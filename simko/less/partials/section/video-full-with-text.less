@@ -1,0 +1,127 @@
+section.video-full-with-text{
+	margin-top: 60px;
+	.content{
+		.inner-content{	
+			body.kristo-orthodontics & {
+				max-width: 900px;
+				margin: auto;
+			}
+			
+			.image-container{
+				min-height:658px;
+				.ease-out(all,0.9s);
+				cursor: pointer;
+				body.page-template-invisalign-virtual-care & {
+					min-height:500px;
+				}
+				
+				@media @mobileMax{
+					min-height:400px;
+					position:relative;
+					width: ~'calc(100% + 2*@{gutter-lg})';
+    				margin: 0 -1*@gutter-lg;
+				}
+				@media @mobileSmallerMax{
+					min-height:210px;
+				}
+				img{
+					// display:none;
+				}
+				.youtube-video{
+					display:none;
+					width:100%;
+					height:100%;
+				}
+			}
+			.content-container{
+				position: absolute;
+			    bottom: 100px;
+			    padding: 0 2*@gutter-lg;
+			    text-align: center;
+			    color: @white;
+			    width:100%;
+			    @media @mobileMax{
+			    	position:relative;
+			    	bottom:-2*@gutter-lg;
+			    	margin-bottom:3*@gutter-lg;
+			    	padding: 0;
+			    }
+			    article{
+			    	max-width: 820px;
+    				margin: 0 auto;
+			    	h2{
+			    		color:@white;
+			    		@media @mobileMax{
+			    			color:var(--color-primary);
+			    			font-size: 20px;
+    						line-height: 30px;
+			    		}
+			    	}
+			    	p{
+			    		@media @mobileMax{
+			    			color:var(--color-gray-1);
+			    		}
+			    	}
+			    }
+			}
+
+			.video-container {
+				overflow: hidden;
+				position: relative;
+				width:100%;
+
+				// body.kristo-orthodontics & {
+				// 	max-width: 900px;
+				// 	margin: auto;
+				// }
+			}
+
+			.video-container::after {
+				padding-top: 56.25%;
+				display: block;
+				content: '';
+			}
+
+			.video-container iframe {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+			}
+
+			.sub-content{
+				text-align: center;
+				color: #418CE1;
+				max-width: 857px;
+				margin: 0 auto;
+				p{
+					font-size: 22px;
+					line-height: 27px;
+					font-weight: bold;
+				}
+			}
+		}
+
+	}
+    &.confidence-counts {
+        @media @mobileMax {
+            margin-top: @gutter-lg;
+        }
+        .content {
+            .inner-content {
+                .image-container {
+                    @media @mobileMax {
+                        width: 100%;
+                        margin: 0px;
+                    }
+                }
+                .content-container {
+                    @media @mobileMax {
+                        margin-bottom: 30px;
+                    }
+                }
+            }
+        }
+    }
+}

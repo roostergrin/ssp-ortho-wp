@@ -1,0 +1,157 @@
+section.hero.image-content-two-column {
+	&.rapids-orthodontics {
+		aside {
+			.img-container.mobile {
+				img {
+					margin-top: -100px;
+					@media (max-width:425px) {margin-top: -50px;}
+					@media (max-width:375px) {margin-top: 0;}
+				}
+			}
+		}
+	}
+	&.shawano-orthodontics {
+		aside {
+			.img-container.mobile {
+				img {
+					@media (min-width:568px) {margin-top: -170px;}
+				}
+			}
+		}
+	}
+	.content {
+		.inner-content {
+			.container {
+				width: 100%;
+				.display-flex;
+				.flex-align-items-flex-start;
+
+				article {
+					@width: ~"calc(100% - 705px)";
+					width: @width;
+					padding-top: 12%;
+					padding-right: 2*@gutter-lg;
+					.flex(1, 0, @width);
+					.display-flex;
+					.flex-direction-column;
+
+					h1 {
+						line-height: 1;
+						@media screen and (max-width: 949px) { margin-bottom: @gutter-sm; }
+					}
+
+					@media screen and (max-width: 1290px) {
+						@width: percentage(1/2);
+						width: @width;
+						.flex(1, 0, @width);
+					}
+				}
+
+				aside {
+					@width: 705px;
+					width: @width;
+					margin-right: -120px;
+					.flex(0, 0, @width);
+					@media @wrapperMax { margin-right: -60px; }
+
+					@media screen and (max-width: 1290px) {
+						@width: percentage(1/2);
+						width: @width;
+						margin-right: 0;
+						.flex(1, 0, @width);
+					}
+
+					.img-container {
+						position: relative;
+						width: 100%;
+						overflow: hidden;
+
+						body.page-template-safer-orthodontic-care & {
+							@media @mobileMax {
+								height: 300px; object-fit: cover; object-position: center top;  .border-top-right-radius(90px);.border-bottom-right-radius(90px);
+								img.PGO_SafetyPage_TopSquare_2048x2048.mobile {
+									margin-top: -60px;
+								}
+
+								img.DTM_SaferCare_TopHero_C.mobile {
+									margin-top: -25px
+								}
+							}
+							@media (max-width:450px) {
+								img.PGO_SafetyPage_TopSquare_2048x2048.mobile {
+									margin-top: 0;
+								}
+							}
+						}
+
+						img {
+							&.top-left-radius {
+								.border-top-left-radius(180px);
+								@media @mobileMax { .border-top-left-radius(90px); }
+							}
+
+							&.bottom-left-radius {
+								.border-bottom-left-radius(180px);
+								@media @mobileMax { .border-bottom-left-radius(90px); }
+							}
+
+							&.top-right-radius {
+								.border-top-right-radius(180px);
+								@media @mobileMax { .border-top-right-radius(90px); }
+							}
+
+							&.bottom-right-radius {
+								.border-bottom-right-radius(180px);
+								@media @mobileMax { .border-bottom-right-radius(90px); }
+							}
+						}
+					}
+				}
+
+				@media @menuMax {
+					.flex-direction-column;
+
+					article {
+						width: 100%;
+						.flex(0, 0, 100%);
+						padding-right: 0;
+						padding-top: 2*@gutter-sm;
+						margin-bottom: 2*@gutter-lg;
+					}
+
+					aside {
+						@width: calc(~"100% + 60px");
+						width: @width;
+						.flex(0, 0, @width);
+						margin-left: -2*@gutter-lg;
+
+						.img-container {
+							img {
+								&.bottom-left-radius {
+									.border-bottom-left-radius(0px);
+									.border-bottom-right-radius(90px);
+									.border-top-right-radius(90px);
+								}
+							}
+						}
+					}
+				}
+
+				@media @mobileMax {
+					article {
+						width: 100%;
+						.flex(0, 0, 100%);
+						margin-bottom: @gutter-lg;
+					}
+
+					aside {
+						@width: calc(~"100% + 30px");
+						width: @width;
+						.flex(0, 0, @width);
+						margin-left: -@gutter-lg;
+					}
+				}
+			}
+		}
+	}
+}

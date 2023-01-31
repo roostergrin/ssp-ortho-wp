@@ -1,0 +1,260 @@
+section.two-cols-with-image-popup-content {
+	margin-top: 4*@gutter-sm;
+	@media @mobileMax {margin-top: 2*@gutter-sm;}
+	.content {
+		.inner-content {
+			.display-flex;
+			.flex-justify-content-flex-start;
+			@colPercent: percentage(1/2);
+			@colWidth: calc(~"@{colPercent} - @{gutter-lg}");
+			@media screen and (max-width:1245px) {
+				.flex-direction-column-reverse;
+				@colPercent: 100%;
+				@colWidth: calc(~"@{colPercent} - @{gutter-lg}");
+				.heading {
+					h2 {
+						br.desktop {
+							display: none;
+						}
+					}
+				}
+
+				aside {
+					margin-bottom: @gutter-lg;
+				}
+			}
+
+			.heading {
+				h2,h3,h4 {
+					color: var(--color-primary);
+					margin-bottom: @gutter-md;
+				}
+			}
+
+			article {
+				padding-right: 2*@gutter-lg;
+				.flex(1, 1, auto);
+				@media @mobileMax{margin-bottom: @gutter-lg; padding-right: 0}
+
+				h2,h3,h4 {
+					color: var(--color-primary);
+				}
+			}
+
+			aside {
+				position: relative;
+				overflow: hidden;
+				margin-right: -120px;
+				width: 520px;
+				.flex(0, 0, 520px);
+				.display-flex;
+				.flex-align-items-flex-end;
+				.flex-align-self-center;
+				@media screen and (min-width: 1246px) { .flex(0, 0, 586px); }
+				@media screen and (max-width: 1245px) {
+					margin-right: 0;
+
+				}
+				@media @mobileMax {
+					@width: calc(~"100% + 60px");
+					margin-bottom: @gutter-lg;
+					width: @width;
+					.flex-direction-column;
+					.flex(0, 0, @width);
+					.flex-align-items-flex-start;
+
+					.heading {
+						padding: 0 30px;
+					}
+				}
+
+				.img-container {
+					margin-right: -120px;
+					max-height: 520px;
+					height: 520px;
+					width: 586px;
+					overflow: hidden;
+					position: relative;
+					.border-top-left-radius(180px);
+					@media screen and (max-width: 1290px) { margin-right: -60px; }
+					@media @mobileMax {
+						margin-right: -30px;
+						max-height: 500px;
+						height: 500px;
+						width: 100%;
+						.border-top-left-radius(90px);
+
+						img {
+							width: 100%;
+						}
+					}
+
+					@media screen and (max-width:370px) { max-height: 400px; height: 400px;}
+					img {
+						position: absolute;
+
+						&.dr-kristo {
+							top: -130px;
+							@media screen and (max-width:450px) {top: -50px;}
+						}
+						&.dr-holloway {
+							top: -40px;
+							@media @mobileMax { top: -90px; }
+							@media screen and (max-width: 675px) { top: -40px; }
+							@media screen and (max-width: 400px) { top: 0; }
+						}
+						&.dr-bronski {
+							top: -120px;
+							@media screen and (max-width: 500px) { top: -60px; }
+						}
+						&.dr-tsunoda {
+							top: -100px;
+							@media screen and (max-width: 500px) { top: 0; }
+						}
+						&.dr-siu {
+							top: -70px;
+							@media screen and (max-width: 530px) { top: 0; }
+							@media (min-width:701px) and (max-width:782px) {top: -165px;}
+							@media (min-width:667px) and (max-width:700px) {top: -140px;}
+						}
+						&.dr-lin {
+							top: -130px;
+							@media screen and (max-width:450px) {top: -50px;}
+						}
+						&.dr-anderson {
+							top: -70px;
+							@media screen and (max-width:450px) {top: -60px;}
+						}
+						&.dr-kapus {
+							top: -70px;
+							@media screen and (max-width:450px) {top: -60px;}
+						}
+						&.dr-duevel {
+							top: -110px;
+							@media @mobileMax { top: -170px; }
+							@media screen and (max-width: 700px) { top: -120px; }
+							@media screen and (max-width: 550px) { top: -80px; }
+							@media screen and (max-width: 352px) { top: -50px; }
+						}
+						&.dr-ross {
+							top: -140px;							
+							@media (min-width:700px) and (max-width:782px) { top: -170px; }
+							@media (min-width:500px) and (max-width:699px) { top: -115px; }
+							@media (max-width:499px) { top: -60px; }
+						}
+						&.dr-hamm {
+							top: -125px;
+							@media (min-width:1024px) and (max-width:1440px) {top: -125px;}
+							@media @mobileMax { top: -175px; }
+							@media screen and (max-width: 700px) { top: -175px; }
+							@media screen and (max-width: 550px) { top: -80px; }
+							@media screen and (max-width: 352px) { top: -50px; }
+						}
+						&.dr-drye {
+							top: -110px;
+							@media @mobileMax { top: -240px; }
+							@media screen and (max-width: 700px) { top: -120px; }
+							@media screen and (max-width: 550px) { top: -80px; }
+							@media screen and (max-width: 352px) { top: -50px; }
+						}
+						&.dr-whetten {
+							@media screen and (min-width: 783px) { top: -50px; }
+							@media @mobileMax { top: -100px; }
+							@media screen and (max-width: 600px) { top: -80px; }
+							@media screen and (max-width: 500px) { top: -30px; }
+							@media screen and (max-width: 400px) { top: 0px; }
+						}
+						&.dr-dietmeier {
+							top: -125px;
+							@media (min-width:1024px) and (max-width:1440px) {top: -105px;}
+							@media @mobileMax { top: -215px; }
+							@media screen and (max-width: 700px) { top: -175px; }
+							@media screen and (max-width: 550px) { top: -40px; }
+							@media screen and (max-width: 352px) { top: -30px; }
+						}
+						&.dr-farhi {
+							@media @desktopMin { top: -20px; }
+						}
+					}
+
+				}
+
+				.img-overlay-copy {
+					position: absolute;
+					bottom: -101%;
+					height: 100%;
+					overflow: hidden;
+					.border-top-left-radius(180px);
+					.ease-out(all, 0.3s);
+
+					@media @mobileMax { position: relative; bottom: 0; width: 100%; overflow: visible; .border-top-left-radius(90px); }
+
+					.container {
+						background-color: var(--color-primary);
+						color: @white;
+						// opacity: 0.8;
+						height: 100%;
+						padding: 0 2*@gutter-lg 2*@gutter-lg;
+						.display-flex;
+						.flex-direction-column;
+						.flex-justify-content-flex-end;
+						@media @mobileMax { padding: @gutter-lg; }
+
+						h2,h3,h4 {
+							color: @white;
+							font-size: 25/@rem;
+							line-height: 1.2;
+							margin-bottom: @gutter-lg;
+							@media @mobileMax { margin-bottom: 0; }
+						}
+
+						p {
+							font-size: 15px;
+							letter-spacing: 0.07px;
+						}
+					}
+				}
+
+				&:hover {
+					.img-overlay-copy {
+						bottom: 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+.page-template-bio {
+	&.todd-anderson-dds  {
+		&.central-lakes-orthodontics{
+			.two-cols-with-image-popup-content{
+				&.central-lakes-orthodontics {
+					aside {
+						.desktop{
+							.dr-anderson{
+								object-position: 0px -105px;
+							}
+						}
+						.mobile {
+							.dr-anderson{
+								object-position: 0px -176px;
+								@media screen and (max-width:767px)  { 
+									object-position: 0px -163px;
+								}
+
+								@media screen and (max-width:657px)  { 
+									object-position: 0px -117px;
+								}
+								@media screen and (max-width:550px)  { 
+									object-position: 0px -63px;
+								}
+							}
+						}
+					}		
+				}
+			}			
+		}
+	}
+}

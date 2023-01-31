@@ -1,0 +1,109 @@
+section.copy.two-cols {
+	.inner-content {
+		@colPercent: percentage(1/2);
+		@colWidth: calc(~"@{colPercent} - (2*@{gutter-lg})");
+		.content-container {
+			h2 {
+				&:not(.h1) { line-height: 35px; }
+				margin-bottom: @gutter-lg;
+			}
+
+			h3 {
+				margin-bottom: @gutter-lg;
+			}
+
+			.heading {
+				margin-bottom: @gutter-md;
+				.display-flex;
+
+				h2 {
+					&:not(.h1) { line-height: 72/@rem; }
+					margin-bottom: 0;
+				}
+			}
+
+			.columns {
+				flex-flow: row wrap;
+				margin: 0 -@gutter-lg;
+				width: calc(~"100% + (2*@{gutter-lg})");
+				.display-flex;
+				.flex-justify-content-flex-start;
+				.flex-align-items-flex-start;
+				@media @mobileMax { margin: 0; width: 100%; .flex-direction-column; }
+
+				.column {
+					margin: 0 @gutter-lg;
+					width: @colWidth;
+					.flex(0, 0, @colWidth);
+
+					@media @mobileMax {
+						margin: 0;
+						width: 100%;
+						.flex(0, 0, 100%);
+
+						&:not(:last-of-type) {
+							margin-bottom: 15px;
+						}
+					}
+
+					.heading {
+						font-weight: bold;
+						margin-bottom: 0;
+					}
+
+					ul.triangles {
+						li {
+							margin-bottom: @gutter-sm;
+							.display-flex;
+							.flex-justify-content-center;
+							.flex-align-items-baseline;
+
+							&:before {
+								content: '';
+								width: 0;
+								height: 0;
+								padding-left: @gutter-sm/2;
+								border-top: 5px solid transparent;
+								border-left: 10px solid var(--color-primary);
+								border-bottom: 5px solid transparent;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	body.page-template-patient-care-philosophy & {
+		margin: 2*@gutter-lg 0 @gutter-lg !important;
+	}
+	&.great-river-orthodontics {
+		body.page-template-patient-care-philosophy & {
+			@media @mobileMax {
+				.content {
+					.inner-content {
+						.content-container {
+							.columns {
+								.column {
+									&:not(:last-of-type) {
+										margin-bottom: @gutter-sm;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	&.prairie-grove-orthodontics {
+		.inner-content {
+			.content-container {
+				h3 {
+					&.h4 {
+						font-size: 27.5/@rem;
+					}
+				}
+			}
+		}
+	}
+}

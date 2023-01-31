@@ -1,0 +1,88 @@
+div.widget.braces {
+	margin: auto;
+	.display-flex;
+	.flex-direction-column;
+
+	+ .container {
+		margin-top: @gutter-lg;
+		@media screen and (max-width: 949px) { margin-top: @gutter-md; }
+	}
+
+	body.page-template-why-orthodontic-treatment & {
+		margin-bottom: 0;
+
+		.img-container {
+			img {
+				width: 100%;
+				max-width: 350px;
+			}
+		}
+	}
+
+	> div {
+		&.inner-content {
+			.display-flex;
+
+			div.copy, ul.smile-icons {
+				margin: 0;
+				align-self: center;
+				.flex(0, 0, 50%);
+				@media @menuMax { margin: 0; .flex(0, 0, 100%); }
+			}
+
+			ul.smile-icons {
+				> li {
+					width: 100%;
+					font-size: 226/@rem;
+					.display-flex;
+					.flex-align-items-center;
+					.flex-justify-content-center;
+					@media screen and (max-width: 949px) { font-size: 180/@rem; }
+					@media @mobileMax { font-size: 100/@rem; max-width: 220px; margin: auto; }
+					body.page-template-brand-home & {
+						svg {
+							max-width: 375px;
+						}
+					}
+				}
+
+				&.images {
+					padding-left: 2*@gutter-lg;
+					@media screen and (max-width: 949px) { padding-left: 0; }
+
+					body.page-template-why-orthodontic-treatment & {
+						 @media @mobileMax {
+							 width: 60%;
+							 margin: 0 auto;
+							 margin-bottom: 0;
+						 }
+					 }
+				}
+			}
+
+			@media screen and (max-width: 949px) {
+				.flex-direction-column;
+
+				section.approval & {
+					.flex-direction-column-reverse;
+
+					div.copy {
+						margin-bottom: 0;
+					}
+
+					ul.smile-icons {
+						margin-bottom: 2*@gutter-sm;
+
+						li {
+							font-size: 170/@rem;
+						}
+					}
+				}
+
+				div.copy {
+					margin-bottom: 2*@gutter-sm;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,1870 @@
+section.hero.standard {
+	width: 100%;
+	background-size: 100% auto;
+	@media screen and (min-width: 2001px) { background-position: center -230px; }
+	@media screen and (max-width: 2000px) { background-position: center -80px; }
+	@media screen and (max-width: 1800px) { background-position: center -40px; }
+	@media screen and (max-width: 1700px) { background-position: center 0px; }
+	@media screen and (max-width: 1600px) { background-position: center 40px; }
+	@media screen and (max-width: 1500px) { background-position: center 80px; }
+	@media screen and (max-width: 1140px) { background-position: center 110px; }
+	@media screen and (max-width: 1066px) { background-size: auto 600px; background-position: 0px 115px; }
+	@media screen and (max-width: 990px) { background-position: -50px 115px; }
+	@media screen and (max-width: 880px) { background-position: -180px 115px; }
+
+	.content {
+		height: 100%;
+
+		.inner-content {
+			width: 100%;
+			height: 100%;
+			padding-top: 40%;
+			@media @mobileMax { padding-top: 30px; }
+
+			.wrapper {
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				.display-flex;
+				.flex-direction-column;
+				.flex-justify-content-center;
+
+				.container {
+					h1 {
+						@media screen and (min-width: 1280px) {
+							body.page-template-brand-home.prairie-grove-orthodontics & {
+								font-size: 48px;
+							}
+							body.page-template-invisalign-aligners.prairie-grove-orthodontics & {
+								font-size: 45px;
+							}
+						}
+
+						margin-bottom: @gutter-sm/2;
+						text-align: start;
+					}
+
+					.sub-heading {
+						font-size: 30/@rem;
+						line-height: 35/@rem;
+						.Regular;
+						max-width: 380px;
+
+						@fontSizeMin: 25px;
+						@fontSizeMax: 30px;
+						@maxMediaQuery: unit(unit(@fontSizeMax) * 783 / unit(@fontSizeMin), px);
+
+						@media @tabletMin and (max-width: @maxMediaQuery) { font-size: unit(100 * @fontSizeMin / 783, vw); }
+						@media screen and (min-width: @maxMediaQuery) { font-size: @fontSizeMax; }
+						@media @mobileMax { font-size: @fontSizeMin; line-height: 30/@rem; margin-bottom: @gutter-lg/2; }
+					}
+
+					&.bg-gray,
+					&.bg-primary {
+						opacity: 1;
+						padding: 2*@gutter-md 2*@gutter-lg;
+						.border-radius(5px);
+						@media @mobileMax { padding: 2*@gutter-sm @gutter-lg; }
+					}
+
+					&.bg-gray {
+						background-color: rgba(246, 246, 246, 0.9);
+					}
+
+					&.bg-primary {
+						background-color: var(--color-primary);
+						opacity: 1;
+						color: @white;
+
+						a {
+							color: @white;
+							border-bottom-color: @white;
+							&:hover {
+								color: var(--color-gray-1);
+							}
+						}
+					}
+
+					@media @mobileSmallMax {
+						h1 {
+							font-size: 30/@rem;
+							line-height: 35/@rem;
+						}
+
+						.sub-heading {
+							font-size: 24/@rem;
+							line-height: 30/@rem;
+						}
+					}
+				}
+
+				&.left-side {
+					margin-right: 720px;
+					@media screen and (max-width: 1410px) { margin-right: 660px; }
+					@media screen and (max-width: 1290px) { margin-right: 630px; }
+					@media @tabletMax { margin-right: 550px; }
+					@media screen and (max-width: 1100px) { margin-right: 440px; }
+					@media screen and (max-width: 990px) { margin-right: 330px; }
+					@media screen and (max-width: 823px) { margin-right: 250px; }
+					@media @mobileMax { position: relative; margin-right: 0; }
+
+					.container {
+						margin-left: -120px;
+						@media screen and (max-width: 1410px) { margin-left: -60px; }
+						@media screen and (max-width: 1290px) { margin-left: -30px; }
+						@media @mobileMax { margin-left: 0; }
+					}
+				}
+
+				// Is this used anywhere else but brand? If no, delete
+				&.right-side {
+					margin-left: 720px;
+					@media screen and (max-width: 1410px) { margin-left: 660px; }
+					@media screen and (max-width: 1290px) { margin-left: 630px; }
+					@media @tabletMax { margin-left: 550px; }
+					@media screen and (max-width: 1100px) { margin-left: 440px; }
+					@media screen and (max-width: 990px) { margin-left: 330px; }
+					@media screen and (max-width: 823px) { margin-left: 250px; }
+					@media @mobileMax { position: relative; margin-left: 0; }
+
+					.container {
+						margin-right: -120px;
+						@media screen and (max-width: 1410px) { margin-right: -60px; }
+						@media screen and (max-width: 1290px) { margin-right: -30px; }
+						@media @mobileMax { margin-right: 0; }
+					}
+				}
+			}
+		}
+	}
+
+	&.brand {
+		height: 100vw;
+		max-height: 520px;
+		@media screen and (min-width: 2701px) { background-position: center -400px; }
+		@media screen and (max-width: 2700px) { background-position: center -340px; }
+		@media screen and (max-width: 2260px) { background-position: center -100px; }
+		@media screen and (max-width: 1920px) { background-position: center -80px; }
+		@media screen and (max-width: 1700px) { background-position: center -20px; }
+		@media screen and (max-width: 1400px) { background-position: center 80px; }
+		@media screen and (max-width: 1075px) { background-position: center 80px; }
+		@media screen and (max-width: 924px) { background-size: auto 520px; background-position: center 115px; }
+		@media @mobileMax { background-size: auto; }
+
+		&.ross-orthodontics {
+			@media screen and (min-width: 2701px) { background-position: center 40px; }
+			@media screen and (max-width: 2700px) { background-position: center 40px; }
+			@media screen and (max-width: 2260px) { background-position: center 30px; }
+			@media screen and (max-width: 1920px) { background-position: center 30px; }
+			@media screen and (max-width: 1700px) { background-position: center 50px; }
+			@media screen and (max-width: 1400px) { background-position: center 80px; }
+			@media screen and (max-width: 1075px) { background-position: center 80px; }
+			@media screen and (max-width: 924px) { background-size: auto 520px; background-position: center 115px; }
+			@media @mobileMax { background-size: auto; }
+		}
+
+		&.great-river-orthodontics {
+			@media screen and (min-width: 2701px) { background-position: center -170px; }
+			@media screen and (max-width: 2700px) { background-position: center -110px; }
+			@media screen and (max-width: 2260px) { background-position: center -50px; }
+			@media screen and (max-width: 1920px) { background-position: center 0px; }
+			@media screen and (max-width: 1400px) { background-position: center 50px; }
+			@media screen and (max-width: 924px) { background-size: auto 520px; background-position: center 115px; }
+
+			&.cc {
+				@media screen and (max-width: 2200px) { background-position-y: -120px; }
+				@media screen and (max-width: 2000px) { background-position-y: -75px; }
+				@media screen and (max-width: 1900px) { background-position-y: 0; }
+				@media screen and (max-width: 1700px) { background-position-y: 60px; }
+				@media screen and (max-width: 1600px) { background-position-y: 140px; }
+				@media screen and (max-width: 1400px) {
+					background-size: auto 800px;
+					background-position-y: 115px !important;
+				}
+				@media screen and (max-width: 924px) { 
+					background-size: auto 720px; 
+					background-position: center 150px; 
+				}
+			}
+		}
+
+		&.prairie-grove-orthodontics {
+			@media screen and (min-width: 2701px) { background-position: center -300px; }
+			@media screen and (max-width: 2700px) { background-position: center -210px; }
+			@media screen and (max-width: 2200px) { background-position: center -110px; }
+			@media screen and (max-width: 1920px) { background-position: center -35px; }
+			@media screen and (max-width: 1860px) { background-position: center -5px; }
+			@media screen and (max-width: 1700px) { background-position: center 30px; }
+			@media screen and (max-width: 1400px) { background-position: center 90px; }
+			@media screen and (max-width: 924px) { background-size: auto 520px; background-position: center 115px; }
+
+			&.cc {
+				background-position-y: -145px;
+				@media screen and (max-width: 2200px) { background-position-y: -120px; }
+				@media screen and (max-width: 2000px) { background-position-y: -75px; }
+				@media screen and (max-width: 1900px) { background-position-y: 0; }
+				@media screen and (max-width: 1700px) { background-position-y: 60px; }
+				@media screen and (max-width: 1600px) { background-position-y: 140px; }
+				@media screen and (max-width: 1400px) {
+					background-size: auto 800px;
+					background-position-y: 115px !important;
+				}
+				@media screen and (max-width: 924px) { 
+					background-size: auto 720px; 
+					background-position: center 150px; 
+				}
+			}
+		}
+
+		@media @mobileMax {
+			background-image: none !important;
+			height: 100%;
+			max-height: 100%;
+		}
+
+		.content {
+			height: 100%;
+			@media @tabletMax { position: relative; }
+
+			.inner-content {
+				height: 100%;
+				padding-top: 0;
+
+				.wrapper {
+					.container {
+						opacity: 0.9;
+						a.cta.text {
+							font-weight: 700;
+							letter-spacing: .5px;
+						}
+
+						&.bg-gray {
+							@media screen and (max-width: 1231px) {
+								padding: 30px;
+
+								h1 {
+									font-size: 40/@rem;
+								}
+							}
+
+							@media screen and (max-width: 1000px) {
+								h1 {
+									font-size: 32/@rem;
+								}
+							}
+							@media screen and (max-width: 375px) {
+								h1 {
+									font-size: 28/@rem;
+								}
+							}
+						}
+					}
+
+					&.left-side {
+						@media @tabletMax { margin-right: 550px; }
+						@media screen and (max-width: 1100px) { margin-right: 480px; }
+						@media screen and (max-width: 1070px) { margin-right: 400px; }
+						@media @menuMax { margin-right: 330px; }
+						@media @mobileMax { margin-right: 0; margin-top: -60px; }
+					}
+
+					// Is this used anywhere else but brand? If no, delete
+					&.right-side {
+						margin-left: 720px;
+						@media screen and (max-width: 1410px) { margin-left: 660px; }
+						@media screen and (max-width: 1290px) { margin-left: 600px; }
+						@media @tabletMax { margin-left: 520px; }
+						@media screen and (max-width: 1100px) { margin-left: 410px; }
+						@media screen and (max-width: 990px) { margin-left: 300px; }
+						@media screen and (max-width: 823px) { margin-left: 220px; }
+						@media @mobileMax { position: relative; margin-left: 0; margin-top: -60px;  }
+
+						.container {
+							margin-right: -120px;
+							@media screen and (max-width: 1410px) { margin-right: -60px; }
+							@media screen and (max-width: 1290px) { margin-right: 0; }
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&.location {
+		height: 600px;
+
+		.content {
+			.inner-content {
+				padding-top: @gutter-lg;
+				padding-bottom: @gutter-lg;
+
+				.wrapper {
+					.container {
+						opacity: 0.9;
+						h2.sub-heading.primary {
+							max-width: none;
+							@media screen and (min-width: 950px) {
+								font-size: 29/@rem;
+								margin-right: 0;
+							}
+						}
+						&.bg-gray {
+							@media screen and (max-width: 1231px) {
+								padding: 30px;
+
+								h1 {
+									font-size: 40/@rem;
+								}
+							}
+
+							@media screen and (max-width: 1000px) {
+								h1 {
+									font-size: 32/@rem;
+								}
+							}
+							@media screen and (max-width:450px) { h1 {font-size: 30/@rem;} }
+						}
+						a.cta.text {
+							font-weight: 700;
+							letter-spacing: .5px;
+						}
+					}
+
+					&.left-side {
+						@media @tabletMax { margin-right: 480px; }
+						@media screen and (max-width: 1100px) { margin-right: 480px; }
+						@media screen and (max-width: 1070px) { margin-right: 400px; }
+						@media @menuMax { margin-right: 330px; }
+						@media @mobileMax { margin-right: 0; margin-top: -60px; }
+					}
+
+					&.right-side {
+						margin-left: 720px;
+						@media screen and (max-width: 1410px) { margin-left: 660px; }
+						@media screen and (max-width: 1290px) { margin-left: 600px; }
+						@media @tabletMax { margin-left: 520px; }
+						@media screen and (max-width: 1100px) { margin-left: 410px; }
+						@media screen and (max-width: 990px) { margin-left: 300px; }
+						@media screen and (max-width: 823px) { margin-left: 220px; }
+						@media @mobileMax { position: relative; margin-left: 0; }
+
+						.container {
+							margin-right: -120px;
+							@media screen and (max-width: 1410px) { margin-right: -60px; }
+							@media screen and (max-width: 1290px) { margin-right: 0; }
+						}
+					}
+				}
+			}
+		}
+
+		&.forest-lake {
+			background-position: center;
+			@media screen and (max-width: 1920px) { background-position: center 30px; }
+			@media screen and (max-width: 1709px) { background-position: center 60px; }
+			@media screen and (max-width: 1440px) { background-position: center 90px; }
+		}
+		
+		&.amery,
+		&.new-richmond {
+			@media screen and (min-width:1800px) { background-position: center 100px; }
+			@media @mobileMax {
+				img.mobile {
+					width: 125%;
+					max-width: none;
+					.flex-align-self-center;
+					margin-top: -10%;
+				}
+			}
+		}
+
+		&.baldwin {
+			.content {
+				.inner-content {
+					.wrapper {
+						&.left-side {
+							@media @tabletMax { margin-right: 550px; }
+							@media screen and (max-width: 1070px) { margin-right: 480px; }
+							@media screen and (max-width: 949px) { margin-right: 400px; }
+							@media screen and (max-width: 820px) { margin-right: 340px; }
+							@media @mobileMax { margin-right: 0; }
+						}
+					}
+				}
+			}
+			@media screen and (min-width:2400px) { background-position: center -160px; }
+			@media screen and (min-width:2100px) and (max-width: 2399px) { background-position: center -80px; }
+			@media screen and (min-width:1600px) and (max-width: 2099px) { background-position: center 45px; }
+		}
+
+		&.black-river-falls,
+		&.eau-claire,
+		&.rice-lake {
+			.content {
+				.inner-content {
+					.wrapper {
+						&.left-side {
+							@media @tabletMax { margin-right: 600px; }
+							@media screen and (max-width: 1100px) { margin-right: 550px; }
+							@media screen and (max-width: 1070px) { margin-right: 520px; }
+							@media screen and (max-width: 1006px) { margin-right: 460px; }
+							@media screen and (max-width: 990px) { margin-right: 550px; }
+							@media screen and (max-width: 970px) { margin-right: 530px; }
+						}
+					}
+				}
+			}
+			@media screen and (min-width:2000px) { background-position: center -45px; }
+			@media screen and (min-width:1800px) and (max-width:1999px){ background-position: center -10px;}
+			@media screen and (min-width:1525px) and (max-width:1799px){ background-position: center 30px;}
+			@media @desktopMin and (max-width:1524px){ background-position: center 50px;}
+			@media @menuMax {
+				background-image: none !important;
+				height: auto;
+
+				img.mobile {
+					display: block !important;
+				}
+
+				.content {
+					.inner-content {
+						padding-top: 0;
+						padding-bottom: 0;
+
+						.wrapper {
+							&.left-side {
+								position: relative;
+								margin-right: 0;
+								margin-top: -60px;
+
+								.container {
+									margin-left: 0;
+
+									br.desktop {
+										display: none;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		&.bloomer {
+			@media screen and (min-width:2200px) { background-position: center -115px; }
+			@media screen and (min-width:1795px) and (max-width:2199px) { background-position: center -35px; }
+			@media screen and (min-width:1400px) and (max-width:1794px) { background-position: center 45px;}
+			@media @desktopMin and (max-width:1399px) { background-position: center 125px;}
+			@media screen and (max-width: 880px) { background-position: -60px 115px; }
+
+			.content {
+				.inner-content {
+					.wrapper {
+						@media @menuMax { margin-top: -3*@gutter-sm; }
+
+						&.right-side {
+							@media @tabletMax { margin-left: 600px; }
+							@media screen and (max-width: 1260px) { margin-left: 550px; }
+							@media screen and (max-width: 1100px) { margin-left: 550px; }
+							@media screen and (max-width: 1070px) { margin-left: 420px; }
+							@media screen and (max-width: 1006px) { margin-left: 460px; }
+							@media screen and (max-width: 990px) { margin-left: 420px; }
+							@media screen and (max-width: 880px) { margin-left: 300px; }
+							@media @mobileMax { margin-left: 0; }
+						}
+					}
+				}
+			}
+		}
+
+		&.chippewa-falls,
+		&.river-falls {
+			@media screen and (min-width:2250px) { background-position: center -105px;}
+			@media screen and (min-width:1900px) and (max-width:2249px){ background-position: center -35px;}
+			@media screen and (min-width:1450px) and (max-width:1899px){ background-position: center 45px;}
+			@media screen and (max-width:880px) { background-position: -90px 115px;}
+			.content {
+				.inner-content {
+					.wrapper {
+						@media @menuMax { margin-top: -3*@gutter-sm; }
+					}
+				}
+			}
+		}
+
+		&.marinette {
+			@media screen and (min-width: 2000px) { background-position: center -25px; }
+			@media screen and (min-width: 1650px) and (max-width: 1999px) {background-position: center 65px;}
+			@media @tabletMax {
+				.content {
+					.inner-content {
+						.wrapper {
+							margin-right: 580px;
+						}
+					}
+				}
+			}
+			@media screen and (max-width: 1070px) {.content {.inner-content {.wrapper {margin-right: 480px;}}}}
+			@media @menuMax {.content {.inner-content {.wrapper {margin-right: 410px;}}}}
+			@media @mobileMax {
+				background-image: none !important;
+				height: 100%;
+
+				.content {
+					position: relative;
+
+					.inner-content {
+						padding-top: 0;
+
+						.wrapper {
+							margin-right: 0;
+							margin-top: -60px;
+
+							.container {
+								padding-top: 30px;
+								padding-bottom: 30px;
+							}
+						}
+					}
+				}
+			}
+
+			img.mobile {
+				@media screen and (max-width:450px) {
+					width: 150%;
+					max-width: none;
+					margin-left: -20%;
+					margin-top: -15%;
+				}
+			}
+		}
+
+		&.merrill, 
+		&.wausau {
+			@media screen and (min-width:2250px) { background-position: center -105px;}
+			@media screen and (min-width:1900px) and (max-width:2249px){ background-position: center -35px;}
+			@media screen and (min-width:1450px) and (max-width:1899px){ background-position: center 45px;}
+		}
+
+		&.stanley,
+		&.menomonie {
+			@media screen and (min-width: 2000px) {background-position: center -75px;}
+			@media screen and (min-width: 1500px) and (max-width: 1999px) {background-position: center 25px;}
+			.content {
+				.inner-content {
+					.wrapper {
+						@media @menuMax { margin-right: 370px; }
+						@media @mobileMax { margin-right: 0; }
+					}
+				}
+			}
+		}
+
+
+		// Great River
+		&.maplewood,
+		&.roseville {
+			@media (min-width:1500px) {background-position: center 25px;}
+			@media screen and (max-width: 1440px) { background-position: 0px 115px; }
+			@media @menuMax { background-position: -90px 115px; }
+			@media screen and (max-width: 860px) { background-position: -180px 115px; }
+		}
+
+		&.onalaska,
+		&.holmen {
+			@media (min-width:2051px) {background-position: center -65px;}
+			@media (min-width:1500px) and (max-width:2050px) {background-position: center 25px;}
+			@media screen and (max-width: 1440px) { background-position: 0px 115px; }
+			@media @menuMax { background-position: -90px 115px; }
+			@media screen and (max-width: 860px) { background-position: -180px 115px; }
+		}
+
+		&.roseville {
+			@media screen and (max-width: 1750px) {background-position: center 50px;}
+			@media screen and (max-width: 1550px) {background-position: center 70px;}
+			@media @tabletMax { background-position: center 115px; }
+		}
+
+		&.la-crosse,
+		&.west-salem {
+			@media screen and (min-width:2400px) { background-position: center -160px; }
+			@media screen and (min-width:2100px) and (max-width: 2399px) { background-position: center -80px; }
+			@media screen and (min-width:1600px) and (max-width: 2099px) { background-position: center 45px; }
+		}
+
+		//	Prairie Grove
+		&.beaver-dam,
+		&.madison,
+		&.sun-prairie {
+			.content {
+				.inner-content {	
+					.wrapper {
+						.container {
+							opacity: .96;
+						}
+					}
+				}
+			}
+		}
+
+		&.beaver-dam {
+			@media screen and (min-width:2100px) { background-position: center -145px;}
+			@media screen and (min-width:1700px) and (max-width:2099px) { background-position: center -20px;}
+			@media screen and (min-width:1400px) and (max-width:1699px) { background-position: center 50px;}
+
+		}
+		&.madison,
+		&.sun-prairie {
+			@media (min-width:2401px) {background-position: center -160px;}
+			@media (min-width:2001px) and (max-width:2400px) {background-position: center -100px;}
+			@media (min-width:1276px) and (max-width:2000px) {background-position: center 0;}
+			@media (max-width:1275px) {background-position: 0 90px;}
+		}
+		&.sun-prairie  {
+			@media (min-width:883px) and (max-width: 1193px){ background-position: 0px 90px;}
+			@media (min-width:836px) and (max-width: 882px){ background-position: -65px 90px;}
+			@media @tabletMin and (max-width: 835px){ background-position: -120px 90px;}
+
+			.content .inner-content .wrapper.left-side {
+				@media (min-width:1101px) and (max-width:1193px) {margin-right: 550px;}
+				@media (min-width:950px) and (max-width:1100px) {margin-right: 500px;}
+			}
+		}
+
+		// Rapids
+		&.rapids-orthodontics {
+			@media screen and (min-width: 1194px) {background-position: center 95px;}
+		}
+		
+		&.shawano-orthodontics {
+			max-height: 520px;
+			@media screen and (min-width: 1851px) {background-position: center -75px;}
+			@media screen and (min-width: 1715px) and (max-width:1850px) {background-position: center 15px;}
+			@media screen and (min-width: 1194px) and (max-width:1714px) {background-position: center 85px;}
+			@media @mobileMax {
+				background-image: none !important;
+				height: 100%;
+				max-height: 100%;
+			}
+			.content {
+				height: 100%;
+				@media @tabletMax { position: relative; }
+	
+				.inner-content {
+					height: 100%;
+					padding-top: 0;
+	
+					.wrapper {
+						.container {
+							opacity: 0.9;
+							a.cta.text {
+								font-weight: 700;
+								letter-spacing: .5px;
+							}
+	
+							&.bg-gray {
+								// @media screen and (max-width: 1231px) {
+									padding: 30px;
+								// }
+								h1 {
+									font-size: 45/@rem;
+									@media (min-width:858px) and(max-width:1010px) {
+										font-size: 37/@rem;
+									}
+									@media (min-width:783px) and (max-width:857px) {
+										font-size: 30/@rem;
+									}
+									@media (max-width:782px) {
+										font-size: 26/@rem;
+									}
+									@media (max-width:425px) {
+										font-size: 24/@rem;
+										line-height: 1.2;
+									}
+									@media (max-width:320px) {
+										font-size: 21/@rem;
+									}
+								}
+							}
+						}
+	
+						&.left-side {
+							@media @tabletMax { margin-right: 550px; }
+							@media screen and (max-width: 1100px) { margin-right: 480px; }
+							@media screen and (max-width: 1070px) { margin-right: 400px; }
+							@media @menuMax { margin-right: 330px; }
+							@media @mobileMax { margin-right: 0; margin-top: -60px; }
+						}
+	
+						// Is this used anywhere else but brand? If no, delete
+						&.right-side {
+							margin-left: 720px;
+							@media screen and (max-width: 1410px) { margin-left: 660px; }
+							@media screen and (max-width: 1290px) { margin-left: 600px; }
+							@media @tabletMax { margin-left: 520px; }
+							@media screen and (max-width: 1100px) { margin-left: 410px; }
+							@media screen and (max-width: 990px) { margin-left: 300px; }
+							@media screen and (max-width: 823px) { margin-left: 220px; }
+							@media @mobileMax { position: relative; margin-left: 0; }
+	
+							.container {
+								margin-right: -120px;
+								@media screen and (max-width: 1410px) { margin-right: -60px; }
+								@media screen and (max-width: 1290px) { margin-right: 0; }
+							}
+						}
+					}
+				}
+			}
+		}
+
+		&.dietmeier-orthodontics {
+			max-height: 740px !important;
+
+			@media screen and (min-width: 1851px) {background-position: center -75px;}
+			@media screen and (min-width: 1715px) and (max-width:1850px) {background-position: center -35px;}
+			@media screen and (min-width: 1194px) and (max-width:1714px) {background-position: center 35px;}
+
+			.mobile-image-container {
+				max-height: 740px !important;
+				overflow: hidden;
+				@media @mobileMax { max-height: 740px !important; }
+
+				img {
+					@media @mobileMax { margin: -40% auto 0 auto; }
+					@media (max-width:680px) { margin: -25% auto 0 auto; }
+				}
+			}
+			.content {
+				.inner-content {
+					.wrapper.left-side {
+						.container.bg-gray {
+							h1 {
+								font-size: 42/@rem;
+								@media (min-width:858px) and(max-width:1010px) {
+									font-size: 37/@rem;
+								}
+								@media (min-width:783px) and (max-width:857px) {
+									font-size: 30/@rem;
+								}
+								@media (max-width:425px) {
+									font-size: 24/@rem;
+									line-height: 1.2;
+								}
+								@media (max-width:320px) {
+									font-size: 21/@rem;
+								}
+							}
+							h2 {
+								@media (max-width:425px) {
+									font-size: 22/@rem;
+									line-height: 1.2;
+								}
+								@media (max-width:320px) {
+									font-size: 18/@rem;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		&.chapman-orthodontics {
+			@media screen and (min-width:2049px) {
+				background-position: center -25px;
+			}
+			@media screen and (min-width: 1194px) and (max-width:2048px) {
+				background-position: center 75px;
+			}
+		}
+	}
+
+	&.wadena, 
+	&.alexandria {
+		background-position-x: center;
+
+		@media screen and (min-width: 2001px) { background-position-y: 0; }
+		@media screen and (max-width: 2000px) { background-position-y: 25px; }
+		@media screen and (max-width: 1650px) { background-position-y: 50px; }
+		@media screen and (max-width: 1350px) { background-position-y: 80px; }
+		@media screen and (max-width: 924px) { background-size: auto 520px; background-position: center 105px; }
+		@media @mobileMax { background-size: auto; }
+	}	
+
+	&.invisalign {
+		height: 100vw;
+		max-height: 520px;
+
+		&.kristo-orthodontics {
+			@media screen and (min-width: 2231px) { background-position: center -330px; }
+			@media screen and (max-width: 2230px) { background-position: center -250px; }
+			@media screen and (max-width: 2015px) { background-position: center -180px; }
+			@media screen and (max-width: 1800px) { background-position: center -90px; }
+			@media screen and (max-width: 1650px) { background-position: center -50px; }
+			@media screen and (max-width: 1350px) { background-position: center 10px; }
+			@media screen and (max-width: 924px) { background-size: auto 520px; background-position: center 105px; }
+			@media @mobileMax { background-size: auto; }
+		}
+
+		&.great-river-orthodontics,
+		&.rapids-orthodontics,
+		&.shawano-orthodontics{
+			@media screen and (min-width: 2250px) { background-position: center -210px; }
+			@media screen and (max-width: 2249px) { background-position: center -80px; }
+			@media screen and (max-width: 1700px) { background-position: center 50px; }
+			@media screen and (max-width: 1600px) { background-position: center 70px; }
+			@media screen and (max-width: 1400px) { background-position: center 100px; }
+			@media @tabletMax { background-position: center 70px; }
+			@media screen and (max-width: 924px) { background-size: auto 520px; background-position: center 115px; }
+			@media @mobileMax { background-size: auto; }
+		}
+
+		&.ross-orthodontics {
+			@media screen and (min-width: 2250px) { background-position: center -210px; }
+			@media screen and (max-width: 2249px) { background-position: center -80px; }
+			@media screen and (max-width: 1700px) { background-position: center 70px; }
+			//@media screen and (max-width: 1600px) { background-position: -50px 115px; }
+			//@media screen and (max-width: 1400px) { background-position: center 145px; } 
+			//test for this trello.com/c/lPhF4DEi/943-match-positioning
+			//trello.com/c/P5y6BqFN/950-adjust-image-positioning
+			@media screen and (max-width: 1400px) { background-position: center 100px; }
+			@media @tabletMax { background-position: center 70px; }
+			@media screen and (max-width: 924px) { background-size: auto 520px; background-position: center 115px; }
+			@media @mobileMax { background-size: auto; }
+		}
+
+		&.prairie-grove-orthodontics {
+			@media (min-width:1900px) { background-position: center -25px; }
+			@media (min-width:1800px) and (max-width:1899px){ background-position: center -5px; }
+			@media (min-width:1551px) and (max-width:1799px){ background-position: center 5px; }
+			@media @desktopMin and (max-width:1550px) { background-position: center 85px; }
+			.content {
+				.inner-content {
+					.wrapper.right-side {
+						@media screen and (max-width: 1290px) { margin-left: 560px; }
+						@media @tabletMax { margin-left: 460px; }
+						@media screen and (max-width: 1100px) { margin-left: 390px; }
+						@media screen and (max-width: 990px) { margin-left: 290px; }
+					}
+				}
+			}
+		}
+
+		&.dietmeier-orthodontics {
+			@media (min-width:1900px) { background-position: center -45px; }
+			@media (min-width:1800px) and (max-width:1899px){ background-position: center -25px; }
+			@media (min-width:1551px) and (max-width:1799px){ background-position: center -15px; }
+			@media @desktopMin and (max-width:1550px) { background-position: center 0; }
+			.content {
+				.inner-content {
+					.wrapper.right-side {
+						@media screen and (max-width: 1290px) { margin-left: 560px; }
+						@media @tabletMax { margin-left: 460px; }
+						@media screen and (max-width: 1100px) { margin-left: 390px; }
+						@media screen and (max-width: 990px) { margin-left: 290px; }
+					}
+				}
+			}
+		}
+
+		&.chapman-orthodontics {
+			@media (min-width:1400px) and (max-width:1699px){ background-position: center 70px; }
+			@media (min-width:1901px) { background-position: center -60px; }
+			@media (min-width:1700px) and (max-width:1900px) { background-position: center 40px; }
+		}
+
+		.content {
+			.inner-content {
+				@media @mobileMax { padding-top: 0; }
+				.wrapper {
+					&.left-side {
+						@media screen and (max-width: 1100px) { margin-right: 480px; }
+						@media @menuMax { margin-right: 430px; }
+					}
+
+					&.right-side {
+						@media screen and (max-width: 990px) { margin-left: 370px; }
+						@media screen and (max-width: 823px) { margin-left: 300px; }
+					}
+				}
+			}
+		}
+	}
+
+	&.why-orthodontic-treatment {
+		height: 720px;
+		@media screen and (min-width: 2651px) { background-position: center -180px; }
+		@media screen and (max-width: 2650px) { background-position: center -20px; }
+		@media screen and (max-width: 1580px) { background-position: center 65px; }
+		@media screen and (max-width: 1425px) { background-position: center 145px; }
+		@media screen and (max-width: 1280px) { background-size: auto 720px; background-position: 0px 145px; }
+		@media screen and (max-width: 1200px) { background-position: -80px 145px; }
+		@media @tabletMax { background-position: -80px 115px; }
+		@media screen and (max-width: 1120px) { background-position: -160px 115px; }
+		@media screen and (max-width: 1040px) { background-position: -150px 115px; }
+		@media screen and (max-width: 960px) { background-position: -150px 115px; }
+		@media screen and (max-width: 910px) { background-position: -350px 115px; }
+		@media screen and (max-width: 885px) {
+			background-image: none !important; height: auto; max-height: none;
+
+			img.mobile {
+				display: block !important;
+				position: relative;
+			}
+		}
+
+		&.central-lakes-orthodontics{
+			height: 720px;
+			@media screen and (min-width: 2651px) { background-position: center -180px; }
+
+			/*@media screen and (max-width: 2650px) { background-position: center 50px; }
+			@media screen and (max-width: 1500px) { background-position: center 100px; }*/
+
+			@media screen and (max-width: 2650px) { background-position: center 50px; } 
+			@media screen and (max-width: 1580px) { background-position: center 50px; }
+			@media screen and (max-width: 1425px) { background-position: center 145px; }
+			@media screen and (max-width: 1280px) { background-size: auto 720px; background-position: 0px 145px; }
+			@media screen and (max-width: 1200px) { background-position: center 108px; }
+
+			@media @tabletMax { background-position: 0px 120px; }
+			@media screen and (max-width: 1040px) { background-position: center 115px; }
+			@media screen and (max-width: 960px) { background-position: -150px 115px; }
+			@media screen and (max-width: 910px) { background-position: -260px 115px; }
+			@media screen and (max-width: 885px) {
+				background-image: none !important; height: auto; max-height: none;
+
+				img.mobile {
+					display: block !important;
+					position: relative;
+				}
+			}
+		}
+
+		.content {
+			height: 100%;
+			@media screen and (max-width: 885px) { padding-top: 0; }
+
+			.inner-content {
+				height: 100%;
+				padding-top: 0;
+				@media @mobileMax { padding-top: 0; }
+
+				.wrapper {
+					margin-right: 580px;
+					@media screen and (max-width: 1199px) { margin-right: 530px; }
+					@media @tabletMax { margin-right: 520px; }
+					@media screen and (max-width: 1000px) { margin-right: 480px; }
+					@media screen and (max-width: 885px) { position: relative; margin-right: 0; margin-top: -2*@gutter-lg; padding-bottom: @gutter-lg; }
+					@media @mobileMax { margin-top: -2*@gutter-lg; }
+					@media screen and (max-width: 450px) { margin-top: -50px; }
+
+					.container {
+						&.bg-gray {
+							@media screen and (max-width: 1231px) {
+								padding: 30px;
+
+								h1 {
+									font-size: 40/@rem;
+								}
+							}
+
+							@media screen and (max-width: 1000px) {
+								h1 {
+									font-size: 32/@rem;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		&.great-river-orthodontics {
+			// background-position: center 70px;
+			@media screen and (min-width: 2651px) { background-position: center -180px; }
+			@media screen and (max-width: 2650px) { background-position: center -140px; }
+			@media screen and (max-width: 2440px) { background-position: center -90px; }
+			@media screen and (max-width: 2260px) { background-position: center -20px; }
+			@media screen and (max-width: 1920px) { background-position: center 70px; }
+			@media screen and (max-width: 1680px) { background-position: center 120px; }
+			@media screen and (max-width: 1425px) { background-position: center 145px; }
+			@media @tabletMax { background-position: center 115px; }
+			@media screen and (max-width: 885px) {
+				background-image: none !important;
+
+				img.mobile {
+					display: block !important;
+					position: relative;
+				}
+
+				.content {
+					padding-top: 0;
+				}
+			}
+			@media @mobileMax { .content { margin-top: 0; } }
+		}
+		&.prairie-grove-orthodontics,
+		&.chapman-orthodontics {
+			@media screen and (max-width: 1040px) { background-position: -150px 115px; }
+		}
+		&.dietmeier-orthodontics {
+			h1 {
+				font-size: 49px;
+			}
+		}
+
+	}
+
+	&.braces {
+		height: 520px;
+
+		&.kristo-orthodontics {
+			@media screen and (min-width: 2701px) { background-position: center -170px; }
+			@media screen and (max-width: 2700px) { background-position: center -80px; }
+			@media screen and (max-width: 2260px) { background-position: center 10px; }
+			@media screen and (max-width: 1920px) { background-position: center 50px; }
+			@media screen and (max-width: 1350px) { background-position: center 100px; }
+			@media screen and (max-width: 924px) { background-size: auto 520px; background-position: center 115px; }
+			@media @mobileMax { background-size: auto; }
+			body.page-template-invisalign-virtual-care & {
+				@media screen and (min-width: 2520px) { background-position: center -100px; }
+				@media screen and (min-width:2201px) and (max-width:2380px){background-position: center -60px;}
+				@media screen and (min-width:2101px) and (max-width:2200px){background-position: center -40px;}
+				@media screen and (min-width:1920px) and (max-width:2100px){background-position: center -10px;}
+			}
+		}
+
+		&.great-river-orthodontics {
+			@media screen and (min-width: 2701px) { background-position: center -170px; }
+			@media screen and (max-width: 2700px) { background-position: center -30px; }
+			@media screen and (max-width: 2260px) { background-position: center 40px; }
+			@media screen and (max-width: 1920px) { background-position: center 50px; }
+			@media screen and (max-width: 1350px) { background-position: center 100px; }
+			@media screen and (max-width: 924px) { background-size: auto 520px; background-position: center 115px; }
+			@media @mobileMax { background-size: auto; }
+		}
+
+		&.prairie-grove-orthodontics {
+			@media screen and (min-width: 2701px) { background-position: center -400px; }
+			@media screen and (max-width: 2700px) { background-position: center -250px; }
+			@media screen and (max-width: 2260px) { background-position: center -190px; }
+			@media screen and (max-width: 1920px) { background-position: center -50px; }
+			@media screen and (max-width: 1700px) { background-position: center 20px; }
+			@media screen and (max-width: 1350px) { background-position: center 70px; }
+			@media screen and (max-width: 924px) { background-size: auto 520px; background-position: center 115px; }
+			@media @mobileMax { background-size: auto; }
+		}
+
+		&.rapids-orthodontics {
+			@media screen and (min-width:2381px) {background-position: center -150px;}
+			@media screen and (min-width:2201px) and (max-width:2380px){background-position: center -75px;}
+			@media screen and (min-width:2101px) and (max-width:2200px){background-position: center -75px;}
+			@media screen and (min-width:1901px) and (max-width:2100px){background-position: center -15px;}
+			@media screen and (min-width:1701px) and (max-width:1900px) {background-position: center 25px;}
+			@media screen and (min-width:1440px) and (max-width:1700px) {background-position: center 45px;}
+			@media screen and (min-width:1194px) and (max-width:1439px) {background-position: center 115px;}
+			@media screen and (max-width: 1066px) {background-position: center 135px;}
+		}
+
+		&.shawano-orthodontics,
+		&.dietmeier-orthodontics,
+		&.ross-orthodontics,
+		&.central-lakes-orthodontics {
+			@media screen and (min-width:2381px) {background-position: center -250px;}
+			@media screen and (min-width:2201px) and (max-width:2380px){background-position: center -165px;}
+			@media screen and (min-width:2101px) and (max-width:2200px){background-position: center -135px;}
+			@media screen and (min-width:1901px) and (max-width:2100px){background-position: center -75px;}
+			@media screen and (min-width:1701px) and (max-width:1900px) {background-position: center -35px;}
+			@media screen and (min-width:1440px) and (max-width:1700px) {background-position: center -5px;}
+			@media screen and (min-width:1194px) and (max-width:1439px) {background-position: center 115px;}
+			@media screen and (max-width: 1066px) {background-position: center 135px;}
+		}
+
+		@media @mobileMax {
+			padding-top: 0;
+			background-image: none !important;
+			height: 100%;
+
+			img {
+				width: 100%;
+			}
+		}
+		&.chapman-orthodontics {
+			@media (min-width:2150px) { background-position: center -95px; }
+			@media (min-width:1920px) and (max-width:2149px){ background-position: center -35px; }
+			@media (min-width:1194px) and (max-width:1919px){ background-position: center 35px; }
+		}
+	}
+
+	&.patient-care-philosophy {
+		height: 600px;
+		
+		@media screen and (max-width: 1100px) {
+			.content {
+				.inner-content {
+					.wrapper {
+						margin-right: 560px;
+					}
+				}
+			}
+		}
+
+		@media screen and (max-width: 1000px) {
+			.content {
+				.inner-content {
+					.wrapper {
+						margin-right: 520px;
+
+						.container {
+							padding: @gutter-sm 0;
+
+							h1 {
+								font-size: 35/@rem;
+								line-height: 38/@rem;
+								padding: 0 @gutter-sm;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		@media @menuMax {
+			background-image: none !important;
+			height: 100%;
+
+			img.mobile {
+				display: block !important;
+			}
+
+			.content {
+				.inner-content {
+					.wrapper {
+						margin-right: 0;
+						position: relative;
+						margin-top: -4*@gutter-sm;
+						margin-bottom: 2*@gutter-sm;
+
+						.container {
+							h1 {
+								font-size: 50/@rem;
+								line-height: 58/50em;
+								letter-spacing:-0.3/50em;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		@media @mobileMax {
+			.content {
+				position: relative;
+
+				.inner-content {
+					.wrapper {
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+
+		@media screen and (max-width: 750px) {
+			.content {
+				.inner-content {
+					.wrapper {
+						margin-top: -2*@gutter-sm;
+
+						.container {
+							h1 {
+								font-size: 35/@rem;
+								line-height: 38/@rem;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		&.kristo-orthodontics {
+			@media screen and (min-width: 2651px) { background-position: center -180px; }
+			@media screen and (max-width: 2650px) { background-position: center -80px; }
+			@media screen and (max-width: 1844px) { background-position: center -40px; }
+			@media screen and (max-width: 1580px) { background-position: center 65px; }
+			@media screen and (max-width: 1425px) { background-position: center 145px; }
+			@media screen and (max-width: 1280px) { background-size: auto 720px; background-position: 0px 145px; }
+			@media screen and (max-width: 1200px) { background-position: -80px 145px; }
+			@media @tabletMax { background-position: -80px 115px; }
+			@media screen and (max-width: 1120px) { background-position: -160px 115px; }
+			@media screen and (max-width: 1040px) { background-position: -240px 115px; }
+			@media screen and (max-width: 960px) { background-position: -300px 115px; }
+			@media screen and (max-width: 910px) { background-position: -350px 115px; }
+		}
+
+		&.great-river-orthodontics {
+			background-position: right -10px;
+			@media screen and (max-width: 1350px) { background-position: right 145px; }
+			@media @tabletMax { background-position: right 115px; }
+		}
+
+		&.rapids-orthodontics {
+			@media (min-width:1850px) {background-position: center -90px;}
+			@media (min-width:1700px) and (max-width:1849px){background-position: center -40px;}
+			@media (min-width:1550px) and (max-width:1699px){background-position: center 15px;}
+			@media (min-width:1345px) and (max-width:1549px) {background-position: center 45px;}
+			.content {
+				.inner-content {
+					.wrapper.left-side {
+						@media (min-width:1425px) {margin-right: 840px;	}
+						@media (min-width:1200px) and (max-width:1424px) {margin-right: 800px;	}
+						@media (min-width:1025px) and (max-width:1199px) {margin-right: 700px;}
+						@media (min-width:951px) and (max-width:1024px) {margin-right: 600px;}
+						h1 {
+							@media (max-width:1285px) {font-size: 37/@rem;}
+						}
+					}
+				}
+			}
+		}
+
+		&.dietmeier-orthodontics,
+		&.chapman-orthodontics {
+			@media (min-width:1900px) { background-position: center -5px; }
+			@media (min-width:1700px) and (max-width:1899px) { background-position: center 25px; }
+			@media (min-width:1500px) and (max-width:1699px) { background-position: center 65px; }
+		}
+
+		// Mobile image is fullsized so we can do position rel for desktop too.
+		&.shawano-orthodontics {
+			height: auto;
+			background-image: none !important;
+			.mobile-image-container {
+				max-height: 600px;
+				overflow: hidden;
+				img {
+					display: block !important;
+					@media (min-width:2100px) { margin-top: -275px; }
+					@media (min-width:1800px) and (max-width:2099px) { margin-top: -230px; }
+					@media (min-width:1200px) and (max-width:1799px) { margin-top: -130px; }
+				}
+			}
+			.content {
+				.inner-content {
+					.wrapper.left-side {
+						position: relative;
+						margin-right: auto;
+						margin-left: auto;
+						margin-top: -3*@gutter-md;
+						margin-bottom: 2*@gutter-sm;
+						@media @mobileMax {
+							margin-top: -2*@gutter-sm;
+							margin-bottom: 1*@gutter-sm;
+						}
+						.container {
+							margin-left: 0;
+						}
+					}
+				}
+			}
+		}
+
+		// Cap at 740px experiment
+		&.shawano-orthodontics {
+			max-height: 740px;
+		}
+
+		.content {
+			height: 100%;
+
+			.inner-content {
+				height: 100%;
+				padding-top: 0;
+
+				.wrapper {
+					.container {
+						h1 {
+							margin-bottom: 0;
+						}
+					}
+				}
+
+				@media (min-width:949px) and @tabletMax {
+					.wrapper {
+						margin-right: 600px;
+
+						.container {
+							padding: @gutter-lg 0;
+
+							h1 {
+								font-size: 40/@rem;
+								line-height: 44/@rem;
+								padding: 0 @gutter-lg;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		&.central-lakes-orthodontics{
+			height:720px;
+			background-position-y: 126px;
+
+			@media screen and (max-width: 1100px) {
+				.content {
+					.inner-content {
+						.wrapper {
+							margin-right: 0px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	// Has different Aspect Ratio then all the rest
+	&.community-involvement {
+		height: 520px;
+		img.menu-max-show { display: none; }
+
+		&.kristo-orthodontics,
+		&.prairie-grove-orthodontics {
+			margin: 0;
+			.transform(scaleX(-1));
+			@media screen and (min-width: 2701px) { background-position: center -10px; }
+			@media screen and (max-width: 2700px) { background-position: center 20px; }
+			@media screen and (max-width: 2260px) { background-position: center 0px; }
+			// @media screen and (max-width: 1920px) { background-position: center 50px; }
+			// @media screen and (max-width: 1650px) { background-position: center 145px; }
+			@media screen and (max-width: 1404px) { 
+				background-size: auto 520px; 
+				// background-position: center 145px; 
+			}
+			// @media @tabletMax { background-position: -180px 115px; }
+			@media screen and (max-width: 1100px) { background-position: -300px 0; }
+			@media screen and (max-width: 980px) { background-position-x: -420px; }
+			@media @menuMax { background-position-x: -450px; }
+			@media screen and (max-width: 875px) { background-position-x: -520px; }
+			@media screen and (max-width: 800px) { background-position-x: -550px; }
+		}
+
+		&.great-river-orthodontics {
+			@media screen and (min-width: 2701px) { background-position: center -340px; }
+			@media screen and (max-width: 2700px) { background-position: center -190px; }
+			@media screen and (max-width: 2260px) { background-position: center -120px; }
+			@media screen and (max-width: 1920px) { background-position: center -60px; }
+			@media screen and (max-width: 1650px) { background-position: center -25px; }
+			@media screen and (max-width: 1404px) { background-size: 100% auto; background-position: 0px 60px; }
+			@media @tabletMax { background-position: 0px 115px; }
+			@media screen and (max-width: 924px) { background-size: auto 520px; background-position: 0px 115px; }
+		}
+
+		&.rapids-orthodontics {
+			@media @desktopMin {background-position: center 25px;}
+		}
+		&.shawano-orthodontics {
+			background-position: left -30px; 
+			@media screen and (min-width: 1701px) and (max-width: 1850px){ background-position: left 0; }
+			@media screen and (min-width: 1533px) and (max-width: 1700px){ background-position: left 0; }
+			@media screen and (min-width: 1386px) and (max-width: 1532px){ background-position: left -20px; }
+			@media screen and (max-width: 1500px) { background-position: left 30px; }
+			@media screen and (min-width: 1500px) { height: 700px; }
+			@media screen and (min-width: 1194px) and (max-width: 1500px){ background-position: left 0; }
+			@media screen and (max-width: 1140px) { background-position: left 30px; }
+			@media screen and (max-width: 1066px) { background-position: left 40px; }
+			@media screen and (max-width: 990px) { background-position: left 50px; }
+			@media screen and (max-width: 880px) { background-position: left 50px; }
+		}
+		&.dietmeier-orthodontics {
+			@media (min-width: 1901px) { background-position: center -175px; }
+			@media (min-width: 1631px) and (max-width:1900px) { background-position: center -135px; }
+			@media (min-width: 1501px) and (max-width:1630px) { background-position: center -65px; }
+			@media (max-width: 1500px) { background-position: center 55px; }
+			@media (max-width: 1140px) { background-position: center 75px; }
+			@media (max-width: 1066px) { background-position: center 65px; }
+			@media (max-width:990px) { background-position: center 85px; }
+			@media screen and (min-width: 1194px) and (max-width: 1500px){ background-position: center -5px; }
+		}
+		&.chapman-orthodontics {
+			@media (min-width:1701px) { background-position: center -115px; }
+			@media (min-width:1441px) and (max-width:1700px) { background-position: center -45px; }
+			@media (min-width:1235px) and (max-width:1440px) { background-position: center 35px; }
+		}
+		@media @mobileMax {
+			padding-top: 0;
+			background-image: none !important;
+			height: 100%;
+
+			img.menu-max-show {
+				display: block;
+				width: 100%;
+			}
+		}
+
+		&.ross-orthodontics,
+		&.central-lakes-orthodontics {
+			@media screen and (min-width: 2701px) { background-position: center -340px; }
+			@media screen and (max-width: 2700px) { 
+				// height: 600px;
+				background-position: center -190px; }
+			@media screen and (max-width: 2260px) { background-position: center -120px; }
+			@media screen and (max-width: 1920px) { 
+				// height: 520px;
+				background-position: center -25px; }
+			@media screen and (max-width: 1650px) { background-position: center -25px; }
+			@media screen and (max-width: 1404px) { background-size: 100% auto; background-position: 0px 60px; }
+			@media @tabletMax { background-position: 0px 115px; }
+			@media screen and (max-width: 924px) { background-size: auto 520px; background-position: 0px 115px; }
+		}			
+	}
+
+	&.orthodontic-care-maintenance {
+		height: 520px;
+		background-position: center 0px;
+
+		&.kristo-orthodontics,
+		&.prairie-grove-orthodontics,
+		&.rapids-orthodontics {
+			@media screen and (min-width: 2701px) { background-position: center -170px; }
+			@media screen and (max-width: 2700px) { background-position: center -80px; }
+			@media screen and (max-width: 2260px) { background-position: center -40px; }
+			@media screen and (max-width: 1920px) { background-position: center -30px; }
+			@media screen and (max-width: 1700px) { background-position: center 10px; }
+			@media screen and (max-width: 1360px) { background-position: center 70px; }
+			@media screen and (max-width: 1000px) { background-position: right 70px; }
+			@media screen and (max-width: 924px) { background-size: auto 520px; background-position: right 115px; }
+			@media @mobileMax { background-size: auto; }
+		}
+
+		&.great-river-orthodontics {
+			@media screen and (min-width: 2701px) { background-position: center -170px; }
+			@media screen and (max-width: 2700px) { background-position: center -80px; }
+			@media screen and (max-width: 2260px) { background-position: center 20px; }
+			@media screen and (max-width: 1920px) { background-position: center 90px; }
+			@media screen and (max-width: 1700px) { background-position: center 70px; }
+			@media screen and (max-width: 1360px) { background-position: center 130px; }
+			@media @tabletMax { background-position: center 115px; }
+			@media screen and (max-width: 1000px) { background-position: right 115px; }
+			@media screen and (max-width: 924px) { background-size: auto 520px; background-position: right 115px; }
+			@media @mobileMax { background-size: auto; }
+		}
+		&.shawano-orthodontics,
+		&.dietmeier-orthodontics {
+			@media (min-width:1801px) { background-position: center -115px;}
+			@media (min-width:1801px) and (max-width:2050px){ background-position: center -65px;}
+			@media (min-width:1441px) and (max-width:1800px){ background-position: center 15px;}
+			@media (max-width:1440px) { background-position: center 45px;}
+		}
+		&.chapman-orthodontics {
+			@media (min-width:1701px) and (max-width:2050px){ background-position: center -30px;}
+			@media (max-width:1700px){ background-position: center 10px;}
+			@media (max-width:1360px){ background-position: center 70px;}
+			@media screen and (max-width: 1000px){ background-position: right 70px;}
+			@media screen and (max-width: 924px){ background-size: auto 520px;}
+		}
+	}
+
+	&.financing {
+		height: 100vw;
+		max-height: 600px;
+		background-position: center 100px;
+		&.prairie-grove-orthodontics,		
+		&.chapman-orthodontics {
+			background-position: center 10px;
+			@media @tabletMin and (max-width:1550px) {background-position: center 100px;}
+		}
+		// &.dietmeier-orthodontics {
+			
+		// }
+		&.rapids-orthodontics {
+			background-position: center -90px;
+			@media (min-width:1441px) and (max-width:1700px) {background-position: center -40px;}
+			@media (max-width:1440px) {background-position: center top;}
+		}
+
+		&.central-lakes-orthodontics{
+			background-position: center 50px;
+			@media @tabletMin and (max-width:1550px) {background-position: center 100px;}
+		}
+
+		@media @mobileMax {
+			background-image: none !important;
+			height: 100%;
+			max-height: 100%;
+		}
+
+		.content {
+			height: 100%;
+			@media @mobileMax { position: relative; }
+
+			.inner-content {
+				height: 100%;
+				padding-top: 0;
+
+				.wrapper {
+					@media @tabletMax { margin-right: 480px; }
+					@media screen and (max-width: 1100px) { margin-right: 480px; }
+					@media screen and (max-width: 1070px) { margin-right: 400px; }
+					@media @menuMax { margin-right: 330px; }
+					@media @mobileMax { margin-right: 0; margin-top: -60px; }
+
+					.container {
+						opacity: 0.9;
+
+						&.bg-gray {
+							@media screen and (max-width: 1231px) {
+								padding: 30px;
+
+								h1 {
+									font-size: 40/@rem;
+								}
+							}
+
+							@media screen and (max-width: 1000px) {
+								h1 {
+									font-size: 32/@rem;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&.free-consultations {
+		height: 520px;
+		@media screen and (min-width: 2701px) { background-position: center -210px; }
+		@media screen and (max-width: 2700px) { background-position: center -170px; }
+		@media screen and (max-width: 2500px) { background-position: center -130px; }
+		@media screen and (max-width: 2260px) { background-position: center -70px; }
+		@media screen and (max-width: 1920px) { background-position: center -10px; }
+		@media screen and (max-width: 1500px) { background-position: center 50px; }
+		@media screen and (max-width: 1350px) { background-position: center 100px; }
+		@media @tabletMax {
+			@height: @mobile-header-height + @utility-header-height;
+			body:not(.ppc-nav) & {
+				background-position: center @height;
+			}
+			body.ppc-nav & {
+				background-position: center  @mobile-header-height;
+			}
+		}
+		@media screen and (max-width: 1066px) { background-size: 100% auto; }
+		@media @menuMax {
+			height: 100%;
+			background-image: none !important;
+
+			img {
+				display: block !important;
+			}
+		}
+		@media screen and (max-width: 910px) { background-size: auto 520px; background-position: center 115px; }
+		@media @mobileMax { background-size: auto; }
+
+		&.central-lakes-orthodontics {		
+			@media screen and (min-width:1501px) { height: 720px; }
+			@media screen and (min-width:1218px) and (max-width: 1500px) { height: 600px; }
+		}
+
+		&.prairie-grove-orthodontics {
+			@media screen and (min-width: 1501px) and (max-width: 1920px) { background-position: center -70px; }
+			@media screen and (min-width:1501px) { height: 720px; }
+			@media screen and (min-width:1218px) and (max-width: 1500px) { height: 600px; }
+			@media screen and (max-width: 1900px) { background-position: center -10px; }
+			@media screen and (max-width: 1500px) { background-position: center 20px; }
+			@media screen and (max-width: 1350px) { background-position: center 50px; }
+			@media @tabletMax {
+				body:not(.ppc-nav) & {
+					background-position: center 0; }
+				}
+			@media (max-width:1145px) { background-position: center 30px; }
+			@media (max-width:1015px) { background-position: center 70px; }
+			@media screen and (min-width: 1501px) and (max-width: 1920px) {
+				body.ppc-nav & {
+					background-position: center -120px;
+					@media screen and (max-width: 1900px) { background-position: center -60px; }
+
+				}
+			}
+		}
+		&.rapids-orthodontics {
+			background-position: center -90px;
+			@media screen and (max-width: 1900px) { background-position: center -40px; }
+			@media screen and (max-width: 1750px) { background-position: center 10px; }
+			@media screen and (max-width: 1600px) { background-position: center 40px; }
+			@media screen and (max-width: 1193px) { background-position: center 65px !important; }
+		}
+		&.dietmeier-orthodontics {
+			background-position: center 40px;
+			@media screen and (max-width: 2260px) { background-position: center 20px; }
+			@media screen and (max-width: 1920px) { background-position: center 40px; }
+			body.ppc-nav & {
+				background-position: center 0;
+				@media screen and (max-width: 2260px) { background-position: center 20px; }
+				@media screen and (max-width: 1920px) { background-position: center 0; }
+			}
+		}
+		&.shawano-orthodontics {
+			background-position: center 60px;
+			@media screen and (max-width: 2260px) { background-position-y: 20px; }
+			@media screen and (max-width: 1920px) { background-position-y: 40px; }
+			@media screen and (max-width: 1700px) { background-position-y: 100px; }
+
+			body.ppc-nav & {
+				background-position: center 0;
+				@media screen and (max-width: 2260px) { background-position: center 20px; }
+				@media screen and (max-width: 1920px) { background-position: center 0; }
+			}
+		}
+		&.chapman-orthodontics {
+			@media screen and (max-width: 1920px) { background-position: center -35px; }
+		}
+	}
+
+	&.error404 {
+		height: 520px;
+		@media screen and (min-width: 2701px) { background-position: center -210px; }
+		@media screen and (max-width: 2700px) { background-position: center -170px; }
+		@media screen and (max-width: 2500px) { background-position: center -130px; }
+		@media screen and (max-width: 2260px) { background-position: center -70px; }
+		@media screen and (max-width: 1920px) { background-position: center -10px; }
+		@media screen and (max-width: 1500px) { background-position: center 50px; }
+		@media screen and (max-width: 1350px) { background-position: center 40px; }
+
+		@media @tabletMax {
+			@height: @mobile-header-height + @utility-header-height;
+			background-position: center @height;
+		}
+
+		@media @menuMax {
+			height: 100%;
+			background-image: none !important;
+
+			img {
+				display: block !important;
+			}
+		}
+
+		.content {
+			height: 100%;
+			@media @mobileMax { position: relative; }
+
+			.inner-content {
+				height: 100%;
+				padding-top: 0;
+
+				.wrapper {
+					@media screen and (max-width: 1100px) { margin-right: 450px; }
+					@media @menuMax {
+						position: relative;
+						margin: @gutter-lg 0;
+					}
+				}
+			}
+		}
+	}
+
+	&.share-feedback {
+		height: 100vw;
+		max-height: 600px;
+		background-size: 100%;
+		background-position: center 55px;
+		@media screen and (max-width: 1920px) { background-position: center 110px; }
+		@media screen and (max-width: 1230px) { background-size: cover; }
+		@media screen and (max-width: 1170px) { background-position: 60% 110px; }
+
+		.content {
+			height: 100%;
+
+			.inner-content {
+				height: 100%;
+
+				.wrapper {
+					.container {
+						h1 {
+							margin-bottom: @gutter-md;
+						}
+					}
+				}
+			}
+		}
+
+		@media @mobileMax {
+			background-image: none !important;
+			background-color: @gray-9;
+			height: 100%;
+			max-height: 100%;
+
+			.content {
+				position: relative;
+				margin-top: -40px;
+
+				.inner-content {
+					padding-top: 0;
+				}
+			}
+		}
+	}
+
+	&.custom_mouthguard {
+		height: 100vw;
+		max-height: 720px;
+		background-size: 100%;
+		background-position: center 90px;
+		@media screen and (max-width: 1380px) { background-size: cover; }
+
+		.content {
+			height: 100%;
+
+			.inner-content {
+				height: 100%;
+				padding-top: 0;
+
+				.wrapper {
+					.container {
+						h1 {
+							margin-bottom: @gutter-md;
+						}
+					}
+				}
+			}
+		}
+
+		@media @mobileMax {
+			background-image: none !important;
+			background-color: @gray-9;
+			height: 100%;
+			max-height: 100%;
+
+			.content {
+				position: relative;
+				margin-top: -4*@gutter-sm;
+
+				.inner-content {
+					padding-top: 0;
+				}
+			}
+		}
+	}
+
+	@media @mobileMax {
+		background-image: none !important;
+		height: auto !important;
+		max-height: none !important;
+
+		.content {
+			.inner-content {
+				.wrapper {
+					position: relative;
+				}
+			}
+		}
+	}
+
+	&.prairie-grove-orthodontics,
+	&.dietmeier-orthodontics,
+    &.ross-orthodontics,
+	&.central-lakes-orthodontics {
+		.content {
+			.inner-content {	
+				.wrapper {
+					.container.bg-gray {
+						opacity: .99;
+					}
+				}
+			}
+		}
+	}
+
+	&.cc {
+		max-height: 720px;
+		background-position-y: -145px;
+		@media screen and (max-width: 2200px) { background-position-y: -120px; }
+		@media screen and (max-width: 2000px) { background-position-y: -75px; }
+		@media screen and (max-width: 1900px) { background-position-y: 0; }
+		@media screen and (max-width: 1700px) { background-position-y: 60px; }
+		@media screen and (max-width: 1600px) { background-position-y: 140px; }
+        @media screen and (max-width: 1400px) {
+            background-size: auto 800px;
+            background-position-y: 115px !important;
+        }
+        @media screen and (max-width: 924px) { 
+			background-size: auto 720px; 
+			background-position: center 150px; 
+		}
+        
+        .content {
+            .inner-content {
+                .wrapper {
+                    &.left-side {
+                        @media screen and (max-width: 1410px) { margin-right: 660px; }
+                        @media screen and (max-width: 1290px) { margin-right: 560px; }
+                        @media @tabletMax { margin-right: 530px; }
+                        @media screen and (max-width: 1100px) { margin-right: 440px; }
+                        @media screen and (max-width: 990px) { margin-right: 330px; }
+                        @media screen and (max-width: 823px) { margin-right: 250px; }
+                        @media @mobileMax { margin-right: 0px; }
+                    }
+                    .container {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+		@media @mobileMax {
+			position: relative;
+            background: #F1B340;
+            overflow: hidden;
+            &::before {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 665px;
+                max-height: 665px;
+                background-image: url(/wp-content/themes/simko/images/placeholder/graphics/confidence-counts-club/CONFETTI_WEB-01.svg);				
+                background-repeat: no-repeat;
+                background-size: auto 100%;
+                background-position: 85% top;
+                top: 35vw;
+            }
+			&.brand-palette-prairie-grove {
+				&::before {
+					background-image: url(/wp-content/themes/simko/images/placeholder/graphics/confidence-counts-club/CONFETTI_WEB-01-PGO.svg);				
+				}
+			}	
+			&.brand-palette-dietmeier {
+				&::before {
+					background-image: url(/wp-content/themes/simko/images/placeholder/graphics/confidence-counts-club/CONFETTI_WEB-01-DTM.svg);				
+				}
+			}		
+		}
+		@media @mobileSmallerMax {
+			&::before {                
+                background-repeat: repeat;
+                background-size: auto 350px;
+                top: 38vw;
+            }			
+		}
+
+		.mobile-hero {
+			display: none;
+
+			@media @mobileMax {
+				display: block;
+			}
+		}
+		p:last-of-type {
+			a {
+				text-decoration: underline;
+			}
+		}
+	}
+}
+
+

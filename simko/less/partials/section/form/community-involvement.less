@@ -1,0 +1,129 @@
+section.form.community-involvement {
+	.inner-content {
+		padding: 90px 0 120px;
+		.display-flex;
+		.flex-justify-content-flex-start;
+
+		article {
+			padding-right: 60px;
+			@percent: percentage(2/5);
+			width: @percent;
+		}
+
+		aside {
+			@percent: percentage(3/5);
+			width: @percent;
+
+			form {
+				.form-group {
+					width: calc(~"100% + @{gutter-lg}");
+					margin: 0 -@gutter-lg/2 @gutter-lg/2;
+					margin-bottom: @gutter-lg/2;
+					.display-flex;
+					.flex-justify-content-flex-start;
+
+					.input-group {
+						margin: 0 15px;
+						@width: calc(~"100% - @{gutter-lg}");
+						width: @width;
+						.flex(0, 0, @width);
+
+						&:not(.full) {
+							@half: percentage(1/2);
+							@width: calc(~"@{half} - @{gutter-lg}");
+							width: @width;
+							.flex(0, 0, @width);
+						}
+					}
+				}
+
+				label {
+					font-weight: 300;
+					font-size: 15/@rem;
+					line-height: 22px;
+					margin-bottom: 5px;
+					display: block;
+					width: 100%;
+					letter-spacing: 0;
+					color: @default-color;
+					white-space: nowrap;
+					padding: 0;
+					cursor: pointer;
+					
+				}
+
+				.initialize-text() {
+					
+					letter-spacing: 0;
+					color: @placeholder;
+					.left;
+				}
+
+				input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]),
+				textarea,
+				select {
+					padding: 1px @gutter-sm;
+					display: block;
+					background-image: none !important;
+					width: 100%;
+					font-size: 15/@rem;
+					line-height: 22px;
+					font-weight: 300;
+					height: 36px;
+					border: none;
+					background: @gray-2;
+					.border-radius(2px);
+					.appearance(none);
+					.initialize-text;
+					.transition(~"color 0.2s linear, background 0.2s linear, border 0.2s linear");
+
+					&.fill {
+						border-color: var(--color-primary);
+						color: var(--color-primary);
+					}
+
+					&::-webkit-input-placeholder {
+						.initialize-text;
+					}
+
+					&::-moz-placeholder {
+						.initialize-text;
+					}
+
+					&:-ms-input-placeholder {
+						.initialize-text;
+					}
+
+					&:-moz-placeholder {
+						.initialize-text;
+					}
+
+					&:placeholder-shown {
+						.initialize-text;
+					}
+
+					&::placeholder {
+						.initialize-text;
+					}
+				}
+
+				textarea {
+					height: none;
+					min-height: 5*@gutter-sm;
+					resize: none;
+					padding: 0.5*@gutter-sm;
+
+					&.auto-expand {
+						min-height: 0px;
+						height: 2*@gutter-sm;
+
+						&.fill {
+							min-height: 5*@gutter-sm;
+							height: 5*@gutter-sm;
+						}
+					}
+				}
+			}
+		}
+	}
+}

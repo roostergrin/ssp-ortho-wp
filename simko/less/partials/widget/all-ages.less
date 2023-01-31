@@ -1,0 +1,276 @@
+div.widget.all-ages {
+	.container {
+		.display-flex;
+		.flex-align-items-center;
+		@media screen and (max-width:1020px) { .flex-direction-column; }
+
+		article,
+		aside {
+			width: percentage(1/2);
+			@media screen and (max-width:1020px) { width: 100%; }
+		}
+
+		article {
+			padding: 0 2*@gutter-lg;
+			@media (max-width:1290px) { padding: 0 @gutter-lg 0 0; }
+			@media @mobileMax { padding: 0 30px; }
+
+			h2, .h2 {
+				margin-bottom: @gutter-md;
+			}
+
+			p {
+				&:last-of-type {
+					margin-bottom: 0;
+				}
+
+				&.tab-content {
+					display: none;
+					opacity: 0;
+					.ease-out(all, 0.3s);
+
+					&.active {
+						display: block;
+						opacity: 1;
+					}
+				}
+				a.cta {
+					display: block;
+					width: fit-content;
+				}
+			}
+
+			> div,
+			.read-more {
+				margin-top: @gutter-md;
+			}
+
+			.read-more {
+				margin-bottom: 2*@gutter-md;
+			}
+
+			.container-buttons {
+				margin-top: 80px;
+				.display-flex;
+
+				a {
+					flex-grow: 1;
+					.border-radius(2px);
+
+					&:not(:last-of-type) {
+						margin-right: @gutter-sm;
+					}
+
+					&.active {
+						background-color: var(--color-primary);
+					}
+				}
+			}
+		}
+
+		aside {
+			overflow: hidden;
+
+			.container-images {
+				position: relative;
+				width: 100%;
+				height: 800px;
+				.display-flex;
+				.flex-align-items-center;
+
+				.tab-image {
+					width: 100%;
+					position: absolute;
+					right: -800px;
+					.ease-out(right, 0.3s);
+					.border-top-left-radius(180px);
+					.border-bottom-left-radius(180px);
+
+					&.active {
+						right: -1px;
+						transition-delay: 0.5s;
+					}
+				}
+			}
+
+			.all-ages.owl-carousel {
+				.img-container {
+					position: relative;
+
+					img {
+						.border-top-left-radius(5px);
+						.border-top-right-radius(5px);
+						@media (max-width:1020px) {
+							border-radius: 5px;
+						}
+					}
+
+					.label {
+						position: absolute;
+						bottom: 0;
+						background-color: var(--color-primary);
+						color: @white;
+						width: 100%;
+						padding: @gutter-sm/2 0;
+						text-align: center;
+						.border-bottom-left-radius(5px);
+						.border-bottom-right-radius(5px);
+					}
+				}
+
+				.owl-nav {
+					width: 2*@gutter-sm;
+					opacity: 1;
+					margin: @gutter-sm auto 0;
+					.display-flex;
+					.flex-justify-content-center;
+					.flex-align-items-center;
+
+					.owl-prev,
+					.owl-next {
+						margin: auto;
+						width: 14px;
+						height: 14px;
+						outline: none;
+						cursor: pointer;
+					}
+
+					.owl-prev {
+						&:before {
+							content: "\e909";
+							color: var(--color-gray-1);
+							margin: auto;
+							width: 14px;
+							height: 14px;
+							font-size: 14px;
+							.Icons;
+							.display-flex;
+							.flex-justify-content-flex-end;
+							.flex-align-items-center;
+							font-weight: 700;
+						}
+
+						&:hover {
+							&:before {
+								color: var(--color-primary);
+							}
+						}
+					}
+
+					.owl-next {
+						&:before {
+							content: "\e90a";
+							color: var(--color-gray-1);
+							margin: auto;
+							width: 14px;
+							height: 14px;
+							font-size: 14px;
+							.Icons;
+							.display-flex;
+							.flex-justify-content-flex-end;
+							.flex-align-items-center;
+							font-weight: 700;
+						}
+
+						&:hover {
+							&:before {
+								color: var(--color-primary);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	section.smile-confidently & {
+		.container {
+			padding-top: 110px;
+			padding-bottom: 90px;
+
+			article {
+				position: relative;
+				height: 400px;
+				.display-flex;
+				.flex-direction-column;
+				&.great-river-orthodontics { height: 430px; }
+				&.prairie-grove-orthodontics {
+					height: 500px;
+					@media (min-width:551px) and (max-width:1020px) { height: 300px;}
+					@media (min-width:461px) and (max-width:550px) { height: 400px;}
+					@media (min-width:321px) and (max-width:424px) { height: 460px;}
+					@media (max-width:320px) { height: 545px;}
+				}
+				@media screen and (max-width:1020px) { height: fit-content;}
+
+				.container-buttons {
+					position: absolute;
+					bottom: 0;
+
+					a {
+						padding: 0 37px;
+					}
+				}
+
+				.content-wrapper {
+					margin-top: 0;
+					height: 100%;
+					margin-bottom: 2*@gutter-sm;
+					.display-flex;
+					.flex-direction-column;
+
+					p {
+						margin-bottom: 0;
+
+						a {
+							&.cta.text { margin: 15px 0 30px 0; }
+						}
+					}
+				}
+			}
+
+			aside {
+				.container-images {
+					height: 549px;
+
+					.tab-image {
+						width: 100%;
+						max-width: 549px;
+						max-height: 549px;
+					}
+				}
+			}
+
+			@media screen and (max-width:1020px) {
+				padding-top: 90px;
+				aside {
+					.container-images {
+						display: none;
+						visibility: hidden;
+					}
+				}
+				article {
+					h2 {
+						font-size: 28/@rem;
+						line-height: 30/@rem;
+					}
+
+					p {
+						margin-bottom: 60px;
+					}
+					.container-buttons {
+						display: none;
+					}
+				}
+			}
+			@media screen and (min-width:1021px) {
+				aside {
+					.all-ages.owl-carousel {
+						display: none;
+					}
+				}
+			}
+			@media @mobileMax { padding: @gutter-lg 0; }
+		}
+	}
+}

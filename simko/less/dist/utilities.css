@@ -1,0 +1,50 @@
+.iframe {
+  overflow: auto;
+}
+.inherit {
+  color: inherit;
+}
+.hidden {
+  display: none;
+}
+.invisible {
+  visibility: hidden;
+}
+.inline-block {
+  display: inline-block;
+}
+.block {
+  display: block;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.break-word {
+  white-space: normal;
+  word-break: break-all;
+}
+.underline {
+  text-decoration: underline;
+}
+.no-underline {
+  text-decoration: none;
+}
+.nowrap {
+  white-space: nowrap;
+}
+.left {
+  text-align: left;
+}
+.center,
+.text-center {
+  text-align: center;
+}
+.right {
+  text-align: right;
+}
+.font-weight-ultra-light {
+  font-weight: 100;
+}
+.grayscale {
+  filter: grayscale(100%);
+}

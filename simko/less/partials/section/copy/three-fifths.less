@@ -1,0 +1,71 @@
+section.copy.three-fifths {
+	margin-top: 95px;
+	margin-bottom: 55px;
+
+	.inner-content {
+		padding: 0;
+		.display-flex;
+		.flex-justify-content-flex-start;
+
+		article {
+			@width: percentage(3/5);
+			width: @width;
+			.flex(0, 0, @width);
+
+			.mb-50 {
+				margin-bottom: 50px;
+			}
+		}
+
+		aside {
+			@width: percentage(2/5);
+			width: @width;
+			.flex(0, 0, @width);
+			padding-left: 65px;
+			padding-right: 0;
+			.display-flex;
+			.flex-justify-content-flex-end;
+
+			body.page-template-dentist-bio & {
+				background-color: @gray-2;
+				margin-right: 70px;
+				padding-right: 0;
+				max-width: 370px;
+				.flex-direction-column;
+
+				.details {
+					padding: 40px 30px 20px;
+
+					ul.triangles {
+						li {
+							margin-bottom: @gutter-sm;
+							.display-flex;
+							.flex-justify-content-center;
+							.flex-align-items-baseline;
+
+							&:before {
+								content: '';
+								width: 0;
+								height: 0;
+								padding-left: @gutter-sm/2;
+								border-top: 5px solid transparent;
+								border-left: 10px solid var(--color-gray-1);
+								border-bottom: 5px solid transparent;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&.reverse {
+		.inner-content {
+			aside {
+				padding-left: 0;
+				padding-right: 65px;
+				.flex-justify-content-flex-start;
+			}
+		}
+	}
+}

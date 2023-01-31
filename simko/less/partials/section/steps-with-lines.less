@@ -1,0 +1,706 @@
+section.steps-with-lines {
+    margin: @gutter-lg 0 !important;
+
+    &.dental-monitoring {
+        margin: @gutter-lg 0 6*@gutter-lg  !important;
+        body.page-template-invisalign-virtual-care &{
+            margin: 0 !important;
+        }
+        @media @menuMax {
+            margin: 0 0 2*@gutter-lg  !important;
+        }
+
+        .content {
+            .inner-content {
+                .circle-copy {
+                    &:not(.step-three) {
+                        @media @mobileMax {
+                            margin: 2*@gutter-lg 0;
+                        }
+                    }
+
+                    &.step-one {
+                        .circle {
+                            top: 60px;
+                            margin-left: 0;
+
+                            @media @mobileMax {
+                                margin: 20px auto;
+                            }
+                        }
+
+                        .copy {
+                            margin-top: 3*@gutter-md;
+                            padding: 0 @gutter-lg 0 0;
+
+                            h3 {
+                                margin-bottom: @gutter-sm;
+                            }
+
+                            @media @tabletSmallRes {
+                                margin-top: 2*@gutter-md;
+                            }
+
+                            @media @mobileMax {
+                                margin-top: 0;
+                                padding: 0;
+                            }
+                        }
+                    }
+
+                    &.step-two {
+                        .circle {
+                            top: 60px;
+
+                            @media @mobileMax {
+                                margin: 20px auto;
+                            }
+                        }
+
+                        .copy {
+                            margin-top: 3*@gutter-md;
+                            padding: 0 0 0 @gutter-lg;
+
+                            h3 {
+                                margin-bottom: @gutter-sm;
+                            }
+
+                            @media @tabletSmallRes {
+                                margin-top: 2*@gutter-md;
+                            }
+
+                            @media @mobileMax {
+                                margin-top: 0;
+                                padding: 0;
+                            }
+                        }
+
+                    }
+
+                    &.step-three {
+                        margin: 0;
+
+                        .circle {
+                            top: 60px;
+                            margin-left: 0;
+
+                            @media @mobileMax {
+                                margin: 20px auto;
+                            }
+
+                        }
+
+                        .copy {
+                            margin-top: 3*@gutter-md;
+                            padding: 0 @gutter-lg 0 0;
+
+                            h3 {
+                                margin-bottom: @gutter-sm;
+                            }
+
+                            @media @tabletSmallRes {
+                                margin-top: 2*@gutter-md;
+                            }
+
+                            @media @mobileMax {
+                                margin-top: 0;
+                                padding: 0;
+                            }
+                        }
+
+                    }
+                    &.step-four {
+                        .circle {
+                            top: 60px;
+
+                            @media @mobileMax {
+                                margin: 20px auto;
+                            }
+                        }
+
+                        .copy {
+                            margin-top: 3*@gutter-md;
+                            padding: 0 0 0 @gutter-lg;
+
+                            h3 {
+                                margin-bottom: @gutter-sm;
+                            }
+
+                            @media @tabletSmallRes {
+                                margin-top: 2*@gutter-md;
+                            }
+
+                            @media @mobileMax {
+                                margin-top: 0;
+                                padding: 0;
+                            }
+                        }
+
+                    }
+
+                    &.right {
+                        .circle {
+                            margin-right: 0;
+                            margin-left: @gutter-lg;
+
+                            @media @mobileMax {
+                                margin: 20px auto;
+                            }
+                        }
+                    }
+
+                    .mobile.vertical-pattern {
+                        border-right: 4px dashed var(--color-primary);
+                        margin-top: 30px;
+                    }
+
+                    .circle {
+                        @media @tabletSmallRes {
+                            height: 150px;
+                            width: 150px;
+                        }
+
+                        .small {
+                            @media @tabletSmallRes {
+                                font-size: 20px;
+                            }
+                        }
+
+                        .large {
+                            @media @tabletSmallRes {
+                                font-size: 35px;
+                            }
+                        }
+
+                    }
+
+                    .copy {
+                        width: 42%;
+
+                        @media @mobileMax {
+                            width: 100%;
+                        }
+                    }
+
+                    .image {
+                        min-height: 400px;
+                        .flex(1, 1, 1);
+
+                        @media @mobileMax {
+                            min-height: 500px;
+                        }
+
+                        @media screen and (max-width: 400px) {
+                            min-height: 300px;
+                        }
+
+                        &.animate-left {
+                            transform: translateX(1000px);
+
+                            body.page-template-invisalign-virtual-care & {
+                                @media @tabletMin{
+                                    transform: translateX(100px);
+                                }
+                            }
+
+                            @media @mobileMax {
+                                transform: translateX(0);
+                            }
+
+                            &.active {
+                                transform: translateX(60px);
+
+                                @media @mobileMax {
+                                    transform: translateX(0);
+                                }
+                            }
+
+                            img {
+                                max-width: ~'calc(100% + 60px)';
+                                width: ~'calc(100% + 60px)';
+                                left: -60px;
+                                .border-top-left-radius(180px);
+                                .border-bottom-left-radius(180px);
+
+                                @media @tabletSmallRes {
+                                    .border-top-left-radius(90px);
+                                    .border-bottom-left-radius(90px);
+                                }
+
+                                @media @mobileMax {
+                                    left: 0;
+                                    max-width: ~'calc(100% + 30px)';
+                                    width: ~'calc(100% + 30px)';
+                                    .border-top-left-radius(90px);
+                                    .border-bottom-left-radius(90px);
+                                }
+                            }
+                        }
+
+                        &.animate-right {
+                            transform: translateX(-1000px);
+                            body.page-template-invisalign-virtual-care & {
+                                &:not(.mobile){
+                                    transform: translateX(-100px);
+                                }
+                            }
+
+                            @media @mobileMax {
+                                transform: translateX(-30px);
+                                .border-top-left-radius(90px);
+                                .border-bottom-left-radius(90px);
+                            }
+
+                            &.active {
+                                transform: translateX(-60px);
+                            }
+
+                            img {
+                                max-width: ~'calc(100% + 60px)';
+                                width: ~'calc(100% + 60px)';
+                                right: -60px;
+                                .border-top-right-radius(180px);
+                                .border-bottom-right-radius(180px);
+
+                                @media @tabletSmallRes {
+                                    .border-top-right-radius(90px);
+                                    .border-bottom-right-radius(90px);
+                                }
+
+                                @media @mobileMax {
+                                    right: 0;
+                                    max-width: ~'calc(100% + 30px)';
+                                    width: ~'calc(100% + 30px)';
+
+                                    .border-top-right-radius(90px);
+                                    .border-bottom-right-radius(90px);
+
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .dash-pattern {
+                    &.step-one {
+                        width: ~'calc(100% - 200px)';
+                        height: 325px;
+                        left: 100px;
+                        top: 150px;
+                        border-bottom: 4px dashed var(--color-primary);
+                        border-left: 4px dashed var(--color-primary);
+
+                        @media @tabletSmallRes {
+                            left: 75px;
+                            width: ~'calc(100% - 150px)';
+                        }
+                    }
+
+                    &.step-two {
+                        width: ~'calc(100% - 200px)';
+                        height: 600px;
+                        right: 100px;
+                        top: -105px;
+                        border-bottom: 4px dashed var(--color-primary);
+                        border-right: 4px dashed var(--color-primary);
+
+                        @media @tabletSmallRes {
+                            right: 75px;
+                            width: ~'calc(100% - 150px)';
+                        }
+                    }
+
+                    &.step-three {
+                        width: ~'calc(100% - 200px)';
+                        height: 250px;
+                        left: 100px;
+                        top: -88px;
+                        border-left: 4px dashed var(--color-primary);
+
+                        @media @tabletSmallRes {
+                            left: 75px;
+                            width: ~'calc(100% - 150px)';
+                        }
+                    }
+                    body.page-template-invisalign-virtual-care & {
+                        &.step-three {
+                            width: ~'calc(100% - 200px)';
+                            height: 565px;
+                            left: 100px;
+                            top: -88px;
+                            border-left: 4px dashed var(--color-primary);
+                            border-bottom: 4px dashed var(--color-primary);
+
+                            @media @tabletSmallRes {
+                                left: 75px;
+                                width: ~'calc(100% - 150px)';
+                            }
+                        }
+                        &.step-four {
+                            width: ~'calc(100% - 200px)';
+                            height: 130px;
+                            right: 100px;
+                            top: -105px;
+                            border-right: 4px dashed var(--color-primary);
+
+                            @media @tabletSmallRes {
+                                right: 75px;
+                                width: ~'calc(100% - 150px)';
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.prairie-grove-orthodontics {
+        .content {
+            .inner-content {
+                div:nth-of-type(5) {
+                    .copy {
+                        margin-top: 50px;
+                    }
+                }
+            }
+        }
+    }
+
+    .heading {
+        margin: 3*@gutter-lg auto;
+        max-width: 1050px;
+
+        h2 {
+            text-align: center;
+        }
+
+        @media @menuMax {
+            margin: @gutter-lg auto 0;
+        }
+    }
+
+    div.circle-copy {
+        margin: 3*@gutter-lg 0;
+        position: relative;
+        .display-flex;
+        .flex-justify-content-flex-start;
+
+        @media @menuMax {
+            margin: @gutter-lg auto;
+        }
+
+        &.flex-end {
+            margin: 6*@gutter-lg 0;
+            .flex-justify-content-flex-end;
+            body.page-template-invisalign-virtual-care & {
+                &.step-four {
+                    margin: 6*@gutter-lg 0 0;
+                }
+
+            }
+            @media @mobileMax {
+                margin: @gutter-lg 0;
+            }
+        }
+
+        .image {
+            flex: 0 0 25%;
+            display: flex;
+            justify-content: flex-end;
+            .ease-out(all, 0.3s);
+
+            &.animate-left {
+                transform: translateX(800px);
+            }
+
+            &.animate-right {
+                transform: translateX(-800px);
+            }
+
+            &.active {
+                transform: translateX(0);
+            }
+
+            @media @mobileMax {
+
+                &.animate-left,
+                &.animate-right {
+                    transform: translateX(0);
+                }
+            }
+        }
+
+        .circle {
+            margin: -45px 30px;
+            position: relative;
+            border-radius: 50%;
+            background-color: var(--color-primary);
+            color: @white;
+            width: 200px;
+            height: 200px;
+            .display-flex;
+            .flex-direction-column;
+            .flex-justify-content-center;
+            .flex-align-items-center;
+            font-weight: bold;
+            flex: 0 0 auto;
+
+            .small {
+                font-size: 25px;
+                margin-top: -@gutter-sm;
+                margin-bottom: @gutter-sm/2;
+            }
+
+            .large {
+                font-size: 45px;
+            }
+
+        }
+
+        .copy {
+            width: 75%;
+            max-width: 620px;
+            padding-right: @gutter-lg;
+
+            @media @wrapperMin {
+                padding-right: 0;
+                margin-right: @gutter-lg;
+
+            }
+
+            @media @mobileMax {
+                padding-right: 0;
+            }
+
+            h3 {
+                margin-bottom: 5/3rem;
+
+                @media @mobileMax {
+                    font-size: 28px;
+                    line-height: 30px;
+                }
+            }
+
+            .description {
+                max-width: 480px;
+                float: right;
+
+                @media @mobileMax {
+                    max-width: 100%;
+                }
+            }
+        }
+
+        @media @mobileMax {
+            margin: @gutter-lg 0;
+            .flex-direction-column;
+
+            &.flex-end {
+                .flex-direction-column-reverse;
+            }
+
+            .circle {
+                margin: @gutter-sm auto;
+            }
+
+            .copy {
+                width: 100%;
+                text-align: center;
+                margin: auto;
+
+                .h3 {
+                    font-size: 28/@rem;
+                    line-height: 30/28;
+                }
+            }
+        }
+
+        .dash-pattern {
+            z-index: -1;
+
+            &.step-one {
+                border-bottom: 2px dashed var(--color-primary);
+                border-left: 2px dashed var(--color-primary);
+                width: ~"calc(100%  - 970px)";
+                position: absolute;
+                left: 130px;
+                @heigth: 280px;
+                height: 280px;
+                top: 50%;
+
+                // body.page-template-virtual-monitoring &{
+                // 	width: ~"calc(100%  - 260px)";
+                // 	height: 223px;
+                // }
+
+                @media @mobileMax {
+                    display: none;
+                }
+
+                @media screen and (max-width: 1090px) {
+                    height:~"calc(100% - @{heigth}*0.3)";
+                    top: 47%;
+                }
+            }
+
+            &.step-two {
+                border-bottom: 2px dashed var(--color-primary);
+                border-right: 2px dashed var(--color-primary);
+                width: ~"calc(100%  - 260px)";
+                position: absolute;
+                right: 130px;
+                height: 625px;
+                top: -30%;
+
+                // body.page-template-virtual-monitoring &{
+                // 	height: 362px;
+                // }
+
+                @media @mobileMax {
+                    display: none;
+                }
+            }
+
+            &.step-three {
+                border-left: 2px dashed var(--color-primary);
+                width: ~"calc(100%  - 970px)";
+                position: absolute;
+                left: 130px;
+                height: 50px;
+                top: -55%;
+
+                // body.page-template-virtual-monitoring & {
+                // 	height: 80px;
+                // 	top: -50%;
+                // }
+
+                @media @mobileMax {
+                    display: none;
+                }
+            }
+
+            &.step-four {
+                border-right: 2px dashed var(--color-primary);
+                width: ~"calc(100%  - 260px)";
+                position: absolute;
+                @heigth: 280px;
+                height: 280px;
+                top: 50%;
+
+                // body.page-template-virtual-monitoring &{
+                // 	height: 362px;
+                // }
+
+                @media @mobileMax {
+                    display: none;
+                }
+            }
+        }
+
+        .mobile.vertical-pattern {
+            margin: 0 auto;
+            height: 100px;
+            width: 1px;
+            border-right: 2px dashed var(--color-primary);
+            margin-top: -50px;
+            margin-bottom: 30px;
+        }
+    }
+
+    .circle-copy.right {
+        .copy {
+            h3 {
+                padding-left: 100px;
+
+                @media screen and (max-width: 1050px) {
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+
+    .icons {
+        .display-flex;
+        .flex-justify-content-flex-end;
+
+        @media @mobileMax {
+            .flex-direction-column;
+            .flex-justify-content-center;
+            .flex-align-items-center;
+        }
+
+        .widget {
+            margin: 0 @gutter-lg;
+
+            @media @mobileMax {
+                margin: @gutter-lg;
+            }
+        }
+    }
+
+    .step-two-point-five {
+        width: 100%;
+        height: auto;
+        position: relative;
+        margin: 90px 0 60px 0;
+		.main-container {
+			padding: 80px 60px 80px 0;
+			.display-flex;
+            @media (max-width:700px) {
+                .flex-direction-column;
+                .flex-align-items-center;
+                padding: @gutter-lg;
+            }
+			.img-container {
+				width: 230px;
+				.display-flex;
+				.flex-justify-content-center;
+				.flex-align-items-center;
+				i {
+                    color: var(--color-primary);
+                    &.icon-virtual-consultations_smartphone {
+                        font-size: 165px;
+                        .transform(~"translateX(18px) rotate(-90deg)");
+                        @media (max-width:700px) {
+                            .transform(~"translateX(0)");
+                        }
+                    }
+				}
+			}
+			.content-container {
+				width: calc(~"100% - 230px");
+				padding-left: 35px;
+                @media (max-width:700px) {
+                    width: 100%;
+                    padding: 0;
+                }
+			}
+		}
+        .dash {
+            position: absolute;
+            border-right: 2px dashed var(--color-primary);
+            width: 130px;
+            left: 0;
+            height: 500px;
+            z-index: -100;
+            top: 0;
+            @media (max-width: 1140px) {top: -90px;}
+            @media (max-width: 1050px) {
+                top: 0;
+                height: 600px;
+            }
+            @media @mobileMax {
+                display: none;
+            }
+        }
+    }
+    &.show-two-point-five {
+        div.circle-copy.flex-end {
+            margin-bottom: 60px;
+            .dash-pattern.step-two {
+                border-bottom: none;
+            }
+        } 
+    }
+
+}

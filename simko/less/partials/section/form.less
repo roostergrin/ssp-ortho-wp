@@ -1,0 +1,186 @@
+section.form {
+	&.rg,
+	&.contact {
+		.content .inner-content > article {
+			min-height: 0;
+			@media screen and (min-width:1200px){ min-height: 0; }
+			@media screen and (min-width:783px) and (max-width:1199px) { min-height: 0; }
+		}
+	}
+
+
+	body.page-template-community-involvement & {
+		@media @mobileMax { margin-top: 3*@gutter-lg !important; }
+	}
+
+	body.page-template-refer-a-friend-program.smiles-by-ross & {
+		@media @mobileSmallerMax {
+			h1 { font-size: 32px; }
+		}
+	}
+
+	.content {
+		.inner-content {
+			margin: auto;
+			.display-flex;
+			.flex-align-items-stretch;
+			.flex-justify-content-flex-start;
+			@media @mobileMax { display: block; }
+
+			h1, h2 { color: var(--color-primary); margin-bottom: @gutter-sm; }
+
+			> article, > aside {
+				position:relative;
+				 @width:percentage(1/2);
+				.flex(0,0,@width);
+				width:@width;
+				max-width:@width;
+				@media @mobileMax {
+					width:100%;
+					max-width:100%;
+				}
+			}
+
+			> article {
+				padding-right: 2*@gutter-lg;
+				@media screen and (min-width:1200px){ min-height: 575px; }
+				@media screen and (min-width:783px) and (max-width:1199px) { min-height: 670px; }
+				@media @mobileMax { padding-right: 0; }
+				body.page-template-schedule-orthodontic-consultation &,
+				body.page-template-schedule-free-consultation-cwi &,
+				body.page-template-schedule-your-free-consultation-scv &,
+				body.page-template-schedule-free-consultation-ewi &,
+				body.page-template-free-orthodontic-consultation & {
+					display: flex;
+					flex-direction: column;
+				}
+
+				body.page-template-free-custom-mouthguard & {
+					p {
+						margin-bottom: 4*@gutter-sm;
+					}
+				}
+
+				.img-container {
+					position: relative;
+					width: 100%;
+					height: 100%;
+					margin-left: -4*@gutter-lg;
+					@media screen and (max-width: 1409px) { margin-left: -2*@gutter-lg; }
+					@media @mobileMax { margin-left: -@gutter-lg; }
+
+					img {
+						&.top-left-radius {
+							.border-top-left-radius(90px);
+						}
+
+						&.bottom-left-radius {
+							.border-bottom-left-radius(90px);
+						}
+
+						&.top-right-radius {
+							.border-top-right-radius(90px);
+						}
+
+						&.bottom-right-radius {
+							.border-bottom-right-radius(90px);
+						}
+						&.bg-img{
+							body.page-template-schedule-orthodontic-consultation &,
+							body.page-template-schedule-free-consultation-cwi &,
+							body.page-template-schedule-your-free-consultation-scv &,
+							body.page-template-schedule-free-consultation-ewi &,
+							body.page-template-free-orthodontic-consultation &,
+							body.page-template-free-custom-mouthguard & {
+								position: relative;
+							}
+						}
+					}
+
+					&.free-consultations {
+						height: 315px;
+						@media @mobileMax { height: 300px }
+
+						img {
+							object-position: center -70px;
+							@media screen and (max-width: 1079px) { object-position: center -35px; }
+							@media @menuMax { object-position: center top; }
+							@media @mobileMax { object-position: center -120px; }
+							@media screen and (max-width: 720px) { object-position: center -80px; }
+							@media screen and (max-width: 620px) { object-position: center -60px; }
+							@media screen and (max-width: 520px) { object-position: center -40px; }
+							@media screen and (max-width: 420px) { object-position: center top; }
+						}
+						
+						&.prairie-grove-orthodontics {
+							img {
+								@media @mobileMax { object-position: center -160px; }
+								@media screen and (max-width: 720px) { object-position: center -120px; }
+								@media screen and (max-width: 620px) { object-position: center -60px; }
+								@media screen and (max-width: 520px) { object-position: center -40px; }
+							}
+						}
+					}
+
+					&.custom-mouthguard {
+						max-height: 400px;
+						@media @mobileMax { height: 300px }
+
+						img {
+							object-position: right 0;
+							@media @menuMax { object-position: -240px 0; }
+							@media @mobileMax { object-position: right -10px; }
+							@media screen and (max-width: 630px) { object-position: right 0; }
+							@media screen and (max-width: 475px) { object-position: right 0; }
+							// @media screen and (max-width: 400px) { object-position: right 0; }
+
+							&.top-right-radius {
+								.border-top-right-radius(150px);
+								@media @mobileMax { .border-top-right-radius(100px); }
+							}
+
+							&.bottom-right-radius {
+								.border-bottom-right-radius(150px);
+								@media @mobileMax { .border-bottom-right-radius(100px); }
+							}
+						}
+					}
+				}
+			}
+
+			> aside {
+				// padding-right: @gutter-lg;
+				@media @mobileMax { padding-right: 0; margin-top: 2*@gutter-lg; }
+				body.page-template-free-custom-mouthguard & {
+					@media @mobileMax { margin-top: 4*@gutter-sm; }
+				}
+
+				.form-wrapper {
+					h2 { margin-bottom: 0; }
+				}
+				@media @mobileMax{
+					body.page-template-community-involvement & {
+						margin-top: @gutter-lg;
+					}
+				}
+			}
+		}
+	}
+
+	&.shawano-orthodontics {
+		.content {
+			.inner-content {
+				article {
+					.img-wrapper-left {
+						@media (max-width: 475px) {
+							margin-left: -40px;
+							img {
+								width: 80%;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

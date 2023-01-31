@@ -1,0 +1,66 @@
+.widget.bandaid {
+	@width: 220px;
+	width: @width;
+	max-width: @width;
+	text-align: center;
+	.display-flex;
+	.flex-direction-column;
+	.flex-align-items-center;
+
+	.icon-container {
+		width: 120px;
+		height: 90px;
+		// margin-bottom: @gutter-lg/2;
+		position: relative;
+		.display-flex;
+		.flex-align-items-flex-start;
+		.flex-justify-content-center;
+
+		> div {
+			position: relative;
+			width: 100px;
+			height: 80px;
+			.display-flex;
+			.flex-align-items-center;
+			.flex-justify-content-center;
+
+			img,
+			div {
+                &.tilt-right,
+                &.tilt-left {
+					width: 70px;
+					height: 70px;
+                }
+
+                &.tilt-left {
+                    position: absolute;
+                    transform: rotate(45deg) scale(1);
+                    opacity: 0;
+                    top: 5px;
+                    left: 15px;
+                    -webkit-transition:  transform 0.3s ease-out, opacity 0.5s ease-out;
+                    -moz-transition:  transform 0.3s ease-out, opacity 0.5s ease-out;
+                    -ms-transition:  transform 0.3s ease-out, opacity 0.5s ease-out;
+                    -o-transition:  transform 0.3s ease-out, opacity 0.5s ease-out;
+                    transition:  transform 0.3s ease-out, opacity 0.5s ease-out;
+                }
+			}
+
+			&:hover {
+				img,
+				div {
+                    &.tilt-left {
+                        opacity: 0.5;
+                        transform: rotate(90deg) scale(1);
+					}
+				}
+			}
+		}
+	}
+
+	p {
+		font-size: 18/@rem;
+		line-height: 22/@rem;
+		
+	}
+}

@@ -1,0 +1,62 @@
+div.widget.schedule-consultation {
+	background-color: var(--color-primary);
+	color: @white;
+	padding: 30px;
+	max-width: 335px;
+	.border-radius(5px);
+	z-index: 1;
+	position: absolute;
+	top: 0;
+	right: 0;
+	opacity: 0;
+	.transition(~"top 0.3s ease-out, opacity 0.3s ease-out");
+	body.page-template-contact-us &,
+	body.page-template-orthodontist-office.B & { display: none; }
+	body.page-template-invisalign-virtual-care & { display: none; }
+
+	h2 {
+		color: @white;
+		margin-bottom: @gutter-sm/2;
+	}
+	&:not(.sub-hero) {
+		h2 {
+			font-size: 30/@rem;
+		}
+	}
+
+	.container {
+		a:first-of-type {
+			margin-right: @gutter-sm;
+		}
+	}
+
+	// @media screen and (max-width: 1035px) {
+		// position: relative;
+		// width: calc(~"100% + 120px");
+		// max-width: 100vw;
+		// margin: -50px 0 40px -60px;
+		// -webkit-border-radius: 0;
+		// -moz-border-radius: 0;
+		// border-radius: 0;
+		// opacity: 1;
+		// top: 0;
+	// }
+	
+	// @media @mobileMax {
+		// 	width: calc(~"100% + 60px");
+		// 	margin: -50px 0 40px -30px;
+		// }
+		@media @mobileMax {
+			position: relative;
+			max-width: 100vw;
+			width: calc(~"100% + 60px");
+			margin: -50px 0 40px -30px;
+			-webkit-border-radius: 0;
+			-moz-border-radius: 0;
+			border-radius: 0;
+			opacity: 1;
+			top: 0;
+		
+
+	}
+}

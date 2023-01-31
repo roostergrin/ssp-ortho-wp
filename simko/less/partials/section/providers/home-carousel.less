@@ -1,0 +1,445 @@
+section.home-carousel {
+
+	body.chapman-orthodontics & {
+		margin-bottom: 60px;
+	}
+
+	.container {
+		margin: 0;
+		.display-flex;
+		.flex-direction-column;
+		.owl-stage {
+			.display-flex;
+		}
+
+		.img-container {
+			img{.border-radius(5px);}
+		}
+
+		.pagination-container {
+			.pagination {
+				width: 100%;
+				margin: @gutter-md auto 0;
+				.display-flex;
+				.flex-justify-content-center;
+
+				.page-left,
+				.page-right {
+					width: 83px;
+					margin: 0 5px;
+					cursor: pointer;
+					.display-flex;
+					.flex-align-items-center;
+
+					&:hover {
+						color: var(--color-primary);
+
+						i:before {
+							color: var(--color-primary);
+						}
+					}
+				}
+
+				.page-left {
+					span {
+						margin-right: @gutter-lg/2;
+						
+						.display-inline-flex;
+					}
+				}
+
+				.page-right {
+					span {
+						margin-left: @gutter-lg/2;
+						
+						.display-inline-flex;
+					}
+				}
+			}
+		}
+	}
+
+	&.providers {
+		.content {
+			.inner-content {
+				.providers {
+					width: calc(~"100% + 2*@{gutter-sm}");
+					margin: @gutter-lg -@gutter-sm 0;
+					.display-flex;
+
+					.img-container {
+						position: relative;
+						width: calc(~"50% - 2*@{gutter-sm}");
+						height: 600px;
+						margin: 0 @gutter-sm;
+						overflow: hidden;
+						.border-radius(5px);
+
+						img {
+							.border-radius(5px);
+
+							&.dr-kristo {
+								object-position: center -130px;
+								@media @tabletMax { object-position: center -50px; }
+							}
+
+							&.dr-bronski {
+								object-position: center -120px;
+								@media @tabletMax { object-position: center -50px; }
+							}
+
+							&.dr-holloway {
+								object-position: center -170px;
+								@media @tabletMax { object-position: center -70px; }
+							}
+
+							&.dr-tsunoda {
+								object-position: center -100px;
+								@media @tabletMax { object-position: center -40px; }
+							}
+
+							&.dr-siu {
+								object-position: center -70px;
+								@media @tabletMax { object-position: center -30px; }
+							}
+
+							&.dr-duevel {
+								object-position: center -120px;
+								@media @tabletMax { object-position: center -60px; }
+							}
+
+							&.dr-lin {
+								object-position: center -120px;
+								@media @tabletMax { object-position: center -60px; }
+							}
+							&.dr-hamm {
+								object-position: right -120px;
+								@media screen and (max-width: 1250px) { object-position: right -90px; }
+							}
+							&.dr-drye {
+								object-position: right -120px;
+								@media screen and (max-width: 1250px) { object-position: right -90px; }
+							}
+							&.dr-farhi {
+								object-position: center -50px;
+							}
+							&.dr-chapman {
+								object-position: center -50px;
+							}
+						}
+
+						.overlay {
+							padding: 2*@gutter-lg 2*@gutter-lg 2*@gutter-md 2*@gutter-lg;
+							background-color: var(--color-primary);
+							position: absolute;
+							top: 100%;
+							right: 0;
+							max-width: 100%;
+							width: 100%;
+							height: 100%;
+							overflow: hidden;
+							.display-flex;
+							.flex-direction-column;
+							.flex-align-items-flex-start;
+							.flex-justify-content-flex-end;
+							.border-radius(5px);
+							transition: all 0.3s ease-out;
+
+							.name {
+								font-size: 25/@rem;
+								line-height: 22/@rem;
+								margin-bottom: 0;
+								color: @white;
+								.Bold;
+								a {
+									color: @white;
+								}
+							}
+
+							.specialty {
+								font-size: 15/@rem;
+								line-height: 22/@rem;
+								color: @white;
+								margin-bottom: 0;
+								padding-bottom: @gutter-md;
+							}
+							
+							.about {
+								color: @white;
+								margin-bottom: 0;
+								color: @white;
+								padding-bottom: @gutter-md;
+							}
+							
+							a.cta.link {
+								color: @white;
+								border-bottom: 2px solid @white;
+								&:hover {
+									color: var(--color-gray-1);
+								}
+							}
+						}
+
+						&:hover {
+							.overlay {
+								top: 0;
+							}
+						}
+					}
+
+					@media @tabletMax {
+						width: calc(~"100% + @{gutter-sm}");
+						margin: @gutter-lg -@gutter-sm/2 0;
+
+						.img-container {
+							width: calc(~"50% - @{gutter-sm}");
+							margin: 0 @gutter-sm/2;
+						}
+					}
+				}
+			}
+		}
+
+		.container {
+			> .providers {
+				margin-top: @gutter-lg;
+
+				&.owl-carousel {
+					.display-flex;
+
+					.owl-stage {
+						.display-flex;
+
+						.owl-item {
+							&.center {
+								.img-container {
+									.overlay {
+										text-align: left;
+									}
+								}
+							}
+
+							.img-container {
+								position: relative;
+								width: 586px;
+								height: 650px;
+
+								@media screen and (max-width: 927px) {
+									width: unset;
+									height: 80vw;
+								}
+
+								img {
+									&.dr-kristo {
+										object-position: center -130px;
+										@media screen and (max-width: 927px) { object-position: center -50px; }
+									}
+
+									&.dr-bronski {
+										object-position: center -120px;
+										@media screen and (max-width: 927px) { object-position: center -50px; }
+									}
+
+									&.dr-holloway {
+										object-position: center -170px;
+										@media screen and (max-width: 927px) { object-position: center -70px; }
+									}
+
+									&.dr-tsunoda {
+										object-position: center -100px;
+										@media screen and (max-width: 927px) { object-position: center -40px; }
+									}
+
+									&.dr-siu {
+										object-position: center -70px;
+										@media screen and (max-width: 927px) { object-position: center -30px; }
+									}
+
+									&.dr-duevel {
+										object-position: right -140px;
+										@media screen and (max-width: 927px) { object-position: right -70px; }
+									}
+
+									&.dr-lin {
+										object-position: right -120px;
+										@media screen and (max-width: 927px) { object-position: right -60px; }
+									}
+									&.dr-hamm {
+										object-position: right -120px;
+										@media screen and (max-width: 927px) { object-position: right -110px; }
+										@media screen and (max-width: 500px) { object-position: right -70px; }
+									}
+									&.dr-drye {
+										object-position: right -120px;
+										@media screen and (max-width: 927px) { object-position: right -110px; }
+										@media screen and (max-width: 500px) { object-position: right -60px; }
+									}
+									&.dr-farhi {
+										object-position: center -50px;
+									}
+									&.dr-chapman {
+										object-position: center -50px;
+									}
+								}
+
+								.overlay {
+									padding: 2*@gutter-lg 2*@gutter-lg 2*@gutter-md 2*@gutter-lg;
+									background-color: var(--color-primary);
+									position: absolute;
+									bottom: 0;
+									right: 0;
+									max-width: 386px;
+									overflow: hidden;
+									.display-flex;
+									.flex-direction-column;
+									.flex-align-items-flex-start;
+									.border-top-left-radius(75px);
+
+									.name {
+										font-size: 25/@rem;
+										line-height: 22/@rem;
+										margin-bottom: 0;
+										color: @white;
+										.Bold;
+										a {
+											color: @white;
+										}
+									}
+									
+									.specialty {
+										font-size: 15/@rem;
+										line-height: 22/@rem;
+										color: @white;
+										margin-bottom: 0;
+									}
+									
+									.about {
+										color: @white;
+										margin-bottom: 0;
+									}
+									
+									a.cta.link {
+										color: @white;
+										border-bottom: 2px solid @white;
+										&:hover {
+											color: var(--color-gray-1);
+										}
+									}
+								}
+
+								&:hover {
+									.overlay {
+										.specialty {
+											padding-bottom: @gutter-md;
+										}
+
+										.about {
+											padding-bottom: @gutter-md;
+											max-height: initial;
+										}
+
+										.link {
+											max-height: initial;
+										}
+									}
+								}
+							}
+
+							@media screen and (max-width: 927px) {
+								.img-container {
+									img {
+										max-width: unset;
+									}
+
+									.overlay {
+										max-width: 225px;
+										padding: @gutter-lg/2 @gutter-lg @gutter-lg/2 @gutter-lg;
+										.border-top-left-radius(40px);
+										.display-flex;
+										.flex-direction-column;
+										.flex-align-items-flex-start;
+
+										.name {
+											font-size: 19/@rem;
+											line-height: 22/@rem;
+											margin-bottom: 0;
+										}
+
+										.about {
+											display: none;
+										}
+									}
+
+									&:hover {
+										.overlay {
+											max-width: 225px;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.great-river-ortho {	
+
+	.providers {
+		&.home-carousel{
+			.content{
+				&.desktop{
+					.inner-content{
+						.providers{
+							.img-container {
+								.dr-ross{
+									object-position: center -100px;		
+									@media screen and (max-width: 2200px) { object-position: left -110px; }
+									@media (min-width:1456px) and (max-width: 1850px) { object-position: left -110px; }
+						
+									@media screen and (max-width: 1455px) { object-position: left -100px; }
+									@media screen and (max-width: 1100px) { object-position: left -70px; }
+								}
+								.dr-kapus {
+									object-position: center -85px;
+									@media screen and (max-width: 1100px) { object-position: left -55px; }
+								}
+								.dr-anderson {
+									object-position: center -70px;
+									@media screen and (max-width: 927px) { object-position: right -30px; }
+								}
+							}
+						}
+					}
+				}				
+			}
+			
+			.container{
+				.providers{
+					&.owl-drag{
+						.img-container{
+							.dr-ross{
+								object-position: center -100px;	
+								@media screen and (max-width: 500px) { object-position: center -55px; }
+							}	
+							.dr-kapus {
+								object-position: center -85px;
+								@media screen and (max-width: 500px) { object-position: center -40px; }
+							}			
+						}
+					}
+				}
+			}
+		}		
+	}
+}
+
+.central-lakes-orthodontics {
+	.providers {
+		&.home-carousel{
+			display: none;
+		}
+	}
+}

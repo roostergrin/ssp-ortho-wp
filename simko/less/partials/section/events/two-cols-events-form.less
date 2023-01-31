@@ -1,0 +1,140 @@
+section.two-cols-events-form {
+    padding: 5*@gutter-sm 0 4*@gutter-sm;
+    background-color: #8469DE;
+
+    &.brand-palette-prairie-grove,
+    &.brand-palette-dietmeier {
+        background-color: var(--color-primary);    
+    }
+
+    &::before {
+        content: '';
+        width: 100%;
+        height: 14px;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        transform: scale(1, -1);
+        background-image: url(/wp-content/themes/simko/images/placeholder/graphics/wavy_white.png)
+    }
+
+    &.confidence-counts {
+        margin-bottom: 0 !important;
+        z-index: 5;
+
+        form {
+            .cta.primary {
+                font-family: var(--font-secondary);
+            }
+        }
+    }
+
+    .content {
+        .inner-content {
+            margin: auto;
+            .display-flex();
+            .flex-align-items-stretch();
+            .flex-justify-content-flex-start();
+
+            @media @mobileMax {
+                .flex-direction-column;
+            }
+
+            article, aside {
+                position: relative;
+                flex: 0 0 50%;
+                width: 50%;
+                max-width: 50%;
+
+                @media @mobileMax {
+                    width: 100%;
+                    max-width: 100%;
+                }
+            }
+
+            article {                
+                min-height: 575px;
+                padding-right: 2*@gutter-md;
+
+                @media @mobileMax {
+                    min-height: 0;
+                    padding-right: 0;
+                    margin-bottom: @gutter-md;
+                }
+
+                h1 {
+                    color: @white;
+                    margin-bottom: @gutter-sm;
+                }
+
+                .event-container {
+                    margin-bottom: @gutter-lg;
+
+                    .event-title-date {
+                        font-weight: bold;
+                        font-size: 18/@rem;
+                        margin-bottom: 10px;
+                    }
+                    .event-desc {
+                        font-size: 15/@rem;
+                        margin-bottom: 10px;
+                    }
+                    .scholarship-link {
+                        color: @white;
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+            aside {
+                border-left: 2px solid white;
+                padding-left: 40px;
+                @media @mobileMax {
+                    border-left: none;
+                    padding-left: 0px;
+                }
+                .form-wrapper {
+                    form {
+                        label,
+                        textarea,
+                        select,
+                        .select-wrapper::after,
+                        .fancy-select .fancy-select-title::after {
+                            color: @white;
+                        }
+                        select,
+                        textarea,
+                        input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]),
+                        .fancy-select .fancy-select-title {
+                            background: transparent;
+                            border-bottom-color: @white;
+                            color: @white;
+                        }
+                        .fancy-select .fancy-select-title.active {
+                            color: var(--color-gray-1);
+
+                            & ~ .options {
+                                width: 95%;
+
+                                ul.select-options {
+                                    column-count: 1;
+
+                                    li {
+                                        margin-bottom: 10px !important;
+                                    }
+                                }
+                            }
+                        }
+                        textarea {
+                            border-color: @white;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.brand-palette-prairie-grove aside form.form_event input[type="submit"] {
+        background-color: var(--color-gray-1);
+    }
+}

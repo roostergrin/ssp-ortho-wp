@@ -1,0 +1,571 @@
+section.half.with-icons {
+	&.bg-orange {
+		background-color: @orange;
+	}
+	body.page-template-invisalign-virtual-care &{
+		&.four-icons{
+			padding-top: 4*@gutter-lg;
+			padding-bottom: 4*@gutter-sm;
+			@media @tabletMax {
+				padding-top: 4*@gutter-sm;
+			}
+			&.bg-blue {
+				color: @white !important;
+				.icon-virtual-consultations_personalized-report-pie-charts .path1:before {
+					content: "\e9c6";
+					color:@white;
+				}
+				p.title { color: @white !important;}
+				p.copy { color: @white !important;}
+				background-color: #418CE1;
+				&.with-bottom-pattern {
+					&:after {
+						content: '';
+						width: 100%;
+						height: 14px;
+						position: absolute;
+						z-index: 1;
+						bottom: -14px;
+						.transform(scale(1, -1));
+						background-image: ~"url(../images/placeholder/graphics/wavy-blue.png)";
+					}
+					article {
+						h2 { color: @white !important;}
+					}
+				}
+				.owl-prev,
+				.owl-next {
+					width: 14px;
+					height: 14px;
+					margin: auto;
+					outline: none;
+					cursor: pointer;
+					position: relative;
+
+					&:before, &:after {
+						color: @white;
+					}
+				}
+			}
+		}
+
+	}
+	&.static-icons{
+		aside {
+			.owl-item {
+				.container{
+					.content-container {
+						.copy {
+							opacity: 1 !important;
+						}
+					}
+					@media screen and (min-width: 1260px) {
+						&:hover {
+							.icon-container {
+								height: 120px !important;
+								max-height: 120px !important;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	.main-container {
+		margin: 0 -2*@gutter-md;
+		width: calc(~"100% + 100px");
+		.display-flex;
+		@media @mobileMax { margin: 0; width: 100%; .flex-direction-column; }
+
+		@percent: percentage(1/2);
+		@width: calc(~"@{percent} - 100px");
+		article {
+			width: @width;
+			margin: 0 2*@gutter-md;
+			@media @mobileMax { width: 100%; margin: 0 0 4*@gutter-md; }
+			body.page-template-free-orthodontic-consultation & {
+				@media @mobileMax { margin: 0 0 @gutter-md; }
+			}
+			p a:first-of-type {
+				margin-right: @gutter-lg;
+			}
+			p a:nth-of-type(2) {
+				color: inherit;
+				padding-bottom: 2px;
+				border-bottom: 2px solid var(--color-primary);
+				.transition(~"color 0.1s linear,border-color 0.1s linear");
+				&:hover {
+					color: var(--color-primary);
+				}
+			}
+		}
+
+		aside {
+			width: @width;
+			margin: 0 auto;
+			@media screen and (min-width: 1260px) {
+				min-height: 500px;
+				body.page-template-invisalign-virtual-care & {
+				min-height: 0;
+			}}
+			@media screen and (max-width: 1259px) {min-height: 0;}
+			@media @mobileMax { width: 100%; margin: 0; }
+
+
+
+			.owl-stage {
+				flex-wrap: wrap;
+				max-width: 100%;
+				.display-flex;
+				.flex-justify-content-center;
+				@media screen and (max-width: 1259px) {
+					max-width: unset; flex-wrap: unset; display: block;
+					body.page-template-invisalign-virtual-care & {
+						display: flex;
+					}
+				}
+
+				.owl-item {
+					@media screen and (min-width: 1260px) {
+						@width: 220px;
+						margin: 0 @gutter-sm @gutter-sm/2;
+						width: @width !important;
+						body.page-template-patient-care-philosophy & {
+							margin: 0;
+						}
+					}
+					@media screen and (max-width: 1259px) { .display-flex; .flex-justify-content-center; }
+
+					.container {
+						@width: 230px;
+						width: @width;
+						min-width: @width;
+						cursor: pointer;
+                        max-height: 240px;
+						margin: 0 auto;
+
+						.icon-container, .widget-container > .img-container {
+							height: 120px;
+							max-height: 120px;
+							overflow: hidden;
+							.display-flex;
+							.flex-justify-content-center;
+							.flex-align-items-center;
+							.ease-out(all, 0.3s);
+
+							i {
+								&:before {
+									color: var(--color-primary);
+								}
+
+								&.icon-benefit_orthodontic-treatment {
+									&:before {
+										font-size: 74/@rem;
+									}
+								}
+
+								&.icon-benefit_digital-x-rays {
+									&:before {
+										font-size: 70/@rem;
+									}
+								}
+
+								&.icon-benefit_3d-scan {
+									&:before {
+										font-size: 60/@rem;
+									}
+								}
+
+								&.icon-virtual-consultations_upload {
+									&:before {
+										font-size: 60/@rem;
+									}
+								}
+
+								&.icon-virtual-consultations_personalized-report-pie-charts{
+									&:before {
+										font-size: 60/@rem;
+										body.page-template-invisalign-virtual-care & {
+											color: @white;
+										}
+									}
+								}
+
+								&.icon-care-and-maintenance_aligners {
+									&:before {
+										font-size: 60/@rem;
+										body.page-template-invisalign-virtual-care & {
+											color: @white;
+										}
+									}
+								}
+
+								&.icon-adjust {
+									&:before {
+										font-size: 60/@rem;
+										body.page-template-invisalign-virtual-care & {
+											color: @white;
+										}
+									}
+								}
+
+								&.icon-general_time {
+									&:before {
+										font-size: 60/@rem;
+										body.page-template-invisalign-virtual-care & {
+											color: @white;
+										}
+									}
+								}
+
+								&.icon-virtual-consultations_smartphone {
+									transform: rotate(270deg);
+									&:before {
+										font-size: 60/@rem;
+									}
+								}
+
+								&.icon-benefit_success-planning {
+									&:before {
+										font-size: 60/@rem;
+									}
+								}
+
+								&.icon-benefit_personalized-treatment-plan {
+									&:before {
+										font-size: 70/@rem;
+									}
+								}
+
+								&.icon-calculator {
+									&:before {
+										font-size: 70/@rem;
+									}
+								}
+
+                                &.icon-commitment_teamwork {
+                                    &:before {
+										font-size: 60/@rem;
+									}
+                                }
+
+                                &.icon-commitment_compassion {
+                                    &:before {
+										font-size: 60/@rem;
+									}
+                                }
+
+                                &.icon-commitment_integrity {
+                                    &:before {
+										font-size: 60/@rem;
+									}
+                                }
+
+                                &.icon-commitment_knowledge {
+                                    &:before {
+										font-size: 60/@rem;
+									}
+                                }
+
+                                &.icon-commitment_fun {
+                                    &:before {
+										font-size: 60/@rem;
+									}
+                                }
+
+                                &.icon-commitment_gratitude {
+                                    &:before {
+										font-size: 60/@rem;
+									}
+                                }
+							}
+						}
+
+						.content-container {
+							text-align: center;
+							overflow: hidden;
+							.ease-out(all, 0.3s);
+
+							p {
+								margin-bottom: 0;
+
+								&.title {
+									font-size: 20/@rem;
+									line-height: 22/@rem;
+									color: var(--color-primary);
+									margin-bottom: @gutter-sm/2;
+									.Bold;
+								}
+
+								&.copy {
+									opacity: 0;
+									.ease-out(opacity, 0.3s);
+                                    @media screen and (max-width: 1259px) { opacity: 1; }
+								}
+							}
+						}
+
+						@media screen and (min-width: 1260px) {
+							&:hover {
+								.icon-container {
+									height: 0;
+									max-height: 0;
+									body.page-template-patient-care-philosophy & {
+										height: 3*@gutter-sm;
+										max-height: 3*@gutter-sm;
+										opacity: 0;
+									}
+
+								}
+
+								.content-container {
+									padding-bottom: 4*@gutter-lg;
+
+									p {
+										&.copy {
+											opacity: 1;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.owl-nav {
+				margin: @gutter-sm auto 0;
+				body.page-template-schedule-orthodontic-consultation &,
+				body.page-template-schedule-free-consultation-cwi &,
+				body.page-template-schedule-your-free-consultation-scv &,
+				body.page-template-schedule-free-consultation-ewi &,
+				body.page-template-free-orthodontic-consultation & {margin-top: @gutter-sm;}
+				body.page-template-invisalign-virtual-care & {margin-top: 2*@gutter-md;}
+				width: @gutter-lg;
+				.display-flex;
+				.flex-justify-content-space-between;
+				.flex-align-items-center;
+
+				&.disabled {
+					display: none;
+				}
+
+				.owl-prev,
+				.owl-next {
+					width: 14px;
+					height: 14px;
+					margin: auto;
+					outline: none;
+					cursor: pointer;
+					position: relative;
+					body.page-template-invisalign-virtual-care & {
+						border: none;
+						outline: none;
+						background: none;
+					}
+
+					&:before {
+						position: absolute;
+                        top: 0;
+						color: var(--color-gray-1);
+						height: 14px;
+						font-size: 14px;
+						cursor: pointer;
+						.Icons;
+						.display-flex;
+						.flex-align-items-center;
+					}
+
+					&:hover {
+						&:before {
+							color: var(--color-primary);
+						}
+					}
+				}
+
+				.owl-prev {
+					&:before {
+						content: '\e909';
+                        left: 0;
+					}
+				}
+
+				.owl-next {
+					&:before {
+						content: '\e90a';
+                        right: 0;
+					}
+				}
+			}
+		}
+	}
+    &.vertical {
+		body.page-template-patient-care-philosophy & {
+			@media @mobileMax { margin-bottom: 4*@gutter-sm !important; }
+		}
+		&.three-icons{
+			body.page-template-invisalign-virtual-care & {
+				.owl-item {
+					.container{
+						cursor: auto !important;
+					}
+				}
+				@media screen and (min-width: 1260px){
+					margin-bottom: 0 !important;
+				}
+			}
+		}
+
+        .main-container {
+            .flex-direction-column;
+            article, aside {
+                width: 100%;
+                .flex(0,0,100%);
+            }
+            article {
+                max-width: 810px;
+                margin: 0 auto;
+                text-align: center;
+                margin-bottom: 2*@gutter-sm;
+                h2 {
+					font-size: 35/@rem; line-height: 1;
+					body.page-template-invisalign-virtual-care & {
+						line-height: 1.2;
+					}
+					@media (max-width:375px) {
+						font-size: 28px;
+						line-height: 1;
+					}
+				}
+				body.page-template-invisalign-virtual-care &{
+					max-width: 100%;
+				}
+            }
+            aside {
+                .owl-stage {
+
+                    .owl-item {
+                    	@media screen and (min-width: 1260px) {
+                    		@width: 330px;
+                    		margin: @gutter-lg;
+                    		width: @width !important;
+							body.page-template-patient-care-philosophy & {
+								margin: 0;
+							}
+							body.page-template-invisalign-virtual-care & {
+								@width: 230px;
+								width: @width !important;
+							}
+                    	}
+                    }
+                }
+            }
+
+        }
+    }
+
+	&.confidence-counts {
+		position: relative;
+		padding-top: 4*@gutter-sm;
+		margin-top: 0 !important;
+
+		@media @ipadMax {
+			padding-bottom: 2*@gutter-lg;
+		}
+		@media @tabletMax {
+			padding-top: 2*@gutter-sm;
+		}
+
+		&::after {
+			content: '';
+			width: 100%;
+			height: 14px;
+			position: absolute;
+			z-index: 1;
+			bottom: -1px;			
+			transform: scale(1, -1) rotate(-180deg);
+			background-image: url(/wp-content/themes/simko/images/placeholder/graphics/wavy_white.png);
+		}
+
+		article {	
+			@media @mobileMax {
+				margin-bottom: 2*@gutter-lg;
+			}
+
+			h2 {
+				body.prairie-grove-orthodontics &,
+				body.dietmeier-orthodontics & {
+					@media @menuMin {
+						white-space: nowrap;
+					}
+				}
+
+				@media @mobileMax {
+					font-size: 32/@rem;
+					line-height: 1.2em;
+				}
+			}		
+			a {
+				color: var(--color-gray-1);
+				border-bottom: 2px solid var(--color-gray-1);
+				padding-bottom: 2px;
+
+				&:hover {
+					color: @white;
+					border-bottom-color: @white;
+				}
+			}
+			img {
+				@media @mobileMax {
+					.hidden;
+				}
+			}
+		}
+
+		aside {			
+			.consultation.owl-carousel {
+				@media screen and (max-width: 1259px) {
+					overflow: hidden;
+				}
+
+				.owl-stage {
+					.display-flex;
+				}
+
+				.owl-nav {
+					@media screen and (max-width: 1259px) {
+						padding-bottom: @gutter-sm;
+
+						button {
+							background: none;
+							border: none;
+
+							&::before {
+								color: @white;
+							}
+						}
+					}
+				}
+			}
+
+			// @media @mobileMax {
+			// 	min-height: 350px;
+
+			// 	.consultation.owl-carousel {
+			// 		.owl-stage {
+			// 			.display-flex;
+			// 		}
+			// 		.owl-nav {
+						
+			// 		}
+			// 	}
+			// }
+		}
+
+		.icon-wrapper {
+			img {
+				max-width: 85px;
+			}
+		}
+	}
+}

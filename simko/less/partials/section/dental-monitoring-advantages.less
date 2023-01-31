@@ -1,0 +1,83 @@
+section.dental-monitoring-advantages {
+	.intro-copy {
+		text-align: center;
+
+		h2, h3 {
+			color: var(--color-primary);
+		}
+	}
+
+	.icons {
+		margin-top: 2*@gutter-sm;
+		.display-flex;
+		.flex-direction-column;
+		.flex-justify-content-space-around;
+		
+		@media @menuMax { margin-top: 0; }
+
+		.widget.folding-icons {
+			width: 100%;
+			margin: 0 auto;
+			padding: 0 @gutter-sm/2;
+
+			.icon-container {
+				i {
+					font-size: 54px;
+				}
+			}
+
+			@media @menuMax {
+				max-width: 220px;
+
+				.content-container {
+					p.copy {
+						opacity: 1;
+					}
+				}
+
+				&:hover {
+					.icon-container {
+						height: 120px;
+						max-height: 120px;
+					}
+
+					.content-container {
+						padding-bottom: 0;
+					}
+				}
+			}
+		}
+
+		.owl-nav {
+			width: 100%;
+			margin-top: @gutter-sm;
+			.display-flex;
+			.flex-justify-content-center;
+			.flex-align-items-center;
+			@media @menuMax { margin-bottom: @gutter-lg; }
+
+			button.owl-prev,
+			button.owl-next {
+				outline: none;
+
+				&:hover {
+					color:var(--color-primary);
+				}
+			}
+
+			.owl-prev:before {
+				content: '\e909';
+				.Icons;
+				margin-right: 15px;
+			}
+			.owl-next:before {
+				content: '\e90a';
+				.Icons;
+			}
+
+			&.disabled {
+				display: none;
+			}
+		}
+	}
+}

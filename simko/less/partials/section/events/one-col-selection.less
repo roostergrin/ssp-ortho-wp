@@ -1,0 +1,105 @@
+section.one-col-selection {
+    padding: 4*@gutter-sm 0;
+    background-color: #8469DE;    
+    z-index: 100;
+
+    &.brand-palette-prairie-grove,
+    &.brand-palette-dietmeier {
+        background-color: var(--color-primary);    
+    }
+
+    &.confidence-counts {
+        margin-bottom: 0 !important;
+        z-index: 5;
+    }
+
+    &:before {
+		content: '';
+		width: 100%;
+		height: 14px;
+		position: absolute;
+		z-index: 1;
+		top: -1px;
+        transform: rotate(180deg);
+		background-image: url(/wp-content/themes/simko/images/placeholder/graphics/wavy_white.png);
+	}
+
+    .content {
+        .inner-content {
+            max-width: 550px;
+            width: 100%;
+            margin: auto;
+
+            & > h2 {
+                margin-bottom: @gutter-sm;
+
+                @media @mobileMax {
+                    text-align: left;
+                }
+            }
+
+            & > p {
+                max-width: 450px;
+                width: 100%;
+                margin: 0 auto 2.5*@gutter-sm;
+
+                @media @mobileMax {
+                    text-align: left;
+                }
+            }
+
+            .form-wrapper {
+                .fancy-select {
+                    max-width: 275px;
+                    margin: auto;
+
+                    @media @mobileMax {
+                        max-width: none;
+                    }
+
+                    .fancy-select-title {
+                        color: @white;
+                        border-bottom-color: @white;
+
+                        &:after {
+                            color: @white;
+                        }
+
+                        &.active {
+                            color: #46464A;
+                            border-bottom-color: var(--color-primary);
+        
+                            &:after {
+                                color: var(--color-primary);
+                            }
+                        }
+                    }
+
+                    .options {
+                        background-color: #f6f6f6;
+                        padding: 0 8px 8px;
+
+                        &:after {
+                            content: "";
+                            position: absolute;
+                            width: ~"calc(100% + 3*@{gutter-sm})";
+                            height: ~"calc(100% + 3*@{gutter-sm})";
+                            background: #f6f6f6;
+                            top: -50px;
+                            z-index: -1;
+                            left: -30px;      
+                            
+                            @media @mobileMax {
+                                width: 100vw;
+                            }
+                        }
+
+                        ul.select-options {
+                            min-width: 250px;
+                        }
+                    }
+                }                
+            }
+        }
+    }
+}

@@ -1,0 +1,145 @@
+section.share-review {
+	&.share-feedback {
+		padding: 80px 0;
+		@media @mobileMax { padding: 40px 0; }
+	}
+
+	h3 {
+		margin-bottom: 35px;
+	}
+
+	.columns {
+		width: calc(~"100% + 2*@{gutter-md}");
+		margin: 0 -@gutter-md;
+		.display-flex;
+		&.single-location-brand {
+			.flex-justify-content-center;
+		}
+
+		.column {
+			@percentage: percentage(1/3);
+			@width: calc(~"@{percentage} - 2*@{gutter-md}");
+			width: @width;
+			margin: 0 @gutter-md;
+
+			> h3 {
+				@media @mobileMax { text-align: center; }
+			}
+
+			&.select {
+				.display-flex;
+				.flex-direction-column;
+				@media @mobileMax { .flex-align-items-center; }
+
+				label {
+					@media @mobileMax { width: 275px; }
+					@media screen and (max-width: 320px) { width: 260px; }
+				}
+
+				.form-wrapper {
+					margin-top: @gutter-sm/2;
+				}
+
+				.fancy-select-title {
+					font-weight: 400;
+				}
+			}
+
+			&.share {
+				flex-shrink: 0;
+				.display-flex;
+				.flex-align-items-flex-start;
+				.flex-justify-content-center;
+
+				.share-img { display: block; }
+				.share-img-active { display: none; }
+
+				.share-link {
+					&.img { flex-shrink: 0; }
+					&[disabled] {
+						&:hover {
+							cursor: not-allowed;
+						}
+					}
+				}
+
+				.text-wrapper {
+					margin-left: @gutter-sm;
+					width: 100%;
+					max-width: 260px;
+
+					.share-text {
+						color: @gray-6;
+
+						a {
+							color: @gray-6;
+						}
+					}
+				}
+
+				html.review-office-preference-selected & {
+					.share-img { display: none; }
+					.share-img-active { display: block; }
+					.share-text {
+						color: var(--color-gray-1);
+						a { color: var(--color-primary); }
+					}
+				}
+			}
+		}
+
+		&:first-of-type {
+			.column {
+				&:first-of-type,
+				&:last-of-type {
+					@media @mobileMax { display: none; }
+				}
+				&:nth-of-type(2) {
+					margin-bottom: 0;
+				}
+			}
+		}
+	}
+
+	.fancy-select {
+		margin-top: @gutter-sm;
+
+		.options-2 {
+			position: relative;
+		}
+	}
+
+	@media @mobileMax {
+		padding: 2*@gutter-sm 0;
+
+		h3 {
+			margin-bottom: @gutter-lg;
+		}
+
+		.columns {
+			width: 100%;
+			margin: 0;
+			.flex-direction-column;
+
+			.column {
+				width: 100%;
+				margin: 0;
+
+				&:not(:last-of-type) {
+					margin-bottom: @gutter-lg;
+				}
+			}
+		}
+	}
+
+	&:after {
+		content: '';
+		width: 100%;
+		height: 14px;
+		position: absolute;
+		z-index: 1;
+		bottom: -14px;
+		.transform(scale(1, -1));
+		background-image: url(../../../images/placeholder/graphics/wavy.png);
+	}
+}

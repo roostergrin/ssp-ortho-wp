@@ -1,0 +1,308 @@
+section.two-cols-with-image-and-icons-carousel {
+	.container {
+		margin: 0 -30px;
+		.display-flex;
+		@media @mobileMax{
+			display:block;
+		}
+
+		@media screen and (max-width: 949px) {
+			body:not(.page-template-orthodontic-care-maintenance) & {
+				position: relative;
+				.flex-direction-column;
+			}
+		}
+
+		> article {
+			width: 50%;
+			max-width: 50%;
+			.flex(0, 1, 50%);
+			margin: 0 @gutter-lg;
+			.display-flex;
+			.flex-direction-column;
+			@media @mobileMax {padding-right: 2*@gutter-lg;}
+
+			h2, h3, h4 {
+				color: var(--color-primary);
+			}
+
+			.bottom-links {
+				.display-flex;
+				.flex-wrap-wrap;
+
+				a {
+					margin-right: @gutter-sm;
+					@media @mobileMax {margin-bottom: @gutter-md/2;}
+				}
+			}
+
+			.icon-wrapper {
+				margin-top: 2*@gutter-lg;
+				.display-flex;
+				.flex-wrap-wrap;
+			}
+
+			.widget-carousel {
+				margin: @gutter-lg 0;
+				padding: 0 @gutter-lg ;
+				.display-flex;
+				.flex-justify-content-flex-start;
+				.flex-wrap-wrap;
+				@media @mobileMax {padding: 0;margin-top: 2*@gutter-lg;}
+
+				.widget-container {
+					margin-bottom: 3*@gutter-lg;
+					margin-top: @gutter-lg;
+					.display-flex;
+					.flex-direction-column;
+					.flex(0, 0, 50%);
+					padding: 0 @gutter-lg;
+					@media @mobileMax {
+						padding: 0 @gutter-lg;
+					}
+
+					div.icon {
+						font-size: 80px;
+						color: var(--color-primary);
+						margin-bottom: @gutter-sm;
+					}
+
+					.widget-content {
+						h2, h3, h4 {
+							font-size: 20px;
+							text-align: center;
+							.ease-out(all, 0.3s);
+						}
+						.copy {
+							opacity: 0;
+							font-size: 15px;
+							margin-top: @gutter-sm/2;
+							text-align: center;
+							.ease-out(opacity, 0.3s);
+							display: none;
+						}
+					}
+
+					&:hover {
+						margin-bottom: 0;
+
+						div.icon {
+							opacity: 0;
+							display: none;
+						}
+
+						.widget-content {
+							.copy {
+								display: block;
+								opacity: 1;
+							}
+						}
+					}
+
+					&.owl-carousel {
+						.widget-container {
+							.widget-content {
+								.copy {
+									display: block;
+									opacity: 1;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.owl-nav {
+				.display-flex;
+				.flex-justify-content-center;
+				.flex-align-items-center;
+				position: absolute;
+				left: 45%;
+				margin-top: @gutter-md;
+
+				.owl-prev:before {content: '\e909'; .Icons; margin-right: 15px;}
+				.owl-next:before {content: '\e90a';.Icons;}
+			
+				button {
+					outline:none;
+					
+					&:hover {
+						color:var(--color-primary);
+					}
+				}
+			}
+
+			.pagination-container {
+				margin-bottom: 2*@gutter-lg;
+				margin-top: -3*@gutter-lg;
+				.display-flex;
+				.flex-align-items-center;
+				.flex-justify-content-center;
+
+				.pagination {
+					width: @gutter-lg;
+					.display-flex;
+					.flex-justify-content-space-between;
+					.flex-align-items-center;
+
+					i {
+						width: 14px;
+						height: 14px;
+						outline: none;
+						cursor: pointer;
+						position: relative;
+
+						&:before {
+							position: absolute;
+							color: var(--color-gray-1);
+							height: 14px;
+							font-size: 14px;
+							cursor: pointer;
+							.display-flex;
+							.flex-align-items-center;
+						}
+
+						&:hover {
+							&:before {
+								color: var(--color-primary);
+							}
+						}
+
+						&.icon-left-arrow {
+							&:before {
+								left: 0;
+							}
+						}
+
+						&.icon-right-arrow {
+							&:before {
+								right: 0;
+							}
+						}
+					}
+				}
+
+				a {
+					margin-left: @gutter-sm;
+				}
+			}
+
+			@media @mobileMax {
+				width: 100%;
+				max-width: 100%;
+				.flex(0, 0, 100%);
+			}
+		}
+
+		> aside {
+			width: 50%;
+			max-width: 50%;
+			margin: 0 @gutter-lg;
+			.flex(1, 1, 50%);
+			.display-flex;
+			.flex-direction-column;
+			.flex-justify-content-space-between;
+
+			@media @mobileMax {
+                @width: ~"calc(100% - @{gutter-lg})";
+				width: @width;
+				max-width: @width;
+				.flex(0, 0, @width);
+				margin-top: 2*@gutter-lg;
+				padding-bottom: 0;
+			}
+
+			.top-img-container {
+				img {
+					&.top-left-radius {
+						.border-top-left-radius(180px);
+						@media @mobileMax { .border-top-left-radius(90px); }
+					}
+
+					&.bottom-left-radius {
+						.border-bottom-left-radius(180px);
+						@media @mobileMax { .border-bottom-left-radius(90px); }
+					}
+
+					&.top-right-radius {
+						.border-top-right-radius(180px);
+						@media @mobileMax { .border-top-right-radius(90px); }
+					}
+
+					&.bottom-right-radius {
+						.border-bottom-right-radius(180px);
+						@media @mobileMax { .border-bottom-right-radius(90px); }
+					}
+				}
+			}
+
+			.content {
+				background-color: @gray-2;
+				padding: 3*@gutter-md 3*@gutter-lg 3*@gutter-lg;
+				border-bottom-left-radius: 6*@gutter-lg;
+
+				@media @mobileMax {
+					padding: 2*@gutter-md @gutter-lg;
+					border-bottom-left-radius: 3*@gutter-lg;
+				}
+
+				h2, h3, h4 {
+					font-size: 25px;
+					
+				}
+			}
+		}
+
+
+		&:not(.reverse) {
+			> article {
+				@media @mobileMax {padding-bottom:2*@gutter-lg;}
+			}
+		}
+		
+		&.reverse {
+			flex-direction: row-reverse;
+			@media @mobileMax {.flex-direction-column;}
+
+			> article {
+				padding: 2*@gutter-lg 0 0 @gutter-lg;
+				@media @mobileMax {padding: 0 2*@gutter-lg 3*@gutter-lg 0;}
+				.page-template-orthodontic-care-maintenance &{
+					@media @mobileMax {padding: 0 2*@gutter-lg 4*@gutter-lg 0;}
+				}
+			}
+
+			> aside {
+				border-bottom-left-radius: 0;
+				border-bottom-right-radius: 6*@gutter-lg;
+				
+				.content {
+					border-bottom-left-radius: 0;
+					border-bottom-right-radius: 6*@gutter-lg;
+				}
+				
+                @media @mobileMax {
+                    margin: 0;
+                    border-bottom-right-radius: 3*@gutter-lg;
+
+					.content {
+						border-bottom-left-radius: 0;
+						border-bottom-right-radius: 3*@gutter-lg;
+					}
+				}
+			}
+		}
+	}
+
+}
+
+.page-template-orthodontic-care-maintenance {
+	&.central-lakes-orthodontics{
+		.two-cols-with-image-and-icons-carousel{		
+			
+			&:nth-child(1n){				
+				margin-bottom: 0!important;	
+			}
+		}		
+	}
+}

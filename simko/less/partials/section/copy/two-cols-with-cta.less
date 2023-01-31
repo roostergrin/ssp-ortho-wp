@@ -1,0 +1,72 @@
+section.two-cols-with-cta {
+    margin: 3.25*@gutter-sm 0 5.5*@gutter-sm 0 !important;
+    @media @mobileMax { margin: @gutter-lg/2 0 0 0 !important; }
+	.content {
+        .inner-content {
+            .columns {
+                width: 100%;
+                .display-flex;
+                .flex-justify-content-flex-start;
+                .flex-align-items-flex-start;
+                @media @mobileMax { margin: 0; width: 100%; .flex-direction-column; }
+
+                .column {
+                    width: percentage(1/2);
+                    padding-right: 2*@gutter-lg;
+                    .flex(0, 0, percentage(1/2));
+
+                    @media @mobileMax {
+                        margin: 0;
+                        width: 100%;
+                        .flex(0, 0, 100%);
+                        padding-right: 0;
+
+                        &:not(:last-of-type) {
+                            margin-bottom: @gutter-sm;
+                        }
+                    }
+
+                    div.widget.schedule-consultation {
+                        opacity: 1;
+                        top: -3.25*@gutter-sm;
+                        padding: 65px 120px 70px 95px;
+                        .border-radius(0px 0px 0px 180px);
+                        @media @wrapperMax {
+                            max-width: ~"calc(50vw - 2*@{gutter-lg})";
+                            padding-right: 0;
+                            margin: 0;
+                            position: absolute;
+                        }
+                        @media @mobileMax {
+                            max-width: unset;
+                            margin: 0 0 0 -@gutter-lg;
+                            padding: 2*@gutter-sm @gutter-lg;
+                            .border-radius(0px);
+                             position: unset;
+                        }
+                        &:after {
+                            content: "";
+                            position: absolute;
+                            top:0;
+                            left: 0;
+                            width: 100vw;
+                            height: 100%;
+                            background-color: var(--color-primary);
+                            .border-radius(0px 0px 0px 180px);
+                            z-index: -1;
+                            @media @mobileMax { display: none; }
+                        }
+                    }
+                    + .column {padding-right: 0; }
+                    &.patient-care-philosophy {
+                        div.widget.schedule-consultation {
+                            max-width: 50%;
+                            @media @mobileMax { max-width: unset;}
+                            &:after { height: ~"calc(100% + @{gutter-lg})"; }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

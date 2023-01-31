@@ -1,0 +1,282 @@
+.smile_icons() {
+    ul.smile-icons {
+		> li {
+			display: none !important;			
+
+			&.clarity-clear,
+			&.icon-clarity-clear {
+				html.clarity-clear & {
+					display: -webkit-box !important;
+					display: -moz-box !important;
+					display: -ms-flexbox !important;
+					display: -webkit-flex !important;
+					display: flex !important;
+
+					&.override { display: none !important; }
+				}
+			}
+			&.forsus-spring,
+			&.icon-forsus-spring {
+				html.forsus-spring & {
+					display: -webkit-box !important;
+					display: -moz-box !important;
+					display: -ms-flexbox !important;
+					display: -webkit-flex !important;
+					display: flex !important;
+
+					&.override { display: none !important; }
+				}
+			}
+			&.quad-helix,
+			&.icon-quad-helix {
+				html.quad-helix & {
+					display: -webkit-box !important;
+					display: -moz-box !important;
+					display: -ms-flexbox !important;
+					display: -webkit-flex !important;
+					display: flex !important;
+
+					&.override { display: none !important; }
+				}
+			}
+
+			&.traditional-braces,
+			&.icon-traditional-braces {
+				html.traditional-braces & {
+					display: -webkit-box !important;
+					display: -moz-box !important;
+					display: -ms-flexbox !important;
+					display: -webkit-flex !important;
+					display: flex !important;
+
+					&.override { display: none !important; }
+				}
+			}
+
+			&.orthodontic-appliances,
+			&.icon-orthodontic-appliances {
+				html.orthodontic-appliances & {
+					display: -webkit-box !important;
+					display: -moz-box !important;
+					display: -ms-flexbox !important;
+					display: -webkit-flex !important;
+					display: flex !important;
+
+					&.override { display: none !important; }
+				}
+			}
+
+			&.palatal-expanders,
+			&.icon-palatal-expanders {
+				html.palatal-expanders & {
+					display: -webkit-box !important;
+					display: -moz-box !important;
+					display: -ms-flexbox !important;
+					display: -webkit-flex !important;
+					display: flex !important;
+
+					&.override { display: none !important; }
+				}
+			}
+
+			&.interarch-bands,
+			&.icon-interarch-bands {
+				html.interarch-bands & {
+					display: -webkit-box !important;
+					display: -moz-box !important;
+					display: -ms-flexbox !important;
+					display: -webkit-flex !important;
+					display: flex !important;
+
+					&.override { display: none !important; }
+				}
+			}
+
+			&.herbst-appliance,
+			&.icon-herbst-appliance {
+				html.herbst-appliance & {
+					display: -webkit-box !important;
+					display: -moz-box !important;
+					display: -ms-flexbox !important;
+					display: -webkit-flex !important;
+					display: flex !important;
+
+					&.override { display: none !important; }
+				}
+			}
+
+			&.crossbite {
+				html.crossbite & {
+					display: -webkit-box !important;
+					display: -moz-box !important;
+					display: -ms-flexbox !important;
+					display: -webkit-flex !important;
+					display: flex !important;
+
+					&.override { display: none !important; }
+				}
+			}
+
+			&.underbite {
+				html.underbite & {
+					display: -webkit-box !important;
+					display: -moz-box !important;
+					display: -ms-flexbox !important;
+					display: -webkit-flex !important;
+					display: flex !important;
+
+					&.override { display: none !important; }
+				}
+			}
+
+			&.openbite {
+				html.openbite & {
+					display: -webkit-box !important;
+					display: -moz-box !important;
+					display: -ms-flexbox !important;
+					display: -webkit-flex !important;
+					display: flex !important;
+
+					&.override { display: none !important; }
+				}
+			}
+
+			&.overbite {
+				html.overbite & {
+					display: -webkit-box !important;
+					display: -moz-box !important;
+					display: -ms-flexbox !important;
+					display: -webkit-flex !important;
+					display: flex !important;
+
+					&.override { display: none !important; }
+				}
+			}
+
+			&.crowding {
+				html.crowding & {
+					display: -webkit-box !important;
+					display: -moz-box !important;
+					display: -ms-flexbox !important;
+					display: -webkit-flex !important;
+					display: flex !important;
+
+					&.override { display: none !important; }
+				}
+			}
+
+			&.spacing {
+				html.spacing & {
+					display: -webkit-box !important;
+					display: -moz-box !important;
+					display: -ms-flexbox !important;
+					display: -webkit-flex !important;
+					display: flex !important;
+
+					&.override { display: none !important; }
+				}
+			}
+
+			&.protrusion {
+				html.protrusion & {
+					display: -webkit-box !important;
+					display: -moz-box !important;
+					display: -ms-flexbox !important;
+					display: -webkit-flex !important;
+					display: flex !important;
+
+					&.override { display: none !important; }
+				}
+			}
+		}
+	}
+}
+
+.pagination-container() {
+    .pagination-container {
+        .pagination {
+            width: 100%;
+            margin: 0 auto @gutter-md;
+            .display-flex;
+            .flex-justify-content-center;
+
+            .page-left,
+            .page-right {
+                width: 83px;
+                margin: 0 5px;
+                cursor: pointer;
+
+                &:hover {
+                    color: var(--color-primary);
+
+                    i:before {
+                        color: var(--color-primary);
+                    }
+                }
+            }
+
+            .page-left {
+                span {
+                    margin-right: @gutter-lg/2;
+                    
+                    .display-inline-flex;
+                }
+            }
+
+            .page-right {
+                span {
+                    margin-left: @gutter-lg/2;
+                    
+                    .display-inline-flex;
+                }
+            }
+        }
+    }
+}
+
+.owl-carousel() {
+    .owl-carousel {
+        .owl-stage {
+            .display-flex;
+
+            .owl-item {
+                .display-flex;
+                width: 100%;
+                .flex(1, 0, 100%);
+                max-width: 586px;
+                @media screen and (max-width: 949px) { max-width: 100vw; }
+
+                .slide {
+                    width: 100%;
+                    .flex(1, 0, 100%);
+                    max-width: 586px;
+                    padding: 2*@gutter-sm 2*@gutter-sm 35px;
+                    background-color: @gray-2;
+                    text-align: left;
+                    .border-radius(5px);
+                    @media screen and (max-width: 949px) { max-width: calc(~"100% - 60px"); margin-left: 30px; padding: 20px 20px; }
+
+                    h3, .h3, h4 {
+                        color: var(--color-primary);
+                        margin-bottom: @gutter-md;
+                        @media screen and (max-width: 949px) { font-size: 28/@rem; line-height: 30/@rem; }
+                    }
+                }
+
+                &.active.center {
+                    .slide {
+                        background-color: var(--color-primary);
+                        color: @white;
+
+                        h3, .h3, h4 {
+                            color: @white;
+                        }
+                    }
+                }
+            }
+        }
+        .owl-nav.disabled {
+            display: none;
+        }
+    }
+}

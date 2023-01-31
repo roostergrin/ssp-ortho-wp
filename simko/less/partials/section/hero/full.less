@@ -1,0 +1,1926 @@
+section.hero.full {
+	overflow: hidden;
+
+	&.background-image {
+		.img-container {
+			height: 600px;
+		}
+
+		.content {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			@media screen and (max-width: 1035px) { position: relative; }
+		}
+	}
+
+	&.confidence-counts {
+		&.row1 {
+            max-height: 830px;
+            @media @mobileMax {
+                max-height: 300px;
+            }
+			&::before {
+				content: '';
+				position: absolute;
+				width: 600px;
+				height: 600px;
+				background-image: url(/wp-content/themes/simko/images/placeholder/graphics/confidence-counts-club/CONFETTI_WEB-02.svg);
+				background-repeat: no-repeat;
+				background-size: 100%;
+				top: 80px;
+                left: -15px;
+				z-index: 1;
+
+				@media @tabletMax {
+					width: 50vw;
+					height: 50vw;
+					top: 30px;
+                    left: -60px;
+				}
+                
+                @media @mobileMax {
+				    width: 300px;
+                    height: 300px;
+                    top: 0px;
+                    left: -150px;
+				}		
+				
+				@media @mobileSmallerMax {
+					background-size: 500px;	
+				}
+			}
+			&.brand-palette-prairie-grove {
+				&::before {
+					background-image: url(/wp-content/themes/simko/images/placeholder/graphics/confidence-counts-club/CONFETTI_WEB-02-PGO.svg);				
+				}
+			}
+			&.brand-palette-dietmeier {
+				&::before {
+					background-image: url(/wp-content/themes/simko/images/placeholder/graphics/confidence-counts-club/CONFETTI_WEB-02-DTM.svg);				
+				}
+			}
+
+			.img-container {
+				@media @mobileMax {
+					height: 400px;
+				}
+				@media @mobileSmallerMax {
+					img.bg-img {
+						object-position: center right;
+					}
+				}
+			}
+		}
+		&.row2 {
+			height: 850px;
+			background-position-y: 100px;
+
+			@media @tabletMax {
+				height: 980px;
+			}
+			@media @menuMax	{
+				background-image: none !important;
+				max-height: 100%;
+				height: 100%;
+			}
+
+			&::before {
+				content: '';
+				position: absolute;
+				width: 850px;
+				height: 850px;
+				background-image: url(/wp-content/themes/simko/images/placeholder/graphics/confidence-counts-club/CONFETTI_WEB-03.svg);
+				background-repeat: repeat;
+                background-position: cover;
+				background-size: 100%;
+				right: -30px;
+                
+				top: 0px;
+				z-index: 1;
+                @media @wrapperMax {
+                    right: -150px;
+                }
+				@media screen and (min-width: 1194px) and (max-width: 1440px) {
+					top: -100px;
+				}
+				@media @tabletMax {
+					right: -200px;
+					width: 400px;
+					height: 400px;
+				}
+                
+                @media @mobileMax {
+					right: -320px;
+				}
+				@media @mobileSmallerMax {
+					background-size: 500px;
+					right: -250px;	
+				}
+			}
+			&.brand-palette-prairie-grove {
+				&::before {
+					background-image: url(/wp-content/themes/simko/images/placeholder/graphics/confidence-counts-club/CONFETTI_WEB-03-PGO.svg);				
+				}
+			}
+			&.brand-palette-dietmeier {
+				&::before {
+					background-image: url(/wp-content/themes/simko/images/placeholder/graphics/confidence-counts-club/CONFETTI_WEB-03-DTM.svg);				
+				}
+			}
+
+			.img-container {
+				.hidden;
+
+				@media @menuMax {
+					height: 400px;
+					.block;
+				}
+                
+                img {
+                    @media @mobileMax {
+                        object-fit: cover;
+                        object-position: 25% 100%;
+                        height: 100%;
+                    }
+                }
+			}
+
+			.content {
+				&-container {
+					padding: 0 !important;
+    				//max-width: 500px !important;
+					z-index: 5;
+
+					@media @menuMax {
+						position: relative !important;
+						right: 0 !important;
+						width: 100% !important;
+						max-width: 100% !important;
+						margin: -20px auto 0;
+					}
+					@media (max-width: 600px) {
+						margin-top: -110px !important;
+					}
+
+					h3 {
+						padding: 50px 50px 0;
+						border-top-left-radius: 4px;
+						border-top-right-radius: 4px;
+					}
+					& > p {
+						padding: 0 50px;
+                        @media @mobileMax {
+                            padding: 0 30px;
+                        }
+					}
+                    
+                    a.cta.black {
+                        margin: 0 50px;
+						color: var(--color-gray-1);
+
+                        @media @mobileMax {
+                            margin: 0 30px;
+                        }
+                    }
+
+					.widget-bottom {
+						background-color: var(--color-primary);
+						color: @white;
+						padding: 50px;
+						border-bottom-left-radius: 4px;
+						border-bottom-right-radius: 4px;
+                        @media @mobileMax {
+                            padding: 30px;
+                        }
+
+						& > h4 {
+							color: @white;
+
+							& > span {
+								font-size: 16/@rem;;
+								font-weight: normal;
+								display: block;
+							}
+						}	
+						
+						.cta.text {
+							border-bottom-color: @white;
+							color: @white;
+
+							&:hover {
+								color: var(--color-gray-1);
+								border-bottom-color: var(--color-gray-1);
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	.img-container {
+		position: relative;
+
+		img {
+			width: 100%;
+		}
+
+		.overlay {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-color: var(--color-primary);
+			opacity: 1;
+			mix-blend-mode: multiply;
+		}
+	}
+
+	.content {
+		height: 100%;
+
+		.inner-content {
+			height: 100%;
+			.display-flex;
+			.flex-align-items-center;
+
+			.content-container {
+				width: 585px;
+				max-width: 585px;
+				height: auto;
+				padding: 2*@gutter-lg;
+				position: absolute;
+				right: 0;
+
+				h2, h3 {
+					font-size: 40/@rem;
+					line-height: 40/@rem;
+					margin-bottom: @gutter-md;
+
+					@fontSizeMin: 35px;
+					@fontSizeMax: 40px;
+					@maxMediaQuery: unit(unit(@fontSizeMax) * 783 / unit(@fontSizeMin), px);
+
+					@media @tabletMin and (max-width: @maxMediaQuery) { font-size: unit(100 * @fontSizeMin / 783, vw); }
+					@media screen and (min-width: @maxMediaQuery) { font-size: @fontSizeMax; }
+					@media @mobileMax { font-size: @fontSizeMin}
+				}
+				h2 {
+					@media @mobileMax { line-height: 35px}
+
+				}
+
+				p {
+					font-size: 15/@rem;
+					line-height: 22/@rem;
+					letter-spacing: -0.07px;
+					.Light;
+				}
+
+				a {
+					.Regular;
+
+					&.cta {
+						white-space: normal;
+						display: inline;
+					}
+				}
+
+				&.bg-grey-2 {
+					background-color: @gray-2;
+					.border-radius(5px);
+				}
+
+				&.animate-in {
+					right: -101%;
+					.ease-out(right, 0.3s);
+				}
+
+				html.time-for-content & {
+					right: 0; // test css for trello.com/c/7m3Iopvo/946-adjust-module-move-to-the-right										
+				}
+				html.time-for-content-to-show & {
+					right: 0; // test css for trello.com/c/7m3Iopvo/946-adjust-module-move-to-the-right										
+				}
+				body.smiles-by-ross & {
+					@media @desktopMin {
+						right: -100px;
+					}
+				}
+				body.central-lakes-orthodontics & {
+					@media @desktopMin {
+						right: -100px;
+					}
+				}
+
+				&.no-bg {
+					bottom: 160px;
+					padding: 0;
+					width: auto;
+					.display-flex;
+					.flex-align-items-center;
+					@media screen and (max-width: 1230px) { bottom: 140px; }
+
+					h4 {
+						max-width: 525px;
+						@media screen and (max-width: 1024px) { max-width: 365px; font-size: 20/@rem; }
+						@media screen and (max-width: 870px) { margin-top: 0; max-width: 285px; }
+						@media @mobileMax { max-width: unset; margin: 40px 0; }
+
+						body.page-template-invisalign-aligners & {
+							@media @tabletMax { margin-top: -250px; }
+							@media screen and (max-width: 1024px) { max-width: 465px; font-size: 20/@rem; margin-top: -250px;}
+							@media screen and (max-width: 870px) { max-width: 385px; margin-top: 180px;}
+							@media @mobileMax { max-width: unset; margin: 40px 0; }
+						}
+					}
+				}
+
+				&.clear-with-gray-mobile {
+					padding: 0 0 0 2*@gutter-lg;
+					margin-bottom: 2*@gutter-lg;
+
+					@media @mobileMax {
+						width: 100%;
+						max-width: 100%;
+						padding: 2*@gutter-sm @gutter-lg;
+						background-color: @gray-2;
+						margin-left: 0;
+						margin-right: 0;
+						.border-radius(5px);
+					}
+				}
+
+				@media @mobileMax {
+					position: unset;
+					z-index: 1;
+					width: calc(~"100% - 60px");
+					max-width: unset;
+					margin: -60px 0px 40px;
+					padding: 40px 30px;
+				}
+
+                &.team {
+                    @media @mobileMax { 
+						margin-top: -2*@gutter-lg;
+						margin-left: 0;
+						margin-right: 0;
+						width: 100%; 
+					}
+                }
+
+				
+			}
+		}
+	}
+
+	&.reverse {
+		.content {
+			.inner-content {
+				.content-container {
+					right: unset;
+					left: 0;
+				}
+			}
+		}
+	}
+
+	&.location {
+		&.team-grey {
+			// background-image: url('../../../../images/placeholder/graphics/kristo-our-team-blue.jpg');
+			max-height: 750px;
+
+			@media @mobileMax {
+				background-image: none !important;
+			}
+		}
+
+		&.middle-hero {
+			max-height: 750px;
+
+			body.chapman-orthodontics & {
+				z-index: 4;
+				@media screen and (max-width: 768px){
+					z-index: 1;
+				}
+			}
+
+			@media @tabletMin { height: 100vh; }
+			@media @mobileMax {
+				background-image: none !important;
+				max-height:none;
+
+				.content-container {
+					width: 100%; margin: -75px 0 30px;
+				}
+			}
+
+			&.black-river-falls {
+				background-position: center 80px;
+
+				@media screen and (max-width: 400px) {
+					.content {
+						.inner-content {
+							.content-container {
+								&.team {
+									margin-top: -30px;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			&.maplewood {
+				background-position: center 160px;
+			}
+			&.sun-prairie,
+			&.madison {
+				background-position: center 120px;
+			}
+			&.rapids-orthodontics,
+			&.shawano-orthodontics {
+				background-position: top;
+				.content-container {
+					left: 0;
+					right: auto;
+				}
+			}
+
+		}
+
+		&.bottom-hero {
+			.img-container {
+				@media @mobileMax { height: 320px; }
+				@media (max-width:550px) { height: 200px; }
+				img {
+					object-position: center;
+					@media @mobileMax { object-position: center top; }
+					@media (max-width:550px) { object-fit: cover; }
+				}
+			}
+			// Kristo
+			&.amery,
+			&.new-richmond {
+				.img-container {
+					img {
+						object-position: left -170px;
+						@media screen and (max-width: 2200px) { object-position: left -140px; }
+						@media (min-width:1456px) and (max-width: 1850px) { object-position: left -110px; }
+						@media (max-width: 1455px) { object-position: left; }
+					}
+
+					&.mobile {
+						@media @mobileMax { height: auto; }
+						@media (max-width:550px) { height: auto; }
+						img {object-position: center; position: relative;}
+					}
+				}
+			}
+
+			&.bloomer,
+			&.eau-claire {
+				.img-container {
+					img.desktop {
+						object-position: center 0;
+						@media (min-width:1650px) { object-position: center -70px;}
+					}
+					&.mobile {
+						@media @mobileMax { height: auto; }
+						@media (max-width:550px) { height: auto; }
+						img {object-position: center; position: relative;}
+					}
+				}
+			}
+
+			&.chippewa-falls,
+			&.baldwin,
+			&.menomonie {
+				.img-container {
+					&.desktop {
+						img {
+							object-position: center 40%;
+						}
+					}
+
+					&.mobile {
+						@media @mobileMax { height: auto; }
+						@media (max-width:550px) { height: auto; }
+						img {object-position: center; position: relative;}
+					}
+				}
+			}
+
+			// &.black-river-falls,
+			&.rice-lake {
+				.img-container {
+					img {
+						object-position: left -130px;
+						@media @desktopMin and (max-width:1830px) { object-position: left -70px; }
+						@media @tabletMax { object-position: center top; }
+					}
+
+					&.mobile {
+						@media @mobileMax { height: auto; }
+						@media (max-width:550px) { height: auto; }
+						img {object-position: center; position: relative;}
+					}
+				}
+			}
+			&.black-river-falls {
+				.img-container {
+					&.mobile {
+						img {
+							object-position: center top;
+							position: relative;
+						}
+						@media @mobileMax { height: auto; }
+						@media (max-width:550px) {
+							height: auto;
+
+							img {
+								object-position: left top;
+							}
+						}
+					}
+				}
+			}
+
+			&.river-falls {
+				.img-container {
+					&.desktop {
+						img {
+							object-position: center 50%;
+							@media (min-width:1722px) and (max-width:1900px) {object-position: center -260px;}
+							@media (max-width:1721px) {object-position: center -220px;}
+							@media (max-width:1450px) {object-position: center 100%;}
+						}
+					}
+
+					&.mobile {
+						@media @mobileMax { height: auto; }
+						@media (max-width:550px) { height: auto; }
+						img {object-position: 0 top; position: relative;}
+					}
+				}
+			}
+
+			&.marinette {
+				.img-container {
+					img {
+						object-position: left -75px;
+						@media (min-width:1523px) and (max-width: 1800px) { object-position: left -60px; }
+						@media (min-width:1301px) and (max-width: 1522px) { object-position: left -40px; }
+						@media screen and (max-width: 1300px) { object-position: left top; }
+						@media screen and (max-width: 760px) { object-position: 35% top; }
+						@media screen and (max-width: 380px) {object-position: 30% bottom;}
+					}
+
+					&.mobile {
+						@media @mobileMax { height: auto; }
+						@media (max-width:550px) { height: auto; }
+						img {object-position: center; position: relative;}
+					}
+				}
+			}
+
+			&.merrill {
+				.img-container {
+					@media screen and (max-width: 600px) { height: 480px; }
+					@media screen and (max-width: 550px) { height: 210px; }
+
+					img {
+						object-position: center;
+						@media screen and (min-width:1024px) and (max-width:1399px) {
+							width: 180%;
+							max-width: none;
+							left: -40%;
+						}
+						@media screen and (min-width:1400px) and (max-width:1600px) {
+							width: 150%;
+							max-width: none;
+							left: -20%;
+						}
+						@media screen and (max-width: 550px) {
+							width: 125%;
+							height: auto;
+							max-width: none;
+							margin-left: -10%;
+						}
+					}
+
+					&.mobile {
+						@media @mobileMax { height: auto; }
+						@media (max-width:550px) { height: auto; }
+						img {object-position: center; position: relative;}
+					}
+				}
+			}
+
+			&.stanley {
+				.img-container {
+					@media screen and (max-width: 600px) { height: 420px; }
+					@media screen and (max-width: 550px) { height: 300px; }
+
+					img {
+						object-position: center;
+						@media screen and (min-width: 1901px) { object-position: center 30%; }
+						@media screen and (min-width: 1500px) and (max-width:1900px) { object-position: center 30%; }
+					}
+
+					&.mobile {
+						@media @mobileMax { height: auto; }
+						@media (max-width:550px) { height: auto; }
+						img {object-position: center; position: relative;}
+					}
+				}
+			}
+
+			&.wausau {
+				.img-container {
+					img {
+						&.desktop {
+							object-position: right -175px;
+							.transform(scaleX(-1));
+							@media screen and (min-width: 2150px) { object-position: right -110px;}
+							@media screen and (min-width: 1751px) and (max-width:2149px){ object-position: right -60px;}
+							@media screen and (max-width: 1750px) { object-position: right -30px;}
+							@media screen and (max-width: 1250px) { object-position: right top;}
+						}
+					}
+
+					&.mobile {
+						@media @mobileMax { height: auto; }
+						@media (max-width:550px) { height: auto; }
+						img {object-position: center; position: relative;.transform(scaleX(-1));}
+					}
+				}
+			}
+
+			// Great River Orthodontics
+			&.onalaska {
+				@media screen and (max-width: 1035px) { background-color: @gray-9; }
+
+				.img-container {
+					@media @mobileMax { height: 650px; }
+					@media screen and (max-width: 700px) { height: 600px; }
+					@media screen and (max-width: 550px) {
+						height: 300px;
+					}
+
+					img {
+						object-position: left 46%;
+						@media screen and (max-width: 1035px) { object-position: left center; }
+						@media @mobileMax { object-position: center bottom; }
+						@media (max-width: 550px) { object-position: center 80%; }
+					}
+				}
+			}
+			&.roseville {
+				@media screen and (max-width: 1035px) { background-color: @gray-9; }
+
+				.img-container {
+					@media @mobileMax { height: 500px; }
+					@media screen and (max-width: 600px) { height: 300px; }
+					
+					&.desktop {
+						img { 
+							object-position: center -40px;
+
+							@media screen and (max-width: 1300px) {
+								object-position: center 0;
+							}
+							@media screen and (max-width: 1100px) {
+								object-position: center;
+							}
+						}
+					}
+
+					img {
+						@media @mobileMax { object-position: center; }
+					}
+				}
+			}
+			&.maplewood {
+				.img-container {
+					&.mobile {
+						@media (max-width:550px) {height: 250px}
+						img {
+							@media (max-width: 768px) {object-position: center;}
+						}
+					}
+				}
+			}
+			&.west-salem {
+				.img-container.mobile {
+					img {
+						object-position: center;
+					}
+				}
+			}
+			&.holmen {
+				.img-container {
+					&.desktop {
+						img {
+							object-position: center top;
+						}
+					}
+				}
+			}
+
+			// Prairie Grove
+			&.madison {
+				.img-container {
+					@media screen and (max-width: 600px) { height: 420px; }
+					@media screen and (max-width: 550px) { height: 300px; }
+
+					img {
+						object-position: center -30px;
+						@media screen and (min-width: 1901px) { object-position: center 30%; }
+						@media screen and (min-width: 1701px) and (max-width:1900px){ object-position: center 20%; }
+						@media screen and (min-width: 1500px) and (max-width:1700px) { object-position: center 10%; }
+					}
+
+					&.mobile {
+						@media @mobileMax { height: auto; }
+						@media (max-width:550px) { height: auto; }
+						img {object-position: center; position: relative;}
+					}
+				}
+			}
+
+			&.beaver-dam {
+				.img-container {
+					img {
+						object-position: center 28%;
+					}
+				}
+			}
+			&.sun-prairie {
+				.img-container {
+					img {
+						&.desktop {
+							object-position: right -175px;
+							.transform(scaleX(-1));
+							@media screen and (min-width: 2150px) { object-position: right -110px;}
+							@media screen and (min-width: 1751px) and (max-width:2149px){ object-position: right -60px;}
+							@media screen and (max-width: 1750px) { object-position: right -30px;}
+							@media screen and (max-width: 1250px) { object-position: right top;}
+						}
+					}
+
+					&.mobile {
+						@media @mobileMax { height: auto; }
+						@media (max-width:550px) { height: auto; }
+						img {object-position: center; position: relative;.transform(scaleX(-1));}
+					}
+				}
+			}
+
+			// Rapids
+			&.rapids-orthodontics {
+				.img-container {
+					img {
+						@media @mobileMax {object-position: center;}
+					}
+				}
+			}
+			// Chapman
+			&.chapman-orthodontics {
+				.img-container {
+					img {
+						@media (min-width:1270px){object-position: center -90px;}
+						@media @mobileMax {object-position: center;}
+					}
+				}
+			}
+		}
+	}
+
+	&.locations {
+		.img-container {
+			max-height: 500px;
+		}
+	}
+
+	&.meet-the-team {
+		&.kristo-orthodontics {
+			.img-container {
+				max-height: 700px;
+				&.desktop {
+					@media (min-width:1400px) { height: 700px; }
+					img{
+						@media (min-width:1630px) {top: -30%;}
+						@media (min-width:1400px) {
+							position: absolute;
+							width: 100%;
+							height: auto;
+							top: 0;
+						}
+					}
+					
+				}
+			}
+		}
+
+		&.great-river-orthodontics {
+			&.holmen,
+			&.la-crosse,
+			&.onalaska,
+			&.west-salem {
+				.img-container {
+					&.desktop {
+						height: 100vh;
+					}
+				}
+			}
+		}
+
+		&.prairie-grove-orthodontics {
+			.img-container {
+				max-height: 700px;
+				&.desktop {
+					@media (min-width:1400px) { height: 700px; }
+					img{
+						@media (min-width:1630px) {top: -10%;}
+						@media (min-width:1400px) {
+							position: absolute;
+							width: 100%;
+							height: auto;
+						}
+					}
+					
+				}
+			}
+		}
+		
+		// Cap at 740px experiment
+		&.shawano-orthodontics {
+			.img-container {
+				max-height: 740px;
+				overflow: hidden;
+				img {
+					@media (min-width:1920px) { margin-top: -5%; }
+				}
+			}
+		}
+	}
+
+	&.brand.bottom-hero {
+		&.great-river-orthodontics {
+			.img-container {
+				img {
+					object-position: center -370px;
+					@media screen and (max-width: 1800px) { object-position: center -240px; }
+					@media screen and (max-width: 1500px) { object-position: center -190px; }
+					@media screen and (max-width: 1300px) { object-position: center -160px; }
+					@media screen and (max-width: 1050px) { object-position: center -140px; }
+					@media (min-width:783px) and (max-width: 1049px) { object-position: center bottom; }
+					@media @mobileMax { object-position: center -140px; }
+				}
+			}
+		}
+		.img-container {
+			max-height: 500px;
+
+			body.great-river-ortho &.mobile {
+				@media (max-width: 650px) { max-height: 400px }
+				@media (max-width: 550px) { max-height: 300px; }
+				@media (max-width: 450px) { max-height: 250px; }
+			}
+
+			img {
+				object-position: center -140px;
+				@media screen and (max-width: 1800px) { object-position: center -110px; }
+				@media screen and (max-width: 1500px) { object-position: center -90px; }
+				@media screen and (max-width: 1300px) { object-position: center -60px; }
+				@media screen and (max-width: 1050px) { object-position: center -40px; }
+				@media screen and (max-width: 900px) { object-position: center top; }
+
+				body.great-river-ortho & {
+					@media (max-width: 550px) { object-position: center -150px; }
+					@media (max-width: 450px) { object-position: center -90px; }
+					@media (max-width: 350px) { object-position: center -55px; }
+				}
+			}
+		}
+	}
+
+	&.patient-care-philosophy {
+		&.middle-hero {
+			@media @tabletMin {height: 100vh;}
+			&.blue-overlay {
+				max-height: 600px;
+
+				@media @mobileMax {
+					background-image: none !important;
+				}
+				&.prairie-grove-orthodontics {
+					background-position: center 120px;
+				}
+			}
+
+			&.made-it-easy {
+				max-height: 800px;
+				background-position-y: 100px;
+				background-position-x: left;
+
+				@media @mobileMax {
+					background-image: none !important;
+                    max-height: unset;
+				}
+
+				&.shawano-orthodontics,
+				&.dietmeier-orthodontics {
+					.content {
+						.inner-content {
+							.content-container {
+								width: 395px;
+								max-width: 395px;
+							}
+						}
+					}
+				}
+			}
+
+			&.rapids-orthodontics {
+				background-position-x: center;
+				.content {
+					.inner-content {
+						.content-container {
+							@media @tabletMin {width: 420px;}
+							@media (max-width:768px) {margin: -60px 30px 0;}
+							right: auto;
+							left: 0;
+								
+						}
+					}
+				}
+			}
+			&.dietmeier-orthodontics,
+			&.chapman-orthodontics {
+				margin-top: 80px;
+				background-position-y: 100px;
+				@media @tabletMax { margin-top: 50px; }
+				@media @mobileMax { margin-top: 0; }
+			}
+		}
+
+		&.bottom-hero {
+			.img-container {
+				max-height: 740px;
+
+				img {
+					object-position: center -70px;
+					@media screen and (max-width: 1700px) { object-position: center -20px; }
+					@media screen and (max-width: 1450px) { object-position: center center; }
+				}
+			}
+			&.rapids-orthodontics {
+				.img-container {
+					&.desktop {
+						img {
+							object-position: center bottom; 
+							@media (min-width:1540px) {
+								object-position: center -120px; 
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&.braces {
+		max-height: 620px;
+		@media @tabletMin {height: 100vh;}
+		@media @mobileMax {
+			max-height: unset;
+			background-image: none !important;
+
+			.content {
+				.inner-content {
+					.content-container {
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+		&.shawano-orthodontics,
+		&.chapman-orthodontics {
+			background-position: center 155px;
+		}
+	}
+
+	&.search-page {
+		.content {
+			position: absolute;
+
+			.inner-content .content-container.clear-with-gray-mobile {
+				width: 50%;
+				@media @mobileMax {width: 100%;}
+			}
+		}
+		@media @mobileMax {
+			.img-container {
+				height: 600px;
+				img {
+				   height: 600px;
+				}
+			}
+			.content {
+				position: relative;
+			}
+		}
+	}
+
+	&.invisalign {
+		&.middle-hero {
+			max-height: 700px;
+			background-position: center 145px;
+			@media @tabletMax { height: 70vh; background-position: center 115px; }
+			&.dietmeier-orthodontics {
+				@media @tabletMax { height: 70vh; background-position: -240px 115px; }
+			}
+			&.prairie-grove-orthodontics {
+				background-position: center -55px;
+			}
+
+			&.rapids-orthodontics {
+				background-position: left 145px;
+			}
+
+			&.dietmeier-orthodontics .content .inner-content .content-container {
+				max-width: 420px;
+			}
+
+			.mobile-hero {
+				display: none;
+			}
+
+			.content {
+				.inner-content {
+					.content-container {
+						padding: 0;
+						max-width: 500px;
+						@media @tabletMax { max-width: 380px; }
+						@media @menuMax { position: relative; right: 0; width: 100%; max-width: 100%; margin: -4*@gutter-lg auto 0; }
+
+						h2, h3 {
+							padding: 2*@gutter-md 2*@gutter-md 0;
+							@media @menuMax { padding: 2*@gutter-sm @gutter-lg 0; }
+							.border-top-left-radius(4px);
+							.border-top-right-radius(4px);
+						}
+
+						h3 {
+							@media @mobileMax { font-size: 28px; line-height: 30px; }
+						}
+
+						&:not(.widget-bottom) {
+							p {
+								padding: 0 2*@gutter-md;
+								@media @menuMax { padding: 0 @gutter-lg; }
+							}
+						}
+
+						.widget-bottom {
+							background-color: var(--color-primary);
+							color: @white;
+							padding: 2*@gutter-md;
+							.border-bottom-left-radius(4px);
+							.border-bottom-right-radius(4px);
+							@media @menuMax { padding: @gutter-lg; }
+
+							.h2, .h3, .h4, h2, h3 {
+								color: @white;
+								margin-bottom: 0;
+								font-size: 38px;
+							}
+
+							p {
+								padding: 0;
+							}
+							.cta.text {
+								border-bottom-color: @white;
+								&:hover {
+									color: #46464a;
+								}
+							}
+
+							span {
+								font-size: 20px;
+                                font-weight: normal;
+                                display: block;
+							}
+						}
+					}
+				}
+			}
+
+			@media @menuMax {
+				background-image: none !important;
+				max-height: 100%;
+				height: 100%;
+
+				.mobile-hero {
+					display: block;
+				}
+			}
+		}
+
+		&.bottom-hero {
+			&.kristo-orthodontics {
+				.img-container {
+					&.desktop {
+						@media (min-width:1024px) {height: 600px;}
+						img {
+							@media (min-width: 2000px) {
+								height: auto;
+								width: 100%;
+								top: -35%;
+								left: 0;
+								right: 0;
+							}
+							@media screen and (min-width:1650px) and (max-width:1800px) {
+								width: 120%;
+								left: auto;
+								right: 0;
+								top: -35%;
+							}
+							@media screen and (min-width:1550px) and (max-width:1649px) {
+								width: 130%;
+								top: -35%;
+								left: -35%;
+							}
+							@media screen and (min-width:1450px) and (max-width:1549px) {
+								width: 140%;
+								top: -35%;
+								left: -35%;
+							}
+							@media screen and (min-width:1250px) and (max-width:1449px) {
+								top: -35%;
+								left: -35%;
+							}
+							@media screen and (min-width:1024px) and (max-width:1249px) {
+								left: -35%;
+								top: -20%;
+							}
+							@media screen and (min-width:1024px) and (max-width:1449px) { width: 150%; }
+							@media (min-width:1024px) {
+								position: absolute;
+								max-width: none;
+							}
+						}
+					}
+				}
+			}
+			&.prairie-grove-orthodontics,
+			&.dietmeier-orthodontics,
+			&.rapids-orthodontics {
+				.img-container {
+					&.desktop {
+						img {
+							@media (min-width:1700px) and (max-width:1799px) { top: -15%; }
+						}
+					}
+				}
+			}
+			.img-container {
+				&.desktop {
+					max-height: 600px;
+					@media (min-width:1550px) {
+						height: 600px;
+					}
+					img {
+						@media (min-width:1800px) {top: -25%;}
+						@media (min-width:1550px) and (max-width:1799px) { top: -10%; }
+						@media (min-width: 1550px) { position: absolute; }
+					}
+				}
+			}
+		}
+	}
+
+	&.emergency-care {
+		z-index: -1;
+		// background-image: url('../../../../../../uploads/2021/02/sim-68314-middle-hero_kristo-emergency-1.jpg');
+		height: 640px;
+		@height: @header-height + @utility-header-height;
+		background-position: center 85px;
+		&.prairie-grove-orthodontics {
+			background-position: center 115px;
+		}
+
+		@media @tabletMax {
+			@height: @mobile-header-height + @utility-header-height;
+			background-position: center 65px;
+		}
+
+		@media screen and (max-width: 1100px) {
+			height: 520px;
+			background-size: 100%;
+			background-position: center 85px;
+		}
+
+		@media @menuMax {
+			height: 390px;
+		}
+
+		@media @ipads {
+			background-position: center 0px;
+			background-size: 100%;
+			height: 45vh;
+		}
+
+		@media @ipads and (orientation: landscape) {
+			height: 80vh;
+		}
+
+		@media @mobileMax {
+			height: auto;
+			background-image: none !important;
+		}
+
+		&.shawano-orthodontics {
+			@media (max-width:1366px) { background-position: center 110px;}
+		}
+	}
+
+	&.free-consultations {
+		@media @mobileMax { .flex-direction-column-reverse; }
+
+		.content {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			@media @mobileMax { position: relative; }
+
+			.inner-content {
+				height: 100%;
+
+				.content-container {
+					padding: 0;
+					margin: 0;
+					height: 100%;
+					width: 100%;
+					max-width: 100%;
+
+					.main-container {
+						height: 100%;
+						.display-flex;
+						.flex-direction-column;
+						.flex-justify-content-center;
+						@media @mobileMax {
+							text-align: center;
+							width: calc(~"100% + 60px");
+							margin-left: -30px;
+							padding: 0 30px;
+							background-color: var(--color-primary);
+						}
+
+						.container {
+							max-width: 390px;
+							margin-bottom: 2*@gutter-sm;
+							@media @tabletMax { margin-bottom: @gutter-sm; }
+							@media screen and (max-width:960px) { max-width:100%; }
+							@media @mobileMax { max-width: 100%; padding-top: 4*@gutter-sm; padding-bottom: 2*@gutter-sm; }
+							h2 {
+								margin-bottom: @gutter-lg/2;
+							}
+						}
+
+						.fancy-select {
+							@media @mobileMax {
+								display:inline-block;
+							}
+							.options {
+								@media @mobileMax {
+									position:static;
+								}
+								ul.select-options {
+									@media screen and (max-width:1565px) {
+										.column-count(3);
+										white-space:nowrap;
+									}
+
+									@media screen and (max-width:1285px) {
+										.column-count(5);
+									}
+									@media @mobileMax {
+										.column-count(2);
+									}
+								}
+							}
+						}
+
+						.columns-container {
+							margin: 0 -@gutter-lg/2 2*@gutter-lg;
+							width: calc(~"100% + @{gutter-lg}");
+							.display-flex;
+
+							@media screen and (max-width:1565px) {
+								margin-bottom:@gutter-lg;
+							}
+
+							& + .form-wrapper {
+								@media screen and (max-width:1285px) {
+									padding-bottom:4*@gutter-sm;
+								}
+								@media @mobileMax {
+									margin-top:1.75*@gutter-sm;
+									padding-bottom:2*@gutter-md;
+								}
+							}
+
+							@media @tabletMax { margin: 0.5*@gutter-sm -@gutter-lg/2 @gutter-lg; }
+							@media screen and (max-width:880px) {
+								margin-bottom:0.5*@gutter-lg;
+							}
+							@media @mobileMax { .flex-direction-column; .flex-align-items-center; }
+
+							.column {
+								margin: 0 @gutter-lg/2;
+								width: 220px;
+								text-align: center;
+
+								@media screen and (max-width:960px) {
+									width:percentage(1/3);
+								}
+
+								@media @mobileMax {
+									margin: 0;
+
+									&:not(:last-of-type) {
+										margin-bottom: 2*@gutter-md;
+									}
+								}
+
+								.img-container {
+									width: 100%;
+									margin-bottom: @gutter-md;
+									.display-flex;
+									.flex-justify-content-center;
+									.flex-align-items-center;
+
+									i {
+										&:before {
+											font-size: 50/@rem;
+											@media @tabletMax { font-size: 40/@rem; }
+											@media screen and (max-width: 900px) { font-size: 25/@rem; }
+											@media @mobileMax { font-size: 50/@rem; }
+										}
+
+										&:first-of-type,
+										&:last-of-type {
+											&:before {
+												font-size: 70/@rem;
+												@media @tabletMax { font-size: 60/@rem; }
+												@media screen and (max-width: 900px) { font-size: 35/@rem; }
+												@media @mobileMax { font-size: 70/@rem; }
+											}
+										}
+									}
+								}
+							}
+						}
+
+						.form-wrapper {
+							padding-bottom: 2*@gutter-md;
+                            .display-flex;
+                            @media @mobileMax { display: block; }
+
+							.row-office_preference {
+								@media @mobileMax {
+									margin: 0;
+									.display-flex;
+									.flex-direction-column;
+									.flex-align-items-center;
+								}
+
+								p {
+									&.title {
+										color: @white;
+										margin-bottom: @gutter-lg/2;
+										font-size: 20/@rem;
+										line-height: 22/@rem;
+										.Bold;
+										@media @mobileMax { text-align: center; }
+									}
+								}
+
+								.form-container {
+									margin: 0;
+									.display-flex;
+									@media screen and (max-width: 483px) { .flex-direction-column; }
+
+									.select-container {
+										width: 200px;
+										max-width: 200px;
+										position: relative;
+
+										.select-wrapper {
+											select {
+												background: none;
+												border-bottom: 2px solid @white;
+												color: @white;
+
+												&::-webkit-input-placeholder {
+													color: @white;
+												}
+
+												&::-moz-placeholder {
+													color: @white;
+												}
+
+												&:-ms-input-placeholder {
+													color: @white;
+												}
+
+												&:-moz-placeholder {
+													color: @white;
+												}
+
+												&:placeholder-shown {
+													color: @white;
+												}
+
+												&::placeholder {
+													color: @white;
+												}
+											}
+
+											&:after {
+												color: @white;
+											}
+										}
+									}
+
+									a {
+										margin-left: @gutter-sm;
+										@media screen and (max-width: 483px) { margin-left: 0; margin-top: @gutter-lg; }
+									}
+								}
+
+								label {
+									color: @white;
+								}
+							}
+
+                            .cta-wrapper {
+                                padding-left: @gutter-lg;
+                                @media @mobileMax { padding-left: 0; margin-top: @gutter-lg; }
+                            }
+						}
+					}
+				}
+			}
+		}
+		&.bottom-hero {
+			&.prairie-grove-orthodontics,
+			&.dietmeier-orthodontics,
+			&.chapman-orthodontics {
+				.img-container.desktop {
+					img {
+						top: -200px;
+						@media screen and (min-width:1601px) and (max-width: 2100px) { top: -210px; }
+					}
+				}
+			}
+			&.rapids-orthodontics {
+				.img-container.desktop {
+					img {
+						top: -150px;
+						right: 0;
+						@media screen and (min-width:1601px) and (max-width: 2100px) { top: -210px; }
+					}
+				}
+			}
+			.img-container.desktop {
+				height: 600px;
+				img {
+					position: absolute;
+					top:-150px;
+					@media screen and (max-width:1600px) {
+						top: -60px;
+						width: 125%;
+						max-width: none;
+						right: -15%;
+					}
+					@media screen and (max-width:1130px) {
+						top: 0;
+						width: 150%;
+						max-width: none;
+						right: -25%;
+					}
+				}
+			}
+			&.shawano-orthodontics {
+				.img-container.desktop {
+					img {
+						@media screen and (max-width: 1440px) { top: -90px }
+					}
+				}
+			}
+		}
+	}
+
+	&.safer-orthodontic-care {
+		@media @mobileMax { .flex-direction-column-reverse; margin-top: @gutter-lg;}
+
+		.cta.text.white:hover {
+			color:var(--color-primary);
+		}
+
+		&.bottom-hero {
+			.img-container {
+				max-height: 600px;
+				&.mobile {
+					img {
+						width: auto;
+						min-height: 300px;
+						object-fit: cover;
+						object-position: right;
+					}
+				}
+			}
+		}
+
+		.content {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			@media @mobileMax { position: relative; }
+
+			.inner-content {
+				height: 100%;
+
+				.content-container {
+					padding: 0;
+					margin: 0;
+					height: 100%;
+					width: 100%;
+					max-width: unset;
+					@media @mobileMax { background-color: var(--color-primary); }
+
+					.main-container {
+						height: 100%;
+						.display-flex;
+						.flex-direction-column;
+						.flex-justify-content-center;
+						@media @mobileMax {
+							text-align: center;
+							width: calc(~"100% + 60px");
+							margin-left: -30px;
+							padding: 0 30px;
+							background-color: var(--color-primary);
+						}
+
+						.container {
+							max-width: 390px;
+							margin-bottom: 2*@gutter-sm;
+							@media @tabletMax { margin-bottom: @gutter-sm; }
+							@media @mobileMax { max-width: unset; padding-top: 70px; padding-bottom: 2*@gutter-sm; margin-bottom: 0;}
+
+							h2 {
+								margin-bottom: @gutter-lg/2;
+								@media @mobileMax {line-height: 35px;}
+							}
+							p {
+								text-align: left;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&.bio {
+		.img-container {
+			height: 600px;
+			position: relative;
+
+			img {
+				position: absolute;
+
+				&.kristo {
+					top: -70px;
+					@media screen and (max-width: 1650px) { top: -40px; }
+					@media screen and (max-width: 1300px) { top: -20px; }
+					@media screen and (max-width:1160px) {object-fit: cover; height: 100%; top: 0;}
+				}
+				&.bronski {
+					top: -110px;
+					@media screen and (max-width:1550px) {top:-30px; }
+					@media screen and (max-width:1075px) {object-fit: cover; height: 100%;top:0; }
+				}
+				&.hamm {
+					top: -140px;
+					@media screen and (max-width:1145px) { object-fit: cover; height: 100%; top: 0; }
+				}
+				&.tsunoda {
+					top: -75px;
+					@media screen and (max-width:1025px) { object-fit: cover; height: 100%; top: 0; object-position: left; }
+					@media screen and (min-width:1475px) and (max-width:1625px) { top: -80px;}
+					@media screen and (min-width:1626px) and (max-width:1799px) { top: -100px;}
+					@media screen and (min-width:1800px) and (max-width:1960px) { top: -150px;}
+					@media screen and (min-width:1961px) and (max-width:2150px) { top: -200px;}
+					@media screen and (min-width:2151px) { top: -300px;}
+				}
+				&.siu {
+					.transform(scaleX(-1));
+					top: -70px;
+					@media screen and (min-width: 2130px) { top: -210px; }
+					@media screen and (min-width: 1701px) and (max-width: 2129px) { top: -95px; }
+					@media screen and (max-width: 1700px) { top: -60px; }
+					@media screen and (max-width: 1300px) { top: 0px; }
+					@media screen and (max-width: 1070px) { object-fit: cover; height: 100%; top: 0; object-position: left; }
+				}
+				&.holloway {
+					top: -200px;
+					@media screen and (max-width: 2000px) { top: -50px; }
+					@media screen and (max-width: 1070px) { object-fit: cover; height: 100%; top: 0; object-position: 26%; }
+				}
+				&.duevel {
+					top: -50px;
+					@media screen and (max-width: 1500px) { top: -10px; }
+					@media screen and (max-width: 1300px) { top: -30px; }
+					@media screen and (max-width: 1075px) { top: 0px; }
+					@media screen and (max-width: 900px) { object-fit: cover; height: 100%; top: 0; object-position: 26%; }
+				}
+				&.lin {
+					top: -170px;
+					@media screen and (max-width: 1500px) { top: -100px; }
+					@media screen and (max-width: 1075px) { top: auto; bottom: 0; }
+					@media screen and (max-width: 900px) { object-fit: cover; height: 100%; top: 0; object-position: 26%; }
+				}
+				&.drye {
+					top: -70px;
+					@media screen and (max-width: 1200px) { top: auto; bottom: 0; }
+
+				}
+				&.dietmeier {
+					top: -250px;
+					@media screen and (max-width: 1920px) { top: -190px; }
+					@media screen and (max-width: 1600px) { top: -50px; }
+					@media screen and (max-width: 1070px) { object-fit: cover; height: 100%; top: 0; object-position: 26%; }
+				}
+				&.chapman {
+					top: -220px;
+					@media screen and (max-width: 1920px) { top: -170px; }
+					@media screen and (max-width: 1600px) { top: -50px; }
+					@media screen and (max-width: 1070px) { object-fit: cover; height: 100%; top: 0; object-position: 26%; }
+				}
+				&.ross {
+					top: -235px;
+					@media screen and (max-width: 1920px) { top: -170px; }
+					@media screen and (max-width: 1723px) { top: -125px; }
+					@media screen and (max-width: 1440px) { top: -80px; object-fit: cover; height: 100%; top: 0; object-position: 26%;}
+					@media screen and (max-width: 1070px) { object-fit: cover; height: 100%; top: 0; object-position: 26%; }
+				}
+
+				&.anderson {
+					top: -235px;
+					@media screen and (max-width: 1920px) { top: -170px; }
+					@media screen and (max-width: 1723px) { top: -125px; }
+					@media screen and (max-width: 1440px) { top: -80px; object-fit: cover; height: 100%; top: 0; object-position: 26%;}
+					@media screen and (max-width: 1070px) { object-fit: cover; height: 100%; top: 0; object-position: 26%; }
+				}
+
+				&.farhi {
+					@media screen and (max-width: 1024px) { height: 100%; object-fit: cover; }
+				}
+			}
+
+			@media @mobileMax {
+				height: 100%;
+
+				img {
+					position: relative;
+					object-fit: contain;
+				}
+			}
+		}
+	}
+
+	&.smile-gallery {
+		max-height: 500px;
+
+		@media screen and (min-width: 2200px) { 
+			max-height: 660px;	
+		}
+		
+		img {						
+			@media screen and (min-width: 1921px) { object-position: center -200px; }
+			@media screen and (max-width: 1920px) { object-position: center -200px; }
+			@media screen and (max-width: 1720px) { object-position: center -150px; }
+			@media screen and (max-width: 1500px) { object-position: center -100px; }
+			@media screen and (max-width: 1300px) { object-position: center -50px; }
+			@media screen and (max-width: 1160px) { object-position: center 0; }
+		}
+		&.kristo-orthodontics {
+			img {
+				object-fit: cover;
+				width: 100%;;
+				@media screen and (min-width: 1900px) { object-position: center -400px; }
+				@media screen and (min-width: 1600px) and (max-width:1899px) { object-position: center -300px; }
+				@media screen and (min-width: 1300px) and (max-width:1599px) { object-position: center -200px; }
+				@media screen and (min-width: 1160px) and (max-width:1299px) { object-position: center -100px; }
+			}
+		}
+		&.prairie-grove-orthodontics {
+			img {
+				object-fit: cover;
+				width: 100%;;
+				@media screen and (min-width: 1900px) { object-position: center -270px; }
+				@media screen and (min-width: 1600px) and (max-width:1899px) { object-position: center -240px; }
+				@media screen and (min-width: 1300px) and (max-width:1599px) { object-position: center -180px; }
+				@media screen and (min-width: 1160px) and (max-width:1299px) { object-position: center -100px; }
+				@media screen and (min-width: 1000px) and (max-width:1159px) { object-position: center -100px; }
+				@media screen and (max-width: 1160px) { object-position: center -40px; }
+				&.mobile {
+					@media screen and (max-width: 1160px) { object-position: center 0; }
+				}
+			}
+		}
+		&.dietmeier-orthodontics {
+			img {
+				object-fit: cover;
+				width: 100%;;
+				@media screen and (min-width: 1900px) { object-position: center -270px; }
+				@media screen and (min-width: 1600px) and (max-width:1899px) { object-position: center -250px; }
+				@media screen and (min-width: 1400px) and (max-width:1599px) { object-position: center -160px; }
+				@media screen and (min-width: 1300px) and (max-width:1399px) { object-position: center -120px; }
+				@media screen and (min-width: 1160px) and (max-width:1299px) { object-position: center -60px; }
+				@media screen and (min-width: 1000px) and (max-width:1159px) { object-position: center -60px; }
+				&.mobile {
+					@media screen and (max-width: 1160px) { object-position: center 0; }
+				}
+			}
+		}
+		&.central-lakes-orthodontics {
+			img {
+				object-fit: cover;
+				width: 100%;;
+				@media screen and (min-width: 1921px) { object-position: center -200px; }
+				@media screen and (max-width: 1920px) { object-position: center -150px; }
+				@media screen and (max-width: 1720px) { object-position: center -80px; }
+				@media screen and (max-width: 1600px) { object-position: center -70px; }
+				@media screen and (max-width: 1500px) { object-position: center -50px; }
+				@media screen and (max-width: 1300px) { object-position: center -50px; }
+				@media screen and (max-width: 1160px) { object-position: center 0; }
+			}
+		}
+	}
+}
+
+.page-template-braces {
+    section.hero.full .content .inner-content .content-container {
+		a {
+			color: var(--color-primary);
+			border-bottom: none;
+		}
+        @media @mobileMax {
+            width: 1000%;
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+}
+
+
+body.smiles-by-ross{
+
+	.hero.standard {
+		
+		&.hudson{
+			background-position: center 15px;
+			@media screen and (max-width: 1600px) {				
+				background-position: center 25px;
+			}	
+			@media @tabletMax {				
+				background-position: 0px 110px;
+			}
+			@media @mobileMax {
+				background-position: center 0px;
+			}
+		}
+
+		&.ross-orthodontics{
+			background-position: center 50px;
+			@media screen and (max-width:1500px) {				
+				background-position: center 100px;
+			}	
+			@media @tabletMax {				
+				background-position: 0px 120px;
+			}
+			@media @mobileMax {
+				background-position: center 0px;
+			}
+		}
+	}
+
+	&.bio {
+		.img-container {		
+			@media screen and (max-width: 1160px) { height: 570px; }
+			@media @mobileMax  { height: 470px; }
+			
+			img {
+				position: absolute;			
+				&.ross {
+					top: 0px;
+					@media screen and (max-width: 1920px) { top: 0px; }
+					@media screen and (max-width: 1723px) { top: 0px; }
+					@media screen and (max-width: 1440px) { top: 0px; }
+				}
+			}
+		}
+	}
+
+	.smile-gallery {
+		max-height: 600px;
+
+		&.ross-orthodontics {
+			
+			@media screen and (min-width: 2200px) { 
+				max-height: 660px;	
+			}
+			
+			img {						
+				@media screen and (min-width: 1921px) { object-position: center -200px!important; }
+				@media screen and (max-width: 1920px) { object-position: center -150px!important; }
+				@media screen and (max-width: 1720px) { object-position: center -70px!important; }
+				@media screen and (max-width: 1500px) { object-position: center -50px!important; }
+				@media screen and (max-width: 1300px) { object-position: center -50px!important; }
+				@media screen and (max-width: 1160px) { object-position: center 0!important; }
+			}
+		}
+	}		
+
+	.bottom-hero {
+
+		&.hudson  {
+
+			.img-container {
+				@media screen and (max-width: 550px) {
+					height: 260px!important;		
+				}
+			}
+			.img-container.desktop,
+			.desktop {
+				height: 1150px;
+				@media screen and (min-width:1601px) and (max-width: 2100px) { height: 950px; }
+						
+				img{
+					top: 0px!important;
+					object-position: center 1px!important;
+					//height: 800px;
+					@media screen and (min-width:1601px) and (max-width: 2100px) { object-position: center 1px!important; }
+					@media screen and (max-width:1600px) {
+						top: 0px!important;
+						object-position: center 1px!important;
+					}
+					@media screen and (max-width:1130px) {
+						top: 0px!important;		
+						object-position: center 1px!important;		
+					}					
+				} 				
+			}
+		}		
+
+		&.ross-orthodontics {
+			.img-container {
+				@media screen and (min-width:1701px) and (max-width: 2100px) { height: 800px!important; }
+				@media screen and (min-width:1401px) and (max-width: 1700px) { height: 900px!important; }
+				@media screen and (min-width:700px) and (max-width: 1400px) { height: 710px!important; }
+			}
+		}
+	}
+}
+
+.page-template-location-home{
+	&.central-lakes-orthodontics {
+		.hero {
+			&.wadena{
+				.content{
+					.inner-content{
+						.content-container{
+							&.team {
+			
+								@media @mobileMax { 
+									margin-top: 0.1*@gutter-lg;
+								}
+							}
+						}
+					}
+				}
+			}
+		}	
+	}
+}

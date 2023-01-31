@@ -1,0 +1,76 @@
+.widget.monthly-payments {
+	@width: 220px;
+	width: @width;
+	max-width: @width;
+	text-align: center;
+	.display-flex;
+	.flex-justify-content-center;
+	.flex-direction-column;
+	.flex-align-items-center;
+
+	.icon-container {
+		width: 120px;
+		height: 90px;
+		margin-bottom: @gutter-lg/2;
+		position: relative;
+		.display-flex;
+		.flex-align-items-flex-start;
+		.flex-justify-content-center;
+
+		> div {
+			position: relative;
+			width: 119px;
+			height: 70px;
+			font-size: 70px;
+			.display-flex;
+			.flex-justify-content-center;
+
+			i.icon-monthly-payments-01 {
+				&:before {
+					color: var(--color-primary);
+					opacity: 1;
+					.ease-out(opacity, 0.3s);
+                    font-size: 90px;
+				}
+			}
+			i.icon-monthly-payments-02 {
+				width: 120px;
+				height: 70px;
+				font-size: 75px;
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				opacity: 0;
+				.display-flex;
+				.flex-justify-content-center;
+				.ease-out(opacity, 0.3s);
+
+                [class^="path"]:before {                
+                    font-size: 90px;
+                }
+                .path4, .path5, .path6, .path7 {
+                    &:before {
+                        color: var(--color-primary);
+                    }
+                }
+			}
+
+			&:hover {
+				i.icon-monthly-payments-01 {
+					&:before {
+						opacity: 0;
+					}	
+				}
+				i.icon-monthly-payments-02 {
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	p {
+		font-size: 18/@rem;
+		line-height: 22/@rem;
+		
+	}
+}

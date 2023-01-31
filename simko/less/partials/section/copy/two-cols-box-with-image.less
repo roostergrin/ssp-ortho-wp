@@ -1,0 +1,156 @@
+section.two-cols-box-with-image {
+	margin-bottom: 80px;
+	@media @tabletMax { margin-bottom: 50px; }
+	&.orthodontic-care-maintenance {
+		aside {
+			h2.h5.primary{font-weight: 500; font-size: 25px;}
+		}
+	}
+
+	&.community-involvement {
+		.content {
+			.inner-content {
+				.container {
+					h2:not(.h1) {
+						.Regular;
+					}
+					article {
+						margin-top: -120px;
+						@media @menuMax {margin-top: -30px; }
+						@media @mobileMax { width: 100%;}
+					}
+				}
+			}
+		}
+	}
+
+	.content {
+		.inner-content {
+			.container {
+				margin: 0;
+				.display-flex;
+				@media @menuMax { .flex-direction-column; }
+
+				article {
+					@width: percentage(585/1170);
+					width: @width;
+					margin: 0;
+					margin-top: -240px;
+					@media @menuMax { width: 100%; margin-top: -60px; }
+
+					.box {
+						padding: 50px 60px;
+						opacity: 0.9;
+						color: @white;
+						.border-radius(5px);
+						background: 0% 0% no-repeat padding-box;
+						.flex(0, 0, @width);
+						.display-flex;
+						.flex-direction-column;
+						//https://trello.com/c/Lbscuk3q/708-copy-update-platform-wide
+						// @media screen and (max-width:450px) { h1 { font-size: 23/@rem; line-height:25/@rem; } }
+
+
+						&.bg-gray {
+							background-color: rgba(246, 246, 246, 0.9);
+							color: var(--color-primary);
+						}
+	
+						&.bg-primary {
+							background-color: var(--color-primary);
+							opacity: 1;
+							color: @white;
+							a {
+								color: @white;
+								border-bottom-color: @white;
+								&:hover {
+									color: var(--color-gray-1);
+								}
+							}
+	
+						}
+						@media @menuMax { padding: 30px; }
+
+						h1, h2, h3, h4, h5 {
+							color: @white; margin-bottom: 25px;
+							&.primary {
+								color: var(--color-primary);
+								margin-bottom: 25px;
+							}
+						}
+
+						a {
+							&.cta.text {
+								border-color: @white;
+								color: @white;
+
+								&:hover {
+									color: var(--color-gray-1);
+								}
+							}
+						}
+					}
+				}
+
+				aside {
+					@width: percentage((1170 - 585)/1170);
+					width: @width;
+					padding-left: 60px;
+					padding-top: 80px;
+					.flex(1, 0, @width);
+					@media @menuMax { width: 100%; padding-left: 0; padding-top: 30px; .flex(1, 0, 100%); }
+				}
+			}
+		}
+	}
+
+	&.reverse {
+		.content {
+			.inner-content {
+				.container {
+					flex-direction: row;
+					@media @menuMax { .flex-direction-column-reverse; }
+
+					aside {
+						padding-left: 0;
+						padding-right: 60px;
+						body.page-template-braces & {
+							@media @mobileMax { padding: 2*@gutter-lg 0 @gutter-lg 0;}
+						}
+						body.page-template-invisalign-virtual-care & {
+							padding-right: 30px;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&.braces {
+		&.reverse {
+			.content {
+				.inner-content {
+					article {
+						.box.bg-primary {
+							h1.white {
+								font-size: 39/@rem;
+								@media (max-width:375px) {font-size: 33/@rem;}
+							}
+						}
+					}
+				}
+			}
+		}
+		.content {
+			.inner-content {
+				.container {
+					@media @menuMax {
+						article {
+							margin-top: -30px;
+						}
+					}
+				}
+			}
+		}
+	}
+}

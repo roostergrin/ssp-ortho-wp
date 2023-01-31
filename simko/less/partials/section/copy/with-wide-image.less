@@ -1,0 +1,51 @@
+section.copy-with-wide-image {
+	margin:4*@gutter-sm 0;
+	
+	.inner-content {
+		.display-flex;
+		.flex-align-items-stretch;
+		.flex-justify-content-flex-start;
+		
+		> article {
+			@width:percentage(730/1170);
+			.flex(0,0,@width);
+			width:@width;
+			max-width:@width;
+			margin:0;
+			padding-right:2*@gutter-md;
+
+			@media @mobileMax {
+				height:auto;
+				width:100%;
+				max-width:100%;
+			}
+		}
+		> aside {
+			@width:percentage((1170-730)/1170);
+			.flex(0,0,@width);
+			width:@width;
+			max-width:@width;
+			margin:0;
+			position:relative;
+
+			@media @mobileMax {
+				height:auto;
+				width:100%;
+				max-width:100%;
+				margin-top:@gutter-lg; // TODO
+			}
+		}
+	}
+	
+	.image-container {
+		@media @tabletMin {
+			margin-right:-2*@gutter-lg;
+			width:calc(~"100% + 2*@{gutter-lg}");
+		}
+		
+		@media screen and (min-width:@wrapper) {
+			margin-right:-4*@gutter-lg;
+			width:calc(~"100% + 4*@{gutter-lg}");
+		}
+	}
+}

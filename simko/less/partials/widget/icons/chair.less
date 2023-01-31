@@ -1,0 +1,60 @@
+.widget.chair {
+	@width: 220px;
+	width: @width;
+	max-width: @width;
+	text-align: center;
+	.display-flex;
+	.flex-direction-column;
+	.flex-align-items-center;
+
+	.icon-container {
+		width: 120px;
+		height: 90px;
+		margin-bottom: @gutter-lg/2;
+		position: relative;
+		margin-left: -40px;
+		.display-flex;
+		.flex-align-items-flex-start;
+		.flex-justify-content-center;
+
+		> div {
+			.display-flex;
+			.flex-justify-content-center;
+		}
+
+		.icon-chair-up,
+		.icon-chair-down {
+			width: 120px;
+			height: 90px;
+			font-size: 85px;
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			.ease-out(opacity, 0.3s);
+
+			&:not(.active) {
+				opacity: 0;
+			}
+		}
+
+		&:hover {
+			.icon-chair-up {
+				opacity: 0;
+			}
+
+			.icon-chair-down {
+				opacity: 1;
+			}
+		}
+
+		body.page-template-invisalign-aligners & {
+			margin-left: -40px;
+		}
+	}
+
+	p {
+		font-size: 18/@rem;
+		line-height: 22/@rem;
+		
+	}
+}

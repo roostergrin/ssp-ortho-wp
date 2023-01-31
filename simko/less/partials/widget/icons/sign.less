@@ -1,0 +1,53 @@
+.widget.sign {
+	@width: 220px;
+	width: @width;
+	max-width: @width;
+	text-align: center;
+	.display-flex;
+	.flex-direction-column;
+	.flex-align-items-center;
+
+	.icon-container {
+		width: 120px;
+		height: 90px;
+		margin-bottom: @gutter-lg/2;
+		position: relative;
+		.display-flex;
+		.flex-align-items-flex-start;
+		.flex-justify-content-center;
+
+		> div {
+			.display-flex;
+			.flex-justify-content-center;
+		}
+
+		.icon-open-sign,
+		.icon-tooth {
+			width: 91px;
+			height: 85px;
+			font-size: 85px;
+			position: absolute;
+			.ease-out(opacity, 0.3s);
+
+			&:not(.active) {
+				opacity: 0;
+			}
+		}
+
+		&:hover {
+			.icon-open-sign {
+				opacity: 0;
+			}
+
+			.icon-tooth {
+				opacity: 1;
+			}
+		}
+	}
+
+	p {
+		font-size: 18/@rem;
+		line-height: 22/@rem;
+		
+	}
+}

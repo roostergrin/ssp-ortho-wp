@@ -1,0 +1,158 @@
+section.logo-carousel {
+	background-color: @gray-9;
+	&:before {
+		content: '';
+		width: 100%;
+		height: 14px;
+		position: absolute;
+		z-index: 1;
+		top: -14px;
+		background-image: ~"url(../images/placeholder/graphics/wavy.png)"; // TODO: consider using clip-path
+	}
+
+	&:after {
+		content: '';
+		width: 100%;
+		height: 14px;
+		position: absolute;
+		z-index: 1;
+		bottom: -14px;
+		.transform(scale(1, -1));
+		background-image: ~"url(../images/placeholder/graphics/wavy.png)"; // TODO: consider using clip-path
+	}
+	// body.page-template-community-involvement & {
+		// @media @mobileMax {
+			// &:before, &:after {
+				// background: none;
+			// }
+			// background-color: @white;
+		// }
+	// }
+	
+	body.page-template-community-involvement & {
+		@media @mobileMax {
+			margin-top:0!important;
+			background-color:@gray-9;
+			padding:@gutter-lg @gutter-md 45px;
+			&:before {
+				background:none;
+			}
+			&:after {
+				left:0;
+			}
+			
+			.content {
+				.carousel-container {
+					padding-left:0;
+					padding-right:0;
+				}
+			}
+		}
+	}
+
+	.content {
+		padding: 0;
+
+		.carousel-container {
+			position: relative;
+			padding: 100px 75px 75px;
+			@media @mobileMax {padding:30px 75px 10px;}
+
+			.logo.owl-carousel {
+
+				@media @ipadMin {
+					&.disable-desktop {
+						max-width: 800px;
+						width: 100%;
+						margin: auto;
+					}
+				}
+
+				.owl-stage {
+					.display-flex;
+					.flex-align-items-center;
+
+					.owl-item {
+						
+						.img-container {
+							.display-flex;
+							.flex-justify-content-center;
+							img {
+								width: auto;
+								max-height: 130px;
+								&#colfax-rehab { max-width: 200px;}
+								&#moms { max-width: 115px;}
+								&#bsa { max-width: 150px;}
+								&#wausau-conservatory { max-width: 120px;}
+								&#mcdonnell-schools { max-width: 200px;}
+
+								body.page-template-community-involvement &{
+									@media @mobileMax {
+										max-height:none;
+										max-width:none!important;
+										min-height:0;
+										height:auto;
+										width:100%;
+									}
+								}
+							}
+						}
+					}
+				}
+
+				.owl-nav {
+					position: absolute;
+					bottom: 30px;
+				}
+			}
+
+			.pagination {
+				// position: absolute;
+				margin: 25px auto 0;
+				bottom: @gutter-lg;
+				width: 28px;
+				left: 50%;
+				.display-flex;
+				.flex-justify-content-space-between;
+				.flex-align-items-center;
+
+				@media @ipadMin {
+					&.disable-desktop {
+						display: none;
+					}
+				}
+
+				.icon-page-left,
+				.icon-page-right {
+					width: @gutter-sm;
+					height: @gutter-sm;
+					outline: none;
+					cursor: pointer;
+
+					&:hover:before {
+						color:var(--color-primary);
+					}
+
+					&:before {
+						content: "\e90a";
+						color: var(--color-gray-1);
+						// width: @gutter-sm;
+						// height: @gutter-sm;
+						// font-size: @gutter-sm;
+						.Icons;
+						.display-flex;
+						.flex-justify-content-flex-end;
+						.flex-align-items-center;
+						font-weight: 700;
+					}
+				}
+
+				.icon-page-left {
+					&:before {
+						transform: scaleX(-1);
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,340 @@
+body.page-template-sleep-apnea-treatment {
+    section {
+        &.header-utility {               
+            // top: 131px;   
+            
+            @media screen and (max-width: 1193px) { 
+                padding: 0px 0;
+                top:70px;
+            }
+        }
+
+        &.hero {
+            &.standard.ross-orthodontics {
+                background-position: center 178px;
+                height: 720px;
+                @media screen and (min-width: 2001px) { background-position-x: center; background-position-y: 0px }
+                @media screen and (max-width: 2000px) { background-position-y: 25% }
+                @media screen and (max-width: 1500px) { background-size: cover; background-position-y: 30% }
+                @media screen and (max-width: 1500px) { background-position-x: 65%; }
+                @media screen and (max-width: 1066px) { background-size: auto; background-position-y: 115px; }
+                @media screen and (max-width: 990px) { background-position: center 115px; }
+                @media screen and (max-width: 880px) { background-position: center 115px; }
+
+                @media screen and (max-width: 782px) { 
+                    background-color: #f6f6f6;
+                }
+            }
+
+            &.standard {
+                .content{
+                    .inner-content {
+                        @media screen and (max-width: 782px) { 
+                            padding-top: 0px;
+                        }
+                    }
+                }
+            }
+
+            .content {
+                .left-side{
+                    .bg-primary{
+                        @media screen and (max-width: 782px) {
+                            top: -75px;
+                            position: relative;
+
+                            p{
+                                padding-right: 8%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.icons{
+            
+            &.with-copy{
+                padding-bottom: 0;
+                background-color: #f6f6f6;
+                &:before,
+                &:after {
+                    display: none;
+                }
+
+                &.bg-gray {
+                    padding: 95px 0;
+
+                    @media screen and (max-width: 768px) { 
+                        padding: 0px 0;
+                        margin: 0 0;
+
+                        .content {
+                            top:-30px;
+                        }
+                    }
+
+                    .inner-content{
+                        max-width: 804px;
+                    }
+                }
+
+                &.bg-white {
+                    background-color: @white;
+                    &:before{
+                        content: '';
+                        display: block;
+                        width: 100%;
+                        position: absolute;
+                        top: 0;
+                        height: 14px;
+                        .transform(rotate(180deg));
+                        background-image: url('https://dev-smilesbyross-com.mdgadvertising.com/wp-content/themes/simko/images/placeholder/graphics/wavy.png');
+                    }
+
+                    .inner-content{
+                        max-width: 804px;
+                        h3 {
+                            padding: 0 17%;
+
+                            @media screen and (max-width: 768px) { 
+                                padding: 0 11%;
+                            }
+                        }
+                    }
+
+                    &:before {
+                        content: '';
+                        width: 100%;
+                        height: 14px;
+                        .transform(rotate(180deg));
+                        filter: opacity(0.5);
+                        background-image: url('https://dev-smilesbyross-com.mdgadvertising.com/wp-content/themes/simko/images/placeholder/graphics/wavy.png');
+                        top:0px;
+                    }
+                }
+            }   
+        }
+
+        &.three-cols-cards {
+            background-color: #f6f6f6;
+            padding-bottom: 130px;                                 
+            
+            @media screen and (max-width: 768px) {  
+                padding-bottom: 72px;
+            }
+
+            .content {                        
+                .inner-content {                  
+                    .main-container {                      
+                        .card {
+                            width: 100%;
+                            max-width: 350px!important;
+                            min-height: 399px!important;
+                            opacity: 1;
+                            transform: none;
+                            background: @white;
+                            
+                            @media screen and (max-width: 1066px) { 
+                                max-width: unset!important;
+                                min-height: unset!important;
+                                padding: 40px 40px;
+                            }
+                            
+                            .title,
+                            h3 {
+                                line-height: 40px;
+                                letter-spacing: -0.1px;
+                                font-weight: bold;
+                                color: var(--color-gray-1);
+                            }
+
+                            p {
+                                line-height: 22px;
+                                letter-spacing: -0.07px;
+                                font-weight: 300;
+                                text-align: left;
+                                color: var(--color-gray-1);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.service.for-ages {        
+            .content-container {
+                @media screen and (max-width: 1140px) { 
+                    margin: auto;
+                }
+            }            
+        }
+
+        &.service.for-ages.first {
+            padding-bottom: 0;
+        }
+        &.service.for-ages.third{
+            padding-bottom: 60px;
+        }
+
+        &.service.for-ages.first,
+        &.service.for-ages.third {            
+
+            .content-container {
+                justify-content: center;
+                @width: calc(~"100% - 72px");
+                width: @width;   
+                
+                @media screen and (max-width: 782px) { 
+                    width: 100%;
+                }
+            }
+
+            .img-container{
+                img {
+                 
+                    @media screen and (max-width: 782px) { 
+                        max-width: 315px;
+                    }
+                }                
+            }
+        }        
+        &.service.for-ages.second {
+            padding-bottom: 0;
+
+            .img-container{
+                img {
+                   
+                    @media screen and (max-width: 782px) { 
+                        max-width: 315px;
+                    }
+                }                
+            }
+
+            .content-container {
+                justify-content: center;
+                @width: calc(~"100% - 63px");
+                width: @width;
+                padding-left: 0; 
+
+                @media screen and (max-width: 1140px) { 
+                    margin: auto;
+                }
+
+                @media screen and (max-width: 782px) { 
+                    @width: calc(~"100% - 11px");
+                    width: @width;
+                }
+                
+                h2 {
+                    span {
+                        display: block;
+                    }
+                }
+
+                p {
+                    padding-right: 12%;
+
+                    @media screen and (max-width: 1066px) { 
+                        padding-right: 0;
+                    }
+                }
+            }
+        }
+        
+        &.overlap.carousel{
+            margin-top: 40px !important;
+
+            @media screen and (max-width: 1050px) {
+                &::before, &::after {
+                    content: none;
+                }    
+            }
+
+            .mobile-pagination-container{
+                display: none;
+            }            
+            @media screen and (max-width: 782px) { 
+                &:before{
+                    display: none;
+                }         
+            }  
+            .main-container {
+                .content-carousel {
+                    .pagination-container {
+                        display: none;
+                    }
+                    .carousel-item {
+                        background-color: #33A3C2;
+                        padding: 2*@gutter-lg 2*@gutter-lg 2*@gutter-lg 220px;
+
+                        @media screen and (max-width: 782px) { 
+                            padding: 80px 30px;
+                        }
+        
+                        h3 { 
+                            color: @white;
+                            line-height: 40px;
+                            font-size: 40px;
+                            letter-spacing: -0.2px;
+
+                            @media screen and (max-width: 782px) { 
+                                line-height: 36px;
+                                font-size: 36px;
+                                letter-spacing: -0.18px;
+                            }
+                        }
+        
+                        p {
+                            color: @white;
+                            line-height: 35px;
+                            letter-spacing: -0.13px;
+                            font-size: 25px;
+                        } 
+                        .cta{
+                            &.text{
+                                font-size: 15px;
+                                color: @white;
+                                text-decoration: underline;
+                                padding: 15px 0px;
+                                letter-spacing: -0.07px;
+                                line-height: 22px;                                
+                            }
+                        }                  
+                    }
+                }
+            }         
+        }
+        
+        &.bottom-hero {            
+            &.ross-orthodontics {
+                .img-container{
+                    height: auto!important;
+                }
+            }            
+        }
+        
+        &.icons.carousel.two-cols {            
+            .mobile-reverse {
+
+                @media screen and (max-width: 782px) {                     
+                    h3 {
+                        font-size: 36px;
+                        padding-right: 10%;
+                        letter-spacing: -0.18px;
+                    }
+                    
+                    p{
+                        font-size: 15px;
+                        line-height: 22px;
+                        letter-spacing: -0.07px;
+                    }
+                }
+            }               
+        }
+
+        &.footer{
+            background: #f6f6f6;
+        }
+    }       
+}

@@ -1,0 +1,318 @@
+section.icons.carousel {
+	.owl-carousel {
+		margin: 0;
+		overflow: hidden;
+		padding: 2*@gutter-md 0;
+		.pointer-events(none);
+		.display-flex;
+		.flex-justify-content-space-around;
+		.flex-align-items-center;
+		@media @menuMax { padding: @gutter-lg 0; }
+		@media @mobileMax { padding-left: 0; padding-right: 0; }
+		body.page-template-patient-care-philosophy & {
+			@media @mobileMax { padding: 2*@gutter-lg 0;}
+		}
+		body.page-template-free-custom-mouthguard & { padding: 2*@gutter-md 0 @gutter-lg; }
+
+		&.owl-loaded {
+			overflow: hidden;
+			.flex-direction-column;
+		}
+
+		.owl-stage-outer {
+			margin: 0 auto @gutter-sm;
+			body.page-template-free-custom-mouthguard & { margin-bottom: 0; }
+
+			.owl-stage {
+				.display-flex;
+
+				.owl-item {
+					height: 100%;
+					margin: 0 auto;
+					.display-flex;
+					.flex-direction-column;
+					.flex-justify-content-center;
+					.flex-align-items-center;
+
+					.widget {
+						margin: 0 2*@gutter-sm;
+						.pointer-events(all);
+						@media @menuMax { margin: 0 auto; }
+					}
+				}
+			}
+		}
+
+		.owl-nav {
+			width: 2*@gutter-sm;
+			margin: auto;
+			display: none;
+			.flex-justify-content-space-between;
+			.flex-align-items-center;
+			@media @menuMax { .display-flex; }
+
+			.owl-prev {
+				&:before {
+					content: '\e909';
+				}
+			}
+
+			.owl-next {
+				&:before {
+					content: '\e90a';
+				}
+			}
+
+			.owl-prev,
+			.owl-next {
+				width: @gutter-sm;
+				height: @gutter-sm;
+				outline: none;
+				border: none;
+				background: none;
+				cursor: pointer;
+
+				&:before {
+					color: var(--color-gray-1);
+					.Icons;
+					.pointer-events(all);
+				}
+
+				&:hover {
+					&:before {
+						color: var(--color-primary);
+					}
+				}
+			}
+		}
+	}
+
+	&.two-cols {
+		margin: 140px 0;
+		@media screen and (max-width: 870px) { margin: 70px 0; }
+		@media @mobileMax { margin: 50px 0; }
+
+		.inner-content {
+			padding: 0;
+			.display-flex;
+			.flex-justify-content-flex-start;
+			@media @mobileMax { .flex-direction-column; }
+
+			> div {
+				@width: percentage(1/2);
+				width: @width;
+				.flex(0, 0, @width);
+				@media @mobileMax {
+					@width: 100%;
+					width: @width;
+					.flex(0, 0, @width);
+				}
+
+				&:first-of-type {
+					padding-right: 100px;
+					@media @menuMax { padding-right: 0; }
+					@media @mobileMax { margin-bottom: 2*@gutter-sm; }
+
+					h3 {
+						margin-bottom: @gutter-sm/2;
+					}
+				}
+
+				&.owl-carousel {
+					padding: 0 0 2*@gutter-md;
+					@media @mobileMax { padding: 0; }
+				}
+			}
+
+            &.mobile-reverse {
+                @media @mobileMax {
+                    .container {
+                        order: 1;
+                        margin-top: 2*@gutter-lg;
+                    }
+                }
+            }
+		}
+	}
+
+	&.two-cols-with-image {
+		margin: 140px 0;
+		@media screen and (max-width: 870px) { margin: 70px 0; }
+		@media @mobileMax { margin: @gutter-lg 0; }
+		&.reverse{
+			.content{
+				.inner-content{
+					@media @tabletMin{
+						.flex-direction-row-reverse;
+					}
+					.container{
+						.h2{
+							text-align:left;
+							@media @mobileMax { text-align:center;}
+						}
+						p{
+							text-align:left;
+							@media @mobileMax { text-align:center;}
+						}
+						// .icon-wrapper{
+						// 	.display-flex;
+						// 	.flex-direction-row;
+						// 	.flex-wrap-wrap;
+						// 	.tile{
+						// 		@width: 50%;
+						// 		width: @width;
+						// 		.flex(0, 0, @width);
+						// 		position:relative;
+						// 		min-height:5*@gutter-lg;
+						// 	}
+						// }
+
+						&.img-container{
+							padding-right: 0;
+							padding-left: 100px;
+							@media @mobileMax {
+								width:~'calc(100% + 30px)';
+							}
+							img{
+								left:inherit;
+								right:-60px;
+								.border-bottom-right-radius(0);
+								.border-top-right-radius(0);
+								.border-bottom-left-radius(180px);
+								.border-top-left-radius(180px);
+								@media @mobileMax {
+									right:0;
+								}
+
+								@media @tabletMax {
+									.border-bottom-right-radius(0);
+									.border-top-right-radius(0);
+									.border-bottom-left-radius(90px);
+									.border-top-left-radius(90px);
+								}
+							}
+
+						}
+					}
+
+
+				}
+
+			}
+
+		}
+		.inner-content {
+			padding: 0;
+			.display-flex;
+			.flex-justify-content-flex-start;
+			@media @mobileMax { .flex-direction-column; }
+
+			> div {
+				@width: percentage(1/2);
+				width: @width;
+				.flex(0, 0, @width);
+				@media @mobileMax {
+					@width: 100%;
+					width: @width;
+					.flex(0, 0, @width);
+				}
+
+				&:first-of-type {
+					padding-right: 100px;
+					@media @menuMax { padding-right: 0; }
+					@media @mobileMax { margin-bottom: 2*@gutter-sm; }
+
+					h3 {
+						margin-bottom: @gutter-sm/2;
+						@media @mobileMax { margin-top: @gutter-sm; }
+					}
+				}
+				.h2{
+					text-align:right;
+					@fontSizeMin: 28px;
+					@fontSizeMax: 40px;
+					@maxMediaQuery: unit(unit(@fontSizeMax) * 783 / unit(@fontSizeMin), px);
+
+					@media @tabletMin and (max-width: @maxMediaQuery) { font-size: unit(100 * @fontSizeMin / 783, vw); }
+					@media screen and (min-width: @maxMediaQuery) { font-size: @fontSizeMax; }
+					@media @mobileMax { font-size: @fontSizeMin; text-align:center; margin-top:2*@gutter-lg;}
+
+				}
+				p{
+					text-align:right;
+					@media @mobileMax { text-align:center; }
+				}
+				.icon-wrapper{
+					.display-flex;
+					.flex-direction-row;
+					.flex-wrap-wrap;
+					.tile{
+						@width: ~'calc(50% - 60px)';
+						width: @width;
+						.flex(0, 0, @width);
+						position:relative;
+						min-height:5*@gutter-lg;
+						margin:1.5*@gutter-lg @gutter-lg;
+						@media screen and (max-width:1200px){
+							margin:2*@gutter-lg 0.5*@gutter-sm;
+							@width: ~'calc(50% - 20px)';
+							width: @width;
+							.flex(0, 0, @width);
+						}
+					}
+				}
+				&.img-container{
+					width:100%;
+					position:relative;
+					min-height:600px;
+					@media @mobileMax {
+						min-height:300px;
+						width:~'calc(100% + 30px)';
+					}
+					img{
+						left:-60px;
+						.border-bottom-right-radius(180px);
+						.border-top-right-radius(180px);
+
+						@media @tabletMax {
+							.border-bottom-right-radius(90px);
+							.border-top-right-radius(90px);
+						}
+						@media @mobileMax {
+							left:-30px;
+						}
+					}
+
+				}
+
+				.owl-carousel {
+					padding: 0 0 2*@gutter-md;
+
+					@media @mobileMax { padding: 0 0 2*@gutter-md; }
+					.owl-stage-outer {
+						@media @mobileMax { margin: 0 auto; }
+						.owl-stage{
+							@media @tabletMin {
+								.display-flex;
+								.flex-wrap-wrap;
+								max-width: 100%;
+							}
+							.owl-item{
+								padding:@gutter-lg 0;
+								@media @tabletMin { min-height: 200px; }
+								@media @mobileMax { padding:1.5*@gutter-lg 0 0; }
+
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+    &.patient-care-philosophy {
+        .owl-carousel {
+            padding: 4*@gutter-sm 0;
+        }
+    }
+}

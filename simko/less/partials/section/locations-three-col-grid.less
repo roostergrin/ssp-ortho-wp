@@ -1,0 +1,220 @@
+.locations-three-col-grid{
+	.content{
+		.inner-content{
+			.container{
+				.locations-list{
+					.display-flex;
+					.flex-wrap-wrap;
+					width:~'calc(100% + 45px)';
+					margin: 0 -15px;
+					@media @tabletMax{
+						width:~'calc(100% + 30px)';
+					}
+					// @media @menuMax{
+					// 	width:~'calc(100% + 60px)';
+					// }
+					@media @mobileSmallerMax{
+						width:100%;
+					}
+					article{
+						background-color:@gray-2;
+						
+						// @width:percentage(1/3);
+						@width:~'calc(33% - 30px)';
+						width:@width;
+						.flex(0,0,@width);
+						.border-radius(5px);
+						margin:0.5*@gutter-lg;
+						@media @tabletMax{
+							@width:~'calc(50% - 30px)';
+							width:@width;
+							.flex(0,0,@width);
+						}
+						@media @mobileSmallerMax{
+							@width:~'calc(100%)';
+							width:@width;
+							.flex(0,0,@width);
+						}
+						.img-container{
+							background-color:@white;
+							max-width:100%;
+							position: relative;
+    						height: 230px;
+    						@media @mobileMax{
+								height: 195px;
+							}
+    						.border-top-right-radius(5px);
+    						.border-top-left-radius(5px);
+    						img{
+    							.border-top-right-radius(5px);
+    							.border-top-left-radius(5px);
+    						}
+
+						}
+						.location-content{
+							padding:2*@gutter-sm @gutter-lg;
+							.row{
+								&.header{
+									margin-bottom:@gutter-lg;
+									.h3{
+										color:var(--color-primary);
+										margin-bottom:0.5*@gutter-sm;
+                                        a:hover { color: var(--color-gray-1); }
+									}
+									ul{
+										li{
+											font-size:15px;
+											line-height:22px;
+											.Bold;
+										}
+
+									}
+
+								}
+								&.address{
+									margin-bottom:0.5*@gutter-sm;
+
+								}
+								&.view-more{
+									padding:0.25*@gutter-sm 0 ;
+									@media @menuMin{
+										display:none;
+									}
+								}
+								&.links{
+									.display-flex;
+									padding:0.25*@gutter-sm 0 ;
+									@media @menuMax{
+										display:none;
+									}
+
+								}
+								&.contact{
+									.display-flex;
+									padding:0.25*@gutter-sm 0 ;
+									@media @menuMax{
+										display:none;
+									}
+									ul{
+										li{
+											padding:0.25*@gutter-sm 0;
+											&:first-of-type{
+												padding-top:0;
+											}
+											&:last-of-type{
+												padding-bottom:0;
+											}
+										}
+									}
+								}
+								.col{
+									&.first{
+										// .flex(0,0,40%);
+										.flex(0,0,125px);
+									}
+									&.last{
+										// .flex(0,0,60%);
+										.flex(1,1,1);
+
+									}
+									
+								}
+							}
+
+						}
+					}
+				}
+			}
+		}
+	}
+
+}
+
+.central-lakes-orthodontics {	
+	.locations-three-col-grid{		
+		.content{			
+			.inner-content{
+				.container{
+					.locations-list{
+						
+						.location-tile {
+							.location-content{								
+								.row{									
+									&.address{	
+										padding-right: 34%;	
+
+										@media screen and (max-width: 1182px) { 
+											padding-right: 20%;	
+										}
+
+										@media screen and (max-width: 782px) {
+											padding-right: 33%;	
+										}
+
+										@media screen and (max-width: 482px) {
+											padding-right: 28%;
+										}	
+
+										@media screen and (max-width: 420px) {
+											padding-right: 24%;
+										}	
+
+										@media screen and (max-width: 380px) {
+											padding-right: 10%;
+										}
+									}
+								}
+							}
+						}
+						.location-tile:nth-child(2n){	
+							
+							
+							.location-content{								
+								.row{									
+									&.address{	
+										padding-right: 48%;	
+										@media screen and (max-width: 1182px) { 
+											padding-right: 20%;	
+										}
+										
+										@media screen and (max-width: 1082px) {
+											padding-right: 56%;		
+										}
+
+										@media screen and (max-width: 982px) {
+											padding-right: 53%;		
+										}
+													
+										@media screen and (max-width: 892px) {
+											padding-right: 46%;		
+										}
+
+										@media screen and (max-width: 692px) {
+											padding-right: 37%;		
+										}
+
+										@media screen and (max-width: 552px) {
+											padding-right: 58%;
+										}	
+
+										@media screen and (max-width: 432px) {
+											padding-right: 48%;
+										}	
+
+										@media screen and (max-width: 400px) {
+											padding-right: 40%;
+										}
+
+										@media screen and (max-width: 380px) {
+											padding-right: 25%;
+										}
+									}
+								}
+							}													
+						}
+					}
+				}
+			}
+		}
+	}
+}

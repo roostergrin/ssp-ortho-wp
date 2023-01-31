@@ -1,0 +1,48 @@
+section.image-copy-full {
+	margin:2*@gutter-lg 0;
+	
+	&.has-background {
+		padding:2*@gutter-lg 0;
+	}
+	
+	.inner-content {
+		.display-flex;
+		.flex-align-items-stretch;
+		.flex-justify-content-flex-start;
+		
+		> article, > aside {
+			position:relative;
+		}
+		
+		> article {
+			@width:percentage(60/100);
+			.flex(0,0,@width);
+			width:@width;
+			max-width:@width;
+			padding-right:@gutter-lg;
+		}
+		
+		> aside {
+			text-align:right;
+			@width:percentage(40/100);
+			.flex(0,0,@width);
+			width:@width;
+			max-width:@width;
+			padding-left:@gutter-lg;
+		}
+	}
+	
+	&.reverse {
+		.inner-content {
+			> article {
+				padding-right:0;
+				padding-left:@gutter-lg;
+			}
+			> aside {
+				text-align:left;
+				padding-left:0;
+				padding-right:@gutter-lg;
+			}
+		}
+	}
+}

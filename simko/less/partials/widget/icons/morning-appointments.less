@@ -1,0 +1,60 @@
+.widget.morning-appointments {
+    @width: 220px;
+	width: @width;
+	max-width: @width;
+	text-align: center;
+	.display-flex;
+	.flex-direction-column;
+	.flex-align-items-center;
+
+	.icon-container {
+		width: 120px;
+		height: 90px;
+		margin-bottom: @gutter-lg/2;
+		position: relative;
+		.display-flex;
+		.flex-align-items-flex-start;
+		.flex-justify-content-center;
+
+		> div {
+			.display-flex;
+			.flex-justify-content-center;
+		}
+        .icon-benefit_early-appointments {
+            &:before { color: var(--color-primary); }
+        }
+        .icon-benefit_early-appointments,
+		.icon-benefit_early-appointments-alt {
+			width: 120px;
+			height: 90px;
+			font-size: 85px;
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			.ease-in(opacity, 0.1s);
+
+			&:not(.active) {
+				opacity: 0;
+			}
+		}
+        .icon-benefit_early-appointments-alt {
+            width: 121px;
+            height: 87px;
+        }
+        
+        &:hover {
+			.icon-benefit_early-appointments {
+				opacity: 0;
+			}
+
+			.icon-benefit_early-appointments-alt {
+				opacity: 1;
+			}
+		}
+    }
+    p {
+		font-size: 18/@rem;
+		line-height: 22/@rem;
+		
+	}
+}

@@ -1,0 +1,33 @@
+section.appointments {
+	padding:2*@gutter-sm 0;
+	border-bottom:solid 2px @gray-2;
+	
+	.inner-content {
+		.display-inline-flex;
+		.flex-align-items-center;
+		.flex-justify-content-center;
+		@media @mobileMax {
+			flex-direction: column;
+		}
+		
+		:first-child,
+		:last-child {
+			margin:0;
+			width:auto;
+			max-width:none;
+			.flex(0,0,auto);
+		}
+		
+		:last-child {
+			@media @tabletMin {
+				margin-left:@gutter-lg;
+			}
+			@media @mobileMax {
+				margin-top:@gutter-sm;
+			}
+			@media screen and (max-width: 593px) {
+				.flex-align-self-flex-start;
+			}
+		}
+	}
+}

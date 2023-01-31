@@ -1,0 +1,144 @@
+section.testimonial-carousel {
+	body.page-template-patient-care-philosophy & {
+		margin-bottom: 120px;
+	}
+
+	.content {
+		.inner-content {
+			header {
+				margin-top: 140px;
+				margin-bottom: 120px;
+
+				h2.h1 {
+					margin-bottom: 15px;
+				}
+
+				.contact {
+					margin: 0;
+					.display-flex;
+					.flex-justify-content-flex-start;
+					.flex-align-items-center;
+
+					a {
+						&:not(:first-of-type) {
+							margin-left: @gutter-lg;
+						}
+					}
+				}
+			}
+
+			footer {
+				text-align: center;
+				margin-top: 2*@gutter-sm;
+			}
+		}
+	}
+
+	.testimonials-container {
+		position: relative;
+
+		.owl-stage-outer {
+			z-index: 1;
+			pointer-events: none;
+		}
+
+		.owl-item {
+			opacity: 0.3;
+
+			.img-container {
+				width: 380px;
+				height: 280px;
+				margin: auto auto -2*@gutter-md;
+				overflow: hidden;
+				.border-radius(@gutter-sm);
+			}
+
+			p {
+				font-size: 25/@rem;
+				line-height: 35px;
+				text-align: center;
+				font-weight: bold;
+				margin-bottom: 0;
+
+				&.name {
+					font-size: 15/@rem;
+					line-height: 22px;
+					font-weight: normal;
+					margin-top: @gutter-lg;
+				}
+			}
+
+			.content {
+				width: 560px;
+				padding: 80px 110px 60px;
+			}
+
+			&.active {
+				&.center {
+					opacity: 1;
+					pointer-events: all;
+				}
+			}
+		}
+
+		.owl-nav {
+			width: 560px;
+			position: absolute;
+			max-height: 260px;
+			top: 230px;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			opacity: 1;
+			margin: 0 auto;
+			border: @gutter-lg solid @gray-3;
+			.ease-in-out-quart(max-height, .3s);
+
+			.owl-prev,
+			.owl-next {
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				margin: auto;
+				width: 42px;
+				height: 42px;
+				outline: none;
+				cursor: pointer;
+
+				&:before {
+					content: "\e901";
+					color: var(--color-primary);
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					margin: auto;
+					width: 42px;
+					height: 42px;
+					font-size: 42px;
+					.Icons;
+					.display-flex;
+					.flex-justify-content-flex-end;
+					.flex-align-items-center;
+					font-weight: 700;
+				}
+			}
+
+			.owl-prev {
+				left: -80px;
+
+				&:before {
+					left: 0;
+					transform: scaleX(-1);
+				}
+			}
+
+			.owl-next {
+				right: -80px;
+
+				&:before {
+					right: 0;
+				}
+			}
+		}
+	}
+}

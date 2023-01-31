@@ -1,0 +1,97 @@
+section.copy.side-by-side-with-box{
+	margin-top:0 !important;
+	.content{
+		.inner-content{
+			.content-container{
+				.display-flex;
+				@media @mobileMax{
+					.flex-direction-column;
+				}
+				.column1{
+					@width:percentage(1/2);
+					width:@width;
+					.flex(0,0,@width);
+					padding-top:3*@gutter-lg;
+					@media @mobileMax{
+						@width:100%;
+						width:@width;
+						.flex(0,0,@width);
+						padding-top:0;
+						margin:1.5*@gutter-lg 0 2*@gutter-lg;
+					}
+					.content-wrapper{
+						padding-right:2*@gutter-lg;
+						@media @mobileMax{
+							padding-right:0;
+						}
+						h1, h2, h3{
+							color:var(--color-primary);
+							line-height:1;
+						}
+						@media (max-width: 375px) {
+							h1 {
+								font-size: 30/@rem;
+							}
+						}
+					}
+				}
+				.column2{
+					@width:~'calc(50% + ( 50vw / 2 ))';
+					width:@width;
+					.flex(0,0,@width);
+					@media @mobileMax{
+						@width:~'calc(100% + 30px)';
+						width:@width;
+						.flex(0,0,@width);
+						// margin-bottom:@gutter-lg;
+					}
+					.bg-container{
+						background-color:var(--color-primary);
+						padding:4*@gutter-md 2*@gutter-lg 4*@gutter-md 4*@gutter-lg;
+						@media @menuMax{
+							padding:3*@gutter-lg 2*@gutter-lg 3*@gutter-lg 3*@gutter-lg;
+						}
+						@media @mobileMax{
+							.border-top-left-radius(90px);
+							.border-bottom-left-radius(90px);
+							padding:3*@gutter-lg @gutter-lg 3*@gutter-lg @gutter-lg;
+
+						}
+						.border-bottom-left-radius(180px);
+						.content-wrapper{
+							max-width:465px;
+							max-width:~'calc(50% + 90px)';
+							@media @mobileMax{
+								max-width:100%;
+							}
+							p{
+								color:@white;
+								&.bold{
+									// font-size:30px;
+									line-height:1.15;
+									@fontSizeMin: 25px;
+									@fontSizeMax: 30px;
+									@maxMediaQuery: unit(unit(@fontSizeMax) * 783 / unit(@fontSizeMin), px);
+
+									@media @tabletMin and (max-width: @maxMediaQuery) { font-size: unit(100 * @fontSizeMin / 783, vw); }
+									@media screen and (min-width: @maxMediaQuery) { font-size: @fontSizeMax; }
+									@media @mobileMax { font-size: @fontSizeMin; line-height: 36/@rem; }
+								}
+								a{
+									border-bottom-color: @white;
+									&:hover{
+										color:var(--color-gray-1);
+									}
+								}
+							}
+							
+						}
+
+					}
+					
+					
+				}
+			}
+		}
+	}
+}

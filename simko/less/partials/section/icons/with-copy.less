@@ -1,0 +1,449 @@
+section.icons.with-copy {
+	position: relative;
+	padding: 5*@gutter-md 0;
+	background-color: @gray-9;
+
+	&.bg-white {
+		background-color: @white;
+	}
+
+	&.prairie-grove-orthodontics {
+		padding: 5*@gutter-md 0 6*@gutter-md 0;
+		body.page-template-affordable-orthodontist & {
+			&.bg-gray.financing {
+				.content .inner-content ul.icons.cols-2 {
+					.flex-justify-content-center;
+					li {
+						.flex(0, 0, 150px);
+						margin: @gutter-md;
+					}
+				}
+			}
+		}
+	}
+
+	&.shawano-orthodontics {
+		padding: 5*@gutter-md 0 6*@gutter-md 0;
+	}
+
+	@media screen and (max-width: 949px) {
+		padding: 2*@gutter-md 0;
+	}
+
+	&.static {
+		> div.content{
+			> div.inner-content{
+				 > p{
+				 	margin-bottom:@gutter-md;
+				 }
+			}
+		}
+	}
+	&.extra-margin-bottom {
+		margin-bottom: 10*@gutter-sm;
+		@media @mobileMax { margin-bottom: @gutter-sm;}
+	}
+	&.bg-gray{
+		.page-template-templates & {
+			@media @mobileMax {
+				margin: 2*@gutter-lg 0 0;
+				padding: 2*@gutter-lg 0;
+			}
+		}
+		.page-template-invisalign-aligners & {
+			@media @mobileMax {
+				margin: 0;
+			}
+		}
+		.page-template-affordable-orthodontist & {
+			@media @mobileMax {
+				margin: 0;
+				padding: 2*@gutter-lg 0 @gutter-sm;
+			}
+		}
+	}
+
+	&.instruction-downloads {
+		div.content {
+			> div.inner-content {
+
+				> h2,
+				> p {
+					color: var(--color-gray-1);
+					max-width: 800px;
+				}
+
+				h2 {
+					margin: 0 auto;
+					line-height: 1;
+					margin-bottom: 20px;
+				}
+
+				p {
+					margin: 0 auto;
+					margin-bottom: 60px;
+				}
+				
+				> ul.cols-2,
+				> ul.cols-3,
+				> ul.cols-4 {
+					padding-bottom: 0;
+					.flex-wrap-wrap;
+					@media screen and (max-width:949px) {
+						.flex-align-items-center;
+						.flex-direction-row;
+					}
+
+					@media @mobileMax {
+						.flex-direction-column;
+					}
+
+					li {
+						.display-flex;
+						.flex-justify-content-center;
+						opacity: 0;
+						transition: all .3s ease-out;
+
+						transform: translate(0px, 50px);
+
+						&:nth-child(1) {
+							transition-delay: 0.1s;
+						}
+
+						&:nth-child(2) {
+							transition-delay: 0.3s;
+						}
+
+						&:nth-child(3) {
+							transition-delay: 0.5s;
+						}
+
+						&:nth-child(4) {
+							transition-delay: 0.7s;
+						}
+
+						@media screen and (max-width:1000px) {
+							.flex(0, 0, 50%);
+							margin-bottom: 60px;
+						}
+
+						@media screen and (max-width:949px) {
+							.flex(0, 0, 50%);
+						}
+
+						@media @mobileMax {
+							transform: translate(50px, 0px);
+							transition-delay: 0.5s;
+						}
+
+						.icon-container {
+							margin-bottom: 0;
+						}
+
+						.heading-container {
+							margin-bottom: 10px;
+
+							h4 {
+								color: var(--color-primary);
+								font-size: 20px;
+								line-height: 22px;
+							}
+						}
+
+						.link-container {
+							border-bottom: 2px solid var(--color-primary);
+
+							a {
+								color: var(--color-gray-1);
+
+								&:hover {
+									color: var(--color-primary);
+								}
+							}
+						}
+
+						&.active {
+							transform: translate(0px, 0px);
+							opacity: 1;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&.financing {
+		padding: 4*@gutter-md 0 4*@gutter-sm;
+
+		.content {
+			.inner-content {
+				@media @mobileMax {
+					text-align: center;
+				}
+
+				.icons {
+					margin-top: 2*@gutter-lg;
+					padding-bottom: 0;
+					@media @menuMax { margin-top: 0; }
+
+					&.cols-1 {
+						.flex-direction-row;
+						.flex-justify-content-center;
+					}
+					&.cols-3,
+					&.cols-2 {
+						@media screen and (max-width: 949px) {
+							.flex-direction-row;
+						}
+
+
+						@media @ipadMax {
+							.flex-direction-column;
+
+						}
+
+						li {
+							margin: @gutter-lg 0;
+							.display-flex;
+							.flex-justify-content-center;
+						}
+
+					}
+					&.cols-4 {
+						flex-wrap: wrap;
+						max-width: 600px;
+						margin: 0 auto;
+
+						li {
+							margin-bottom: @gutter-lg;
+						}
+					}
+				}
+			}
+		}
+	}
+	&.invisalign{
+		margin-bottom:125px;
+		padding: 125px 0 150px;
+		@media @menuMax {
+			padding: 90px 0 60px;
+			margin-bottom:80px;
+		}
+		@media @mobileMax { padding: 3*@gutter-lg 0 @gutter-md; }
+		> div.content{
+			> div.inner-content{
+				> p{
+					margin-bottom:2*@gutter-md;
+					@media @mobileMax { margin-bottom: @gutter-md; }
+				}
+				.icons{
+					li{
+						.widget{
+							.content{
+								padding:0 30px;
+								@media @menuMax { padding:0; }
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&:before {
+		content: '';
+		width: 100%;
+		height: 14px;
+		position: absolute;
+		z-index: 1;
+		top: -14px;
+		background-image: ~"url(../images/placeholder/graphics/wavy.png)"; // TODO: consider using clip-path
+	}
+
+	&:after {
+		content: '';
+		width: 100%;
+		height: 14px;
+		position: absolute;
+		z-index: 1;
+		bottom: -14px;
+		.transform(scale(1, -1));
+		background-image: ~"url(../images/placeholder/graphics/wavy.png)"; // TODO: consider using clip-path
+	}
+
+	>div.content {
+		>div.inner-content {
+
+			>h1,
+			>h2,
+			>h3,
+			>h4 {
+				color: var(--color-primary);
+				margin-bottom: 2*@gutter-lg;
+
+				&.gray {
+					color: var(--color-gray-1);
+				}
+
+				@media screen and (max-width: 949px) {
+					margin-bottom: 2*@gutter-sm;
+				}
+			}
+			>p {
+                max-width: 810px;
+                text-align: center;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+			>ul {
+				padding-bottom: 110px;				
+				.display-flex;
+				.flex-align-items-flex-start;
+				.flex-justify-content-space-between;
+
+				&.cols-2>li {
+					.flex(0, 0, percentage(1/2));
+					
+				}
+
+				&.cols-3>li {
+					.flex(0, 0, percentage(1/3));
+				}
+
+				&.cols-4>li {
+					.flex(0, 0, percentage(1/4));
+				}
+
+				&.cols-5>li {
+					.flex(0, 0, percentage(1/5));
+				}
+
+				@media @mobileMax {
+					.flex-align-items-center;
+				}
+
+				@media screen and (max-width: 949px) {
+					padding-bottom: 0;
+					.flex-direction-column;
+					.flex-justify-content-center;
+					.flex-align-items-center;
+				}
+
+				>li {
+					position: relative;
+                    @media @mobileMax { margin-top: @gutter-lg; }
+
+					body.page-template-invisalign-aligners & {
+						@media @tabletMax {
+							margin: 0 auto;
+						}
+						@media @mobileMax {
+							padding: 0 25px;
+						}
+					}					
+				}
+			}
+
+			body.page-template-orthodontic-care-maintenance & {
+				max-width: 810px;
+			}
+		}
+	}	
+
+	&.confidence-counts {
+		padding-top: 0;
+		padding-bottom: 0;
+
+		&::before, &::after {
+			content: none;
+		}
+
+		.inner-content {
+			h2 {
+				color: var(--color-gray-1) !important;
+				margin-bottom: @gutter-sm !important;
+			}
+			// & > p {
+			// 	margin-bottom: 2*@gutter-sm !important;
+			// }
+
+			.icons {
+				padding-bottom: 0;
+				
+				li {
+					@media @mobileMax {
+						margin-top: 0;
+					}
+
+					text-align: center;
+					padding: @gutter-lg;
+                    @media @mobileMax {
+                        padding: 0.5*@gutter-lg;
+                    }
+
+					.icon-container {
+						.display-flex;
+						.flex-align-items-center;
+						.flex-justify-content-center;
+						min-height: 150px;
+
+						@media @mobileMax {
+							min-height: 0;
+						}
+
+						img {
+							margin: auto;
+						}
+
+						& ~ p {
+							font-weight: bold;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&.centered {
+		padding: 4*@gutter-lg 0 2*@gutter-lg;
+		@media @tabletMax { padding: 2*@gutter-lg 0 @gutter-lg; }
+		@media @mobileMax { padding: @gutter-lg 0 @gutter-lg; }
+
+		> div.content > div.inner-content {
+			> ul {
+				padding-bottom: 0;
+				max-width: 800px;
+				.display-flex;
+				.flex-justify-content-center;
+				.flex-align-items-center;
+				margin: 2*@gutter-lg auto 0;
+
+				@media @tabletMax {
+					margin-top: @gutter-lg;
+				}
+				@media @mobileMax {
+					margin-top: 0;
+				}
+
+				li {
+					.widget {margin: 0 auto;}
+				}
+			}
+			
+			h2 {
+				@media @tabletMax {
+					margin-bottom: @gutter-lg;
+				}
+			}
+									
+			> p {
+				@media @mobileMax {
+					margin-bottom: 0;
+				}
+			}			
+		}
+	}
+}
+
+

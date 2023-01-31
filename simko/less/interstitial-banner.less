@@ -1,0 +1,172 @@
+section.interstitial-banner{
+    display: block;
+    position: fixed;
+    background-color: var(--color-primary);
+    top: 0px;
+    z-index: 100000;
+    transition: all .2s ease-in-out;
+    width: 100%;
+
+    & .content{
+        & .inner-content{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: @interstitial-height;
+
+            @media screen and (max-width: 768px) {
+                flex-direction: column;
+                align-items: unset;
+                padding: @gutter-sm 0;
+                height: 170px;
+            }
+
+            & div {
+                &.almost-full-width {
+                    flex: 0.9;
+                    @media @mobileMax { margin-bottom: 20px; width: 90%; }
+                }
+                &.full-width {
+                    flex: 1;
+                    text-align: center;
+                    @media @mobileMax { margin-bottom: 20px; width: 100%; }
+                }
+
+                & .h1 {
+                    color: white;
+                    margin-bottom: 5px;
+                    font-size: 25px;
+                    font-family: var(--font-secondary);
+
+                    @media @mobileMax { 
+                        font-size: 18px;
+                        line-height: 20px;
+                    }
+                }
+
+                & .h2 {
+                    font-size: 16px;
+                    line-height: 1em;
+                    color: white;
+                    margin-bottom: 0.75*@gutter-sm;
+
+                    @media @mobileMax { 
+                        font-size: 14px;
+                        line-height: 16px;
+                        padding: 5px 0;
+                    }
+                }
+
+                & p {
+                    color: white;
+                    font-size: 14px;
+                }
+            }
+
+            & a {
+                background: white;
+                color: var(--color-primary);
+                text-align: center;
+                padding: 0 15px;
+                -webkit-border-radius: 2px;
+                -moz-border-radius: 2px;
+                border-radius: 2px;
+                font-weight: 400;
+                font-style: normal;
+                font-size: 1rem;
+                line-height: 36px;
+
+                @media screen and (max-width: 768px) {
+                    width: max-content;
+                }
+            }
+           
+        }
+        
+    }
+
+    & .close-icon {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        font-size: 3rem;
+        font-weight: 600;
+        cursor: pointer;
+        color: white;
+    }
+}
+html.interstital-banner-open body main {
+    padding-top: @header-height + @utility-header-height + @interstitial-height;
+    @media @tabletMax { padding-top: @mobile-header-height + @utility-header-height + @interstitial-height; }
+    @media @mobileMax { padding-top: 290px; overflow-x: hidden; }
+}
+
+.mobile-header-top {
+    top: 10px !important;
+}
+
+html.mobileMenu body main section.interstitial-banner{
+    display: none;
+}
+
+html.mobileMenu body main #mobile-header {
+    top: 10px !important;
+}
+
+html.interstital-banner-open body main section.header {
+    top: @interstitial-height;
+    
+    @media screen and (max-width: 768px) {
+        top: @interstitial-height + 20;
+    }
+}
+
+html.interstital-banner-open body main #mobile-header {
+    top: 210px;
+    
+    @media screen and (max-width: 768px) {
+        top: @interstitial-height + 35;
+    }
+}
+
+
+html.interstital-banner-open body main section.header-utility {
+    top: @header-height + @interstitial-height;
+
+    @media screen and (max-width: 1194px) {
+        top: @mobile-header-height + @interstitial-height; 
+    }
+
+    @media screen and (max-width: 768px) {
+        top: 245px;
+    }
+}
+
+html.interstital-banner-open.solid-header body main section.interstitial-banner{
+    opacity: 0;
+    transition: all 100ms ease-in-out;
+}
+
+html.interstital-banner-open.solid-header body main section.header {
+    top: 0px;
+}
+
+html.interstital-banner-open.solid-header body main #mobile-header {
+    top: 10px !important;
+}
+
+html.interstital-banner-open.solid-header body main #mobile-header {
+    top: 10px !important;
+}
+
+html.interstital-banner-open.solid-header body main section.header-utility {
+    top: @header-height;
+
+    @media screen and (max-width: 1194px) {
+        top: @mobile-header-height; 
+    }
+
+    @media screen and (max-width: 768px) {
+        top: 69px !important;
+    }
+}

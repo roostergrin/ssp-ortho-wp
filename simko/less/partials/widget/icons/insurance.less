@@ -1,0 +1,111 @@
+.widget.insurance {
+	@width: 220px;
+	width: @width;
+	max-width: @width;
+	text-align: center;
+	.display-flex;
+	.flex-direction-column;
+	.flex-align-items-center;
+
+	.icon-container {
+		width: 120px;
+		height: 90px;
+		margin-bottom: @gutter-lg/2;
+		position: relative;
+		margin-left: 40px;
+		.display-flex;
+		.flex-align-items-flex-start;
+		.flex-justify-content-center;
+
+		> div {
+			.display-flex;
+			.flex-justify-content-center;
+		}
+
+		.icon-insur {
+			width: 120px;
+			height: 900px;
+			font-size: 85px;
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			.ease-out(all, 0.4s);
+
+			&:not(.active) {
+				opacity: 0;
+			}
+
+			& svg {
+				max-width: 100%;
+				height: auto;
+				overflow: hidden;
+			}
+
+			& #Rectangle_1 {
+				fill: var(--color-primary);
+			}
+
+			& #incurance-icon-right {
+				fill: var(--color-secondary);
+			}
+
+			g#Group_5 {
+				.ease-out(all, 0.4s);
+			}
+
+			&:hover {
+				path#Path_7 {
+					display: none;
+				}
+
+				path#Path_8 {
+					display: none;
+				}
+
+				path#Path_9 {
+					display: none;
+				}
+
+				path#Path_10 {
+					display: none;
+				}
+
+				path#Path_11 {
+					display: none;
+				}
+
+				path#Path_12 {
+					display: none;
+				}
+
+				path#Path_13 {
+					display: none;
+				}
+
+				g#Group_5 {
+					transform: translateX(-53px);
+				}
+
+			}
+
+		}
+
+		body.page-template-invisalign-aligners & {
+			margin-left: 20px;
+		}
+
+        body.page-template-location-home & {
+            margin-left: 30px;
+		}
+
+        body.page-template-brand-home & {
+            margin-left: 30px;
+        }
+	}
+
+	p {
+		font-size: 18/@rem;
+		line-height: 22/@rem;
+
+	}
+}

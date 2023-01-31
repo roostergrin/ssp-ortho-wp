@@ -1,0 +1,28 @@
+section.team-list {
+	margin-top:-110px - 0.5*(3*@gutter-md);
+	
+	ul {
+		.display-flex;
+		.flex-wrap-wrap;
+		.flex-align-items-flex-start;
+		.flex-justify-content-flex-start;
+		margin:-0.5*(3*@gutter-md) -0.5*(2*@gutter-lg);
+		
+		> li {
+			margin:0.5*(3*@gutter-md) 0.5*(2*@gutter-lg);
+			@pre:percentage(1/3);
+			@width:calc(~"@{pre} - 2*@{gutter-lg}");
+			.flex(0,0,@width);
+			width:@width;
+			max-width:@width;
+		}
+		
+		img {
+			margin-bottom:@gutter-lg;
+		}
+		
+		h2 {
+			margin-bottom:0;
+		}
+	}
+}

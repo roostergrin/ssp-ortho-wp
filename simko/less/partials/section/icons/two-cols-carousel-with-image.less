@@ -1,0 +1,344 @@
+section.two-cols-carousel-with-image {
+	h3 {
+		@media @mobileMax { font-size: 28px; line-height: 30px; }
+	}		
+
+	.main-container {
+		margin: 0;
+		.display-flex;
+		@media @mobileMax { .flex-direction-column-reverse; }
+
+		@percent: percentage(1/2);
+		@width: calc(~"@{percent} - 120px");
+		article {
+			@articleWidth: percentage(((1170 - 585) + 120)/1170);
+			width: @articleWidth;
+			padding-right: 4*@gutter-lg;
+			.display-flex;
+			.flex-direction-column;
+			@media @tabletMax { padding-right: 2*@gutter-lg; }
+			@media @mobileMax { width: 100%; padding-right: 0; text-align: center;}
+
+			.icon-wrapper {
+				flex-wrap: wrap;
+				.display-flex;
+				.flex-justify-content-center;
+			}
+
+			.two-cols.owl-carousel {
+				.owl-nav {
+					width: 220px;
+					opacity: 1;
+					margin: @gutter-sm auto 0;
+					.display-flex;
+					.flex-justify-content-center;
+					.flex-align-items-center;
+
+					.owl-prev,
+					.owl-next {
+						margin: auto;
+						width: 110px;
+						height: 15px;
+						outline: none;
+						cursor: pointer;
+					}
+
+					.owl-prev {
+						&:before {
+							content: "\e909";
+							color: var(--color-gray-1);
+							margin: auto;
+							width: 95px;
+							height: 15px;
+							font-size: 15px;
+							.Icons;
+							.display-flex;
+							.flex-justify-content-flex-end;
+							.flex-align-items-center;
+							font-weight: 700;
+						}
+
+						&:hover {
+							&:before {
+								color: var(--color-primary);
+							}
+						}
+					}
+
+					.owl-next {
+						&:before {
+							content: "\e90a";
+							color: var(--color-gray-1);
+							margin: auto;
+							width: 95px;
+							height: 15px;
+							font-size: 15px;
+							.Icons;
+							.display-flex;
+							.flex-justify-content-flex-start;
+							.flex-align-items-center;
+							font-weight: 700;
+						}
+
+						&:hover {
+							&:before {
+								color: var(--color-primary);
+							}
+						}
+					}
+				}
+			}
+		}
+
+		aside {
+			@asideWidth: percentage(585/1170);
+			width: @asideWidth;
+			margin-right: -4*@gutter-lg;
+			overflow: hidden;
+			.display-flex;
+			.flex-align-items-center;
+			.flex-justify-content-flex-start;
+			@media @tabletMax { margin-right: -2*@gutter-lg; }
+			@media @mobileMax { width: calc(~"100% + @{gutter-lg}"); margin-right: -@gutter-lg; margin-bottom: 2*@gutter-lg; }
+
+			.img-container {
+				width: 100%;
+				height: 100%;
+				max-width: 100%;
+				position: relative;
+				.display-flex;
+				.flex-justify-content-flex-end;
+
+				img {
+					width: 100%;
+					margin-left: 585px;
+					.flex-align-self-center;
+					.ease-out(all, 0.3s);
+					@media @mobileMax { height: 300px; object-fit: cover; }
+					&.active {
+						margin-left: 0;
+					}
+
+					&.top-left-radius {
+						.border-top-left-radius(180px);
+						@media @mobileMax { .border-top-left-radius(90px); }
+					}
+
+					&.bottom-left-radius {
+						.border-bottom-left-radius(180px);
+						@media @mobileMax { .border-bottom-left-radius(90px); }
+					}
+
+					&.top-right-radius {
+						.border-top-right-radius(180px);
+						@media @mobileMax { .border-top-right-radius(90px); }
+					}
+
+					&.bottom-right-radius {
+						.border-bottom-right-radius(180px);
+						@media @mobileMax { .border-bottom-right-radius(90px); }
+					}
+				}
+
+				@media @mobileMax {
+					height: 300px;
+
+					img {
+						&.top-left-radius.bottom-left-radius,
+						&.top-right-radius.bottom-right-radius {
+							object-fit: cover;
+							object-position: center center;
+							font-family: 'object-fit: cover; object-position: center center;';
+							.position-absolute;
+							.pointer-events(none);
+							&.PGO_Safety_StaffRequirements_2048x2048 {
+								object-position: center -110px;
+								&.mobile {
+									object-position: center;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&.reverse {
+		.main-container {
+			@media @mobileMax { .flex-direction-column; }
+
+			article {
+				text-align: right;
+				padding-right: 0;
+				padding-left: 120px;
+				@media @tabletMax { padding-left: 60px; }
+				@media @mobileMax { padding-left: 0; text-align: center;}
+			}
+
+			aside {
+				margin-right: 0;
+				margin-left: -120px;
+				@media @tabletMax { margin-left: -60px; }
+				@media @mobileMax { margin-left: -30px; }
+
+				.img-container {
+					.flex-justify-content-flex-start;
+
+					img {
+						margin-right: 0;
+						margin-left: -585px;
+						.flex-align-self-center;
+
+						&.RAP_Safety_PatientArrival {
+							@media (min-width:1024px) and (max-width:1440px) {object-position: 0;}
+						}
+						&.RAP_Safety_StaffRequirements {
+							@media (min-width:1024px) and (max-width:1440px) {object-position: center;}
+						}
+						@media @mobileMax {
+							height: 300px; object-fit: cover;
+							&.sim-68314-section-square-hero_safety_before-care { object-position: center -100px; }
+							&.sim-68314-section-square-hero_safety_staff-requirements { object-position: center -10px; }
+							&.RAP_Safety_StaffRequirements {object-position: center -190px;}
+							&.DTM_SaferCare_ArrivalMiddleModule { object-position: center -40px; }
+							&.DTM_SaferCare_StaffReqMiddleModule { object-position: center -150px; }
+						}
+						@media (max-width:650px) {
+							&.RAP_Safety_StaffRequirements {object-position: center center;}
+						}
+						@media (max-width: 500px) {
+							&.DTM_SaferCare_StaffReqMiddleModule {
+								object-position: center -50px;
+							}
+						}
+
+						&.active {
+							margin-left: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&.second {
+		.main-container {
+			aside {
+				.img-container {
+					img {
+						object-position: 35%;
+						&.PGO_Safety_PatientArrivalSquare_2048x2048 {
+							@media (max-width:1440px) {
+								object-position: right;
+							}
+						}
+						&.RAP_Safety_PatientArrival {
+							@media screen and (min-width:1441px) {
+								object-position: left;
+							}
+						}
+						&.CHP_Safety_PatientArrivalSquare {
+							@media screen and (min-width:1024px) {
+								object-position: left;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&.fourth {
+		margin-bottom: 0 !important;
+
+		.main-container {
+			aside {
+				.img-container {
+					img {
+						object-position: 21%;
+						&.Shawano_Safety_StaffSquare {
+						}
+						&.CHP_Safety_StaffRequirementsSquare {
+							object-position: 0;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&.second, &.fourth {
+		&.reverse {
+			margin: 2*@gutter-lg 0 !important;
+		}
+	}
+
+	&.third {
+		.main-container {
+			aside {
+				.img-container {
+					img {
+						&.Shawano_Safety_WaitingRoomSquare {
+								object-position: bottom right;
+							&.mobile {
+								@media (min-width:598px) {
+									object-position: center 70%;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+	}
+}
+
+.smiles-by-ross {	
+
+	section.two-cols-carousel-with-image  {
+		
+		&.fourth {
+			margin-bottom: 0 !important;
+	
+			.main-container {
+				aside {
+					.img-container {
+						img {
+							
+							@media screen and (max-width: 1250px) { object-position: 53%; }
+						}
+					}
+				}
+			}
+
+			&.reverse {
+				margin-bottom: 60px!important;
+			}
+		}
+	}	
+}
+
+.page-template-safer-orthodontic-care {
+	&.central-lakes-orthodontics{
+		.two-cols-carousel-with-image {
+			&.second,
+			&.fourth {
+				.main-container {
+					aside {
+						.img-container {
+							img {
+								@media screen and (max-width: 1250px) {
+									object-position: 48%;
+								}								
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+

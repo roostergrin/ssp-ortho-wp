@@ -1,0 +1,241 @@
+section.hero.team {
+	padding-top: 80px;
+	.content {
+		@media @mobileMax { padding-right: 0; }
+
+		.inner-content {
+			width: 100%;
+			.display-flex;
+			.flex-align-items-center;
+			@media screen and (max-width: 1040px) { .flex-direction-column-reverse; }
+
+			article {
+				padding: 30px 60px 30px 0;
+				@width: calc(~"100% - 586px");
+				width: @width;
+				.flex(1, 0, @width);
+				.display-flex;
+				.flex-direction-column;
+				.Light;
+				@media screen and (max-width: 1040px) { width: 100%; .flex(0, 0, 100%); padding-right: 0; }
+				@media @mobileMax { padding: @gutter-lg @gutter-lg @gutter-lg 0; }
+
+				h1 {
+					margin-bottom: 10px;
+					@media screen and (max-width: 1164px) { br{content:' ';} }
+				}
+				h2 {
+					&.sub-heading {
+						font-size: 30px;
+						font-weight: 400;
+					}
+				}
+
+				.pagination-container {
+					margin: 0;
+					.display-flex;
+					.flex-align-items-center;
+					@media screen and (max-width: 1040px) { margin-bottom: @gutter-md; }
+
+					.pagination {
+						width: @gutter-lg;
+						margin-right: @gutter-sm;
+						.display-flex;
+						.flex-justify-content-space-between;
+						.flex-align-items-center;
+
+						.providers {
+							width: 14px;
+							height: 14px;
+							outline: none;
+							cursor: pointer;
+							position: relative;
+
+							&:before {
+								position: absolute;
+								color: var(--color-gray-1);
+								height: 14px;
+								font-size: 14px;
+								cursor: pointer;
+								.Icons;
+								.display-flex;
+								.flex-align-items-center;
+							}
+
+							&:hover {
+								&:before {
+									color: var(--color-primary);
+								}
+							}
+
+							&.icon-left-arrow-thick {
+								&:before {
+									left: 0;
+								}
+							}
+
+							&.icon-right-arrow-thick {
+								&:before {
+									right: 0;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			aside {
+				max-width: 586px;
+				margin-right: -120px;
+				@media @wrapperMax { margin-right: -60px; }
+				@media screen and (max-width: 1290px) { margin-right: 0; }
+				@media screen and (max-width: 1040px) { width: 100%; .flex(0, 0, 100%); }
+
+				.provider {
+					@width: 586px;
+					@height: 650px;
+					height: @height;
+					width: @width;
+					position: relative;
+					overflow: hidden;
+					@media screen and (max-width: 1040px) { height: 700px; }
+					@media @mobileMax { height: 450px; }
+					@media screen and (max-width: 640px) { width: 100%; }
+					@media screen and (max-width: 400px) { height: 400px; }
+
+					> div {
+						position: absolute;
+
+						&.img-container {
+							position: relative;
+							height: 100%;
+
+							img {
+								&.dr-kristo {
+									object-position: right -120px;
+									@media screen and (max-width:500px){ object-position: right -60px; }
+								}
+
+								&.dr-bronski {
+									object-position: right -120px;
+									@media screen and (max-width:500px){ object-position: right -70px; }
+								}
+
+								&.dr-holloway {
+									object-position: right -170px;
+									@media screen and (max-width: 595px) { object-position: right -150px; }
+									@media screen and (max-width: 530px) { object-position: right -130px; }
+									@media screen and (max-width: 475px) { object-position: right -100px; }
+									@media screen and (max-width: 400px) { object-position: right -60px; }
+								}
+
+								&.dr-siu {
+									object-position: right -70px;
+									@media screen and (max-width:450px){ object-position: right -30px; }
+								}
+
+								&.dr-tsunoda {
+									object-position: right -100px;
+									@media screen and (max-width:500px){ object-position: right -30px; }
+								}
+
+								&.dr-hamm {
+									object-position: right -260px;
+									@media screen and (max-width:560px){ object-position: right -200px; }
+									@media screen and (max-width:440px){ object-position: right -130px; }
+								}
+
+								&.dr-duevel {
+									object-position: right -140px;
+									@media screen and (max-width:500px){ object-position: right -70px; }
+								}
+
+								&.dr-lin {
+									object-position: right -120px;
+									@media screen and (max-width:500px){ object-position: right -60px; }
+								}
+
+								.border-top-left-radius(180px);
+								@media @tabletMax { .border-top-left-radius(90px); }
+							}
+
+							.overlay {
+								padding: 2*@gutter-lg 2*@gutter-lg 2*@gutter-md 2*@gutter-lg;
+								background-color: @white;
+								position: absolute;
+								bottom: 0;
+								right: 0;
+								max-width: 386px;
+								overflow: hidden;
+								.display-flex;
+								.flex-direction-column;
+								.flex-align-items-flex-start;
+								.border-top-left-radius(75px);
+
+								.name {
+									font-size: 25/@rem;
+									line-height: 22/@rem;
+									margin-bottom: 0;
+									color: var(--color-primary);
+									.Bold;
+								}
+
+								.specialty {
+									font-size: 15/@rem;
+									line-height: 22/@rem;
+									color: var(--color-primary);
+									margin-bottom: 0;
+									.ease-out(all, 0.3s);
+								}
+
+								.about {
+									color: var(--color-primary);
+									max-height: 0;
+									opacity: 0;
+									margin-bottom: 0;
+									.ease-out(all, 0.3s);
+								}
+
+								.link {
+									opacity: 0;
+									max-height: 0;
+									.ease-out(all, 0.3s);
+									@media @mobileMax { opacity: 1; max-height: 100vh; margin-top: 10px; }
+								}
+								@media @mobileMax {padding: 30px 30px 15px 60px;width: 90%;}
+								@media screen and (max-width:350px) {padding: 30px 30px 15px 40px;width: 100%;}
+							}
+
+							&:hover {
+								@media @tabletMin {
+									.overlay {
+										max-width: 486px;
+										opacity: 0.95;
+										// height: 100%;
+										// max-width: 100%;
+										// .border-top-left-radius(0px);
+
+										.specialty {
+											padding-bottom: @gutter-md;
+										}
+
+										.about {
+											opacity: 1;
+											max-height: initial;
+											padding-bottom: @gutter-md;
+										}
+
+										.link {
+											opacity: 1;
+											max-height: initial;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

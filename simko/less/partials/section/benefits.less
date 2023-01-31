@@ -1,0 +1,41 @@
+section.benefits {
+	margin:4*@gutter-sm 0 4.5*@gutter-sm;
+	text-align:center;
+	
+	ul {
+		.display-flex;
+		.flex-align-items-stretch;
+		.flex-justify-content-flex-start;
+		margin:2*@gutter-sm -0.5*@gutter-lg 0;
+	}
+	
+	li {
+		margin:0 0.5*@gutter-lg;
+		padding:2*@gutter-md @gutter-md 2*@gutter-sm;
+		@percentage:percentage(1/4);
+		@width:calc(~"@{percentage} - @{gutter-lg}");
+		width:@width;
+		max-width:@width;
+		.flex(0,0,@width);
+		background-color:@gray-2;
+		.border-radius(2px);
+		.Bold;
+		.size-medium;
+		
+		i {
+			color:var(--color-primary);
+			&.icon-open { font-size:80/@rem; }
+			&.icon-financing { font-size:70/@rem; }
+			&.icon-exam { font-size:85/@rem; }
+			&.icon-price { font-size:70/@rem; }
+		}
+	}
+	
+	.icon-container {
+		height:85px;
+		.display-flex;
+		.flex-align-items-center;
+		.flex-justify-content-center;
+		margin-bottom:@gutter-sm;
+	}
+}

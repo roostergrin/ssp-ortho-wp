@@ -1,0 +1,79 @@
+section.illustrations {
+	.container {
+		margin: 0 -60px;
+		width: calc(~"100% + 120px");
+		.display-flex;
+		.flex-align-items-center;
+
+		.column {
+			margin: 0 60px;
+			@percent: percentage(1/2);
+			@width: calc(~"@{percent} - 120px");
+			width: @width;
+			.flex(0, 0, @width);
+			
+			&:first-of-type {
+				padding-bottom: 20px;
+			}
+			img {
+				max-height: 250px;
+			}
+
+			h3 {
+				font-size: 25/@rem;
+				line-height: 35/@rem;
+				margin-bottom: @gutter-sm;
+			}
+		}
+
+		@media @mobileMax {
+			margin: 0;
+			width: 100%;
+			.flex-direction-column;
+
+			.column {
+				margin: 0;
+				width: 100%;
+				.flex(0, 0, 100%);
+			}
+		}
+	}
+	
+	&.wide {
+		@media @tabletMin {
+			.column {
+				@percent: percentage(4/10);
+				@width: calc(~"@{percent} - 120px");
+				width: @width;
+				.flex(0, 0, @width);
+				
+				& + .column {
+					@percent: percentage(6/10);
+					@width: calc(~"@{percent} - 120px");
+					width: @width;
+					.flex(0, 0, @width);
+				}
+			}
+		}
+		@media @desktopMin {
+			.column {
+				@percent: percentage(3/10);
+				@width: calc(~"@{percent} - 120px");
+				width: @width;
+				.flex(0, 0, @width);
+				
+				& + .column {
+					@percent: percentage(7/10);
+					@width: calc(~"@{percent} - 120px");
+					width: @width;
+					.flex(0, 0, @width);
+				}
+			}
+		}
+	}
+	&.dietmeier-orthodontics {
+		.icon-humans-sitting {
+			filter: grayscale(1);
+		}
+	}
+}

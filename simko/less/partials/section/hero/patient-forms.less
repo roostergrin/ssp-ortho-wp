@@ -1,0 +1,316 @@
+section.hero.patient {
+	width: 100%;
+
+	&.patient-forms {
+		z-index: 2;
+		height: 100vh;
+		max-height: 730px;		
+		background-size: cover;
+
+		background-position: left top 60px;
+
+		@media @tabletMax {
+			background-image: none !important;
+			height: 100%;
+			max-height: 100%;
+
+			.mobile {
+				display: block !important;
+				width: 100%;
+			}
+
+			.fancy-select {
+				max-width:none;
+
+				.options {
+					position:static;
+				}
+			}
+		}
+
+		.content {
+			height: 100%;
+
+			@media @tabletMax {
+				display: block;
+				padding-left: @gutter-lg;
+				padding-right: @gutter-lg;
+			}
+
+			.inner-content {
+				height: 100%;
+
+				.wrapper {
+					height: 100%;
+					.display-flex;
+					.flex-direction-column;
+					.flex-justify-content-center;
+
+					&.left-side { margin-right: 52%; @media @tabletMax { margin-right: 0; } }
+					&.right-side { margin-left: 52%; @media @tabletMax { margin-left: 0; } }
+
+					article {						
+						margin-top: -25%;	
+
+						@media @tabletMax { margin-top: 40px; }
+
+						.content-wrapper {
+							margin-bottom: @gutter-sm;
+							.form-wrapper {
+
+							}
+							
+							h1.white,
+							p.white {								
+
+								@media @tabletMax {
+									color: var(--color-gray-1);
+								}
+							}
+						}
+
+						.form-wrapper {
+							@media @tabletMax {
+								margin-bottom: 2*@gutter-md;
+								.fancy-select .fancy-select-title.white,
+								.fancy-select ul li a,
+								.fancy-select ul li a:hover {
+									color: var(--color-gray-1);
+								}
+							}
+
+							form {
+								p {
+									margin-bottom: 1em;
+								}
+
+								.form-container {
+									max-width: 300px;
+
+									select {
+										background-color: transparent;
+									}
+								}
+							}							
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&.patient-forms-location {
+		.content {
+			padding-top: 3*@gutter-lg;
+			padding-bottom: 3*@gutter-lg;
+			@media @mobileMax {padding: @gutter-lg;}
+			.wrapper {
+				margin: 0 -@gutter-lg;
+				.display-flex;
+				@media @mobileMax {.flex-direction-column;}
+				article {
+					padding: 0 @gutter-lg;
+					@media @mobileMax {padding: 0 0 @gutter-lg 0; margin: @gutter-lg @gutter-lg 0 @gutter-lg;}
+					&:first-of-type{
+						@media @mobileMax {border-right: none;}
+					}
+					.heading-container {
+						h2 {
+							color: var(--color-primary);
+						}
+					}
+					.content-container {
+						.cta-container {
+							margin-top: 2*@gutter-md;
+							p.bold {
+								font-weight: 900;
+								margin-bottom: 0;
+							}
+							p:last-of-type {
+								margin-bottom: 1em;
+							}
+							a.cta {
+								transition: all 0.3s ease-out;
+								margin-right: @gutter-sm;
+                                @media @mobileMax {
+                                    &:not(:last-of-type) {
+                                        margin-bottom: @gutter-sm;
+                                    }
+                                }
+								&:hover {
+									background-color: var(--color-gray-1);
+								}
+							}
+						}
+					}
+
+					img.patients-img {
+						.border-top-left-radius(180px);
+						.border-bottom-left-radius(180px);
+						@media @mobileMax { display: none; }
+					}
+				}
+			}
+		}
+	}
+
+	&.prairie-grove-orthodontics {
+		.content {
+			.inner-content {
+				@media @desktopMin {
+					article {
+						background-color: var(--color-primary);
+						opacity: .9;
+						padding: @gutter-md;
+						margin: -@gutter-md;
+						border-radius: 5px;
+						.fancy-select {
+							.fancy-select-title {
+								border-bottom: 2px solid @white;
+								&::after {
+									color: @white;
+								}
+							}
+							.options {							
+								ul.select-options {
+									background-color: var(--color-primary);
+									opacity: .9;
+									padding: 0 10px 10px;
+									border-radius: 5px;
+									li {
+										a {
+											&:hover {
+												color: @white;
+											}
+										}
+									}
+								}
+							}	
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.ross-orthodontics {	
+	&.patient-forms {				
+		.content {
+			.inner-content {
+				.wrapper {		
+					article {	
+						background-color: var(--color-primary);
+						opacity: .9;		
+						padding: 25px;
+						margin: -25px;
+						border-radius: 5px;	
+						margin-top: -25%;
+
+						.content-wrapper {
+
+							h1,
+							p {
+								color: @white;
+							}
+						}
+						
+						.form-wrapper {
+
+							.fancy-select {
+									
+								.fancy-select-title {
+									color: @white;
+									border-bottom-color: @white;
+
+									@media @tabletMax {
+										color:@white;
+										border-bottom: 2px solid @white;
+										&:after {
+											color: @white;
+										}
+									}
+								}
+								.fancy-select-title::after{
+									color: @white;
+								}
+
+								.options ul.select-options li a{
+									color: @white;									
+								}							
+		
+								.select-options {
+									background-color: var(--color-primary);
+									opacity: .9;									
+									padding: 0 10px 10px;									
+									border-radius: 5px;
+								}
+							}	
+						}					
+					}
+				}
+			}
+		}
+	}
+}
+
+.central-lakes-orthodontics{
+		
+	&.patient-forms {				
+		.content {
+			.inner-content {
+				.wrapper {		
+					article {	
+						background-color: var(--color-primary);
+						opacity: .9;		
+						padding: 25px;
+						margin: -25px;
+						border-radius: 5px;	
+						margin-top: -25%;
+
+						.content-wrapper {
+
+							h1,
+							p {
+								color: @white;
+							}
+						}
+						
+						.form-wrapper {
+
+							.fancy-select {
+									
+								.fancy-select-title {
+									color: @white;
+									border-bottom-color: @white;
+
+									@media @tabletMax {
+										color:@white;
+										border-bottom: 2px solid @white;
+										&:after {
+											color: @white;
+										}
+									}
+								}
+								.fancy-select-title::after{
+									color: @white;
+								}
+
+								.options ul.select-options li a{
+									color: @white;									
+								}							
+		
+								.select-options {
+									background-color: var(--color-primary);
+									opacity: .9;									
+									padding: 0 10px 10px;									
+									border-radius: 5px;
+								}
+							}	
+						}					
+					}
+				}
+			}
+		}
+	}
+}

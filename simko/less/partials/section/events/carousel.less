@@ -1,0 +1,74 @@
+section.event-ortho-treatment-carousel {
+    @media @mobileMax {
+        margin-top: 2*@gutter-lg !important;
+    }
+
+    .content {
+        .inner-content {
+            .copy {
+                width: 55%;
+
+                @media @mobileMax {
+                    width: 100%;
+                    margin: auto;
+                }
+
+                h3 {
+                    &.no-margin {
+                        margin-bottom: 0;
+                    }
+                    color: var(--color-primary);
+
+                    @media @mobileMax {
+                        font-size: 28/@rem;
+                    }
+                }
+            }
+        }
+    }
+    .container {
+        .pagination-container();
+        .owl-carousel();
+
+        .owl-item {
+            &.active.center {
+                .slide {                        
+                    .content-container {                        
+                        background-color: var(--color-primary);
+                        color: @white; 
+
+                        h3, .h3, h4 {
+                            color: @white;
+                        }
+                    }
+                }
+            }
+
+            .slide {
+                background-color: @white !important;
+                padding: 0 0 40px 0 !important;
+
+                .img-container {
+                    padding: 0 2*@gutter-lg;
+                    @media @mobileMax {
+                        padding: 0;
+                    }
+                    img {
+                        max-width: 280px;
+                        margin: 0 auto;
+                        @media @mobileMax {
+                            max-width: 200px;
+                        }
+                    }
+                }
+
+                .content-container {
+                    background-color: @gray-2;
+                    border-radius: 5px;
+                    padding: 2*@gutter-sm 2*@gutter-sm 35px;
+                    min-height: 230px;
+                }
+            }
+        }
+    }
+}

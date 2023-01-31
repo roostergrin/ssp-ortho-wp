@@ -1,0 +1,124 @@
+section.confidence-count-module {    
+    background-image: url('/wp-content/themes/simko/images/placeholder/graphics/confidence-counts-club/sim-ccc-module-confetti-desktop-kristo.svg');
+    background-position: center;  
+    background-color: var(--color-primary);  
+    
+    @media @mobileMax {
+        background-image: url('/wp-content/themes/simko/images/placeholder/graphics/confidence-counts-club/sim-ccc-module-confetti-mobile-kristo.svg');
+        background-repeat: no-repeat;
+        background-position: center -470px;
+        background-color: var(--color-primary);
+    }
+    @media @mobileSmallerMax {
+        background-position-x: -600px;
+    }
+
+    body.page-template-free-orthodontic-consultation & {
+        margin-bottom: -40px !important;
+
+        @media @mobileMax {
+            margin-bottom: 0px !important;
+        }
+    }
+
+    &.bubbles-top {
+        margin-top: -80px !important;
+
+        @media @menuMax {
+            margin-top: -50px;
+        }
+        @media @mobileMax {
+            margin-top: -30px !important;
+        }
+
+        // &:before {
+        //     content: '';
+        //     width: 100%;
+        //     height: 14px;
+        //     position: absolute;
+        //     z-index: 1;
+        //     top: -13px;        
+        //     transform: scale(1, -1) rotate(180deg);
+        //     background-image: url(/wp-content/themes/simko/images/placeholder/graphics/wavy-blue.png);
+        // }
+    }
+
+    &.dietmeier-orthodontics {
+        background-image: url('/wp-content/themes/simko/images/placeholder/graphics/confidence-counts-club/sim-ccc-module-confetti-desktop-dtm.svg');
+        background-color: #deb852;
+
+        h2, p, a.cta {
+            color: var(--color-gray-1);
+        }
+        a.cta {
+            border-bottom: 2px solid var(--color-gray-1);
+
+            &:hover {
+                color: @white;
+                border-bottom-color: @white;
+            }
+        }
+
+        @media @mobileMax {
+            background-image: url('/wp-content/themes/simko/images/placeholder/graphics/confidence-counts-club/sim-ccc-module-confetti-mobile-dtm.svg');
+        }
+
+        &.bubbles-top:before {
+            background-image: url(/wp-content/themes/simko/images/placeholder/graphics/wavy-red.png);
+        }
+    }
+    &.prairie-grove-orthodontics {
+        background-image: url('/wp-content/themes/simko/images/placeholder/graphics/confidence-counts-club/sim-ccc-module-confetti-desktop-prarie.svg');
+
+        @media @mobileMax {
+            background-image: url('/wp-content/themes/simko/images/placeholder/graphics/confidence-counts-club/sim-ccc-module-confetti-mobile-prarie.svg');
+        }
+
+        &.bubbles-top:before {
+            background-image: url(/wp-content/themes/simko/images/placeholder/graphics/wavy-red.png);
+        }
+    }
+
+    .content {
+        .inner-content {
+            .display-flex;
+            gap: 3em;
+
+            @media @mobileMax {
+                .flex-direction-column;
+                gap: 0;
+            }
+
+            article {
+                order: 2;
+                width: 55%;
+                padding-top: 5*@gutter-sm;
+                padding-bottom: 2*@gutter-md;
+
+                @media @mobileMax {
+                    width: 100%;
+                    padding-top: 4*@gutter-sm;
+                }
+                
+                p.copy {
+                    margin-bottom: 0.5*@gutter-sm;
+                }
+            }
+            aside {
+                .display-flex;
+                width: 40%;
+
+                @media @mobileMax {
+                    width: 100%;
+                    margin-top: 4*@gutter-sm;
+                }
+
+                img {
+                    margin: 0 auto;
+                    max-width: 300px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,413 @@
+section.providers.carousel {
+	padding-top: 40px;
+
+	.content {
+		@media @mobileMax {
+			padding-right: 0;
+			.inner-content {
+				.container {
+					article {
+						padding-right: 30px;
+					}
+				}
+			}
+		}
+
+		.container {
+			width: 100%;
+			.display-flex;
+			.flex-align-items-center;
+			@media screen and (max-width: 1040px) { .flex-direction-column-reverse; }
+
+			article {
+				padding: 30px 60px 30px 0;
+				@width: calc(~"100% - 586px");
+				width: @width;
+				.flex(1, 0, @width);
+				.display-flex;
+				.flex-direction-column;
+				.Light;
+				@media screen and (max-width: 1040px) {
+					width: 100%;
+					 .flex(0, 0, 100%);
+					 padding-right: 0;
+					.single-location-link {
+						margin-top: @gutter-sm;
+					}
+					}
+
+				.inner-content {
+					margin-bottom: @gutter-md;
+					@media screen and (max-width: 1040px) { margin-bottom: 0; }
+
+					h1 {
+						margin-bottom: 10px;
+					}
+
+					h2 {
+						&.sub-heading {
+							font-size: 30px;
+							font-weight: 400;
+						}
+					}
+
+					body.page-template-location-home & {
+						p {
+							color: var(--color-primary);
+						}
+					}
+
+					.team-mobile {
+						display: none;
+						@media screen and (max-width: 1040px) { display: inline-block; }
+					}
+				}
+
+				.pagination-container {
+					&.pagination-reversed {
+						.flex-direction-row-reverse;
+						.flex-justify-content-space-between;
+					}
+					margin: 0;
+					.display-flex;
+					.flex-align-items-flex-start;
+					.pagination {
+						margin: 0 -5px;
+						.display-flex;
+						.flex-justify-content-flex-end;
+						@media screen and (max-width: 1040px) { width: 100%; margin-bottom: @gutter-lg; .flex-justify-content-center; }
+
+						.page-left,
+						.page-right {
+							margin: 0 5px;
+							cursor: pointer;
+
+							&:hover {
+								color: var(--color-primary);
+
+								i:before {
+									color: var(--color-primary);
+								}
+							}
+						}
+
+						.page-left {
+							width: 83px;
+
+							span {
+								margin-right: @gutter-lg/2;
+								
+								.display-inline-flex;
+							}
+						}
+
+						.page-right {
+							width: 59px;
+
+							span {
+								margin-left: @gutter-lg/2;
+								
+								.display-inline-flex;
+							}
+						}
+					}
+
+					.team-desktop {
+						@media screen and (max-width: 1040px) { display: none; }
+					}
+				}
+
+				body.page-template-brand-home.chapman-orthodontics & {
+					.single-location-link {
+						.hidden;
+					}					
+				}
+			}
+
+			aside {
+				max-width: 586px;
+				margin-right: -120px;
+				@media @wrapperMax { margin-right: -60px; }
+				@media screen and (max-width: 1290px) { margin-right: 0; }
+				@media screen and (max-width: 1040px) { width: 100%; .flex(0, 0, 100%); }
+
+				.provider {
+					@width: 586px;
+					@height: 650px;
+					height: @height;
+					width: @width;
+					position: relative;
+					overflow: hidden;
+					@media screen and (max-width: 1040px) { height: 700px; }
+					@media @mobileMax { height: 450px; }
+					@media screen and (max-width: 640px) { width: 100%; }
+					@media screen and (max-width: 400px) { height: 400px; }
+
+					> div {
+						position: absolute;
+
+						&.img-container {
+							position: relative;
+							height: 100%;
+
+							img {
+								&.dr-kristo {
+									object-position: right -120px;
+									@media screen and (max-width: 500px) { object-position: right -60px; }
+								}
+								&.dr-bronski {
+									object-position: right -120px;
+									@media screen and (max-width: 500px) { object-position: right -70px; }
+								}
+								&.dr-holloway {
+									object-position: right -60px;
+									@media screen and (max-width: 600px) { object-position: right -60px; }
+									@media screen and (max-width: 530px) { object-position: right -40px; }
+									@media screen and (max-width: 475px) { object-position: right -30px; }
+									@media screen and (max-width: 374px) { object-position: right -30px; }
+								}
+								&.dr-siu {
+									object-position: right -70px;
+									@media screen and (max-width: 768px) { object-position: right -110px; }
+									@media screen and (max-width: 450px) { object-position: right -30px; }
+								}
+								&.dr-tsunoda {
+									object-position: right -100px;
+									@media screen and (max-width: 500px) { object-position: right -30px; }
+								}
+								&.dr-duevel {
+									object-position: right -130px;
+									@media screen and (max-width:500px){ object-position: right -80px; }
+								}
+								&.dr-lin {
+									object-position: right -120px;
+									@media screen and (max-width:500px){ object-position: right -60px; }
+								}
+								&.dr-anderson {
+									object-position: center -70px;
+									@media screen and (max-width:450px) { object-position: center -30px; }
+								}
+								&.dr-kapus {
+									object-position: center -80px;
+									@media screen and (max-width:450px) { object-position: center -40px; }
+								}
+								&.dr-ross {
+									object-position: center -120px;
+									@media screen and (min-width:501px) and (max-width:782px) { object-position: center -200px; }
+									@media screen and (max-width:500px) { object-position: center -75px; }
+								}
+								&.dr-hamm {
+									object-position: right -120px;
+									@media @mobileMax { object-position: right -210px; }
+									@media screen and (max-width:580px){ object-position: right -180px; }
+									@media screen and (max-width:500px){ object-position: right -110px; }
+									@media screen and (max-width:375px){ object-position: right -80px; }
+									@media screen and (max-width:320px){ object-position: right -60px; }
+								}
+								&.dr-drye {
+									object-position: right -120px;
+									@media @mobileMax { object-position: right -210px; }
+									@media screen and (max-width:580px){ object-position: right -180px; }
+									@media screen and (max-width:500px){ object-position: right -100px; }
+									@media screen and (max-width:375px){ object-position: right -75px; }
+									@media screen and (max-width:320px){ object-position: right -60px; }
+								}
+								&.dr-whetten { 
+									object-position: center -20px; 
+									@media @mobileMax { object-position: center -75px; } 
+									@media screen and (max-width:580px){ object-position: center -20px; } 
+								} 
+								&.dr-dietmeier {
+									object-position: right -70px;
+									@media @mobileMax { object-position: right -130px; }
+									@media screen and (max-width:580px){ object-position: right -120px; }
+									@media screen and (max-width:500px){ object-position: right -60px; }
+									@media screen and (max-width:375px){ object-position: right -45px; }
+									@media screen and (max-width:320px){ object-position: right -20px; }
+								}
+								&.dr-chapman {
+									object-position: right -40px;
+								}
+								&.dr-farhi {
+									object-position: center -30px;
+								}
+
+								.border-top-left-radius(180px);
+								@media @tabletMax { .border-top-left-radius(90px); }
+							}
+
+							.overlay {
+								padding: 2*@gutter-lg 2*@gutter-lg 2*@gutter-md 2*@gutter-lg;
+								background-color: var(--color-primary);
+								position: absolute;
+								height: 100%;
+								width: 100%;
+								top: 100%;
+								right: 0;
+								max-width: 100%;
+								overflow: hidden;
+								.display-flex;
+								.flex-direction-column;
+								.flex-align-items-flex-start;
+								.flex-justify-content-flex-end;
+								.border-top-left-radius(180px);
+								transition: all 0.3s ease-out;
+								@media @tabletMax { .border-top-left-radius(90px); }
+
+								.name {
+									font-size: 25/@rem;
+									line-height: 22/@rem;
+									margin-bottom: 0;
+									color: @white;
+									.Bold;
+									a {
+										color: @white;
+									}
+								}
+
+								.specialty {
+									font-size: 15/@rem;
+									line-height: 22/@rem;
+									color: @white;
+									margin-bottom: 0;
+									.ease-out(all, 0.3s);
+								}
+
+								.about {
+									color: @white;
+									max-height: 0;
+									margin-bottom: 0;
+									.ease-out(all, 0.3s);
+								}
+								>a.cta.text.link {
+									color: @white;
+									border-bottom: 2px solid @white;
+									.ease-out(all, 0.3s);
+									&:hover {
+										color: var(--color-gray-1);
+									}
+								}
+
+								.link {
+									opacity: 0;
+									max-height: 0;
+									.ease-out(all, 0.3s);
+									@media @mobileMax { opacity: 1; max-height: 100vh; margin-top: 10px; }
+								}
+								@media @mobileMax {padding: 30px 30px 15px 60px;width: 90%;}
+								@media screen and (max-width:350px) {padding: 30px 30px 15px 40px;width: 100%;}
+							}
+
+							&:hover {
+								@media @tabletMin {
+									.overlay {
+										height: 100%;
+										max-width: 100%;
+										top: 0;
+
+										.specialty {
+											padding-bottom: @gutter-md;
+										}
+
+										.about {
+											max-height: initial;
+											padding-bottom: @gutter-md;
+										}
+
+										.link {
+											max-height: initial;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.page-template-bio {
+	&.default-map-view{
+		&.meet-our-orthodontic-team{
+			&.central-lakes-orthodontics{
+				.providers {
+					&.carousel {
+						aside {
+							.providers-container{
+								.dr-anderson{
+									object-position: 0px -72px;
+									@media screen and (max-width:768px) { 
+										object-position: 0px -132px;
+									}
+									@media screen and (max-width:537px) { 
+										object-position: 0px -100px;
+									}	
+									
+									@media screen and (max-width:437px) { 
+										object-position: 0px -75px;
+									}
+								}
+							}
+						}						
+					}	
+				}				
+			}
+		}
+	}
+}
+ 
+.page-template-brand-home{
+	&.default-map-view{
+		&.central-lakes-orthodontics{
+			.providers {
+				&.carousel {
+					aside {
+						.providers-container{
+							.dr-anderson{
+								object-position: 0px -72px;
+								@media screen and (max-width:768px) { 
+									object-position: 0px -132px;
+								}
+								@media screen and (max-width:537px) { 
+									object-position: 0px -100px;
+								}
+
+								@media screen and (max-width:437px) { 
+									object-position: 0px -75px;
+								}
+							}
+						}
+					}						
+				}	
+			}				
+		}		
+	}
+}
+
+.page-template-location-home{
+	&.central-lakes-orthodontics{
+		.providers {
+			&.carousel{
+				.providers-container {
+					.dr-anderson {
+						object-position: center -80px;
+
+						@media screen and (max-width:768px) { 
+							object-position: 0px -132px;
+						}
+						@media screen and (max-width:537px) { 
+							object-position: 0px -100px;
+						}
+
+						@media screen and (max-width:437px) { 
+							object-position: 0px -75px;
+						}
+					}
+				}
+			}
+		} 
+	}
+} 
+

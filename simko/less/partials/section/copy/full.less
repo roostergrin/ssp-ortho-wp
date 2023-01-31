@@ -1,0 +1,133 @@
+section.copy.full {
+    &.why-orthodontic-treatment {
+        margin-top: 4*@gutter-md;
+
+        @media screen and (max-width: 885px) {
+            margin-top: 4*@gutter-sm;
+        }
+
+        &.central-lakes-orthodontics{
+            @media screen and (max-width: 885px) {
+                margin-top: 1*@gutter-sm;
+            }
+            @media screen and (max-width: 585px) {
+                margin-top: 0*@gutter-sm;
+            }
+        }
+
+        .main-container {
+            margin: 0;
+            padding: 4*@gutter-sm 2*@gutter-lg 4*@gutter-sm 0;
+            .display-flex;
+
+            @media screen and (max-width: 885px) {
+                padding: 0 @gutter-lg 4*@gutter-sm;
+                .flex-direction-column;
+            }
+
+            .img-container {
+                width: 230px;
+                .display-flex;
+                .flex-justify-content-center;
+                .flex-align-items-center;
+
+                i {
+					font-size: 130px;
+                    .transform(translateX(18px));
+                }
+
+                @media screen and (max-width: 885px) {
+                    width: 100%;
+                    height: 270px;
+
+                    i {
+                        .transform(translateX(0));
+                    }
+                }
+            }
+
+            .content-container {
+                width: calc(~"100% - 230px");
+                padding-left: 35px;
+
+                @media screen and (max-width: 885px) {
+                    width: 100%;
+                    padding-left: 0;
+                    text-align: center;
+                }
+
+                h3 {
+                    margin-bottom: @gutter-lg;
+                }
+            }
+        }
+
+        &.great-river-orthodontics {
+            @media @menuMax {
+                .main-container {
+                    .img-container {
+                        img {
+                            .transform(translateX(0));
+                        }
+                    }
+
+                    .content-container {
+                        padding-left: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    &.saftey-procedures {
+        p {
+            max-width: 810px;
+            margin: auto;
+        }
+    }
+
+    &.patient-care-philosophy {
+
+        h2,
+        p {
+            .inner-content {
+                max-width: 710px;
+                margin-left: 0;
+                margin-right: unset;
+            }
+        }
+
+        h2 {
+            letter-spacing: -0.14px;
+        }
+    }
+
+    &.community-involvement {
+
+        .content {
+            @media @tabletMax {
+                margin-bottom: 60px;
+            }
+
+            .inner-content {
+
+                h2,
+                p {
+                    max-width: 800px;
+                }
+            }
+        }
+
+        h2:not(.h1) {
+            .Regular;
+        }
+
+        h2.h1 {
+            margin-bottom: @gutter-lg;
+
+            br {
+                display: none;
+            }
+        }
+    }
+}

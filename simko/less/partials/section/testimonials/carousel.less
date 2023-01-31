@@ -1,0 +1,290 @@
+section.testimonials.carousel {
+	@media @mobileMax {margin: 0 0 3*@gutter-lg 0 !important;}
+	body.page-template-orthodontic-treatment-results & {
+		@media @mobileMax { margin: @gutter-lg 0 !important; }
+	}
+	body.page-template-invisalign-aligners & {
+		@media @tabletMin and @tabletMax {margin: 3*@gutter-lg 0 0 !important;}
+	}
+	body.page-template-brand-home & {
+		margin: 80px 0 0 !important;
+		@media @mobileMax { margin: 30px 0 !important; }
+		&.prairie-grove-orthodontics {
+			@media (max-width:425px) {min-height: 650px;}
+			@media (max-width:375px) {min-height: 745px;}
+		}
+	}
+
+	&.cc {
+		position: relative;
+        
+        margin-bottom: 200px !important;
+		@media @mobileMax {
+			margin-bottom: 200px !important;
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 225px;
+			background-image: url(/wp-content/themes/simko/images/placeholder/graphics/confidence-counts-club/CONFETTI_WEB-04.svg);
+			background-repeat: no-repeat;
+            background-size: cover;
+			bottom: -250px;
+
+            @media @mobileMax {
+				height: 275px;
+                background-size: 1600px;
+				z-index: -1;
+            }
+		}
+
+		&.brand-palette-prairie-grove {
+			&::after {
+				background-image: url(/wp-content/themes/simko/images/placeholder/graphics/confidence-counts-club/CONFETTI_WEB-04-PGO.svg);				
+			}
+		}
+		&.brand-palette-dietmeier {
+			&::after {
+				background-image: url(/wp-content/themes/simko/images/placeholder/graphics/confidence-counts-club/CONFETTI_WEB-04-DTM.svg);				
+			}
+		}
+	}
+
+	.main-container {
+		margin: 0;
+		.display-flex;
+		.flex-align-items-flex-start;
+
+		a.read-more {
+			color: var(--color-gray-1);
+			> span { color: var(--color-primary); }
+		}
+
+		.content-container {
+			@width: percentage((1410-510) / 1410);
+			width: @width;
+			padding-left: 60px;
+			padding-right: 2*@gutter-md;
+			.flex(1, 0, @width);
+			@media screen and (max-width: 1290px) { padding-left: 0; }
+
+			@media @tabletMin {
+				.content-carousel {
+					height:auto!important;
+				}
+			}
+			.content-carousel {
+				width: 100%;
+				overflow: hidden;
+				.display-flex;
+				@media @tabletMin and (max-width:1399px) {margin-left: -2*@gutter-lg; padding-left: 2*@gutter-lg;}
+				@media @mobileMax { margin-bottom: 0; }
+
+				.carousel-item {
+					max-width: 730px;
+					.flex(0, 0, 100%);
+					.transform(translateX(-1410px));
+					.ease-out(0.3s, all);
+
+					& + .carousel-item {
+						margin-left: -100%;
+					}
+
+					&.active {
+						.transform(translateX(0px));
+						transition-delay: 0.5s;
+					}
+
+					.content {
+						p {
+							&.name {
+								margin-bottom: @gutter-md;
+								.Bold;
+							}
+
+							&:not(.name) {
+								font-size: 25/@rem;
+								line-height: 35/@rem;
+								.Light;
+
+								@media @mobileMax {
+									font-size: 18/@rem;
+									line-height:1.25em;
+								}
+							}
+						}
+					}
+				}
+			}
+
+			.pagination-container {
+				margin: 0;
+				display: none;
+				// .display-flex;
+				.flex-align-items-center;
+
+				.pagination {
+					width: 28px;
+					.display-flex;
+					.flex-justify-content-space-between;
+					.flex-align-items-center;
+
+					i {
+						width: 14px;
+						height: 14px;
+						outline: none;
+						cursor: pointer;
+						position: relative;
+						font-weight: 900;
+
+						&:before {
+							position: absolute;
+							color: var(--color-gray-1);
+							height: 14px;
+							font-size: 14px;
+							cursor: pointer;
+							.display-flex;
+							.flex-align-items-center;
+						}
+
+						&:hover {
+							&:before {
+								color: var(--color-primary);
+							}
+						}
+
+						&.icon-left-arrow-thick {
+							&:before {
+								left: 0;
+							}
+						}
+
+						&.icon-right-arrow-thick {
+							&:before {
+								right: 0;
+							}
+						}
+					}
+				}
+
+				a {
+					margin-left: @gutter-sm;
+				}
+			}
+		}
+
+		.images-container {
+			@width: percentage(510 / 1410);
+			width: @width;
+			.flex(1, 0, @width);
+			@media @tabletMin and (max-width:1399px) {margin-right: -2*@gutter-lg; }
+
+			.images-carousel {
+				width: 100%;
+				overflow: hidden;
+				.display-flex;
+
+				.img-container {
+					.flex(0, 0, 100%);
+					.transform(translateX(1410px));
+					.ease-out(0.3s, all);
+
+					& + .img-container {
+						margin-left: -100%;
+					}
+
+					&.active {
+						.transform(translateX(0px));
+						transition-delay: 0.5s;
+					}
+
+					img {
+						width: 100%;
+
+						&.top-left-border-radius {
+							.border-top-left-radius(90px);
+							@media @mobileMax { .border-top-left-radius(90px); }
+						}
+
+						&.bottom-left-border-radius {
+							.border-bottom-left-radius(90px);
+							@media @mobileMax { .border-bottom-left-radius(90px); }
+						}
+
+						&.top-right-border-radius {
+							.border-top-right-radius(90px);
+							@media @mobileMax { .border-top-right-radius(90px); }
+						}
+
+						&.bottom-right-border-radius {
+							.border-bottom-right-radius(90px);
+							@media @mobileMax { .border-bottom-right-radius(90px); }
+						}
+
+						@media @mobileMax {
+							height:300px;
+							object-fit:cover;
+							object-position:center center;
+						}
+					}
+				}
+			}
+		}
+
+		@media @mobileMax {
+			.flex-direction-column;
+
+			.content-container {
+				width: 100%;
+				padding-right: 0;
+				.flex(1, 0, 100%);
+				.display-flex;
+				.flex-direction-column-reverse;
+
+				h2 {
+					order: 1;
+				}
+
+				.content-carousel {
+					margin-bottom: 2*@gutter-md;
+					.carousel-item {
+						.name {
+							margin-bottom: @gutter-sm;
+						}
+						.read-more {
+							font-size: 15px;
+							color: #4c4c4c;
+							font-weight: 700;
+						}
+						.read-less {
+							display: none;
+							text-decoration: underline;
+
+							&.active {
+								display: block;
+							}
+						}
+					}
+
+					.transition(height 0.2s linear);
+				}
+
+				.pagination-container {
+					display: none;
+					margin-top: @gutter-sm;
+					margin-bottom: 2*@gutter-sm;
+					.flex-justify-content-flex-start;
+				}
+			}
+
+			.images-container {
+				@width: calc(~"100% + @{gutter-lg}");
+				width: @width;
+				.flex(1, 0, @width);
+				margin-right: -@gutter-lg;
+			}
+		}
+	}
+}

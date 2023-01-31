@@ -1,0 +1,37 @@
+section.full-two-columns {
+	margin:4*@gutter-sm 0 0;
+	padding:4*@gutter-md 0;
+
+	&.bg-grey {
+		background-color: @gray-2;
+	}
+
+	body.page-template-patient-care-philosophy & {
+		margin: 0;
+	}
+
+	.content > h2 {
+		max-width:590px;
+		text-align:center;
+		margin:0 auto 2*@gutter-lg;
+	}
+
+	.inner-content {
+		margin-bottom:-5/3rem;
+		.display-flex;
+		.flex-justify-content-flex-start;
+
+		.col {
+			@half: percentage(1/2);
+			@width: calc(~"@{half} + 30px");
+			padding: 0 15px;
+			width: @width;
+			.flex(0,0,@width);
+
+			.heading {
+				font-weight: bold;
+				margin-bottom: 0;
+			}
+		}
+	}
+}
