@@ -33,7 +33,7 @@ function get_brands_for_event( $event_id ) {
 		sort($event_brands);
 	}
 
-	
+
 	foreach ($event_brands as $brand) {
 		$brand_str[] = !empty($admin_link) ? '<a href="'.get_edit_post_link($brand->ID).'" class="admin-edit-item">'.$brand->post_title.'</a>' : $brand->post_title;
 	}
@@ -68,7 +68,7 @@ function get_providers() {
 	$brand_location_ids = wp_list_pluck(get_locations_for_brand($brand->ID), 'ID');
 	$location = is_location();
 	$all_providers = [];
-	
+
 	if (property_exists($providers, 'providers') && !empty($providers->providers)) {
 		$all_providers = array_values(array_filter($providers->providers, function($provider) use ($brand_location_ids) {
 			$location_relationship = !empty($provider->location_relationship) ? unserialize($provider->location_relationship) : false;
@@ -93,12 +93,12 @@ function is_confidence_counts_brand() {
 
 	/**
 	 * Brands currently with Confidence Counts
-	 * - Kristo: 1217 
-	 * - Ross: 16332 
+	 * - Kristo: 1217
+	 * - Ross: 16332
 	 * - Dietmeier: 13032
-	 * - Shawano: 12097 
-	 * - Rapids: 9825 
-	 * - Great River: 3291 
+	 * - Shawano: 12097
+	 * - Rapids: 9825
+	 * - Great River: 3291
 	 * - Chapman: 13590
 	 * - Prairie Grove: 8643
 	 * - Central Lakes Orthodontics: 16618
@@ -174,13 +174,13 @@ function get_locations_for_brand($brand_id, $admin_link = false) {
 		$location_str[] = !empty($admin_link) ? '<a href="'.get_edit_post_link($location->ID).'" class="admin-edit-item">'.$location->post_title.'</a>' : $location;
 	}
 	return $location_str;
-}	
+}
 
 function get_events_for_region($region_id, $no_scholarships = false) {
 	global $events;
 
 	$event_count = 4;
-	$scholarship_count = 2;	
+	$scholarship_count = 2;
 	$events_in_region = [];
 
 	// remove all expired events
@@ -188,8 +188,8 @@ function get_events_for_region($region_id, $no_scholarships = false) {
 
 	foreach ($all_future_events as $event) {
 		// check if event is a scholarship event
-		if( $no_scholarships == true && $event->is_scholarship == 1 ) continue;		
-		
+		if( $no_scholarships == true && $event->is_scholarship == 1 ) continue;
+
 		$event_region_ids = unserialize( $event->region_relationship );
 		if( in_array( $region_id, $event_region_ids ) ) {
 			array_push( $events_in_region, $event );
@@ -213,7 +213,7 @@ function get_event_name_by_id($event_id) {
 }
 
 function get_event_title_date( $event ) {
-	$event_title_date = '';	
+	$event_title_date = '';
 
 	if( $event->is_scholarship == 1 ){
 		$event_title_date = $event->post_title;
@@ -222,10 +222,10 @@ function get_event_title_date( $event ) {
 
 	$date = get_post_meta( $event->ID,'event_date', true);
 	$start_time = get_post_meta( $event->ID,'event_hours_start', true);
-	$end_time = get_post_meta( $event->ID,'event_hours_end', true);	
+	$end_time = get_post_meta( $event->ID,'event_hours_end', true);
 
 	$event_title_date = $event->post_title . '<br>' . date_format( date_create($date), 'F j, Y' ) . ' | ';
-	
+
 	if( !empty($start_time) ) {
 		$start_time_format = 'gA';
 		if( explode( ':', $start_time )[1] > 0 ) $start_time_format = 'g:iA';
@@ -247,7 +247,7 @@ function get_only_future_events( $events ) {
 
 	foreach ($events as $event) {
 		// check to see if event expired
-		$event_date = new DateTime( $event->date );		
+		$event_date = new DateTime( $event->date );
 		if( $event_date < $todays_date ) continue;
 
 		array_push( $future_events, $event );
@@ -362,7 +362,7 @@ function get_parent_for_page($page_id, $admin_link = false) {
 			return !empty($admin_link) ? '<a href="'.get_edit_post_link($location->ID).'" class="admin-edit-item">'.$location->post_title.'</a>' : $location->post_title;
 		} else {
 			return '-';
-		}		
+		}
 	}
 
 	return '-';
@@ -432,7 +432,7 @@ function get_regions_for_event( $event_id ) {
 	global $regions;
 
 	$event_region_ids = get_post_meta( $event_id, 'event_region_relationship', true );
-	$event_regions = [];	
+	$event_regions = [];
 	$region_str = [];
 
 	if (property_exists($regions, 'regions') && !empty($regions->regions)) {
@@ -445,7 +445,7 @@ function get_regions_for_event( $event_id ) {
 	foreach ($event_regions as $region) {
 		$region_str[] = $region->post_title;
 	}
-	
+
 	return $region_str;
 }
 
@@ -483,7 +483,7 @@ function get_provider_multi_brand_relationship($old_provider, $brand_id) {
 	];
 
 	$q = new WP_Query($query_params);
-	$new_provider = current($q->posts);	
+	$new_provider = current($q->posts);
 	$provider = $providers->providers[$new_provider->ID];
 
 	if(!empty($provider)) return $provider;
@@ -557,12 +557,12 @@ function get_custom_column_info( $column_name, $post_id ) {
 function if_landing_page_get_lp_phone() {
 	global $regions, $locations;
 	$template_array = explode('/', get_page_template());
-	if(end($template_array) === 'free-consultations.php' && get_post_meta(get_the_id(), 'free_consultation_lp_toggle', true) ) {		
+	if(end($template_array) === 'free-consultations.php' && get_post_meta(get_the_id(), 'free_consultation_lp_toggle', true) ) {
 		$region_id = get_post_meta(get_the_id(), 'free_consultation_lp_relationship', true)[0];
 		$location_id = unserialize($regions->regions[$region_id]->main_location_relationship)[0];
 		$main_location = $locations->locations[$location_id];
 		return !empty($main_location->toll_free_phone) ? $main_location->toll_free_phone : $main_location->phone;
-	} else {		
+	} else {
 		return NULL;
 	}
 }
@@ -675,7 +675,7 @@ function brand_url($path, $brand = false) {
 	return $uri;
 }
 
-function get_email_addresses_for_form($form, $location_id) {	
+function get_email_addresses_for_form($form, $location_id) {
 	global $locations;
 	$brand = is_brand();
 	$location = $locations->locations[$location_id];
@@ -704,12 +704,12 @@ function get_email_addresses_for_form($form, $location_id) {
 function get_email_addresses_for_event_form( $event_id, $email_type ) {
 	global $events;
 	$addresses = '';
-	$event = $events->events[$event_id];	
+	$event = $events->events[$event_id];
 
-	for ($i=0; $i < $event->{'form_'.$email_type.'_emails'}; $i++) { 
+	for ($i=0; $i < $event->{'form_'.$email_type.'_emails'}; $i++) {
 		$addresses .= ($i == 0) ? $event->{'form_'.$email_type.'_emails_'.($i).'_email'} : ','.$event->{'form_'.$email_type.'_emails_'.($i).'_email'};
-	}		
-	
+	}
+
 	return $addresses;
 }
 
@@ -772,7 +772,13 @@ function get_bcc_email_addresses_for_form($form, $location_id) {
 }
 
 function sanitize_array_for_output($array) {
-	return array_map(function($v) { return stripslashes(trim(strip_tags(htmlentities($v)))); }, $array);
+  return array_map(function($v) {
+    if (is_array($v)) {
+      return sanitize_array_for_output($v);
+    } else {
+      return stripslashes(trim(strip_tags(htmlentities($v))));
+    }
+  }, $array);
 }
 
 function starts_with($s, $prefix){
@@ -880,7 +886,7 @@ function list_all_blogs($full_obj = false, $exclude_hidden = false) {
 	$query = [
 		'post_type' => 'post',
 		'posts_per_page' => -1,
-		'post_status' => 'publish',		
+		'post_status' => 'publish',
 		'meta_query' => [
 			[
 				'key' => 'post_brand_relationship',
@@ -895,7 +901,7 @@ function list_all_blogs($full_obj = false, $exclude_hidden = false) {
 	}
 
 	$blog_posts = new WP_Query($query);
-	if ($blog_posts->have_posts()) {		
+	if ($blog_posts->have_posts()) {
 		foreach ($blog_posts->posts as $post) {
 			$posts[] = $full_obj ? $post : $post->post_name;
 		}
@@ -1481,7 +1487,7 @@ function do_location_page($loc = NULL, $pro = NULL, $rev = NULL) {
 		]);
 
 	}else{
-		
+
 		partial('section.providers.carousel', [
 			'h2' => $location->section_three_heading,
 			'h2_classes' => ['primary', 'h3'],
@@ -1510,7 +1516,7 @@ function do_location_page($loc = NULL, $pro = NULL, $rev = NULL) {
 				'content' => $location->section_four_content,
 				'shortcode' => $location->section_four_cta
 			]
-		]);		
+		]);
 	}
 	partial('section.maps.location', [
 		'loc' => $location,
@@ -1533,7 +1539,7 @@ function do_location_page($loc = NULL, $pro = NULL, $rev = NULL) {
 				'content' => $location->section_four_content,
 				'shortcode' => $location->section_four_cta
 			]
-		]);		
+		]);
 	}
 	if(empty($loc)) {
 		$all_ages_slides = [];
@@ -1638,7 +1644,7 @@ function do_location_page($loc = NULL, $pro = NULL, $rev = NULL) {
 				'classes' => [$brand->post_name]
 			]);
 		}
-	} 	
+	}
 
 	$smile_transformation_ids = array_rand(get_smile_transformations_by_region_or_brand($region), 8);
 	$smiles = array_values(array_filter(get_smile_transformations_by_region_or_brand($region), function($smile) use ($smile_transformation_ids) {
@@ -1795,14 +1801,14 @@ function get_path_count_from_svg( $svg_path ) {
 
 	$xml = new SimpleXMLElement( $svg );
 	$path_count = 0;
-	
+
 	if ( property_exists( $xml, 'g' ) ) {
 		$path_count = $path_count + count( $xml->g->path );
 
 		if( property_exists( $xml->g, 'g' ) ) {
 			$path_count = $path_count + count( $xml->g->g->path );
 		}
-	}	
+	}
 
 	return $path_count;
 }
