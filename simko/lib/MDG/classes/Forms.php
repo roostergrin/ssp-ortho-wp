@@ -1166,8 +1166,8 @@ class Forms {
             $form_name = $this->getFormFromHash($_POST['__f']);
             if(empty($form_name)) return;
             $this->current_form_name = $form_name;
-            $this->current_form = (object)$this->form_configurations[$form_name];            
-            $this->form_errors = $this->getFormErrors();            
+            $this->current_form = (object)$this->form_configurations[$form_name];
+            $this->form_errors = $this->getFormErrors();
 
             if(empty($this->form_errors)) {
                 $this->processFormSubmission();
@@ -1240,13 +1240,17 @@ class Forms {
 
         $content = file_get_contents($email_template);
         foreach($data as $k => $v) {
-            if(!empty($v)) $content = str_replace('[%'.$k.'%]', $v, $content);
+            if(is_string($v)) {
+                if(!empty($v)) {
+                    $content = str_replace('[%'.$k.'%]', $v, $content);
+                }
+            }
         }
         return $content;
     }
 
     protected function invokeAPI() {
-        $data = sanitize_array_for_output($_POST);        
+        $data = sanitize_array_for_output($_POST);
     }
 
     private function getXrayFileKey() {
@@ -1261,7 +1265,7 @@ class Forms {
     protected function processFormSubmission() {
         $this->invokeAPI();
 
-        $row_values = []; foreach($this->current_form->rows as $row) $row_values = array_merge($row_values, $row);        
+        $row_values = []; foreach($this->current_form->rows as $row) $row_values = array_merge($row_values, $row);
 
         if (in_array('panoramic_xray_file', $row_values) || in_array('panoramic_xray_file:hidden', $row_values)) {
             define('MAX_FILE_COUNT', 5);
@@ -1628,8 +1632,8 @@ class Forms {
                 $loc_array[$location->ID] = $location->post_title;
             }
             return $loc_array;
-        } 
-        
+        }
+
         return [];
     }
 
@@ -1757,14 +1761,14 @@ class Forms {
                 $results = $wpdb->get_results("select * from form_submissions where form='$form' order by timestamp desc;");
 
                 ob_start();
-                $fh = fopen('php://output', 'w');                
+                $fh = fopen('php://output', 'w');
 
                 // Preprocess all results
                 foreach($results as $k => $r) {
                     $metadata = (array)json_decode($r->metadata);
                     $data = (array)$r;
                     unset($data['metadata']);
-                    /*unset($metadata['form_name'], $metadata['email_address'], $metadata['user_port'], $metadata['submit'], $metadata['submit_btn'], $metadata['fields_message'], $metadata['message'], $metadata['fields_comments'], $metadata['email_address_confirm'], $metadata['g-recaptcha-response'], $metadata['timestamp'], $metadata['ip'], $metadata['fields_first_name'], $metadata['first_name'], $metadata['last_name'], $metadata['fields_last_name'], $metadata['name'], $metadata['fields_name'], $metadata['email'], $metadata['submit']);*/                                        
+                    /*unset($metadata['form_name'], $metadata['email_address'], $metadata['user_port'], $metadata['submit'], $metadata['submit_btn'], $metadata['fields_message'], $metadata['message'], $metadata['fields_comments'], $metadata['email_address_confirm'], $metadata['g-recaptcha-response'], $metadata['timestamp'], $metadata['ip'], $metadata['fields_first_name'], $metadata['first_name'], $metadata['last_name'], $metadata['fields_last_name'], $metadata['name'], $metadata['fields_name'], $metadata['email'], $metadata['submit']);*/
 
                     $data = array_merge($data, $metadata);
                     $data['office_preference'] = $this->locationNameFromID($data['office_preference']);
@@ -1796,12 +1800,12 @@ class Forms {
                     if( $data['form'] == 'event' ) $data['event_select'] = get_event_name_by_id( $data['event_select'] );
 
                     $r->data = $data;
-                }                
+                }
 
                 // Fetch a unique array of all keys
                 $keys = array();
                 $mapped_keys = array();
-                foreach($results as $r) foreach($r->data as $k => $v) if(!in_array($k, $keys)) $keys[] = $k;                
+                foreach($results as $r) foreach($r->data as $k => $v) if(!in_array($k, $keys)) $keys[] = $k;
 
                 foreach($keys as $k => $v) {
                     if(empty($key_label_mapping[$v])) {
