@@ -43,7 +43,7 @@ section.home-carousel {
 				.page-left {
 					span {
 						margin-right: @gutter-lg/2;
-						
+
 						.display-inline-flex;
 					}
 				}
@@ -51,7 +51,7 @@ section.home-carousel {
 				.page-right {
 					span {
 						margin-left: @gutter-lg/2;
-						
+
 						.display-inline-flex;
 					}
 				}
@@ -163,14 +163,14 @@ section.home-carousel {
 								margin-bottom: 0;
 								padding-bottom: @gutter-md;
 							}
-							
+
 							.about {
 								color: @white;
 								margin-bottom: 0;
 								color: @white;
 								padding-bottom: @gutter-md;
 							}
-							
+
 							a.cta.link {
 								color: @white;
 								border-bottom: 2px solid @white;
@@ -305,19 +305,19 @@ section.home-carousel {
 											color: @white;
 										}
 									}
-									
+
 									.specialty {
 										font-size: 15/@rem;
 										line-height: 22/@rem;
 										color: @white;
 										margin-bottom: 0;
 									}
-									
+
 									.about {
 										color: @white;
 										margin-bottom: 0;
 									}
-									
+
 									a.cta.link {
 										color: @white;
 										border-bottom: 2px solid @white;
@@ -385,7 +385,7 @@ section.home-carousel {
 	}
 }
 
-.great-river-ortho {	
+.great-river-ortho {
 
 	.providers {
 		&.home-carousel{
@@ -395,15 +395,19 @@ section.home-carousel {
 						.providers{
 							.img-container {
 								.dr-ross{
-									object-position: center -100px;		
+									object-position: center -100px;
 									@media screen and (max-width: 2200px) { object-position: left -110px; }
 									@media (min-width:1456px) and (max-width: 1850px) { object-position: left -110px; }
-						
+
 									@media screen and (max-width: 1455px) { object-position: left -100px; }
 									@media screen and (max-width: 1100px) { object-position: left -70px; }
 								}
 								.dr-kapus {
 									object-position: center -85px;
+									@media screen and (max-width: 1100px) { object-position: left -55px; }
+								}
+								.dr-furche {
+									object-position: center -25px;
 									@media screen and (max-width: 1100px) { object-position: left -55px; }
 								}
 								.dr-anderson {
@@ -413,26 +417,30 @@ section.home-carousel {
 							}
 						}
 					}
-				}				
+				}
 			}
-			
+
 			.container{
 				.providers{
 					&.owl-drag{
 						.img-container{
 							.dr-ross{
-								object-position: center -100px;	
+								object-position: center -100px;
 								@media screen and (max-width: 500px) { object-position: center -55px; }
-							}	
+							}
 							.dr-kapus {
 								object-position: center -85px;
 								@media screen and (max-width: 500px) { object-position: center -40px; }
-							}			
+							}
+							.dr-furche {
+								object-position: center -10px;
+								@media screen and (max-width: 500px) { object-position: center -40px; }
+							}
 						}
 					}
 				}
 			}
-		}		
+		}
 	}
 }
 
