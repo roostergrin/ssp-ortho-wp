@@ -89,6 +89,7 @@ if(is_brand()->ID === 16332 || is_brand()->ID === 3291) {
 			],
 			'name' => 'White'
 		]
+	]
 } else {
 	$setColor = [
 		[
