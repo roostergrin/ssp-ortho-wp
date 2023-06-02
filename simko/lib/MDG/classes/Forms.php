@@ -1544,38 +1544,38 @@ class Forms {
     //=======================================================================
 
     final protected function getMouthguardColors() {
-        if (is_brand()->ID === 16332 || is_brand()->ID === 3291){
-            return [
-                'Blue' => 'Blue',
-                'Red' => 'Red',
-                'Orange' => 'Orange'
-                'Black' => 'Black',
-                'White' => 'White'
-            ];
-        }else {
-            return [
-                'Clear' => 'Clear',
-                'Black' => 'Black',
-                'Blue' => 'Blue',
-                'Green' => 'Green',
-                'Maroon' => 'Maroon',
-                'Pink' => 'Pink',
-                'Purple' => 'Purple',
-                'Red' => 'Red',
-                'White' => 'White',
-                'Yellow' => 'Yellow',
-                'Black/Red' => 'Black/Red',
-                'Black/White' => 'Black/White',
-                'Blue/Yellow' => 'Blue/Yellow',
-                'Purple/White' => 'Purple/White',
-                'Purple/White' => 'Purple/White',
-                'Green Camo' => 'Green Camo',
-                'Pink Camo' => 'Pink Camo',
-                'Patriotic' => 'Patriotic',
-                'Rainbow' => 'Rainbow',
-                'Unsure' => 'Unsure'
-            ];
-        }
+        // if (is_brand()->ID === 16332 || is_brand()->ID === 3291){
+        //     return [
+        //         'Blue' => 'Blue',
+        //         'Red' => 'Red',
+        //         'Orange' => 'Orange'
+        //         'Black' => 'Black',
+        //         'White' => 'White'
+        //     ];
+        // }else {
+        return [
+            'Clear' => 'Clear',
+            'Black' => 'Black',
+            'Blue' => 'Blue',
+            'Green' => 'Green',
+            'Maroon' => 'Maroon',
+            'Pink' => 'Pink',
+            'Purple' => 'Purple',
+            'Red' => 'Red',
+            'White' => 'White',
+            'Yellow' => 'Yellow',
+            'Black/Red' => 'Black/Red',
+            'Black/White' => 'Black/White',
+            'Blue/Yellow' => 'Blue/Yellow',
+            'Purple/White' => 'Purple/White',
+            'Purple/White' => 'Purple/White',
+            'Green Camo' => 'Green Camo',
+            'Pink Camo' => 'Pink Camo',
+            'Patriotic' => 'Patriotic',
+            'Rainbow' => 'Rainbow',
+            'Unsure' => 'Unsure'
+        ];
+        //}
     }
 
     final protected function getStateList() {
