@@ -51,9 +51,8 @@ partial('section.icons.four-cols-carousel', [
 	]
 ]);
 $mouthguard_image_id = get_post_meta(get_the_ID(), 'custom_mouthguard_section_three_image', true);
-$setColor = [];
-if(is_brand()->ID === 16332 || is_brand()->ID === 3291) {
-	$setColor = [
+$setColor = (is_brand()->ID === 16332 || is_brand()->ID === 3291) ?
+	[
 		[
 			'svg' => [
 				'path' => 'images/svgs/colors/inline',
@@ -90,8 +89,8 @@ if(is_brand()->ID === 16332 || is_brand()->ID === 3291) {
 			'name' => 'White'
 		]
 	]
-} else {
-	$setColor = [
+:
+	[
 		[
 			'svg' => [
 				'path' => 'images/svgs/colors/inline',
@@ -226,7 +225,6 @@ if(is_brand()->ID === 16332 || is_brand()->ID === 3291) {
 			'name' => 'Patriotic'
 		]
 	]
-}
 partial('section.mouthguard-colors', [
 	'classes' => [],
 	'h2' => get_post_meta(get_the_ID(), 'custom_mouthguard_section_three_heading', true),
