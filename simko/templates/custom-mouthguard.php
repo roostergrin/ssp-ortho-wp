@@ -52,7 +52,7 @@ partial('section.icons.four-cols-carousel', [
 ]);
 $mouthguard_image_id = get_post_meta(get_the_ID(), 'custom_mouthguard_section_three_image', true);
 $setColor = [];
-if(is_brand()->ID === 16332) {
+if(is_brand()->ID === 16332 || is_brand()->ID === 3291) {
 	$setColor = [
 		[
 			'svg' => [
@@ -64,23 +64,16 @@ if(is_brand()->ID === 16332) {
 		[
 			'svg' => [
 				'path' => 'images/svgs/colors/inline',
-				'color' => 'maroon.svg'
+				'color' => 'blue.svg'
 			],
-			'name' => 'Maroon'
+			'name' => 'Blue'
 		],
 		[
 			'svg' => [
 				'path' => 'images/svgs/colors/inline',
-				'color' => 'pink.svg'
+				'color' => 'orange.svg'
 			],
-			'name' => 'Pink'
-		],
-		[
-			'svg' => [
-				'path' => 'images/svgs/colors/inline',
-				'color' => 'purple.svg'
-			],
-			'name' => 'Purple'
+			'name' => 'Orange'
 		],
 		[
 			'svg' => [
@@ -92,102 +85,10 @@ if(is_brand()->ID === 16332) {
 		[
 			'svg' => [
 				'path' => 'images/svgs/colors/inline',
-				'color' => 'blue.svg'
-			],
-			'name' => 'Blue'
-		],
-		[
-			'svg' => [
-				'path' => 'images/svgs/colors/inline',
-				'color' => 'green.svg'
-			],
-			'name' => 'Green'
-		],
-		[
-			'svg' => [
-				'path' => 'images/svgs/colors/inline',
-				'color' => 'yellow.svg'
-			],
-			'name' => 'Yellow'
-		],
-		[
-			'svg' => [
-				'path' => 'images/svgs/colors/inline',
-				'color' => 'clear.svg'
-			],
-			'name' => 'Clear'
-		],
-		[
-			'svg' => [
-				'path' => 'images/svgs/colors/inline',
 				'color' => 'white.svg'
 			],
 			'name' => 'White'
-		],
-		[
-			'svg' => [
-				'path' => 'images/svgs/colors/inline',
-				'color' => 'blue-yellow.svg'
-			],
-			'name' => 'Blue/yellow'
-		],
-		[
-			'svg' => [
-				'path' => 'images/svgs/colors/inline',
-				'color' => 'black-red.svg'
-			],
-			'name' => 'Black/red'
-		],
-		[
-			'svg' => [
-				'path' => 'images/svgs/colors/inline',
-				'color' => 'red-white.svg'
-			],
-			'name' => 'Red/white'
-		],
-		[
-			'svg' => [
-				'path' => 'images/svgs/colors/inline',
-				'color' => 'black-white.svg'
-			],
-			'name' => 'Black/white'
-		],
-		[
-			'svg' => [
-				'path' => 'images/svgs/colors/inline',
-				'color' => 'purple-white.svg'
-			],
-			'name' => 'Purple/white'
-		],
-		[
-			'svg' => [
-				'path' => 'images/svgs/colors/inline',
-				'color' => 'green-camo.svg'
-			],
-			'name' => 'Green camo'
-		],
-		[
-			'svg' => [
-				'path' => 'images/svgs/colors/inline',
-				'color' => 'pink-camo.svg'
-			],
-			'name' => 'Pink camo'
-		],
-		[
-			'svg' => [
-				'path' => 'images/svgs/colors/inline',
-				'color' => 'rainbow.svg'
-			],
-			'name' => 'Rainbow'
-		],
-		[
-			'svg' => [
-				'path' => 'images/svgs/colors/inline',
-				'color' => 'patriotic.svg'
-			],
-			'name' => 'Patriotic'
 		]
-	]
 } else {
 	$setColor = [
 		[
