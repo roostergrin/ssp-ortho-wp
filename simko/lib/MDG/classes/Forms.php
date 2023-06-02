@@ -1544,13 +1544,13 @@ class Forms {
     //=======================================================================
 
     final protected function getMouthguardColors() {
-        if (is_brand()->ID === 16332 || is_brand()->ID === 3291n){
+        if (is_brand()->ID === 16332 || is_brand()->ID === 3291){
             return [
                 'Blue' => 'Blue',
                 'Red' => 'Red',
                 'Orange' => 'Orange'
                 'Black' => 'Black',
-                'White' => 'White',
+                'White' => 'White'
             ];
         }else {
             return [
