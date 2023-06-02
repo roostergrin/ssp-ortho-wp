@@ -50,6 +50,7 @@ partial('section.icons.four-cols-carousel', [
 		]
 	]
 ]);
+echo (is_brand()->ID === 16332 || is_brand()->ID === 3291)
 $mouthguard_image_id = get_post_meta(get_the_ID(), 'custom_mouthguard_section_three_image', true);
 partial('section.mouthguard-colors', [
 	'classes' => [],
