@@ -1544,8 +1544,7 @@ class Forms {
     //=======================================================================
 
     final protected function getMouthguardColors() {
-        $condition = is_brand()->ID === 16332 || is_brand()->ID === 3291;
-        if ($condition){
+        if (is_brand()->ID === 16332 || is_brand()->ID === 3291n){
             return [
                 'Blue' => 'Blue',
                 'Red' => 'Red',
