@@ -1,6 +1,7 @@
 <?
 # Template Name: Custom Mouthguard
 global $reviews;
+$brand = is_brand();
 
 get_header();
 $hero_desktop_image_id = get_post_meta(get_the_ID(), 'custom_mouthguard_section_one_desktop_image', true);
@@ -50,17 +51,9 @@ partial('section.icons.four-cols-carousel', [
 	]
 ]);
 $mouthguard_image_id = get_post_meta(get_the_ID(), 'custom_mouthguard_section_three_image', true);
-partial('section.mouthguard-colors', [
-	'classes' => [],
-	'h2' => get_post_meta(get_the_ID(), 'custom_mouthguard_section_three_heading', true),
-	'h2_classes' => ['h1', 'primary'],
-	'content' => get_post_meta(get_the_ID(), 'custom_mouthguard_section_three_content', true),
-	'image' => [
-		'src' => wp_get_attachment_image_src($mouthguard_image_id, 'medium_large')[0],
-		'alt' => get_post_meta($mouthguard_image_id, '_wp_attachment_image_alt', true),
-		'classes' => []
-	],
-	'colors' => [
+$setColor = [];
+if(is_brand()->ID === 16332) {
+	$setColor = [
 		[
 			'svg' => [
 				'path' => 'images/svgs/colors/inline',
@@ -194,7 +187,155 @@ partial('section.mouthguard-colors', [
 			],
 			'name' => 'Patriotic'
 		]
+	]
+} else {
+	$setColor = [
+		[
+			'svg' => [
+				'path' => 'images/svgs/colors/inline',
+				'color' => 'red.svg'
+			],
+			'name' => 'Red'
+		],
+		[
+			'svg' => [
+				'path' => 'images/svgs/colors/inline',
+				'color' => 'maroon.svg'
+			],
+			'name' => 'Maroon'
+		],
+		[
+			'svg' => [
+				'path' => 'images/svgs/colors/inline',
+				'color' => 'pink.svg'
+			],
+			'name' => 'Pink'
+		],
+		[
+			'svg' => [
+				'path' => 'images/svgs/colors/inline',
+				'color' => 'purple.svg'
+			],
+			'name' => 'Purple'
+		],
+		[
+			'svg' => [
+				'path' => 'images/svgs/colors/inline',
+				'color' => 'black.svg'
+			],
+			'name' => 'Black'
+		],
+		[
+			'svg' => [
+				'path' => 'images/svgs/colors/inline',
+				'color' => 'blue.svg'
+			],
+			'name' => 'Blue'
+		],
+		[
+			'svg' => [
+				'path' => 'images/svgs/colors/inline',
+				'color' => 'green.svg'
+			],
+			'name' => 'Green'
+		],
+		[
+			'svg' => [
+				'path' => 'images/svgs/colors/inline',
+				'color' => 'yellow.svg'
+			],
+			'name' => 'Yellow'
+		],
+		[
+			'svg' => [
+				'path' => 'images/svgs/colors/inline',
+				'color' => 'clear.svg'
+			],
+			'name' => 'Clear'
+		],
+		[
+			'svg' => [
+				'path' => 'images/svgs/colors/inline',
+				'color' => 'white.svg'
+			],
+			'name' => 'White'
+		],
+		[
+			'svg' => [
+				'path' => 'images/svgs/colors/inline',
+				'color' => 'blue-yellow.svg'
+			],
+			'name' => 'Blue/yellow'
+		],
+		[
+			'svg' => [
+				'path' => 'images/svgs/colors/inline',
+				'color' => 'black-red.svg'
+			],
+			'name' => 'Black/red'
+		],
+		[
+			'svg' => [
+				'path' => 'images/svgs/colors/inline',
+				'color' => 'red-white.svg'
+			],
+			'name' => 'Red/white'
+		],
+		[
+			'svg' => [
+				'path' => 'images/svgs/colors/inline',
+				'color' => 'black-white.svg'
+			],
+			'name' => 'Black/white'
+		],
+		[
+			'svg' => [
+				'path' => 'images/svgs/colors/inline',
+				'color' => 'purple-white.svg'
+			],
+			'name' => 'Purple/white'
+		],
+		[
+			'svg' => [
+				'path' => 'images/svgs/colors/inline',
+				'color' => 'green-camo.svg'
+			],
+			'name' => 'Green camo'
+		],
+		[
+			'svg' => [
+				'path' => 'images/svgs/colors/inline',
+				'color' => 'pink-camo.svg'
+			],
+			'name' => 'Pink camo'
+		],
+		[
+			'svg' => [
+				'path' => 'images/svgs/colors/inline',
+				'color' => 'rainbow.svg'
+			],
+			'name' => 'Rainbow'
+		],
+		[
+			'svg' => [
+				'path' => 'images/svgs/colors/inline',
+				'color' => 'patriotic.svg'
+			],
+			'name' => 'Patriotic'
+		]
+	]
+}
+partial('section.mouthguard-colors', [
+	'classes' => [],
+	'h2' => get_post_meta(get_the_ID(), 'custom_mouthguard_section_three_heading', true),
+	'h2_classes' => ['h1', 'primary'],
+	'content' => get_post_meta(get_the_ID(), 'custom_mouthguard_section_three_content', true),
+	'image' => [
+		'src' => wp_get_attachment_image_src($mouthguard_image_id, 'medium_large')[0],
+		'alt' => get_post_meta($mouthguard_image_id, '_wp_attachment_image_alt', true),
+		'classes' => []
 	],
+	'colors' => $setColor
 ]);
 $column_one_image_id = get_post_meta(get_the_ID(), 'custom_mouthguard_section_four_columns_column_1_image', true);
 $column_two_image_id = get_post_meta(get_the_ID(), 'custom_mouthguard_section_four_columns_column_2_image', true);
