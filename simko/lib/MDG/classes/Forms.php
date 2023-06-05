@@ -1544,16 +1544,17 @@ class Forms {
     //=======================================================================
 
     final protected function getMouthguardColors() {
-        // if (is_brand()->ID === 16332 || is_brand()->ID === 3291){
-        //     return [
-        //         'Blue' => 'Blue',
-        //         'Red' => 'Red',
-        //         'Orange' => 'Orange'
-        //         'Black' => 'Black',
-        //         'White' => 'White'
-        //     ];
-        // }else {
-        return [
+        return (is_brand()->ID === 16332 || is_brand()->ID === 3291) ?
+        [
+            'Blue' => 'Blue',
+            'Red' => 'Red',
+            'Orange' => 'Orange',
+            'Black' => 'Black',
+            'White' => 'White',
+            'Unsure' => 'Unsure'
+        ]
+        :
+        [
             'Clear' => 'Clear',
             'Black' => 'Black',
             'Blue' => 'Blue',
@@ -1575,7 +1576,6 @@ class Forms {
             'Rainbow' => 'Rainbow',
             'Unsure' => 'Unsure'
         ];
-        //}
     }
 
     final protected function getStateList() {
