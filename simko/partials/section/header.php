@@ -62,7 +62,7 @@ if( (!$location && $show_interstital_banner_at_brand_level == true) || (!empty( 
 									<? foreach ($services as $slug => $s): ?>
 									<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?= brand_url($slug, $brand) ?>"><?= esc_html($s) ?></a></li>
 									<? endforeach ?>
-								</ul>								
+								</ul>
 							</li>
 						<? endif ?>
 						<li id="menu-item-366" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-366<? if(
@@ -103,7 +103,7 @@ if( (!$location && $show_interstital_banner_at_brand_level == true) || (!empty( 
 								<? if( is_confidence_counts_brand() ): ?>
 								<li id="menu-item-309" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-309"><a href="<?= brand_url('confidence-counts-club', $brand) ?>">Confidence Counts Club</a></li>
 								<? endif; ?>
-								<? if(!empty($location) && !empty($location->invisalign_vc_toggle) && $location->invisalign_vc_toggle) : ?>
+								<? if((!empty($location) && !empty($location->invisalign_vc_toggle) && $location->invisalign_vc_toggle) || $brand->invisalign_vc_toggle) : ?>
 								<li id="menu-item-308" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-308"><a href="<?= brand_url('invisalign-virtual-care', $brand) ?>">Invisalign&reg; virtual care</a></li>
 								<? endif;?>
 								<li id="menu-item-306" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-306"><a href="<?= brand_url('orthodontic-emergency-care-repairs', $brand) ?>">Emergency care &#038; repair</a></li>
