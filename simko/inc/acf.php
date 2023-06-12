@@ -2526,24 +2526,24 @@ if(function_exists('acf_add_local_field_group')) {
 				'ajax' => false,
 			],
 			[
-                'key' => 'invisalign_section_seven_step_2_point_five_toggle',
-                'name' => 'invisalign_section_seven_step_2_point_five_toggle',
-                'label' => 'Show/hide Section 2.5',
-                'type' => 'true_false',
-                'instructions' => '',
-                'required' => 0,
-                'conditional_logic' => 0,
-                'wrapper' => [
-                    'width' => 100,
-                    'class' => 'important-message',
-                    'id' => '',
-                ],
-                'message' => '',
-                'default_value' => 0,
-                'ui' => 1,
-                'ui_on_text' => 'Show',
-                'ui_off_text' => 'Hide',
-            ],
+				'key' => 'invisalign_section_seven_step_2_point_five_toggle',
+				'name' => 'invisalign_section_seven_step_2_point_five_toggle',
+				'label' => 'Show/hide Section 2.5',
+				'type' => 'true_false',
+				'instructions' => '',
+				'required' => 0,
+				'conditional_logic' => 0,
+				'wrapper' => [
+					'width' => 100,
+					'class' => 'important-message',
+					'id' => '',
+				],
+				'message' => '',
+				'default_value' => 0,
+				'ui' => 1,
+				'ui_on_text' => 'Show',
+				'ui_off_text' => 'Hide',
+      ],
 			[
 				'key' => 'invisalign_section_seven_step_2_point_five_heading',
 				'name' => 'invisalign_section_seven_step_2_point_five_heading',
@@ -9898,7 +9898,7 @@ if(function_exists('acf_add_local_field_group')) {
 				'wrapper' => [
 					'width' => 100,
 				],
-			],			
+			],
 			[
 				'key' => 'sleep_apnea_section_three_cards',
 				'name' => 'sleep_apnea_section_three_cards',
@@ -9958,13 +9958,13 @@ if(function_exists('acf_add_local_field_group')) {
 					'width' => 100,
 				],
 			],
-			
+
 			[
 				'key' => 'section_four_tab_sleep_apnea',
 				'name' => 'section_four_tab_sleep_apnea',
 				'label' => 'Section Four',
 				'type' => 'tab',
-			],			
+			],
 			[
 				'key' => 'sleep_apnea_section_four_heading',
 				'name' => 'sleep_apnea_section_four_heading',
@@ -10189,7 +10189,7 @@ if(function_exists('acf_add_local_field_group')) {
 				'name' => 'sleep_apnea_section_eight_tab',
 				'label' => 'Section Eight',
 				'type' => 'tab',
-			],		
+			],
 			[
 				'key' => 'sleep_apnea_bottom_hero_desktop_image',
 				'name' => 'sleep_apnea_bottom_hero_desktop_image',
@@ -10396,7 +10396,7 @@ if(function_exists('acf_add_local_field_group')) {
 				'type' => 'text',
 				'wrapper' => [
 					'width' => 100,
-				],			
+				],
 			],
 			[
 				'key' => 'section_two_tab_confidence_counts',
@@ -10437,7 +10437,7 @@ if(function_exists('acf_add_local_field_group')) {
 				'wrapper' => [
 					'width' => 100,
 				],
-			],			
+			],
 			[
 				'key' => 'confidence_counts_section_two_cards',
 				'name' => 'confidence_counts_section_two_cards',
