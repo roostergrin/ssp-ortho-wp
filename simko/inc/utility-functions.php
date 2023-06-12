@@ -634,6 +634,10 @@ function get_nav_services_for_brand( $brand ) {
             unset( $services['sleep-apnea-treatment'] );
             break;
 
+				case 'great-river-ortho':
+						unset( $services['sleep-apnea-treatment'] );
+						break;
+
         case 'central-lakes-orthodontics':
             unset( $services['invisalign-aligners'], $services['free-custom-mouthguard'], $services['sleep-apnea-treatment'] );
             break;
@@ -642,17 +646,6 @@ function get_nav_services_for_brand( $brand ) {
 			$remove_from_arr = ['free-custom-mouthguard', 'sleep-apnea-treatment'];
 			$services = array_diff_key( $services, array_flip( $remove_from_arr ) );
 			break;
-	}
-
-	if ($location->ID == 3393 || $location->ID == 3396){
-		$services = [
-			'braces' => 'Braces',
-			'invisalign-aligners' => 'Invisalign&reg; treatment',
-			'why-orthodontic-treatment' => 'Why orthodontic treatment',
-			'free-custom-mouthguard' => 'Custom mouthguards',
-			'orthodontic-treatment-results' => 'Smile transformations'
-		];
-		return $services
 	}
 
 	return $services;
