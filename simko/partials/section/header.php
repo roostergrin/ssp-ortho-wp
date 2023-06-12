@@ -12,7 +12,8 @@ $service_templates = [
 	'braces.php',
 	'invisalign.php',
 	'sleep-apnea.php',
-	'smile-gallery.php'
+	'smile-gallery.php',
+	'custom-mouthguard.php'
 ];
 
 $template_array = explode('/', get_page_template());
