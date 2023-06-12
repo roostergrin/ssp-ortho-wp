@@ -15,9 +15,9 @@ $service_templates = [
 	'smile-gallery.php'
 ];
 
-if(!empty($services) && ($location->ID !== 3393 || $location->ID !== 3396)){
-	unset( $services['free-custom-mouthguard'] );
-}
+// if(!empty($services) && ($location->ID !== 3393 || $location->ID !== 3396)){
+// 	unset( $services['free-custom-mouthguard'] );
+// }
 
 $template_array = explode('/', get_page_template());
 $is_landing_page = if_landing_page_get_lp_phone() ?? false;
@@ -64,7 +64,9 @@ if( (!$location && $show_interstital_banner_at_brand_level == true) || (!empty( 
 								<a href="#">Services<span class="dropdown mobile icon-plus" aria-disabled="true"></span><div class="hover-bar"></div></a>
 								<ul class="sub-menu">
 									<? foreach ($services as $slug => $s): ?>
-									<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?= brand_url($slug, $brand) ?>"><?= esc_html($s) ?></a></li>
+										<? if ($slug == 'free-custom-mouthguard' && ($location->ID !== 3393 || $location->ID !== 3396)): ?>
+											<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?= brand_url($slug, $brand) ?>"><?= esc_html($s) ?></a></li>
+										<? endif ?>
 									<? endforeach ?>
 								</ul>
 							</li>
