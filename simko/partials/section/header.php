@@ -15,10 +15,6 @@ $service_templates = [
 	'smile-gallery.php'
 ];
 
-if($location->ID !== 3393 || $location->ID !== 3396){
-	//unset( $services['free-custom-mouthguard'] );
-	echo "<script>console.log('Debug Objects: " . $location->ID . "' );</script>";
-}
 
 $template_array = explode('/', get_page_template());
 $is_landing_page = if_landing_page_get_lp_phone() ?? false;
