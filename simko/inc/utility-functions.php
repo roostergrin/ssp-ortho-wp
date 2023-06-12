@@ -648,6 +648,10 @@ function get_nav_services_for_brand( $brand ) {
 			break;
 	}
 
+	if ($brand->post_name == 'great-river-ortho' && ($location->ID !== 3393 || $location->ID !== 3396)){
+		unset( $services['free-custom-mouthguard'] );
+	}
+
 	return $services;
 }
 
