@@ -645,14 +645,14 @@ function get_nav_services_for_brand( $brand ) {
 	}
 
 	if ($location->ID == 3393 || $location->ID == 3396){
-		$ser = [
+		$services = [
 			'braces' => 'Braces',
 			'invisalign-aligners' => 'Invisalign&reg; treatment',
 			'why-orthodontic-treatment' => 'Why orthodontic treatment',
 			'free-custom-mouthguard' => 'Custom mouthguards',
 			'orthodontic-treatment-results' => 'Smile transformations'
 		];
-		return $ser
+		return $services
 	}
 
 	return $services;
