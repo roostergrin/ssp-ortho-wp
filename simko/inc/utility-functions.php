@@ -634,7 +634,7 @@ function get_nav_services_for_brand( $brand ) {
             unset( $services['sleep-apnea-treatment'] );
             break;
 
-				case 'great-river-orthodontics':
+				case 'great-river-ortho':
 						unset( $services['sleep-apnea-treatment'] );
 						break;
 
