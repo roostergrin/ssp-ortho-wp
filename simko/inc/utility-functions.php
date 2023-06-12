@@ -628,12 +628,15 @@ function get_nav_services_for_brand( $brand ) {
 
 	switch ( $brand->post_name ) {
         case 'smiles-by-ross':
-            unset( $services['free-custom-mouthguard'] );
             break;
 
         case 'rapids-orthodontics':
             unset( $services['sleep-apnea-treatment'] );
             break;
+
+				case 'great-river-orthodontics':
+						unset( $services['sleep-apnea-treatment'] );
+						break;
 
         case 'central-lakes-orthodontics':
             unset( $services['invisalign-aligners'], $services['free-custom-mouthguard'], $services['sleep-apnea-treatment'] );
