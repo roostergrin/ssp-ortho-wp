@@ -634,9 +634,9 @@ function get_nav_services_for_brand( $brand ) {
             unset( $services['sleep-apnea-treatment'] );
             break;
 
-				// case 'great-river-ortho':
-				// 		unset( $services['sleep-apnea-treatment'] );
-				// 		break;
+				case 'great-river-ortho':
+						unset( $services['orthodontic-treatment-results'], $services['free-custom-mouthguard'], $services['sleep-apnea-treatment'] );
+						break;
 
         case 'central-lakes-orthodontics':
             unset( $services['invisalign-aligners'], $services['free-custom-mouthguard'], $services['sleep-apnea-treatment'] );

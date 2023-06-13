@@ -9,6 +9,14 @@ $is_landing_page = if_landing_page_get_lp_phone() ?? false;
 $landing_page_phone = if_landing_page_get_lp_phone();
 $services = get_nav_services_for_brand( $brand );
 
+if(!empty($location)) {
+	if(!empty($location->ID) && $location->ID == 3393 || $location->ID == 3396) {
+		$services['free-custom-mouthguard'] = 'Custom mouthguards';
+	}
+}
+if($brand->ID == 3291) {
+	$services['orthodontic-treatment-results'] = 'Smile transformations';
+}
 ?>
 <section class="mobile-header">
 	<? if( !$is_landing_page):?>
@@ -20,7 +28,7 @@ $services = get_nav_services_for_brand( $brand );
 				<? if (!empty($services)): ?>
 				<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-368"><a href="#">Services<span class="dropdown mobile icon-close" aria-disabled="true"></span></a>
 					<ul class="sub-menu">
-						<? foreach ($services as $slug => $s): ?>							
+						<? foreach ($services as $slug => $s): ?>
 						<li class="menu-item menu-item-type-post_type menu-item-object-page"><a href="<?= brand_url($slug, $brand) ?>"><?= esc_html($s) ?></a></li>
 						<? endforeach ?>
 					</ul>

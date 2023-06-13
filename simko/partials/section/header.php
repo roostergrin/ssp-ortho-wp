@@ -15,7 +15,6 @@ $service_templates = [
 	'smile-gallery.php'
 ];
 
-
 $template_array = explode('/', get_page_template());
 $is_landing_page = if_landing_page_get_lp_phone() ?? false;
 $landing_page_phone = if_landing_page_get_lp_phone();
@@ -26,6 +25,9 @@ if(!empty($location)) {
 	} else {
 		$phone = $location->phone;
 	}
+	if(!empty($location->ID) && $location->ID == 3393 || $location->ID == 3396) {
+		$services['free-custom-mouthguard'] = 'Custom mouthguards';
+	}
 } else {
 	if(!empty($brand->corporate_toll_free_phone)) {
 		$phone = $brand->corporate_toll_free_phone;
@@ -33,7 +35,9 @@ if(!empty($location)) {
 		$phone = $brand->corporate_phone;
 	}
 }
-
+if($brand->ID == 3291) {
+	$services['orthodontic-treatment-results'] = 'Smile transformations';
+}
 $show_interstital_banner = false;
 $interstital_banner_locations = get_post_meta($brand->ID, 'brand_interstitial_locations_relationship', true);
 $show_interstital_banner_at_brand_level = get_post_meta($brand->ID, 'brand_interstitial_show_at_brand_level', true);
