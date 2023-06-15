@@ -639,7 +639,7 @@ function get_nav_services_for_brand( $brand ) {
 						break;
 
         case 'central-lakes-orthodontics':
-            unset( $services['invisalign-aligners'], $services['free-custom-mouthguard'], $services['sleep-apnea-treatment'] );
+            unset( $services['free-custom-mouthguard'], $services['sleep-apnea-treatment'] );
             break;
 
 		default:
