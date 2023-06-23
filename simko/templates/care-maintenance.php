@@ -211,7 +211,6 @@ partial('section.copy.two-cols-with-image-and-icons-carousel', [
 	'container_classes' => []
 ]);
 
-if( $brand->ID != 16618 ): // Central Lakes
 partial('section.copy.two-cols-with-image-and-icons-carousel', [
 	'article' => [
 		'<h2>'. $section_five_heading .'</h2>',
@@ -234,7 +233,6 @@ partial('section.copy.two-cols-with-image-and-icons-carousel', [
 	],
 	'container_classes' => ['reverse']
 ]);
-endif;
 
 partial('section.copy.two-cols-with-image-and-icons-carousel', [
 	'article' => [

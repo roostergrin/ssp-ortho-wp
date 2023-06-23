@@ -111,7 +111,6 @@ partial('section.copy.with-image', [
 ]);
 
 
-if( $brand->ID != 16618 ): // Central Lakes
 $section_six_image_id = get_post_meta(get_the_ID(), 'why_orthodontic_treatment_section_six_image', true);
 partial('section.copy.with-image', [
 	'classes' => ['second', 'reverse'],
@@ -122,7 +121,6 @@ partial('section.copy.with-image', [
 		'classes' => ['top-right-radius', 'bottom-right-radius', 'bg-img'],
 	]
 ]);
-endif;
 
 $section_seven_icon_name = get_post_meta(get_the_ID(), 'why_orthodontic_treatment_section_seven_icon', true);
 partial('section.copy.full', [
