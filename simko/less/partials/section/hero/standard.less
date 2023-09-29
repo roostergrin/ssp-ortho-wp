@@ -1338,9 +1338,21 @@ section.hero.standard {
 		&.prairie-grove-orthodontics {
 			margin: 0;
 			.transform(scaleX(-1));
-			@media screen and (min-width: 1650px) { background-position: center -300px; }
-			@media screen and (min-width: 1400px) { background-position: center -200px; }
-			background-position: center;
+			@media screen and (min-width: 2701px) { background-position: center -10px; }
+			@media screen and (max-width: 2700px) { background-position: center 20px; }
+			@media screen and (max-width: 2260px) { background-position: center 0px; }
+			// @media screen and (max-width: 1920px) { background-position: center 50px; }
+			// @media screen and (max-width: 1650px) { background-position: center 145px; }
+			@media screen and (max-width: 1404px) {
+				background-size: auto 520px;
+				// background-position: center 145px;
+			}
+			// @media @tabletMax { background-position: -180px 115px; }
+			@media screen and (max-width: 1100px) { background-position: -300px 0; }
+			@media screen and (max-width: 980px) { background-position-x: -420px; }
+			@media @menuMax { background-position-x: -450px; }
+			@media screen and (max-width: 875px) { background-position-x: -520px; }
+			@media screen and (max-width: 800px) { background-position-x: -550px; }
 			}
 		}
 
