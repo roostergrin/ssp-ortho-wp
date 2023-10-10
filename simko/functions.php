@@ -82,6 +82,7 @@ add_action('wp_head', function() {
         <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
         <?
     }
+
     ?>
 
     <link rel="shortcut icon" href="<?= wp_get_attachment_image_url($brand->favicon); ?>" type="image/png" />
@@ -105,6 +106,12 @@ add_action('wp_head', function() {
     gtag('config', '<?= $g_measurement_id; ?>');
     </script>
     <? endif; 
+
+    if($brand->ID === 13590) {
+        ?>
+        <script type="text/javascript" src="https://firebasestorage.googleapis.com/v0/b/deardoc-embed-codes.appspot.com/o/Chapman%20Orthodontics%20-%20Kevin%20Chapman%2FChapman%20Orthodontics%20-%20Kevin%20Chapman%2Fcode.js?alt=media&token=4a10a488-8dfc-4056-87d4-b523d20ba5d4"></script>
+        <?
+    }
 });
 
 add_action('body', function() {
