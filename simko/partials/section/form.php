@@ -14,7 +14,7 @@ $content = $content ?? get_the_content();
 			</article>
 			<aside>
                 <div class="form-wrapper">
-					<?php if( $brand->ID === 8643): ?>
+					<?php if( $brand->ID === 8643 && is_page('free-orthodontic-consultation') ): ?>
 						<p> ALT FORM </p>
 					<?php else: ?>
                     	<? $forms->generateForm($form); ?>
