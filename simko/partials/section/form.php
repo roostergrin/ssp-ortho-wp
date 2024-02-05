@@ -12,8 +12,8 @@ $content = $content ?? get_the_content();
 			</article>
 			<aside>
                 <div class="form-wrapper">
-					<? if( is_post('9534') ):?>
-					<p> post 9534 </p>
+					<? if( is_page('free-orthodontic-consultation') && $brand->ID === 8643): ?>
+					<p> ALT FORM </p>
 					<? else: ?>
                     <? $forms->generateForm($form); ?>					
                 </div>
