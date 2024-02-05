@@ -1,5 +1,7 @@
 <?
 global $forms;
+global $brands;
+$brand = is_brand();
 $location = is_location();
 $content = $content ?? get_the_content();
 ?>
