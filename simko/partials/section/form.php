@@ -12,10 +12,11 @@ $content = $content ?? get_the_content();
 			</article>
 			<aside>
                 <div class="form-wrapper">
-					<? if( is_page('free-orthodontic-consultation') && $brand->ID === 8643): ?>
-					<p> ALT FORM </p>
-					<? else: ?>
-                    <? $forms->generateForm($form); ?>					
+					<?php if( is_page('free-orthodontic-consultation') && $brand->ID === 8643): ?>
+						<p> ALT FORM </p>
+					<?php else: ?>
+                    	<? $forms->generateForm($form); ?>
+					<?php endif; ?>			
                 </div>
 			</aside>
 		</div>
