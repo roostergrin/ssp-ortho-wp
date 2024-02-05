@@ -111,7 +111,7 @@ $content = $content ?? get_the_content();
 							window.attachEvent("onmessage", handleIFrameMessage);
 							}
 						</script>
-					<?php elseif ($brand->ID === 8643 && is_page('free-orthodontic-consultation'))?>
+					<?php elseif ($brand->ID === 8643 && is_page('free-orthodontic-consultation') ): ?>
 						<iframe
 							id="JotFormIFrame-240186307930959"
 							title="Prairie Grove Orthodontics - New Patient Form"
@@ -208,7 +208,7 @@ $content = $content ?? get_the_content();
 							window.attachEvent("onmessage", handleIFrameMessage);
 							}
 						</script>
-					<?php elseif ($brand->ID === 8643 && is_page('contact-us'))?>
+					<?php elseif ($brand->ID === 8643 && is_page('contact-us') ): ?>
 						<iframe
 							id="JotFormIFrame-240186315377963"
 							title="Prairie Grove Orthodontics - Contact Form"
