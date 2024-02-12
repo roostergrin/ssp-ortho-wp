@@ -33,6 +33,16 @@ $html_classes = empty($html_classes) ? '' : ' class="'.implode(' ', $html_classe
 				--font-secondary: <?= !empty($fonts) ? $fonts : '\'Kumbh Sans\', sans-serif'; ?>;
 			}
 		</style>
+		<?php if( $brand->ID === 8643 || $brand->ID === 3291 ): ?>
+			<script 
+				type="text/javascript"
+				defer 
+				src="https://analytics.liine.com/v1/bootstrapped/42f33e1134074fb0bbef3b2fe2ea0680.js"
+			>
+			</script>
+
+			<script src="https://app-widget.jotform.io/scripts/getUrlReferrer.js" defer></script>
+		<?php endif; ?>	
 	</head>
 	<body <? body_class($body_classes) ?>>
 		<main>
