@@ -599,8 +599,6 @@ $content = $content ?? get_the_content();
 					<?php else: ?>
                     	<? $forms->generateForm($form); ?>
 					<?php endif; ?>		
-					
-					<? $forms->generateForm($form); ?>
                 </div>
 			</aside>
 		</div>
