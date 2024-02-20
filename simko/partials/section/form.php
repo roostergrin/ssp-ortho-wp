@@ -14,7 +14,7 @@ $content = $content ?? get_the_content();
 			</article>
 			<aside>
                 <div class="form-wrapper">
-					<!-- <?php if( $brand->ID === 8643 && is_page('schedule-appointment') ): ?>
+					<?php if( $brand->ID === 8643 && is_page('schedule-appointment') ): ?>
 						<iframe
 							id="JotFormIFrame-240186390664965"
 							title="Prairie Grove Orthodontics - Appointment Form"
@@ -599,7 +599,6 @@ $content = $content ?? get_the_content();
 					<?php else: ?>
                     	<? $forms->generateForm($form); ?>
 					<?php endif; ?>		
-					-->
 					
 					<? $forms->generateForm($form); ?>
                 </div>
