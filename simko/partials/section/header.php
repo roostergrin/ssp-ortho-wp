@@ -150,7 +150,7 @@ if( (!$location && $show_interstital_banner_at_brand_level == true) || (!empty( 
 		<div class="content">
 			<div class="inner-content">
 				<div id="header-location-tagline-utility-navigation">
-					<?if(!is_single_location_brand()) :?>
+					<?if(!is_single_location_brand() || $brand->ID !== 16332) :?>
 						<? if ($location): ?><div id="header-location-tagline"><?= $location->post_title; ?><i class="icon-list-triangle mobile"></i></div><? endif ?>
 						<div id="header-utility-navigation">
 							<ul>
