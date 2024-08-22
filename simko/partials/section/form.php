@@ -641,6 +641,51 @@ $content = $content ?? get_the_content();
     					</iframe>
     					<script src='https://forms.liine.com/s/umd/latest/for-form-embed-handler.js'></script>
     					<script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-242116016402945']", "https://forms.liine.com/")</script>
+					<?php elseif( $brand->ID === 13032 && is_page('contact-us') ): ?>
+						<iframe
+      						id="JotFormIFrame-242185334899974"
+      						title="Dietmeier Orthodontics - Contact Form"
+      						onload="window.parent.scrollTo(0,0)"
+      						allowtransparency="true"
+      						allow="geolocation; microphone; camera; fullscreen"
+      						src="https://forms.liine.com/242185334899974"
+      						frameborder="0"
+      						style="min-width:100%;max-width:100%;height:539px;border:none;"
+      						scrolling="no"
+    					>
+    					</iframe>
+    					<script src='https://forms.liine.com/s/umd/latest/for-form-embed-handler.js'></script>
+    					<script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-242185334899974']", "https://forms.liine.com/")</script>
+					<?php elseif( $brand->ID === 13032 && is_page('free-orthodontic-consultation') ): ?>
+						<iframe
+      						id="JotFormIFrame-242186150152953"
+      						title="Dietmeier Orthodontics - New Patient Form"
+      						onload="window.parent.scrollTo(0,0)"
+      						allowtransparency="true"
+      						allow="geolocation; microphone; camera; fullscreen"
+      						src="https://forms.liine.com/242186150152953"
+      						frameborder="0"
+      						style="min-width:100%;max-width:100%;height:539px;border:none;"
+      						scrolling="no"
+    					>
+    					</iframe>
+    					<script src='https://forms.liine.com/s/umd/latest/for-form-embed-handler.js'></script>
+    					<script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-242186150152953']", "https://forms.liine.com/")</script>
+					<?php elseif( $brand->ID === 13032 && is_page('schedule-appointment') ): ?>
+						<iframe
+      						id="JotFormIFrame-242186155230955"
+      						title="Dietmeier Orthodontics - Appointment Form"
+      						onload="window.parent.scrollTo(0,0)"
+      						allowtransparency="true"
+      						allow="geolocation; microphone; camera; fullscreen"
+      						src="https://forms.liine.com/242186155230955"
+      						frameborder="0"
+      						style="min-width:100%;max-width:100%;height:539px;border:none;"
+      						scrolling="no"
+    					>
+    					</iframe>
+    					<script src='https://forms.liine.com/s/umd/latest/for-form-embed-handler.js'></script>
+    					<script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-242186155230955']", "https://forms.liine.com/")</script>
 					<?php else: ?>
                     	<? $forms->generateForm($form); ?>
 					<?php endif; ?>		
