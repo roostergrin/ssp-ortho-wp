@@ -686,6 +686,51 @@ $content = $content ?? get_the_content();
     					</iframe>
     					<script src='https://forms.liine.com/s/umd/latest/for-form-embed-handler.js'></script>
     					<script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-242186155230955']", "https://forms.liine.com/")</script>
+					<?php elseif( $brand->ID === 16618 && is_page('contact-us') ): ?>
+						<iframe
+      						id="JotFormIFrame-242274455990969"
+      						title="Central Lakes Orthodontics - Contact Form"
+      						onload="window.parent.scrollTo(0,0)"
+      						allowtransparency="true"
+      						allow="geolocation; microphone; camera; fullscreen"
+      						src="https://forms.liine.com/242274455990969"
+      						frameborder="0"
+      						style="min-width:100%;max-width:100%;height:539px;border:none;"
+      						scrolling="no"
+    					>
+    					</iframe>
+    					<script src='https://forms.liine.com/s/umd/latest/for-form-embed-handler.js'></script>
+    					<script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-242274455990969']", "https://forms.liine.com/")</script>
+					<?php elseif( $brand->ID === 16618 && is_page('free-orthodontic-consultation') ): ?>
+						<iframe
+      						id="JotFormIFrame-242275162989973"
+      						title="Central Lakes Orthodontics - New Patient Form"
+      						onload="window.parent.scrollTo(0,0)"
+      						allowtransparency="true"
+      						allow="geolocation; microphone; camera; fullscreen"
+      						src="https://forms.liine.com/242275162989973"
+      						frameborder="0"
+      						style="min-width:100%;max-width:100%;height:539px;border:none;"
+      						scrolling="no"
+    					>
+    					</iframe>
+    					<script src='https://forms.liine.com/s/umd/latest/for-form-embed-handler.js'></script>
+    					<script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-242275162989973']", "https://forms.liine.com/")</script>
+					<?php elseif( $brand->ID === 16618 && is_page('schedule-appointment') ): ?>
+						<iframe
+      						id="JotFormIFrame-242275388878980"
+      						title="Central Lakes Orthodontics - Appointment Form"
+      						onload="window.parent.scrollTo(0,0)"
+      						allowtransparency="true"
+      						allow="geolocation; microphone; camera; fullscreen"
+      						src="https://forms.liine.com/242275388878980"
+      						frameborder="0"
+      						style="min-width:100%;max-width:100%;height:539px;border:none;"
+      						scrolling="no"
+    					>
+    					</iframe>
+    					<script src='https://forms.liine.com/s/umd/latest/for-form-embed-handler.js'></script>
+    					<script>window.jotformEmbedHandler("iframe[id='JotFormIFrame-242275388878980']", "https://forms.liine.com/")</script>
 					<?php else: ?>
                     	<? $forms->generateForm($form); ?>
 					<?php endif; ?>		
