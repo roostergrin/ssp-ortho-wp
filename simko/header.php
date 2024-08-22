@@ -33,7 +33,7 @@ $html_classes = empty($html_classes) ? '' : ' class="'.implode(' ', $html_classe
 				--font-secondary: <?= !empty($fonts) ? $fonts : '\'Kumbh Sans\', sans-serif'; ?>;
 			}
 		</style>
-		<?php if( $brand->ID === 8643 || $brand->ID === 3291 || $brand->ID === 13032 || $brand->ID === 16332): ?>
+		<?php if( $brand->ID === 8643 || $brand->ID === 3291 || $brand->ID === 13032 || $brand->ID === 16332 || $brand->ID === 16618): ?>
 			<script 
 				type="text/javascript"
 				defer 
