@@ -49,7 +49,9 @@ partial('section.copy.side-by-side-with-box', [
 	'column1' => '<h1>'. $careers_hero_heading .'</h1>'. apply_filters('the_content', $careers_hero_content) .'<p>'. do_shortcode($careers_hero_cta) .'</p>',
 	'column2' => '<p class="bold">'. $careers_hero_subheading .'</p><p><a href="'. $careers_hero_email .'" class="cta text" target="_blank">'. $careers_hero_email_text .'</a></p>',
 ]);
+if ($brand->ID === 3291) {
     echo "<script src='https://workforcenow.adp.com/mascsr/default/mdf/recwebcomponents/recruitment/main-config/recruitment.js'></script><recruitment-current-openings cid='ddbaaed6-ae19-4112-a714-e3ed99d3fed1' ccid='9200431423114_3' host='DP' locale='en_US'></recruitment-current-openings>";
+}
 partial('section.tri-carousel', [
 	'images' => $tri_carousel_slides
 ]);
