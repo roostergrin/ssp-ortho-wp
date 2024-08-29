@@ -50,8 +50,29 @@ partial('section.copy.side-by-side-with-box', [
 	'column1' => '<h1>'. $careers_hero_heading .'</h1>'. apply_filters('the_content', $careers_hero_content) .'<p>'. do_shortcode($careers_hero_cta) .'</p>',
 	'column2' => '<p class="bold">'. $careers_hero_subheading .'</p><p><a href="'. $careers_hero_email .'" class="cta text" target="_blank">'. $careers_hero_email_text .'</a></p>',
 ]);
+// greatriverortho.com
 if ($brand->ID === 3291) {
-    echo "<div style='padding: 2rem;'> <script src='https://workforcenow.adp.com/mascsr/default/mdf/recwebcomponents/recruitment/main-config/recruitment.js'></script><recruitment-current-openings cid='ddbaaed6-ae19-4112-a714-e3ed99d3fed1' ccid='9200431423114_3' host='DP' locale='en_US'></recruitment-current-openings> </div>";
+    echo "<div style='padding: 3rem;'> <script src='https://workforcenow.adp.com/mascsr/default/mdf/recwebcomponents/recruitment/main-config/recruitment.js'></script><recruitment-current-openings cid='ddbaaed6-ae19-4112-a714-e3ed99d3fed1' ccid='9200431423114_3' host='DP' locale='en_US'></recruitment-current-openings> </div>";
+}
+// www.shawanoorthodontics.com
+else if ($brand->ID === 12097) {
+    echo "<div style='padding: 3rem;'> <script src='https://workforcenow.adp.com/mascsr/default/mdf/recwebcomponents/recruitment/main-config/recruitment.js'></script><recruitment-current-openings cid='ddbaaed6-ae19-4112-a714-e3ed99d3fed1' ccid='9200431430772_3' host='DP' locale='en_US'></recruitment-current-openings> </div>";
+}
+// www.prairiegroveorthodontics.com
+else if ($brand->ID === 8643) {
+	echo "<div style='padding: 3rem;'> <script src='https://workforcenow.adp.com/mascsr/default/mdf/recwebcomponents/recruitment/main-config/recruitment.js'></script><recruitment-current-openings cid='ddbaaed6-ae19-4112-a714-e3ed99d3fed1' ccid='9200431446017_3' host='DP' locale='en_US'></recruitment-current-openings> </div>";
+}
+// https://centrallakesorthodontics.com/
+else if ($brand->ID === 16618) {
+	echo "<div style='padding: 3rem;'> <script src='https://workforcenow.adp.com/mascsr/default/mdf/recwebcomponents/recruitment/main-config/recruitment.js'></script><recruitment-current-openings cid='ddbaaed6-ae19-4112-a714-e3ed99d3fed1' ccid='9200431451307_3' host='DP' locale='en_US'></recruitment-current-openings> </div>";
+}
+// www.dietmeierortho.com
+else if ($brand->ID === 13032) {
+	echo "<div style='padding: 3rem;'> <script src='https://workforcenow.adp.com/mascsr/default/mdf/recwebcomponents/recruitment/main-config/recruitment.js'></script><recruitment-current-openings cid='ddbaaed6-ae19-4112-a714-e3ed99d3fed1' ccid='9200431458536_3' host='DP' locale='en_US'></recruitment-current-openings> </div>";
+}
+// www.chapmanorthodontics.com
+else if ($brand->ID === 13590) {
+	echo "<div style='padding: 3rem;'> <script src='https://workforcenow.adp.com/mascsr/default/mdf/recwebcomponents/recruitment/main-config/recruitment.js'></script><recruitment-current-openings cid='ddbaaed6-ae19-4112-a714-e3ed99d3fed1' ccid='9200431459075_3' host='DP' locale='en_US'></recruitment-current-openings> </div>";
 }
 partial('section.tri-carousel', [
 	'images' => $tri_carousel_slides
