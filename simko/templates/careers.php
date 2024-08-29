@@ -2,6 +2,7 @@
 # Template Name: Careers
 
 // Tri Carousel - Patient Carousel
+$brand = is_brand();
 
 $tri_carousel_slides = [];
 if( have_rows('careers_slide_repeater') ):
