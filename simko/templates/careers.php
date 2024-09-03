@@ -74,6 +74,10 @@ else if ($brand->ID === 13032) {
 else if ($brand->ID === 13590) {
 	echo "<section> <div class='content' style='padding: 0 110px;'> <script src='https://workforcenow.adp.com/mascsr/default/mdf/recwebcomponents/recruitment/main-config/recruitment.js'></script><recruitment-current-openings cid='ddbaaed6-ae19-4112-a714-e3ed99d3fed1' ccid='9200431459075_3' host='DP' locale='en_US'></recruitment-current-openings> </div> </section>";
 }
+// www.smilesbyross.com
+else if ($brand->ID === 16332) {
+	echo "<section> <div class='content' style='padding: 0 110px;'> <script src='https://workforcenow.adp.com/mascsr/default/mdf/recwebcomponents/recruitment/main-config/recruitment.js'></script><recruitment-current-openings cid='ddbaaed6-ae19-4112-a714-e3ed99d3fed1' ccid='9200431427299_3' host='DP' locale='en_US'></recruitment-current-openings> </div> </section>";
+}
 partial('section.tri-carousel', [
 	'images' => $tri_carousel_slides
 ]);
