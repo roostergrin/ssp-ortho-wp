@@ -78,7 +78,8 @@ else if ($brand->ID === 13590) {
 else if ($brand->ID === 16332) {
 	echo "<section> <div class='content career-widget' style=''> <script src='https://workforcenow.adp.com/mascsr/default/mdf/recwebcomponents/recruitment/main-config/recruitment.js'></script><recruitment-current-openings cid='ddbaaed6-ae19-4112-a714-e3ed99d3fed1' ccid='9200431427299_3' host='DP' locale='en_US'></recruitment-current-openings> </div> </section>";
 }
-echo "<script>var style = document.createElement('style'); style.innerHTML = '.career-widget { padding: 0 8rem; }'; document.head.appendChild(style);</script>";
+echo "<script>var style = document.createElement('style'); style.innerHTML = '.career-widget { padding: 0 8rem !important; } @media (max-width: 600px) { .career-widget { padding: 0 !important; } }'; document.head.appendChild(style);</script>";
+
 
 partial('section.tri-carousel', [
 	'images' => $tri_carousel_slides
