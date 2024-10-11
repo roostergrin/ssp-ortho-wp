@@ -1372,7 +1372,7 @@ add_filter('robots_txt', function($output) {
         ob_start();
         ?>
         User-agent: *
-        Disallow:
+        Disallow: /
         <?
         return ob_get_clean();
     }
