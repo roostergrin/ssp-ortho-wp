@@ -75,7 +75,7 @@ $header_classes = [];
 $navigation = null;
 
 add_action('wp_head', function() {
-    $brand = is_brand();    
+    $brand = is_brand();
 
     if(get_page_template_slug() === 'templates/leg-three.php' || get_page_template_slug() === 'templates/leg-four.php') {
         ?>
@@ -94,8 +94,8 @@ add_action('wp_head', function() {
         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','<?= $brand->gtm_container_id ?>');</script>
 
-    <?    
-        $g_measurement_id = get_field('brand_ga4_measurement_id', $brand->ID); 
+    <?
+        $g_measurement_id = get_field('brand_ga4_measurement_id', $brand->ID);
         if($g_measurement_id):
     ?>
     <script async src="https://www.googletagmanager.com/gtag/js?id=<?= $g_measurement_id; ?>"></script>
@@ -105,7 +105,7 @@ add_action('wp_head', function() {
     gtag('js', new Date());
     gtag('config', '<?= $g_measurement_id; ?>');
     </script>
-    <? endif; 
+    <? endif;
 
     if($brand->ID === 13590) {
         ?>
@@ -195,7 +195,7 @@ add_action('after_setup_theme', function() {
     global $brands; 					$brands = new Brands();
     global $providers; 					$providers = new Providers();
     global $locations; 					$locations = new Locations();
-    global $regions; 					$regions = new Regions();    
+    global $regions; 					$regions = new Regions();
     global $edu_associations; 			$edu_associations = new EducationalAssociations();
     global $pro_affiliations; 			$pro_affiliations = new ProfessionalAffiliations();
     global $reviews; 					$reviews = new Reviews();
@@ -486,11 +486,11 @@ add_action('manage_page_posts_custom_column', function($column, $post_id) {
 
 //=====================================[Filter Relationship & Post_Object fields]=====================================//
 function filter_acf_queries($key) {
-    add_filter($key, function($args, $field, $post_id) {                  
+    add_filter($key, function($args, $field, $post_id) {
         $brand = is_brand();
         $brand_location_ids = wp_list_pluck(get_locations_for_brand($brand->ID), 'ID');
         $pattern = '("'.implode('"|"', $brand_location_ids).'")';
-        
+
         foreach ($args['post_type'] as $post_type) {
             if ($post_type == 'post') {
                 $args['meta_query'] = [
@@ -500,18 +500,18 @@ function filter_acf_queries($key) {
                         'compare' => 'LIKE'
                     ]
                 ];
-            } 
-            
+            }
+
             if ($post_type == 'page') {
                 $args['meta_query'] = [
                     [
                         'key' => 'page_brand_relationship',
-                        'value' => '"'.$brand->ID.'"',                        
+                        'value' => '"'.$brand->ID.'"',
                         'compare' => 'LIKE'
                     ]
                 ];
-            } 
-            
+            }
+
             if ($post_type == 'provider') {
                 $args['meta_query'] = [
                     [
@@ -520,10 +520,10 @@ function filter_acf_queries($key) {
                         'compare' => 'REGEXP'
                     ]
                 ];
-            } 
-            
-            if ($post_type == 'location') { 
-                
+            }
+
+            if ($post_type == 'location') {
+
                 if( $field['key'] == 'brand_interstitial_locations_relationship' ) {
                     $args['meta_query'] = [
                         [
@@ -536,7 +536,7 @@ function filter_acf_queries($key) {
                     $args['meta_query'] = [
                         [
                             'key' => 'location_brand_relationship',
-                            'value' => '"'.$brand->ID.'"',                            
+                            'value' => '"'.$brand->ID.'"',
                             'compare' => 'LIKE'
                         ]
                     ];
@@ -567,24 +567,24 @@ add_filter('acf/fields/relationship/result/name=provider_location_relationship',
 add_filter('acf/fields/relationship/result/name=insurance_provider_page_relationship', function( $text, $post, $field, $post_id ) {
     global $locations, $brands;
 
-    $brand_id = get_post_meta($post->ID, 'page_brand_relationship', true);        
+    $brand_id = get_post_meta($post->ID, 'page_brand_relationship', true);
     $page_location_id = get_post_meta($post->ID, 'page_location_parent', true);
     if( !empty( $page_location_id ) ) {
         $text .= ' - ' .  $locations->locations[$page_location_id]->post_title;
     } else {
-        if( !empty($brand_id)) {            
-            $brand_name = $brands->brands[$brand_id[0]]->post_title;        
+        if( !empty($brand_id)) {
+            $brand_name = $brands->brands[$brand_id[0]]->post_title;
             $brand_name = str_replace('Orthodontics', '', $brand_name);
             $text .= ' - ' .  $brand_name . ' brand level';
         }
-    }     
-    
+    }
+
     return $text;
 }, 10, 4 );
 
 
-function sim_acf_relationship_query( $args, $field, $post_id ) {    
-    $args['meta_query'] = [];      
+function sim_acf_relationship_query( $args, $field, $post_id ) {
+    $args['meta_query'] = [];
     return $args;
 };
 add_filter('acf/fields/relationship/query/name=meet_the_team_providers_relationship', 'sim_acf_relationship_query', 10, 3 );
@@ -910,18 +910,18 @@ add_action('wp', function($template) {
         && starts_with($wp->request, $wp_post_types['location']->rewrite['slug'].'/')
         && !is_single_location_brand()
     ) {
-        
+
         if(count($segments) == 3 || count($segments) == 4 || count($segments) == 5) {
             $brand = is_brand();
             $location = get_page_by_path($segments[1], OBJECT, 'location');
-            if(empty($location)) return;            
-            
+            if(empty($location)) return;
+
             if (count($segments) == 3) {
                 $post_name = $segments[2];
                 $post_parent = $location->ID ?? 0;
                 $post_type = 'page';
-            } 
-            
+            }
+
             if (count($segments) == 4) {
                 $post_name = $segments[3];
                 $post_subject = $segments[2];
@@ -931,8 +931,8 @@ add_action('wp', function($template) {
                 } elseif ($post_subject === 'orthodontic-team') {
                     $post_type = 'provider';
                 }
-            } 
-            
+            }
+
             if (count($segments) == 5 && $segments[3] === 'category') {
                 $post_type = 'post';
                 $this_type = 'archive';
@@ -946,7 +946,7 @@ add_action('wp', function($template) {
                 'post_status' => 'publish',
             ];
 
-            // if location-based blog post page... 
+            // if location-based blog post page...
             if( count($segments) == 4 && $post_parent == 0 && $post_subject == 'orthodontic-blog' ){
                 $query_params['meta_query'] = [
                     [
@@ -954,7 +954,7 @@ add_action('wp', function($template) {
                         'value' => $brand->ID,
                         'compare' => 'LIKE'
                     ]
-                ];                
+                ];
             }
 
             $q = new WP_Query($query_params);
@@ -976,7 +976,7 @@ add_action('wp', function($template) {
                 do_virtual_page(get_post($p->ID));
                 $meta_title = get_post_meta($p->ID, '_aioseop_title', true);
                 $meta_description = get_post_meta($p->ID, '_aioseop_description', true);
-                
+
                 add_filter('wp_title', function($text) use ($meta_title) { return $meta_title.' | '.do_shortcode('[BRAND_TITLE]'); });
                 add_filter('aioseop_title', function($text) use ($meta_title) { return $meta_title.' | '.do_shortcode('[BRAND_TITLE]'); });
                 add_filter('aioseop_description', function($text) use ($meta_description) { return $meta_description; });
@@ -990,7 +990,7 @@ add_action('wp', function($template) {
                     include_once get_stylesheet_directory().'/single.php';
                     exit;
                 }
-            }            
+            }
         }
     }
 });
@@ -1030,16 +1030,16 @@ add_action('init', function() {
 /**
  * remove WP Admin page editor
  * from Confidence Counts templates
- */ 
+ */
 add_action( 'admin_init', function() {
     $post_id;
-    
+
     if( isset( $_GET['post'] ) ) $post_id = $_GET['post'];
-    if( isset( $_POST['post'] ) ) $post_id = $_POST['post_ID'];      
+    if( isset( $_POST['post'] ) ) $post_id = $_POST['post_ID'];
     if( !isset( $post_id ) ) return;
- 
+
     $template_file = get_post_meta($post_id, '_wp_page_template', true);
-     
+
     if( $template_file == 'templates/confidence-counts.php' ){
         remove_post_type_support('page', 'editor');
     }
@@ -1133,44 +1133,44 @@ add_filter('aioseop_canonical_url', function($url) {
     global $wp;
 
     $segments = explode('/', $wp->request);
-    $relative_url = get_relative_url($wp->request);    
-    $url = empty($relative_url) ? brand_url('/') : brand_url('/'.$relative_url.'/');    
+    $relative_url = get_relative_url($wp->request);
+    $url = empty($relative_url) ? brand_url('/') : brand_url('/'.$relative_url.'/');
     $this_type = $post_name = null;
     $post_parent = 0;
-    
+
     if(count($segments) == 3 || count($segments) == 4 || count($segments) == 5) {
         $location = get_page_by_path($segments[1], OBJECT, 'location');
-        if(empty($location)) return $url;          
+        if(empty($location)) return $url;
 
-        if (count($segments) == 3) {            
+        if (count($segments) == 3) {
             $post_name = $segments[2];
             $post_parent = $location->ID;
             $post_type = 'page';
-        } 
-        
+        }
+
         if (count($segments) == 4) {
             $post_name = $segments[3];
             $post_subject = $segments[2];
-            
+
             if ($post_subject === 'orthodontic-blog') {
                 $post_type = 'post';
             } elseif ($post_subject === 'orthodontic-team') {
                 $post_type = 'provider';
             }
-        } 
-        
-        if (count($segments) == 5 && $segments[3] === 'category') {
-            $post_type = 'post';
-            $this_type = 'archive';            
         }
 
-        if($this_type == 'archive') {            
+        if (count($segments) == 5 && $segments[3] === 'category') {
+            $post_type = 'post';
+            $this_type = 'archive';
+        }
+
+        if($this_type == 'archive') {
             $term = get_term_by('slug', $segments[4], 'category');
             $term_path = get_relative_url( get_term_link( $term->term_id ) );
             $url = brand_host().'/'.$segments[0].'/'.$segments[1].'/'.($term_path).'/';
             return $url;
-        }         
-            
+        }
+
         $q = new WP_Query([
             'post_type' => $post_type,
             'post_parent' => $post_parent,
@@ -1179,16 +1179,16 @@ add_filter('aioseop_canonical_url', function($url) {
             'post_status' => 'publish',
         ]);
 
-        $p = current($q->posts);                 
+        $p = current($q->posts);
         $relative_url = get_relative_url(get_permalink($p->ID));
-        $url = brand_host().'/'.($relative_url).'/';        
+        $url = brand_host().'/'.($relative_url).'/';
 
         if(
             ($post_subject === 'orthodontic-team' && $post_type === 'provider') ||
             ($post_type === 'post' && $this_type != 'archive')
           ) {
             $url = brand_host().'/'.$segments[0].'/'.$segments[1].'/'.($relative_url).'/';
-        }                
+        }
     }
 
     return $url;
@@ -1228,7 +1228,7 @@ add_filter('aiosp_sitemap_data', function($sitemap_data, $sitemap_type, $page_nu
         $posts_sitemap = [];
         $post_slugs = list_all_blogs(true, true);
         if (!empty($post_slugs)) {
-            foreach ($post_slugs as $post) {                
+            foreach ($post_slugs as $post) {
                 $post_url = get_permalink($post->ID);
                 $relative_url = get_relative_url($post_url);
                 $posts_sitemap[] = [
@@ -1372,7 +1372,7 @@ add_filter('robots_txt', function($output) {
         ob_start();
         ?>
         User-agent: *
-        Disallow: /
+        Disallow:
         <?
         return ob_get_clean();
     }
@@ -1948,7 +1948,7 @@ function filter_smile_transformations_by_provider_dropdown() {
 		foreach($providers->providers as $provider) {
 			$choices[$provider->ID] = $provider->first_name . ' ' . $provider->last_name;
 		}
-	
+
 		echo'<select name="'. $meta_val .'">';
 			echo '<option value="all" '. (( $selected == 'all' ) ? 'selected="selected"' : "") . '>All Providers</option>';
 			foreach( $choices as $key => $value ) {
@@ -1987,7 +1987,7 @@ function filter_smile_transformations_by_owner_dropdown() {
 		foreach($providers->providers as $provider) {
 			$choices[$provider->ID] = $provider->first_name . ' ' . $provider->last_name;
 		}
-	
+
 		echo'<select name="'. $meta_val .'">';
 			echo '<option value="all" '. (( $selected == 'all' ) ? 'selected="selected"' : "") . '>Owners</option>';
 			foreach( $choices as $key => $value ) {
@@ -2011,7 +2011,7 @@ function filter_smile_transformations_by_owner_filter($query) {
         }
     }
 }
-add_action('pre_get_posts','filter_smile_transformations_by_owner_filter'); 
+add_action('pre_get_posts','filter_smile_transformations_by_owner_filter');
 
 
 //	Filter locations
@@ -2133,7 +2133,7 @@ function filter_edu_associations_by_brand_dropdown() {
 		foreach($brands->brands as $brand) {
 			$choices[$brand->ID] = $brand->post_title;
 		}
-	
+
 		echo'<select name="'. $meta_val .'">';
 			echo '<option value="all" '. (( $selected == 'all' ) ? 'selected="selected"' : "") . '>All Brands</option>';
 			foreach( $choices as $key => $value ) {
@@ -2148,10 +2148,10 @@ function filter_edu_associations_by_brand_filter($query) {
 	global $wpdb;
 
 	if(is_admin() && isset($_GET['post_type']) && $_GET['post_type'] === 'edu_association' && $query->is_main_query()) {
-		$meta_val = 'edu_association_brand_relationship';        
+		$meta_val = 'edu_association_brand_relationship';
 
 		if( isset($_GET[$meta_val]) && $_GET[$meta_val] != 'all' ) {
-            // if(!empty($filtered_regions)){            
+            // if(!empty($filtered_regions)){
             //     $filtered_regions->regions = get_regions_for_brand($_GET[$meta_val]);
             // } else {
             //     $filtered_regions = (object)[];
@@ -2165,12 +2165,12 @@ function filter_edu_associations_by_brand_filter($query) {
 					'key' => 'edu_association_provider_relationship',
 					'value' => $provider_id_listing,
 					'compare' => 'REGEXP'
-				) 
+				)
 			) );
 		}
     }
 }
-add_action('pre_get_posts','filter_edu_associations_by_brand_filter'); 
+add_action('pre_get_posts','filter_edu_associations_by_brand_filter');
 
 //	Filter Edu associations by Region
 function filter_edu_associations_by_region_dropdown() {
@@ -2184,7 +2184,7 @@ function filter_edu_associations_by_region_dropdown() {
 		foreach($regions->regions as $region) {
 			$choices[$region->ID] = $region->post_title;
 		}
-	
+
 		echo'<select name="'. $meta_val .'">';
 			echo '<option value="all" '. (( $selected == 'all' ) ? 'selected="selected"' : "") . '>All Regions</option>';
 			foreach( $choices as $key => $value ) {
@@ -2211,7 +2211,7 @@ function filter_edu_associations_by_region_filter($query) {
 
 				foreach ($providers_for_location as $inner_key => $provider) {
 					$provider_id_listing_str .= $provider->post_id;
-					
+
 					if ( (COUNT($providers_for_location) - 1) > $inner_key) {
 						$provider_id_listing_str .= '|';
 					}
@@ -2227,13 +2227,13 @@ function filter_edu_associations_by_region_filter($query) {
 					'key' => 'edu_association_provider_relationship',
 					'value' => $provider_id_listing_str,
 					'compare' => 'REGEXP'
-				) 
+				)
 			) );
 		}
         // print_stmt($regions, true);
     }
 }
-add_action('pre_get_posts','filter_edu_associations_by_region_filter'); 
+add_action('pre_get_posts','filter_edu_associations_by_region_filter');
 
 //	Filter Professional Associations by Provider
 function filter_pro_affiliations_by_provider_dropdown() {
@@ -2269,7 +2269,7 @@ function filter_pro_affiliations_by_provider_filter($query) {
         }
     }
 }
-add_action('pre_get_posts','filter_pro_affiliations_by_provider_filter'); 
+add_action('pre_get_posts','filter_pro_affiliations_by_provider_filter');
 
 // Filter Events by Brand
 //	Filter locations
