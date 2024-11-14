@@ -106,4 +106,5 @@ if(!empty($location)) {
             <div class="disclaimer"><p><?= $brand->footer_trademark_text; ?></p></div>
 		</div>
 	</div>
+	<?php echo do_shortcode("[gtranslate]"); ?>
 </section>
