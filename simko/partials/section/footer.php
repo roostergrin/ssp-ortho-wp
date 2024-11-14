@@ -106,5 +106,5 @@ if(!empty($location)) {
             <div class="disclaimer"><p><?= $brand->footer_trademark_text; ?></p></div>
 		</div>
 	</div>
-	<?if ($brand->ID === 13032 || $brand->ID === 13590) : echo do_shortcode('[gtranslate'); ?>
+	<?if ($brand->ID === 13032 || $brand->ID === 13590) : echo do_shortcode('[gtranslate]'); ?>
 </section>
