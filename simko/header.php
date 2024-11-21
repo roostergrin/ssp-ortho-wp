@@ -23,7 +23,7 @@ $html_classes = empty($html_classes) ? '' : ' class="'.implode(' ', $html_classe
 		<title><? wp_title(' | ', true, 'right'); ?></title>
 		<meta name="format-detection" content="telephone=no">
 		<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-		<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *;**script-src 'self' *.jotfor.ms widgets.jotform.io 'unsafe-inline' 'unsafe-eval';** ">
+		<meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *; script-src 'self' *.jotfor.ms widgets.jotform.io 'unsafe-inline' 'unsafe-eval';">
 
 		<? wp_head(); ?>
 		<style>
