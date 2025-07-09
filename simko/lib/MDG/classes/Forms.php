@@ -1469,6 +1469,10 @@ class Forms {
         $recipient_bcc_by_form = get_bcc_email_addresses_for_form($this->current_form_name, $_POST['office_preference']);
 
         $referring_doctor_email = $_POST['referring_doctor_email'] ? $_POST['referring_doctor_email'] : '';
+
+        error_log("sendEmailNotification called at " . date('Y-m-d H:i:s') . 
+          " | Recipient: " . (isset($recipient_by_form) ? $recipient_by_form : 'default') . 
+          " | Subject: " . $this->current_form->subject);
         if(!empty($referring_doctor_email)) $headers[] = 'Cc: ' . $referring_doctor_email;
 
         if(!empty($recipient_by_form)) $recipient = $recipient_by_form;
