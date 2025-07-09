@@ -1482,7 +1482,8 @@ class Forms {
         $this->current_form_name,
         $recipient
     );
-        file_put_contents(__DIR__ . '/send_email_log.txt', $log_message, FILE_APPEND);
+    //uncomment line below for logging
+        // file_put_contents(__DIR__ . '/send_email_log.txt', $log_message, FILE_APPEND);
 
         # Deploy email
         if(!is_live()) $this->current_form->subject = '(DEV) '.$this->current_form->subject;
