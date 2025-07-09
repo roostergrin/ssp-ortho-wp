@@ -1469,13 +1469,6 @@ class Forms {
         $recipient_bcc_by_form = get_bcc_email_addresses_for_form($this->current_form_name, $_POST['office_preference']);
 
         $referring_doctor_email = $_POST['referring_doctor_email'] ? $_POST['referring_doctor_email'] : '';
-        $log_message = sprintf(
-        "[%s] sendEmailNotification called | Form: %s | Recipient: %s\n",
-        date('Y-m-d H:i:s'),
-        $this->current_form_name,
-        isset($_POST['email']) ? $_POST['email'] : 'N/A'
-    );
-        file_put_contents(__DIR__ . '/send_email_log.txt', $log_message, FILE_APPEND);
 
 
         if(!empty($referring_doctor_email)) $headers[] = 'Cc: ' . $referring_doctor_email;
@@ -1483,6 +1476,13 @@ class Forms {
         if(!empty($recipient_by_form)) $recipient = $recipient_by_form;
         if(!empty($recipient_cc_by_form)) $headers[] = 'Cc: '.$recipient_cc_by_form;
         if(!empty($recipient_bcc_by_form)) $headers[] = 'Bcc: '.$recipient_bcc_by_form;
+        $log_message = sprintf(
+        "[%s] sendEmailNotification called | Form: %s | Recipient: %s\n",
+        date('Y-m-d H:i:s'),
+        $this->current_form_name,
+        $recipient
+    );
+        file_put_contents(__DIR__ . '/send_email_log.txt', $log_message, FILE_APPEND);
 
         # Deploy email
         if(!is_live()) $this->current_form->subject = '(DEV) '.$this->current_form->subject;
