@@ -44,7 +44,7 @@ wp_enqueue_script('internal-logo-carousel');
                         <div class="logo-container">
                         <? if (!empty($pro->image['src']) && !empty($pro->heading) && !empty($pro->content)) : ?>
                             <div class="image">
-                                <img<?= !empty($pro->image['src']) ? ' src="'.(brand_host().$pro->image['src']).'"' : ''; ?><?= !empty($pro->image['width']) ? ' width="'.$pro->image['width'].'"' : ''; ?><?= !empty($pro->image['height']) ? ' height="'.$pro->image['height'].'"' : ''; ?><?= !empty($pro->image['srcset']) ? ' srcset="'.$pro->image['srcset'].'"' : ''; ?><?= !empty($pro->image['sizes']) ? ' sizes="'.$pro->image['sizes'].'"' : ''; ?><?= !empty($pro->image['alt']) ? ' alt="'.$pro->image['alt'].'"' : ''; ?><?= !empty($pro->image['classes']) ? ' class="'.implode(' ', $pro->image['classes']).'"' : ''; ?> />
+                                <img<?= !empty($pro->image['src']) ? ' src="'.($pro->image['src']).'"' : ''; ?><?= !empty($pro->image['width']) ? ' width="'.$pro->image['width'].'"' : ''; ?><?= !empty($pro->image['height']) ? ' height="'.$pro->image['height'].'"' : ''; ?><?= !empty($pro->image['srcset']) ? ' srcset="'.$pro->image['srcset'].'"' : ''; ?><?= !empty($pro->image['sizes']) ? ' sizes="'.$pro->image['sizes'].'"' : ''; ?><?= !empty($pro->image['alt']) ? ' alt="'.$pro->image['alt'].'"' : ''; ?><?= !empty($pro->image['classes']) ? ' class="'.implode(' ', $pro->image['classes']).'"' : ''; ?> />
                             </div>
                             <div class="copy">
                                 <h3><?= $pro->heading; ?></h3>
