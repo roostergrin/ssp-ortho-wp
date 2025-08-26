@@ -12,7 +12,7 @@ wp_enqueue_script('internal-logo-carousel');
                 <div class="logo-container">
                     <? if (!empty($edu->image['src']) && !empty($edu->heading) && !empty($edu->content)) : ?>
                     <div class="image">
-                        <img<?= !empty($edu->image['src']) ? ' src="'.(brand_host().$edu->image['src']).'"' : ''; ?><?= !empty($edu->image['width']) ? ' width="'.$edu->image['width'].'"' : ''; ?><?= !empty($edu->image['height']) ? ' height="'.$edu->image['height'].'"' : ''; ?><?= !empty($edu->image['srcset']) ? ' srcset="'.$edu->image['srcset'].'"' : ''; ?><?= !empty($edu->image['sizes']) ? ' sizes="'.$edu->image['sizes'].'"' : ''; ?><?= !empty($edu->image['alt']) ? ' alt="'.$edu->image['alt'].'"' : ''; ?><?= !empty($edu->image['classes']) ? ' class="'.implode(' ', $edu->image['classes']).'"' : ''; ?> />
+                        <img<?= !empty($edu->image['src']) ? ' src="'.($edu->image['src']).'"' : ''; ?><?= !empty($edu->image['width']) ? ' width="'.$edu->image['width'].'"' : ''; ?><?= !empty($edu->image['height']) ? ' height="'.$edu->image['height'].'"' : ''; ?><?= !empty($edu->image['srcset']) ? ' srcset="'.$edu->image['srcset'].'"' : ''; ?><?= !empty($edu->image['sizes']) ? ' sizes="'.$edu->image['sizes'].'"' : ''; ?><?= !empty($edu->image['alt']) ? ' alt="'.$edu->image['alt'].'"' : ''; ?><?= !empty($edu->image['classes']) ? ' class="'.implode(' ', $edu->image['classes']).'"' : ''; ?> />
                     </div>
                     <div class="copy">
                         <h3><?= $edu->heading; ?></h3>
