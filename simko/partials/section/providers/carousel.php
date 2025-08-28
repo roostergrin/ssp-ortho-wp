@@ -55,12 +55,11 @@ if(is_brand()->ID === 8643) { // Prairie Grove Orthodontics - patch for Dr. Josh
 								</div>
 							<? endif; ?>
 						<? endif; ?>
-						<?// if(isset($hide_meet_the_team) && isset($slb_link)) :?>
+						<? if(isset($hide_meet_the_team) && isset($slb_link)) :?>
 							<div class="single-location-link">
-								<?//= do_shortcode($slb_link); ?>
-								<a style='margin-left: 1rem;' href='/meet-our-orthodontic-team/'>Meet the Team</a>
+								<?= do_shortcode($slb_link); ?>
 							</div>
-						<?// endif; ?>
+						<? endif; ?>
 					</div>
 				</article>
 				<? if (!empty($providers)) : ?>
