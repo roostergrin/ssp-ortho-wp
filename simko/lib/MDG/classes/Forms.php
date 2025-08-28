@@ -1482,7 +1482,7 @@ class Forms {
         $this->current_form_name,
         $recipient
     );
-    //uncomment line below for logging
+        //uncomment line below for logging
         // file_put_contents(__DIR__ . '/send_email_log.txt', $log_message, FILE_APPEND);
 
         # Deploy email
