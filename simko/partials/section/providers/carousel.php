@@ -48,23 +48,34 @@ if(is_brand()->ID === 8643) { // Prairie Grove Orthodontics - patch for Dr. Josh
 					</div>
 					<div class="pagination-container<?= !empty($pagination_classes) ? ' '.implode(' ', $pagination_classes) : ''; ?>">
 						<? if (!empty($all_providers) && is_array($all_providers) && count($all_providers) > 1) : ?>
-							<? if(!$hide_pagination) :?>
-								<div class="pagination">
-									<div class="page-left"><span>Previous</span><i class="icon-left-arrow-thick providers"></i></div>
-									<div class="page-right"><i class="icon-right-arrow-thick providers"></i><span>Next</span></div>
-								</div>
-							<? endif; ?>
+							<?
+if (
+    !$hide_pagination
+    && ($_SERVER['HTTP_HOST'] ?? '') !== 'smilesbyross.com'
+    && ($_SERVER['HTTP_HOST'] ?? '') !== 'www.smilesbyross.com'
+) : ?>
+    <div class="pagination">
+        <div class="page-left"><span>Previous</span><i class="icon-left-arrow-thick providers"></i></div>
+        <div class="page-right"><i class="icon-right-arrow-thick providers"></i><span>Next</span></div>
+    </div>
+<? endif; ?>
 						<? endif; ?>
-						<? if(isset($hide_meet_the_team) && isset($slb_link)) :?>
-							<div class="single-location-link">
-								<?= do_shortcode($slb_link); ?>
-							</div>
-						<? endif; ?>
+						<? if (
+    isset($hide_meet_the_team) && 
+    isset($slb_link) && 
+    strpos($_SERVER['REQUEST_URI'], '/orthodontist-office') === false
+) : ?>
+    <div class="single-location-link">
+        <?php // echo do_shortcode($slb_link); ?>
+        <a style="" href="/meet-our-orthodontic-team/">Meet the Team</a>
+    </div>
+<? endif; ?>
 					</div>
 				</article>
 				<? if (!empty($providers)) : ?>
 					<aside>
 						<div class="providers-container owl-carousel">
+							
 							<? foreach($providers as $provider) : ?>
 								<div class="provider">
 									<? if (!empty($provider['image'])) : ?>
@@ -127,4 +138,6 @@ if(is_brand()->ID === 8643) { // Prairie Grove Orthodontics - patch for Dr. Josh
 			</div>
 		</div>
 	</div>
+	
+	
 </section>
