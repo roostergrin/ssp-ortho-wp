@@ -628,6 +628,7 @@ function get_nav_services_for_brand( $brand ) {
 
 	switch ( $brand->post_name ) {
         case 'smiles-by-ross':
+						unset( $services['sleep-apnea-treatment'] );
             break;
 
         case 'rapids-orthodontics':
